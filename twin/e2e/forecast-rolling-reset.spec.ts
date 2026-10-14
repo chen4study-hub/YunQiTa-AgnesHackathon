@@ -1,0 +1,10 @@
+import {test,expect} from '@playwright/test';
+test.use({timezoneId:'Asia/Shanghai'});
+test('paused fixed forecast resumes and reset restores the current rolling origin',async({page})=>{
+ test.setTimeout(90000);await page.clock.install({time:new Date('2026-10-12T23:00:00+08:00')});await page.clock.pauseAt(new Date('2026-10-12T23:00:00+08:00'));await page.route('**/api/**',r=>r.abort());await page.goto('/?source=file&scenario=normal&at=2026-10-12T23:00');await expect(page.locator('.overview-number')).toHaveCount(3);await page.clock.runFor(64);
+ const root=page.locator('.replay-chart');await expect(root).toHaveAttribute('data-actual-count','2');await expect(root).toHaveAttribute('data-forecast-count','24');await expect(root).toHaveAttribute('data-axis-start','22');
+ await page.getByRole('button',{name:'▶ 播放',exact:true}).click();await page.clock.runFor(2200);await page.getByRole('button',{name:'Ⅱ 暂停',exact:true}).click();await expect(root).toHaveAttribute('data-actual-count','4');await expect(root).toHaveAttribute('data-axis-start','22');const paused=await page.locator('.forecast-playhead').getAttribute('data-head');await page.clock.runFor(500);expect(await page.locator('.forecast-playhead').getAttribute('data-head')).toBe(paused);
+ await page.getByRole('button',{name:'▶ 播放',exact:true}).click();await page.clock.runFor(22032);await expect(page.getByRole('button',{name:'↺ 重置',exact:true})).toBeVisible();await expect(root).toHaveAttribute('data-actual-count','26');
+ await page.getByRole('button',{name:'↺ 重置',exact:true}).click();await expect(root).toHaveAttribute('data-actual-count','2');await expect(root).toHaveAttribute('data-forecast-count','24');await expect(page.locator('.forecast-playhead')).toHaveCount(0);await expect(page.getByLabel('当前本地时间')).toHaveText('2026-10-12 周一 23:00:00');
+ await page.locator('.timeline').press('Home');await expect(root).toHaveAttribute('data-axis-start','-1');await expect(root).toHaveAttribute('data-axis-end','24');await expect(root).toHaveAttribute('data-actual-count','2');
+});

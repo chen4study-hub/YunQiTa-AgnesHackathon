@@ -1,0 +1,18 @@
+{
+  "version": "holiday-calibration-v1",
+  "seed": 42,
+  "baseline": "pooled28",
+  "candidates": ["pooled90", "holiday90"],
+  "development": "2016-07 through 2016-12 monthly past-only rolling evaluation",
+  "final": "2017-01 through 2017-12 one frozen rolling evaluation of selected candidate; original cached pooled28 baseline",
+  "train_origin": "2016-01-20",
+  "rho": 0.15,
+  "alpha": 0.095,
+  "holiday90": "90-day calibration; independent Cq holiday/nonholiday rank references, risk threshold and CQR score quantile when at least24 Cq hours in group; otherwise pooled90 fallback. No change to point/scale feature schema (holiday already included).",
+  "selection": "Choose among two candidates using development only. Eligible if holiday/nonholiday retained PICP>=0.905 and nonholiday rejection<=baseline+0.02; minimize holiday rejection then retained width then name. If none eligible choose smallest summed coverage deficit then holiday rejection then name, explicitly mark development gate failed. Selection is research-only, never promotion.",
+  "calendar": "US federal observed dates, using existing BDG2 wall-clock date convention",
+  "minimum_group_cq_hours": 24,
+  "no_replay_or_registry_change": true,
+  "no_final_retuning": true,
+  "limitation": "2017 already measured in prior work; not a never-seen blind test. New candidate decisions frozen from2016 only. Hourly coverage not independent day samples."
+}

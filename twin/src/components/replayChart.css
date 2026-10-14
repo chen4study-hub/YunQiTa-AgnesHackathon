@@ -1,0 +1,2 @@
+.responsive-dashboard .overview-forecast .replay-chart { position:relative;top:auto;left:auto; }
+.forecast-playhead { position:absolute;left:0;width:1px;background:#fff2bd;pointer-events:none;z-index:2; }

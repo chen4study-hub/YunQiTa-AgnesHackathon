@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "hours": 72,
+  "raw_weather_sha256": "a8189f1c6acdf3b9933a9e6354b8e7c1278cd56a7075929623a17565d44f04bd",
+  "humidity": "Magnus-derived from origin T/dewpoint; null if missing",
+  "future": "origin persistence, no target weather leakage",
+  "new_llm_calls": 0,
+  "export_sha256": {
+    "normal.json": "273af2632d7cfa1da83e7d7b6b78fa62a6eaca3e83dc8bba4d6a833c08bab6b0",
+    "peak.json": "8b1ce28aa7d03de361432806e414a305326abf056d49208dd365be7455e8c6f4",
+    "abstain.json": "5bb0f1af42983a474b382a6d2ba4789117bed510df080ee92965318c291c899b"
+  }
+}

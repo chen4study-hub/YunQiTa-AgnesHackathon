@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "source_version": "byron-expanded-holiday-monthly-v1",
+  "source_index": "experiments/demo_monthly_index.json",
+  "source_daily_version": "byron-daily10-v1",
+  "data": "data/hog2017_cohort.csv",
+  "selection_basis": "Metadata only: Office, Education, Food sales and service, Manufacturing/industrial, Lodging/residential; lexicographically first building_id within each use, excluding Byron. No outcomes or previous transfer metrics consulted.",
+  "buildings": [
+    {"building_id": "Hog_office_Alexis", "usage": "Office"},
+    {"building_id": "Hog_education_Beth", "usage": "Education"},
+    {"building_id": "Hog_food_Morgan", "usage": "Food sales and service"},
+    {"building_id": "Hog_industrial_Jeremy", "usage": "Manufacturing/industrial"},
+    {"building_id": "Hog_lodging_Brian", "usage": "Lodging/residential"}
+  ],
+  "time": {
+    "start": "2017-01-01T00:00:00Z",
+    "self_train_end_exclusive": "2017-01-22T00:00:00Z",
+    "self_scale_end_exclusive": "2017-02-05T00:00:00Z",
+    "test_start": "2017-02-15T00:00:00Z",
+    "end_exclusive": "2018-01-01T00:00:00Z"
+  },
+  "primary_protocol": "early_only: target fitting uses only first 45 days; CQR/risk calibration uses final 10 early days (Feb5-14), recomputed for each frozen monthly source expert. State frozen within month; NO test outcomes enter any fit. This is NOT adaptive daily10 deployment and measures calibration staleness deliberately.",
+  "secondary_protocol": "daily_past10: exact deployed daily10 CQR/risk/width rules via generic single-building fit_local+issued; completed target observations strictly before origin day may update calibration, including past test observations. Separately labeled prequential online evaluation, NEVER pooled with primary or used for model_card cross_building_coverage.",
+  "source_models": "Existing monthly artifact for target calendar month; verify index SHA256, version and train_end<month_start; freeze point, scale and quantiles. Target feature lags are observed before target hour (rolling one-step, NOT open-loop forecast). No scaling, tuning, cold-start correction or target point retraining.",
+  "self_baseline": "Same source artifact cfg/features/expanded US holidays and LightGBM hyperparameters; train point and quantiles Jan1-21; fit scale on first65% of Jan22-Feb4; CQR/risk local calibration Feb5-14. Point/scale/quantiles fixed for rest of year; both protocols use identical test hours and calibration policy. Source has longer Byron history, so this is a limited-history self-trained comparator, not a full-history upper bound.",
+  "calibration_days": 10,
+  "minimum_calibration_rows": 120,
+  "alpha": 0.095,
+  "rejection_fraction": 0.15,
+  "max_relative_width": 1.0,
+  "seed": 42,
+  "metric_definition": "all_coverage over all issued test rows; retained_coverage/retained_mae only final gate-passed rows (risk AND width); CV(RMSE)=RMSE/mean(observed target test load), fraction; undefined if mean=0; MAE in source hourly kWh. Pool coverage by counts, not building-average. Also report gate reasons, widths, seasonal/holiday/low-load diagnostics.",
+  "failure_thresholds_not_selection": {"retained_coverage_minimum": 0.905, "rejection_rate_warning": 0.3, "transfer_mae_worse_than_self": true},
+  "outputs": ["results.json", "metrics.csv", "diagnostics.csv", "predictions.csv.gz", "run.log", "report.md", "verification.log"],
+  "immutability": "Write this plan before any fit/score. Store plan/data/source artifact hashes and runtime versions; never replace selected buildings or retune after scoring. Existing results refuse overwrite.",
+  "scope": "Offline evaluation, model-card export and tests only; no dashboard, QA/chat or API changes; multi_horizon cross_building_coverage remains null."
+}

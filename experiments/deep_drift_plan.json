@@ -1,0 +1,12 @@
+{
+  "scope": "bounded deep development research; no final test reuse",
+  "folds": [[0.35,0.45,0.55],[0.40,0.50,0.60],[0.45,0.55,0.65]],
+  "diagnose": ["lagged weather outside training range", "lag-1 load outside training range", "large 1h-versus-24h disagreement", "persistence versus LightGBM versus XGBoost point errors"],
+  "candidate": "LightGBM CQR residuals shrunk by fixed 0.5 toward lag-1 persistence, point and quantile models; recalibrate scale and intervals independently",
+  "baseline": "unmodified LightGBM CQR",
+  "shrinkage": 0.5,
+  "gate": "calibration-frozen rho=0.15",
+  "criterion": "existing three exploratory composite weight scenarios and per-window stability, not all-metric superiority",
+  "claims": "diagnostic associations not causal attribution; overlapping historical development windows not blind tests",
+  "hard_constraints": ["issue-time features only", "shadow only", "no automatic champion/replay update"]
+}

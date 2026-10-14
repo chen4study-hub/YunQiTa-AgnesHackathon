@@ -1,0 +1,7 @@
+import {test,expect} from '@playwright/test';
+import {realReplayFixture} from './real-replay-fixture';
+for(const width of [390,1366])test(`last forecast axis label stays complete inside canvas at ${width}`,async({page})=>{
+ await page.setViewportSize({width,height:width===390?844:768});await realReplayFixture(page);await page.route('**/api/**',r=>r.abort());
+ await page.addInitScript(()=>{const original=CanvasRenderingContext2D.prototype.fillText;(window as any).__axisLabels=[];CanvasRenderingContext2D.prototype.fillText=function(text,x,y,maxWidth){if(/^次日 \d{2}:\d{2}$/.test(String(text))){const metrics=this.measureText(text),matrix=this.getTransform();const left=x-(this.textAlign==='center'?metrics.width/2:this.textAlign==='right'||this.textAlign==='end'?metrics.width:0);(window as any).__axisLabels.push({text,left:left*matrix.a+matrix.e,right:(left+metrics.width)*matrix.a+matrix.e,width:this.canvas.width});}if(maxWidth===undefined)original.call(this,text,x,y);else original.call(this,text,x,y,maxWidth);};});
+ await page.goto('/?source=file&scenario=normal&at=2026-10-12T09:00');await expect(page.locator('.replay-chart .echart')).toHaveAttribute('_echarts_instance_',/./);await expect.poll(()=>page.evaluate(()=>(window as any).__axisLabels.filter((r:any)=>r.text==='次日 09:00').length)).toBeGreaterThan(0);const labels=await page.evaluate(()=>(window as any).__axisLabels.filter((r:any)=>r.text==='次日 09:00'));for(const label of labels){expect(label.left).toBeGreaterThanOrEqual(0);expect(label.right).toBeLessThanOrEqual(label.width+.5);}
+});

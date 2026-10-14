@@ -1,0 +1,1209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yunqi.invalid/contracts/ops/1.0",
+  "title": "Yunqi operations 1.0",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0"
+        },
+        "kind": {
+          "const": "day"
+        },
+        "day_start_ms": {
+          "type": "integer"
+        },
+        "meta": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "scenario": {
+              "enum": [
+                "normal",
+                "peak",
+                "abstain"
+              ]
+            },
+            "source_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "building_id": {
+              "type": "string"
+            },
+            "timezone": {
+              "type": "string"
+            },
+            "source_timezone": {
+              "type": "string"
+            },
+            "source_sha256": {
+              "type": "string"
+            },
+            "generator_version": {
+              "type": "string"
+            },
+            "config_sha256": {
+              "type": "string"
+            },
+            "provider": {
+              "type": "string"
+            },
+            "floors": {
+              "const": 40
+            },
+            "zones": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 6,
+              "maxItems": 6
+            },
+            "tariff": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "currency": {
+                  "const": "CNY"
+                },
+                "unit": {
+                  "const": "CNY/kWh"
+                },
+                "definition": {
+                  "type": "string"
+                },
+                "periods": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "valley",
+                      "flat",
+                      "peak"
+                    ]
+                  },
+                  "minItems": 24,
+                  "maxItems": 24
+                },
+                "prices": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "minItems": 24,
+                  "maxItems": 24
+                }
+              },
+              "required": [
+                "currency",
+                "unit",
+                "definition",
+                "periods",
+                "prices"
+              ]
+            },
+            "rules": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "threshold": {
+                    "type": "number"
+                  },
+                  "unit": {
+                    "type": "string"
+                  },
+                  "system": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "checks": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "id",
+                  "threshold",
+                  "unit",
+                  "system",
+                  "content",
+                  "checks"
+                ]
+              }
+            },
+            "floor_height_m": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "max_speed_m_s": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "acceleration_m_s2": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "motion": {
+              "const": "trapezoidal_acceleration"
+            },
+            "precision": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              }
+            },
+            "units": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "connections": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "connected": {
+                    "type": "boolean"
+                  },
+                  "provider": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "system",
+                  "connected",
+                  "provider"
+                ]
+              }
+            },
+            "floors_file": {
+              "type": "string"
+            },
+            "floors_sha256": {
+              "type": "string"
+            },
+            "source_git_commit": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40,64}$"
+            }
+          },
+          "required": [
+            "scenario",
+            "source_date",
+            "building_id",
+            "timezone",
+            "source_timezone",
+            "source_sha256",
+            "generator_version",
+            "config_sha256",
+            "provider",
+            "floors",
+            "zones",
+            "tariff",
+            "rules",
+            "floor_height_m",
+            "max_speed_m_s",
+            "acceleration_m_s2",
+            "motion",
+            "precision",
+            "units",
+            "connections"
+          ]
+        },
+        "hours": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/hour"
+          },
+          "minItems": 24,
+          "maxItems": 24
+        },
+        "elevators": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "enum": [
+                  "L1",
+                  "L2",
+                  "L3",
+                  "H1",
+                  "H2",
+                  "H3"
+                ]
+              },
+              "zone": {
+                "enum": [
+                  "low",
+                  "high"
+                ]
+              },
+              "stops": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "initial_floor": {
+                "const": 1
+              },
+              "capacity_people": {
+                "const": 20
+              },
+              "seed_sha256": {
+                "type": "string"
+              },
+              "trips": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "depart_ms": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 86400000
+                    },
+                    "arrive_ms": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 86400000
+                    },
+                    "from_floor": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 40
+                    },
+                    "to_floor": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 40
+                    },
+                    "dwell_ms": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "load_pct": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 100,
+                      "multipleOf": 0.1
+                    },
+                    "passengers": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 20
+                    }
+                  },
+                  "required": [
+                    "depart_ms",
+                    "arrive_ms",
+                    "from_floor",
+                    "to_floor",
+                    "dwell_ms",
+                    "load_pct",
+                    "passengers"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "id",
+              "zone",
+              "stops",
+              "initial_floor",
+              "capacity_people",
+              "seed_sha256",
+              "trips"
+            ]
+          },
+          "minItems": 6,
+          "maxItems": 6
+        },
+        "alerts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "rule_id": {
+                "type": "string"
+              },
+              "offset_ms": {
+                "type": "integer"
+              },
+              "level": {
+                "enum": [
+                  "提示",
+                  "关注",
+                  "转人工"
+                ]
+              },
+              "system": {
+                "type": "string"
+              },
+              "asset_id": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "suggested_checks": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "resolved_offset_ms": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "status": {
+                "type": "string"
+              },
+              "work_order_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "rule_id",
+              "offset_ms",
+              "level",
+              "system",
+              "asset_id",
+              "content",
+              "suggested_checks",
+              "resolved_offset_ms",
+              "status",
+              "work_order_id"
+            ]
+          }
+        },
+        "work_orders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "alert_id": {
+                "type": "string"
+              },
+              "offset_ms": {
+                "type": "integer"
+              },
+              "system": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "suggested_checks": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "status": {
+                "type": "string"
+              },
+              "resolved_offset_ms": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "alert_id",
+              "offset_ms",
+              "system",
+              "content",
+              "suggested_checks",
+              "status",
+              "resolved_offset_ms"
+            ]
+          }
+        },
+        "agent_order_refs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "offset_ms": {
+                "type": "integer"
+              },
+              "source_t": {
+                "type": "string"
+              },
+              "detail_index": {
+                "type": "integer"
+              },
+              "suggested_checks": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "offset_ms",
+              "source_t",
+              "detail_index",
+              "suggested_checks"
+            ]
+          }
+        },
+        "history": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hours": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/hour"
+              },
+              "minItems": 6,
+              "maxItems": 6
+            },
+            "agent_records": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {},
+                "required": []
+              }
+            },
+            "agent_records_quality": {
+              "const": "unavailable"
+            },
+            "source_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "source_sha256": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "hours",
+            "agent_records",
+            "agent_records_quality",
+            "source_date",
+            "source_sha256"
+          ]
+        },
+        "summary": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "energy_kwh": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "actual_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "hvac_electric_estimate_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "lighting_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "plug_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "elevator_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "other_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                }
+              },
+              "required": [
+                "actual_kwh",
+                "hvac_electric_estimate_kwh",
+                "lighting_kwh",
+                "plug_kwh",
+                "elevator_kwh",
+                "other_kwh"
+              ]
+            },
+            "cost_cny": {
+              "type": "number",
+              "minimum": 0,
+              "multipleOf": 0.1
+            }
+          },
+          "required": [
+            "energy_kwh",
+            "cost_cny"
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "day_start_ms",
+        "meta",
+        "hours",
+        "elevators",
+        "alerts",
+        "work_orders",
+        "agent_order_refs",
+        "history",
+        "summary"
+      ]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0"
+        },
+        "kind": {
+          "const": "calendar"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "rule_version": {
+          "type": "string"
+        },
+        "policy": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "calendar_reference": {
+          "type": "string"
+        },
+        "days": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "date": {
+                "type": "string",
+                "format": "date"
+              },
+              "scenario": {
+                "enum": [
+                  "normal",
+                  "peak",
+                  "abstain"
+                ]
+              },
+              "source_date": {
+                "type": "string",
+                "format": "date"
+              },
+              "day_start_ms": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "date",
+              "scenario",
+              "source_date",
+              "day_start_ms"
+            ]
+          },
+          "minItems": 730,
+          "maxItems": 730
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "timezone",
+        "rule_version",
+        "policy",
+        "calendar_reference",
+        "days"
+      ]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0"
+        },
+        "kind": {
+          "const": "floors"
+        },
+        "scenario": {
+          "type": "string"
+        },
+        "source_date": {
+          "type": "string"
+        },
+        "hours": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "offset_ms": {
+                "type": "integer"
+              },
+              "floors": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/floor"
+                },
+                "minItems": 40,
+                "maxItems": 40
+              }
+            },
+            "required": [
+              "offset_ms",
+              "floors"
+            ]
+          },
+          "minItems": 24,
+          "maxItems": 24
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "offset_ms": {
+                "type": "integer"
+              },
+              "floors": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/floor"
+                },
+                "minItems": 40,
+                "maxItems": 40
+              }
+            },
+            "required": [
+              "offset_ms",
+              "floors"
+            ]
+          },
+          "minItems": 6,
+          "maxItems": 6
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "scenario",
+        "source_date",
+        "hours",
+        "history"
+      ]
+    }
+  ],
+  "$defs": {
+    "floor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "floor": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 40
+        },
+        "use": {
+          "enum": [
+            "lobby",
+            "office",
+            "garden",
+            "equipment"
+          ]
+        },
+        "floor_kw": {
+          "type": "number",
+          "minimum": 0,
+          "multipleOf": 0.1
+        },
+        "floor_actual_kw": {
+          "type": "number",
+          "minimum": 0,
+          "multipleOf": 0.1
+        },
+        "occupancy_people": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lighting_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "multipleOf": 0.1
+        },
+        "fresh_air_m3_h": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "co2_ppm": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fan_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "multipleOf": 0.1
+        },
+        "mean_temp_c": {
+          "type": "number"
+        },
+        "zones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "enum": [
+                  "north",
+                  "northeast",
+                  "west",
+                  "east",
+                  "southwest",
+                  "south"
+                ]
+              },
+              "temp_c": {
+                "type": "number"
+              },
+              "fan_pct": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "multipleOf": 0.1
+              }
+            },
+            "required": [
+              "id",
+              "temp_c",
+              "fan_pct"
+            ]
+          },
+          "minItems": 6,
+          "maxItems": 6
+        }
+      },
+      "required": [
+        "floor",
+        "use",
+        "floor_kw",
+        "floor_actual_kw",
+        "occupancy_people",
+        "lighting_pct",
+        "fresh_air_m3_h",
+        "co2_ppm",
+        "fan_pct",
+        "mean_temp_c",
+        "zones"
+      ]
+    },
+    "hour": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "offset_ms": {
+          "type": "integer"
+        },
+        "source_t": {
+          "type": "string"
+        },
+        "actual_kw": {
+          "type": "number",
+          "minimum": 0,
+          "multipleOf": 0.1
+        },
+        "point_kw": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "outdoor_temp_c": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "hvac_setpoint_c": {
+          "type": "number"
+        },
+        "solar_w_m2": {
+          "type": "number",
+          "minimum": 0,
+          "multipleOf": 0.1
+        },
+        "floors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/floor"
+          },
+          "minItems": 40,
+          "maxItems": 40
+        },
+        "environment": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "people": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "co2_ppm": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "indoor_temp_c": {
+              "type": "number"
+            },
+            "outdoor_temp_c": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "relative_humidity_pct": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "pm25_ug_m3": {
+              "type": "number",
+              "minimum": 0,
+              "multipleOf": 0.1
+            },
+            "humidity_basis": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "people",
+            "co2_ppm",
+            "indoor_temp_c",
+            "outdoor_temp_c",
+            "relative_humidity_pct",
+            "pm25_ug_m3",
+            "humidity_basis"
+          ]
+        },
+        "storage": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "soc": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "power_kw": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "soc",
+            "power_kw"
+          ]
+        },
+        "pv": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "power_kw": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "power_kw"
+          ]
+        },
+        "grid_kw": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "end_uses": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hvac_electric_estimate_kw": {
+              "type": "number",
+              "minimum": 0,
+              "multipleOf": 0.1
+            },
+            "lighting_kw": {
+              "type": "number",
+              "minimum": 0,
+              "multipleOf": 0.1
+            },
+            "plug_kw": {
+              "type": "number",
+              "minimum": 0,
+              "multipleOf": 0.1
+            },
+            "elevator_kw": {
+              "type": "number",
+              "minimum": 0,
+              "multipleOf": 0.1
+            },
+            "other_kw": {
+              "type": "number",
+              "minimum": 0,
+              "multipleOf": 0.1
+            }
+          },
+          "required": [
+            "hvac_electric_estimate_kw",
+            "lighting_kw",
+            "plug_kw",
+            "elevator_kw",
+            "other_kw"
+          ]
+        },
+        "energy": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hour_kwh": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "actual_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "hvac_electric_estimate_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "lighting_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "plug_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "elevator_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "other_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                }
+              },
+              "required": [
+                "actual_kwh",
+                "hvac_electric_estimate_kwh",
+                "lighting_kwh",
+                "plug_kwh",
+                "elevator_kwh",
+                "other_kwh"
+              ]
+            },
+            "cumulative_start_kwh": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "actual_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "hvac_electric_estimate_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "lighting_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "plug_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "elevator_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "other_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                }
+              },
+              "required": [
+                "actual_kwh",
+                "hvac_electric_estimate_kwh",
+                "lighting_kwh",
+                "plug_kwh",
+                "elevator_kwh",
+                "other_kwh"
+              ]
+            },
+            "cumulative_end_kwh": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "actual_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "hvac_electric_estimate_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "lighting_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "plug_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "elevator_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                },
+                "other_kwh": {
+                  "type": "number",
+                  "minimum": 0,
+                  "multipleOf": 0.1
+                }
+              },
+              "required": [
+                "actual_kwh",
+                "hvac_electric_estimate_kwh",
+                "lighting_kwh",
+                "plug_kwh",
+                "elevator_kwh",
+                "other_kwh"
+              ]
+            },
+            "hour_cost_cny": {
+              "type": "number",
+              "minimum": 0,
+              "multipleOf": 0.1
+            }
+          },
+          "required": [
+            "hour_kwh",
+            "cumulative_start_kwh",
+            "cumulative_end_kwh",
+            "hour_cost_cny"
+          ]
+        },
+        "quality": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "offset_ms",
+        "source_t",
+        "actual_kw",
+        "point_kw",
+        "outdoor_temp_c",
+        "hvac_setpoint_c",
+        "solar_w_m2",
+        "environment",
+        "storage",
+        "pv",
+        "grid_kw",
+        "end_uses",
+        "energy",
+        "quality"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+ "version":"byron-blend24-monthly-v3","seed":42,
+ "parameters":{"n_estimators":150,"learning_rate":0.05,"num_leaves":31,"n_jobs":2},
+ "development":"2016July-December monthly origins with data physically clipped2016; target labels2016only",
+ "baseline":"v2latest_segmented re-fit2016; h1unchanged; all final2017baseline from hashedv2cache",
+ "candidates":{"linear_bridge":{"3":0.2,"4":0.4,"5":0.6,"6":0.8},"slow_bridge":{"3":0.1,"4":0.25,"5":0.5,"6":0.75}},
+ "weights":"long expert weight for h3-6, short=1-long. Fit overlapping short expert2-6 with load_t residual anchor and long expert3-6 with seasonal daily_target anchor. Mix point/rawquantiles/predictedscale/prior, then fit per-horizon Cq risk/CQR on mixed prediction (not interval averaging). h2andh7+retainv2model; h1exactoriginal1step.",
+ "selection":"Eligible if2016h3-6MAE<=v2*1.05, retained coverageh3-6>=0.875 and mean absolute delta34 prediction-minus-actual error<=v2*0.9. Among eligible minimize seam error then h3-6MAE then name. If none eligible select candidate with lowest seam error then MAE and mark gate failed. Freeze decision before new2017candidate evaluation; no test tuning.",
+ "risk_weights":[0.7,0.15,0.1,0.05],"rho":0.15,"alpha":0.095,"min_scale":0.001,"max_relative_width":1.0,
+ "calibration":"same prior28day65/35scale/Cq with target-label gaps; per-horizon mixed CQR quantile/risk gate; confidence previous completed targets only; h1original lookup",
+ "final":"selected candidate only, monthly2017rolling once after2016decision; report all24steps and seam metrics baseline/new. No further blend choice from2017.",
+ "unchanged":"legacy1step/champion, contract1.2, Agent records; noLLMexportcalls",
+ "limitations":"Previously viewed2017data, not blind; blend may move h6toh7jump, audit it. No joint24hcoverage guarantee. Smoothness does not prove accuracy."
+}

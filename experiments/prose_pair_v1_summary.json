@@ -1,0 +1,584 @@
+{
+  "status": "completed",
+  "completed_pairs": 312,
+  "plan_sha256": "59d1864b4bb8312fd8443afa0bd10e6619be99b1f1eef1558f86b7baad21be16",
+  "rows_sha256": "c43367d02adb47aad64d76dee0470a6f2dfe4f2010dbd67cfc62dcd8e2c6af9b",
+  "arms": {
+    "08cfb8e": {
+      "hours": 312,
+      "accepted_hours": 259,
+      "llm": 67,
+      "template": 184,
+      "rule": 61,
+      "llm_pct_accepted": 25.868725868725868,
+      "final_unsourced": 0,
+      "transport_calls": 282,
+      "fallback_reasons": {
+        "refused_current": 53,
+        "call_failed": 4,
+        "grounding_failed": 4
+      }
+    },
+    "13a9be8": {
+      "hours": 312,
+      "accepted_hours": 259,
+      "llm": 162,
+      "template": 93,
+      "rule": 57,
+      "llm_pct_accepted": 62.54826254826255,
+      "final_unsourced": 0,
+      "transport_calls": 259,
+      "fallback_reasons": {
+        "refused_current": 53,
+        "call_failed": 4
+      }
+    },
+    "17ad158": {
+      "hours": 312,
+      "accepted_hours": 259,
+      "llm": 169,
+      "template": 90,
+      "rule": 53,
+      "llm_pct_accepted": 65.25096525096525,
+      "final_unsourced": 0,
+      "transport_calls": 265,
+      "fallback_reasons": {
+        "refused_current": 53
+      }
+    }
+  },
+  "days": {
+    "2017-01-04": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 12,
+        "llm": 1,
+        "template": 10,
+        "rule": 13,
+        "llm_pct_accepted": 8.333333333333334,
+        "final_unsourced": 0,
+        "transport_calls": 12,
+        "fallback_reasons": {
+          "refused_current": 12,
+          "call_failed": 1
+        }
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 12,
+        "llm": 9,
+        "template": 3,
+        "rule": 12,
+        "llm_pct_accepted": 75.0,
+        "final_unsourced": 0,
+        "transport_calls": 12,
+        "fallback_reasons": {
+          "refused_current": 12
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 12,
+        "llm": 7,
+        "template": 5,
+        "rule": 12,
+        "llm_pct_accepted": 58.333333333333336,
+        "final_unsourced": 0,
+        "transport_calls": 12,
+        "fallback_reasons": {
+          "refused_current": 12
+        }
+      }
+    },
+    "2017-01-07": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 23,
+        "llm": 3,
+        "template": 19,
+        "rule": 2,
+        "llm_pct_accepted": 13.043478260869565,
+        "final_unsourced": 0,
+        "transport_calls": 25,
+        "fallback_reasons": {
+          "refused_current": 1,
+          "grounding_failed": 1
+        }
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 23,
+        "llm": 10,
+        "template": 13,
+        "rule": 1,
+        "llm_pct_accepted": 43.47826086956522,
+        "final_unsourced": 0,
+        "transport_calls": 23,
+        "fallback_reasons": {
+          "refused_current": 1
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 23,
+        "llm": 8,
+        "template": 15,
+        "rule": 1,
+        "llm_pct_accepted": 34.78260869565217,
+        "final_unsourced": 0,
+        "transport_calls": 23,
+        "fallback_reasons": {
+          "refused_current": 1
+        }
+      }
+    },
+    "2017-02-01": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 23,
+        "llm": 8,
+        "template": 15,
+        "rule": 1,
+        "llm_pct_accepted": 34.78260869565217,
+        "final_unsourced": 0,
+        "transport_calls": 24,
+        "fallback_reasons": {
+          "refused_current": 1
+        }
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 23,
+        "llm": 12,
+        "template": 11,
+        "rule": 1,
+        "llm_pct_accepted": 52.17391304347826,
+        "final_unsourced": 0,
+        "transport_calls": 23,
+        "fallback_reasons": {
+          "refused_current": 1
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 23,
+        "llm": 14,
+        "template": 9,
+        "rule": 1,
+        "llm_pct_accepted": 60.869565217391305,
+        "final_unsourced": 0,
+        "transport_calls": 25,
+        "fallback_reasons": {
+          "refused_current": 1
+        }
+      }
+    },
+    "2017-04-01": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 23,
+        "llm": 6,
+        "template": 16,
+        "rule": 2,
+        "llm_pct_accepted": 26.08695652173913,
+        "final_unsourced": 0,
+        "transport_calls": 26,
+        "fallback_reasons": {
+          "grounding_failed": 1,
+          "refused_current": 1
+        }
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 23,
+        "llm": 12,
+        "template": 11,
+        "rule": 1,
+        "llm_pct_accepted": 52.17391304347826,
+        "final_unsourced": 0,
+        "transport_calls": 23,
+        "fallback_reasons": {
+          "refused_current": 1
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 23,
+        "llm": 14,
+        "template": 9,
+        "rule": 1,
+        "llm_pct_accepted": 60.869565217391305,
+        "final_unsourced": 0,
+        "transport_calls": 24,
+        "fallback_reasons": {
+          "refused_current": 1
+        }
+      }
+    },
+    "2017-04-05": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 22,
+        "llm": 10,
+        "template": 10,
+        "rule": 4,
+        "llm_pct_accepted": 45.45454545454545,
+        "final_unsourced": 0,
+        "transport_calls": 27,
+        "fallback_reasons": {
+          "refused_current": 2,
+          "grounding_failed": 1,
+          "call_failed": 1
+        }
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 22,
+        "llm": 13,
+        "template": 9,
+        "rule": 2,
+        "llm_pct_accepted": 59.09090909090909,
+        "final_unsourced": 0,
+        "transport_calls": 22,
+        "fallback_reasons": {
+          "refused_current": 2
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 22,
+        "llm": 18,
+        "template": 4,
+        "rule": 2,
+        "llm_pct_accepted": 81.81818181818181,
+        "final_unsourced": 0,
+        "transport_calls": 23,
+        "fallback_reasons": {
+          "refused_current": 2
+        }
+      }
+    },
+    "2017-07-01": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 24,
+        "llm": 3,
+        "template": 21,
+        "rule": 0,
+        "llm_pct_accepted": 12.5,
+        "final_unsourced": 0,
+        "transport_calls": 25,
+        "fallback_reasons": {}
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 24,
+        "llm": 19,
+        "template": 4,
+        "rule": 1,
+        "llm_pct_accepted": 79.16666666666667,
+        "final_unsourced": 0,
+        "transport_calls": 24,
+        "fallback_reasons": {
+          "call_failed": 1
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 24,
+        "llm": 16,
+        "template": 8,
+        "rule": 0,
+        "llm_pct_accepted": 66.66666666666667,
+        "final_unsourced": 0,
+        "transport_calls": 24,
+        "fallback_reasons": {}
+      }
+    },
+    "2017-07-04": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 12,
+        "llm": 5,
+        "template": 7,
+        "rule": 12,
+        "llm_pct_accepted": 41.666666666666664,
+        "final_unsourced": 0,
+        "transport_calls": 13,
+        "fallback_reasons": {
+          "refused_current": 12
+        }
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 12,
+        "llm": 9,
+        "template": 3,
+        "rule": 12,
+        "llm_pct_accepted": 75.0,
+        "final_unsourced": 0,
+        "transport_calls": 12,
+        "fallback_reasons": {
+          "refused_current": 12
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 12,
+        "llm": 9,
+        "template": 3,
+        "rule": 12,
+        "llm_pct_accepted": 75.0,
+        "final_unsourced": 0,
+        "transport_calls": 12,
+        "fallback_reasons": {
+          "refused_current": 12
+        }
+      }
+    },
+    "2017-07-05": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 14,
+        "llm": 5,
+        "template": 9,
+        "rule": 10,
+        "llm_pct_accepted": 35.714285714285715,
+        "final_unsourced": 0,
+        "transport_calls": 14,
+        "fallback_reasons": {
+          "refused_current": 10
+        }
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 14,
+        "llm": 10,
+        "template": 4,
+        "rule": 10,
+        "llm_pct_accepted": 71.42857142857143,
+        "final_unsourced": 0,
+        "transport_calls": 14,
+        "fallback_reasons": {
+          "refused_current": 10
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 14,
+        "llm": 8,
+        "template": 6,
+        "rule": 10,
+        "llm_pct_accepted": 57.142857142857146,
+        "final_unsourced": 0,
+        "transport_calls": 14,
+        "fallback_reasons": {
+          "refused_current": 10
+        }
+      }
+    },
+    "2017-07-20": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 22,
+        "llm": 6,
+        "template": 14,
+        "rule": 4,
+        "llm_pct_accepted": 27.272727272727273,
+        "final_unsourced": 0,
+        "transport_calls": 24,
+        "fallback_reasons": {
+          "refused_current": 2,
+          "call_failed": 1,
+          "grounding_failed": 1
+        }
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 22,
+        "llm": 17,
+        "template": 5,
+        "rule": 2,
+        "llm_pct_accepted": 77.27272727272727,
+        "final_unsourced": 0,
+        "transport_calls": 22,
+        "fallback_reasons": {
+          "refused_current": 2
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 22,
+        "llm": 15,
+        "template": 7,
+        "rule": 2,
+        "llm_pct_accepted": 68.18181818181819,
+        "final_unsourced": 0,
+        "transport_calls": 22,
+        "fallback_reasons": {
+          "refused_current": 2
+        }
+      }
+    },
+    "2017-10-04": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 23,
+        "llm": 6,
+        "template": 17,
+        "rule": 1,
+        "llm_pct_accepted": 26.08695652173913,
+        "final_unsourced": 0,
+        "transport_calls": 24,
+        "fallback_reasons": {
+          "refused_current": 1
+        }
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 23,
+        "llm": 14,
+        "template": 8,
+        "rule": 2,
+        "llm_pct_accepted": 60.869565217391305,
+        "final_unsourced": 0,
+        "transport_calls": 23,
+        "fallback_reasons": {
+          "refused_current": 1,
+          "call_failed": 1
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 23,
+        "llm": 14,
+        "template": 9,
+        "rule": 1,
+        "llm_pct_accepted": 60.869565217391305,
+        "final_unsourced": 0,
+        "transport_calls": 23,
+        "fallback_reasons": {
+          "refused_current": 1
+        }
+      }
+    },
+    "2017-10-07": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 24,
+        "llm": 5,
+        "template": 19,
+        "rule": 0,
+        "llm_pct_accepted": 20.833333333333332,
+        "final_unsourced": 0,
+        "transport_calls": 28,
+        "fallback_reasons": {}
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 24,
+        "llm": 13,
+        "template": 10,
+        "rule": 1,
+        "llm_pct_accepted": 54.166666666666664,
+        "final_unsourced": 0,
+        "transport_calls": 24,
+        "fallback_reasons": {
+          "call_failed": 1
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 24,
+        "llm": 14,
+        "template": 10,
+        "rule": 0,
+        "llm_pct_accepted": 58.333333333333336,
+        "final_unsourced": 0,
+        "transport_calls": 25,
+        "fallback_reasons": {}
+      }
+    },
+    "2017-10-23": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 24,
+        "llm": 5,
+        "template": 18,
+        "rule": 1,
+        "llm_pct_accepted": 20.833333333333332,
+        "final_unsourced": 0,
+        "transport_calls": 27,
+        "fallback_reasons": {
+          "call_failed": 1
+        }
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 24,
+        "llm": 15,
+        "template": 8,
+        "rule": 1,
+        "llm_pct_accepted": 62.5,
+        "final_unsourced": 0,
+        "transport_calls": 24,
+        "fallback_reasons": {
+          "call_failed": 1
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 24,
+        "llm": 21,
+        "template": 3,
+        "rule": 0,
+        "llm_pct_accepted": 87.5,
+        "final_unsourced": 0,
+        "transport_calls": 25,
+        "fallback_reasons": {}
+      }
+    },
+    "2017-11-23": {
+      "08cfb8e": {
+        "hours": 24,
+        "accepted_hours": 13,
+        "llm": 4,
+        "template": 9,
+        "rule": 11,
+        "llm_pct_accepted": 30.76923076923077,
+        "final_unsourced": 0,
+        "transport_calls": 13,
+        "fallback_reasons": {
+          "refused_current": 11
+        }
+      },
+      "13a9be8": {
+        "hours": 24,
+        "accepted_hours": 13,
+        "llm": 9,
+        "template": 4,
+        "rule": 11,
+        "llm_pct_accepted": 69.23076923076923,
+        "final_unsourced": 0,
+        "transport_calls": 13,
+        "fallback_reasons": {
+          "refused_current": 11
+        }
+      },
+      "17ad158": {
+        "hours": 24,
+        "accepted_hours": 13,
+        "llm": 11,
+        "template": 2,
+        "rule": 11,
+        "llm_pct_accepted": 84.61538461538461,
+        "final_unsourced": 0,
+        "transport_calls": 13,
+        "fallback_reasons": {
+          "refused_current": 11
+        }
+      }
+    }
+  },
+  "target_met": true
+}

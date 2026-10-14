@@ -1,0 +1,377 @@
+[
+  {
+    "question": "空调改26度能省多少电费",
+    "index": 48,
+    "old": {
+      "contains": [
+        "元"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义费用措辞不决定通过；改前改后温度/电费/方向/峰值/全部排除时段按工具原始值核对。"
+  },
+  {
+    "question": "你好，今天有点累，陪我聊两句",
+    "index": 53,
+    "old": {
+      "exact_sentences": null
+    },
+    "new": {
+      "exact_sentences": 2
+    },
+    "reason": "用户明确要求两句，自动检查恰好两句。"
+  },
+  {
+    "question": "空调改24度电费多少",
+    "index": 74,
+    "old": {
+      "contains": [
+        "预计多花"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义费用措辞不决定通过；改前改后温度/电费/方向/峰值/全部排除时段按工具原始值核对。"
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "index": 75,
+    "old": {
+      "contains": [
+        "24.5 °C",
+        "预计多花",
+        "电网峰值",
+        "kW",
+        "只覆盖",
+        "未计入"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义费用措辞不决定通过；改前改后温度/电费/方向/峰值/全部排除时段按工具原始值核对。"
+  },
+  {
+    "question": "空调设定降低1度，电费和峰值有什么变化",
+    "index": 76,
+    "old": {
+      "contains": [
+        "24.5 °C",
+        "预计多花",
+        "电网峰值",
+        "kW",
+        "只覆盖",
+        "未计入"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义费用措辞不决定通过；改前改后温度/电费/方向/峰值/全部排除时段按工具原始值核对。"
+  },
+  {
+    "question": "空调降温一度要多花多少钱",
+    "index": 77,
+    "old": {
+      "contains": [
+        "24.5 °C",
+        "预计多花",
+        "电网峰值",
+        "kW",
+        "只覆盖",
+        "未计入"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义费用措辞不决定通过；改前改后温度/电费/方向/峰值/全部排除时段按工具原始值核对。"
+  },
+  {
+    "question": "把空调温度下调一度呢",
+    "index": 78,
+    "old": {
+      "contains": [
+        "24.5 °C",
+        "预计多花",
+        "电网峰值",
+        "kW",
+        "只覆盖",
+        "未计入"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义费用措辞不决定通过；改前改后温度/电费/方向/峰值/全部排除时段按工具原始值核对。"
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "index": 80,
+    "old": {
+      "contains": [
+        "24.8 °C",
+        "预计多花",
+        "506.9 元",
+        "电网峰值",
+        "只覆盖",
+        "未计入"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义费用措辞不决定通过；改前改后温度/电费/方向/峰值/全部排除时段按工具原始值核对。"
+  },
+  {
+    "question": "空调设定调到24度会多花多少钱",
+    "index": 81,
+    "old": {
+      "contains": [
+        "24.0 °C",
+        "预计多花",
+        "912.5 元",
+        "电网峰值",
+        "只覆盖",
+        "未计入"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义费用措辞不决定通过；改前改后温度/电费/方向/峰值/全部排除时段按工具原始值核对。"
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "index": 82,
+    "old": {
+      "contains": [
+        "24.5 °C",
+        "预计多花",
+        "292.6 元",
+        "电网峰值",
+        "只覆盖",
+        "未计入"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义费用措辞不决定通过；改前改后温度/电费/方向/峰值/全部排除时段按工具原始值核对。"
+  },
+  {
+    "question": "空调设定调到24度会多花多少钱",
+    "index": 83,
+    "old": {
+      "contains": [
+        "24.0 °C",
+        "预计多花",
+        "438.9 元",
+        "电网峰值",
+        "只覆盖",
+        "未计入"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义费用措辞不决定通过；改前改后温度/电费/方向/峰值/全部排除时段按工具原始值核对。"
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "index": 84,
+    "old": {
+      "contains": [
+        "25.4 °C",
+        "预计多花",
+        "292.9 元",
+        "电网峰值",
+        "只覆盖",
+        "未计入"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义费用措辞不决定通过；改前改后温度/电费/方向/峰值/全部排除时段按工具原始值核对。"
+  },
+  {
+    "question": "空调设定调到24度会多花多少钱",
+    "index": 85,
+    "old": {
+      "contains": [
+        "24.0 °C",
+        "预计多花",
+        "703.0 元",
+        "电网峰值",
+        "只覆盖",
+        "未计入"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义费用措辞不决定通过；改前改后温度/电费/方向/峰值/全部排除时段按工具原始值核对。"
+  },
+  {
+    "question": "光伏现在发多少电",
+    "index": 88,
+    "old": {
+      "tool": "current_energy",
+      "semantic_check": null
+    },
+    "new": {
+      "tool": null,
+      "semantic_check": "pv_power"
+    },
+    "reason": "光伏瞬时pv_kw来自current_energy或pv_generation同字段均可；不能用累计kWh替代。"
+  },
+  {
+    "question": "空调改到24度能省多少钱",
+    "index": 4,
+    "old": {
+      "contains": [
+        "24.0 °C",
+        "预计多花",
+        "不按整天"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义措辞按原始比较值和方向，保留全部排除时刻及原因/非整天。"
+  },
+  {
+    "question": "本楼业主是谁",
+    "index": 6,
+    "old": {
+      "contains": [
+        "系统里没有"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [],
+      "semantic_check": "no_local_identity"
+    },
+    "reason": "明确查不到本楼业主物业记录可正确，不要求固定系统里没有。"
+  },
+  {
+    "question": "那么物业公司是谁？",
+    "index": 7,
+    "old": {
+      "contains": [
+        "系统里没有"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [],
+      "semantic_check": "no_local_identity"
+    },
+    "reason": "明确查不到本楼业主物业记录可正确，不要求固定系统里没有。"
+  },
+  {
+    "question": "那今天几号？",
+    "index": 11,
+    "old": {
+      "contains": [
+        "2026-10-13"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [],
+      "semantic_check": "host_date"
+    },
+    "reason": "月日中文与ISO日期等价，必须来自工具display_date而非历史起点年份。"
+  },
+  {
+    "question": "比刚才的设定调低一度，电费会怎样？",
+    "index": 19,
+    "old": {
+      "contains": [
+        "24.5 °C",
+        "预计多花",
+        "不按整天"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "元",
+        "kW"
+      ],
+      "semantic_check": "hvac"
+    },
+    "reason": "同义措辞按原始比较值和方向，保留全部排除时刻及原因/非整天。"
+  }
+]

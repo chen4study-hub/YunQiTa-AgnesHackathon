@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "schema_version": "1.5",
+  "files": {
+    "exports/replay/normal.json": {
+      "before": {
+        "raw_bytes": 1881583,
+        "gzip_bytes": 252161
+      },
+      "after": {
+        "raw_bytes": 399558,
+        "gzip_bytes": 56425
+      }
+    },
+    "exports/replay/normal.agent-detail.json": {
+      "before": {
+        "raw_bytes": 0,
+        "gzip_bytes": 0
+      },
+      "after": {
+        "raw_bytes": 1270291,
+        "gzip_bytes": 97377
+      }
+    },
+    "exports/replay/peak.json": {
+      "before": {
+        "raw_bytes": 1866428,
+        "gzip_bytes": 259326
+      },
+      "after": {
+        "raw_bytes": 399837,
+        "gzip_bytes": 59539
+      }
+    },
+    "exports/replay/peak.agent-detail.json": {
+      "before": {
+        "raw_bytes": 0,
+        "gzip_bytes": 0
+      },
+      "after": {
+        "raw_bytes": 1230164,
+        "gzip_bytes": 94711
+      }
+    },
+    "exports/replay/abstain.json": {
+      "before": {
+        "raw_bytes": 1733539,
+        "gzip_bytes": 248470
+      },
+      "after": {
+        "raw_bytes": 398377,
+        "gzip_bytes": 63450
+      }
+    },
+    "exports/replay/abstain.agent-detail.json": {
+      "before": {
+        "raw_bytes": 0,
+        "gzip_bytes": 0
+      },
+      "after": {
+        "raw_bytes": 1113527,
+        "gzip_bytes": 85441
+      }
+    }
+  },
+  "source_counts": {
+    "normal": {
+      "before": {
+        "llm": 16,
+        "template": 8
+      },
+      "after": {
+        "llm": 16,
+        "template": 8
+      }
+    },
+    "peak": {
+      "before": {
+        "llm": 15,
+        "template": 7,
+        "rule": 2
+      },
+      "after": {
+        "llm": 15,
+        "template": 7,
+        "rule": 2
+      }
+    },
+    "abstain": {
+      "before": {
+        "llm": 11,
+        "template": 1,
+        "rule": 12
+      },
+      "after": {
+        "llm": 11,
+        "template": 1,
+        "rule": 12
+      }
+    }
+  },
+  "new_llm_calls": 0,
+  "new_dispatches": 0,
+  "exact_runtime_roundtrip": true,
+  "gate_booleans_preserved": true,
+  "pair_idempotent": true,
+  "display_precision": "nearest half-even; power/energy/cost/temp 1 decimal, probabilities/ratios 4",
+  "runtime_precision": "frozen Agent evidence and sparse numeric overrides retain exact originals, not display data",
+  "engineering_metadata_unchanged": true,
+  "before_revision": "ad86110 (before prose repair and split)"
+}

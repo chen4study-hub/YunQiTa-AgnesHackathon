@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "owned_port": 50261,
+  "owned_process_stopped": true,
+  "resident_changed": false,
+  "results": [
+    {
+      "question": "2020 年诺贝尔奖得主有哪些",
+      "known": true,
+      "reason": "answered",
+      "answer": "2020 年已公布的获奖名单：化学奖：Emmanuelle Charpentier、Jennifer A. Doudna。经济学奖：Paul R. Milgrom、Robert B. Wilson。文学奖：Louise Glück。和平奖：World Food Programme。物理学奖：Roger Penrose、Reinhard Genzel、Andrea Ghez。生理学或医学奖：Harvey J. Alter、Michael Houghton、Charles M. Rice。\n来源：\n2020 年化学奖：https://api.nobelprize.org/2.1/nobelPrizes?nobelPrizeYear=2020&limit=10\n2020 年经济学奖：https://api.nobelprize.org/2.1/nobelPrizes?nobelPrizeYear=2020&limit=10\n2020 年文学奖：https://api.nobelprize.org/2.1/nobelPrizes?nobelPrizeYear=2020&limit=10\n2020 年和平奖：https://api.nobelprize.org/2.1/nobelPrizes?nobelPrizeYear=2020&limit=10\n2020 年物理学奖：https://api.nobelprize.org/2.1/nobelPrizes?nobelPrizeYear=2020&limit=10\n2020 年生理学或医学奖：https://api.nobelprize.org/2.1/nobelPrizes?nobelPrizeYear=2020&limit=10",
+      "json_sse_equal": true
+    },
+    {
+      "question": "2099 年诺贝尔奖得主有哪些",
+      "known": false,
+      "reason": "out_of_scope",
+      "answer": "这个问题超出楼宇运维数据的范围。目前未查到可核验的信息，不能确认。可以问负荷、电费、储能、空调、天气、楼层环境和告警。",
+      "json_sse_equal": true
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "champion": "paper-inspired-v1",
+  "models": [
+    {
+      "version": "paper-inspired-v1",
+      "status": "ready",
+      "metrics": {
+        "mae": 15.478584909673994,
+        "rmse": 27.819515481151775,
+        "cv_rmse": 16.605438814298658,
+        "nmbe": 0.5929027355761713,
+        "picp": 0.8793626707132018,
+        "pinaw": 0.08352214796227485,
+        "rejection_rate": 0.2822458270106222,
+        "retained_mae": 7.210797384356916,
+        "retained_rmse": 14.424604650886357,
+        "retained_picp": 0.8946441155743481,
+        "risk_coverage_curve_gate_rank": [
+          {
+            "coverage": 1,
+            "risk_mae": 15.478584909673994
+          },
+          {
+            "coverage": 0.9,
+            "risk_mae": 12.660051809528042
+          },
+          {
+            "coverage": 0.8,
+            "risk_mae": 9.61849431616363
+          },
+          {
+            "coverage": 0.7,
+            "risk_mae": 6.416150231694998
+          }
+        ]
+      },
+      "seed": 42,
+      "config_path": "configs/baseline.yaml",
+      "elapsed_seconds": 2.4219999999986612,
+      "validation": {
+        "mae": 16.304974312306406,
+        "rmse": 30.298782139121975,
+        "cv_rmse": 13.797505725345607,
+        "nmbe": -1.089002707796914,
+        "picp": 0.9329916476841306,
+        "pinaw": 0.08038324229661996,
+        "rejection_rate": 0.31473044798785116,
+        "retained_mae": 6.65090017307779,
+        "retained_rmse": 12.116275503659015,
+        "retained_picp": 0.9321329639889196
+      },
+      "baseline_validation_rmse": 33.48339641311811,
+      "eligible_for_champion": true,
+      "data_source": "data/bdg2_cohort.csv",
+      "split": {
+        "train_end": "2016-08-25 20:00:00+00:00",
+        "calib_end": "2016-11-07 01:00:00+00:00",
+        "test_end": "2016-12-31 23:00:00+00:00"
+      }
+    },
+    {
+      "version": "hog2017-v1",
+      "status": "ready",
+      "metrics": {
+        "mae": 8.216731121021839,
+        "rmse": 18.21033000524865,
+        "cv_rmse": 7.729189928226788,
+        "nmbe": 0.17829300325354994,
+        "picp": 0.9068135016563703,
+        "pinaw": 0.009056536808528715,
+        "rejection_rate": 0.3298146655922643,
+        "retained_mae": 3.8713400245311247,
+        "retained_rmse": 6.221639866030762,
+        "retained_picp": 0.9194688255647736,
+        "risk_coverage_curve_gate_rank": [
+          {
+            "coverage": 1,
+            "risk_mae": 8.216731121021839
+          },
+          {
+            "coverage": 0.9,
+            "risk_mae": 5.918752039918246
+          },
+          {
+            "coverage": 0.8,
+            "risk_mae": 4.54957075435053
+          },
+          {
+            "coverage": 0.7,
+            "risk_mae": 3.7270987795919353
+          }
+        ]
+      },
+      "seed": 42,
+      "config_path": "configs/hog2017.yaml",
+      "elapsed_seconds": 23.90599999999904,
+      "validation": {
+        "mae": 16.051407084788913,
+        "rmse": 52.31445627587423,
+        "cv_rmse": 16.802052662992182,
+        "nmbe": -0.7778132708912707,
+        "picp": 0.9015713134568896,
+        "pinaw": 0.007442115281927014,
+        "rejection_rate": 0.3365296803652968,
+        "retained_mae": 4.085548837341488,
+        "retained_rmse": 7.34714872041213,
+        "retained_picp": 0.9164608720294725
+      },
+      "baseline_validation_rmse": 59.50535548441218,
+      "eligible_for_champion": false,
+      "data_source": "data/hog2017_cohort.csv",
+      "split": {
+        "train_end": "2017-08-26 05:00:00+00:00",
+        "calib_end": "2017-11-07 05:00:00+00:00",
+        "test_end": "2017-12-31 23:00:00+00:00"
+      }
+    },
+    {
+      "version": "byron2017-v1",
+      "status": "ready",
+      "metrics": {
+        "mae": 10.829925688088126,
+        "rmse": 15.437353613914185,
+        "cv_rmse": 1.6646074119871497,
+        "nmbe": -0.08510004597755323,
+        "picp": 0.8538812785388128,
+        "pinaw": 0.06890525646076838,
+        "rejection_rate": 0.4353120243531202,
+        "retained_mae": 8.683129288369624,
+        "retained_rmse": 11.349489805977225,
+        "retained_picp": 0.8113207547169812,
+        "risk_coverage_curve_gate_rank": [
+          {
+            "coverage": 1,
+            "risk_mae": 10.829925688088126
+          },
+          {
+            "coverage": 0.9,
+            "risk_mae": 9.934431147807237
+          },
+          {
+            "coverage": 0.8,
+            "risk_mae": 9.209982116623962
+          },
+          {
+            "coverage": 0.7,
+            "risk_mae": 8.873418426820548
+          }
+        ]
+      },
+      "seed": 42,
+      "config_path": "configs/byron2017.yaml",
+      "elapsed_seconds": 0.5619999999980791,
+      "validation": {
+        "mae": 11.245466366088376,
+        "rmse": 16.260081581094465,
+        "cv_rmse": 1.669195864850745,
+        "nmbe": -0.26173262611307946,
+        "picp": 0.952054794520548,
+        "pinaw": 0.18717656372881358,
+        "rejection_rate": 0.1267123287671233,
+        "retained_mae": 9.75186038493082,
+        "retained_rmse": 13.514842935128083,
+        "retained_picp": 0.9450980392156862
+      },
+      "baseline_validation_rmse": 46.338072698174216,
+      "eligible_for_champion": false,
+      "data_source": "data/byron2017.csv",
+      "split": {
+        "train_end": "2017-08-26 05:00:00+00:00",
+        "calib_end": "2017-11-07 05:00:00+00:00",
+        "test_end": "2017-12-31 23:00:00+00:00"
+      }
+    },
+    {
+      "version": "byron2017-v1-cqr",
+      "status": "replay_only",
+      "mode": "shadow",
+      "eligible_for_champion": false,
+      "artifact": "models\\byron2017-v1-cqr.joblib",
+      "artifact_sha256": "e836087f8dc0fbda5edd8c62dcde401e7b9ba38ccb57aa49d8899fbc09aa52ec",
+      "validation": {
+        "split": "validation",
+        "rho": 0.15,
+        "method": "cqr",
+        "weeks": 0,
+        "seed": 42,
+        "n": 876,
+        "retained_n": 842,
+        "rejection_rate": 0.03881278538812785,
+        "retained_picp": 0.9168646080760094,
+        "retained_mae": 10.623393891615079,
+        "mae": 11.245466366088376,
+        "rmse": 16.260081581094465,
+        "width": 56.23569048269604,
+        "ci_low": 0.8961290015582812,
+        "ci_high": 0.93462073736868,
+        "elapsed_seconds": 0.7969999999986612
+      },
+      "metrics": {
+        "target_rejection": 0.15,
+        "actual_rejection": 0.19710806697108066,
+        "retained_picp": 0.8767772511848341,
+        "retained_mae": 9.197226578975224
+      },
+      "notes": "No same-rate MAE improvement; final undercoverage; champion unchanged"
+    },
+    {
+      "version": "byron-expanded-holiday-monthly-v1",
+      "status": "demo_active",
+      "scope": "Byron monthly historical log dispatch",
+      "holiday_feature_enabled": true,
+      "artifact_index": "experiments/demo_monthly_index.json"
+    }
+  ],
+  "demo_model": "byron-expanded-holiday-monthly-v1",
+  "demo_route": "configs/prediction_routes.json",
+  "demo_metrics": {
+    "n": 8760,
+    "retained_n": 7344,
+    "rejection_rate": 0.16164383561643836,
+    "retained_picp": 0.9038671023965141,
+    "retained_mae": 10.138421385005199,
+    "all_mae": 11.59305247483131,
+    "interval_score": 110.71413596804275
+  }
+}

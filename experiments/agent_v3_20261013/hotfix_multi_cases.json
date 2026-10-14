@@ -1,0 +1,4 @@
+[
+  {"question":"今天储能一共充了多少电？","tool":"storage_history","contains":["802.4 kWh"],"excludes":["未能取得可用"],"display_time":"19:30","group":"charge_discharge","semantic_evidence":true},
+  {"question":"那放电呢？","tool":"storage_history","contains":["1,171.7 kWh"],"excludes":["当前电量","电量 29.5","现在 19:30","未能取得可用"],"display_time":"19:30","group":"charge_discharge","semantic_evidence":true}
+]

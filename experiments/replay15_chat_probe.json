@@ -1,0 +1,135 @@
+{
+  "status": "passed",
+  "schema_version": "1.5",
+  "owned_port": 51646,
+  "resident_unchanged": true,
+  "owned_process_stopped": true,
+  "new_llm_calls": 0,
+  "results": [
+    {
+      "question": "现在几点",
+      "known": true,
+      "grounded": true,
+      "answer": "现在 13:44。",
+      "tool_names": [
+        "get_time"
+      ],
+      "llm_called": false,
+      "json_sse_equal": true,
+      "elapsed_ms": 93.0
+    },
+    {
+      "question": "今天几号",
+      "known": true,
+      "grounded": true,
+      "answer": "今天是 10 月 12 日。",
+      "tool_names": [
+        "get_time"
+      ],
+      "llm_called": false,
+      "json_sse_equal": true,
+      "elapsed_ms": 63.0
+    },
+    {
+      "question": "天气怎么样",
+      "known": true,
+      "grounded": true,
+      "answer": "当前室外 13.3 °C，湿度 57%。",
+      "tool_names": [
+        "get_weather"
+      ],
+      "llm_called": false,
+      "json_sse_equal": true,
+      "elapsed_ms": 93.0
+    },
+    {
+      "question": "现在储能电量多少",
+      "known": true,
+      "grounded": true,
+      "answer": "当前储能电量 60.0%。",
+      "tool_names": [
+        "current_state"
+      ],
+      "llm_called": false,
+      "json_sse_equal": true,
+      "elapsed_ms": 78.0
+    },
+    {
+      "question": "为什么这样调度",
+      "known": true,
+      "grounded": true,
+      "answer": "选用全额调度，负荷偏高时的电网峰值为 1,179.9 kW，电费为 15,172.3 元。相对保持原运行方式的基准，预计节省 2,234.5 元。仅比较可自动调度的时段，未计入的小时不计电费。",
+      "tool_names": [
+        "selection_reason"
+      ],
+      "llm_called": false,
+      "json_sse_equal": true,
+      "elapsed_ms": 62.0
+    },
+    {
+      "question": "执行回执是什么",
+      "known": true,
+      "grounded": true,
+      "answer": "14:00 当前小时回执确认 2 条指令，耗时 1.4 毫秒。这是 BA/EMS 下发日志回执。",
+      "tool_names": [
+        "execution_receipt"
+      ],
+      "llm_called": false,
+      "json_sse_equal": true,
+      "elapsed_ms": 78.0
+    },
+    {
+      "question": "明天最高负荷",
+      "known": true,
+      "grounded": true,
+      "answer": "本次预测中最高负荷约 1,279.7 kW，出现在明天 13:00。",
+      "tool_names": [
+        "get_forecast",
+        "forecast_peak"
+      ],
+      "llm_called": false,
+      "json_sse_equal": true,
+      "elapsed_ms": 63.0
+    },
+    {
+      "question": "未来天气怎么样",
+      "known": true,
+      "grounded": true,
+      "answer": "15:00：室外 13.3 °C，湿度 57%。16:00：室外 13.3 °C，湿度 57%。17:00：室外 13.3 °C，湿度 57%。",
+      "tool_names": [
+        "get_weather"
+      ],
+      "llm_called": false,
+      "json_sse_equal": true,
+      "elapsed_ms": 63.0
+    },
+    {
+      "question": "空调改26度电费多少",
+      "known": true,
+      "grounded": true,
+      "answer": "从 25.5 °C改为 26.0 °C，计入时段电费从 16,769.6 元变为 16,506.2 元，预计可节省 263.4 元。本次只覆盖可自动调度的 21 个小时，另有 3 个小时未计入，不按整天计算。未计入时段：17:00–19:00（预测风险偏高）；请值班人员检查这些时段的表计和设备记录，费用差额不含这些小时。使用分时电价。",
+      "tool_names": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "llm_called": false,
+      "json_sse_equal": true,
+      "elapsed_ms": 63.0
+    },
+    {
+      "question": "当前光伏和储能功率是多少",
+      "known": true,
+      "grounded": true,
+      "answer": "当前光伏功率 114.3 kW，储能功率 0.0 kW。储能正值为放电，负值为充电。",
+      "tool_names": [
+        "current_energy"
+      ],
+      "llm_called": false,
+      "json_sse_equal": true,
+      "elapsed_ms": 47.0
+    }
+  ]
+}

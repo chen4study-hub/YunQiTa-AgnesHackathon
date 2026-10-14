@@ -1,0 +1,871 @@
+{
+  "kind": "ten",
+  "switch": "on",
+  "source_hash": {
+    "src/api/app.py": "9e11e69be8fc223f99b8b921c68533f4e0144635c05a034a233ed5813d2c0969",
+    "src/agent/agent_runner.py": "1cc4088c68f98ac852731fabe37783ee12636961de4a55608a39365cd1bf6ef2",
+    "src/agent/agent_provider.py": "07f63023152da79d093d57088442fa2eb6fe39ddcf03d19f41534ea9cb90c5fa",
+    "src/agent/agent_tools.py": "04e38990944acc0c2d694d6d5a635d3eaeb0cf88a0bd3867e4bb28e1da6746aa",
+    "src/agent/agent_validation.py": "4796f2577ef190bb1f75b4932d400731c1c8173d9717043c62d5ca74e3dc433a",
+    "tests/building_chat_cases.json": "dccb868255eabb22041971894f4e08a66f737043c9fc91cd71c761cac233d127"
+  },
+  "results": [
+    {
+      "index": 0,
+      "question": "现在几点",
+      "answer": "现在是 14:00，日期为 2,026-10-13。",
+      "tools": [],
+      "duration_ms": 1219.0,
+      "first_answer_ms": 1219.0,
+      "correct_with_evidence": false,
+      "success_within_15s": false,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 1063.0,
+            "reason": "completed",
+            "post_tool": false
+          }
+        ],
+        "session_id": "8275b2b6a75243e9b8fca131ef4df6c3",
+        "context_id": null,
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none"
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 969.0,
+          "total_ms": 1063.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 69
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal"
+    },
+    {
+      "index": 1,
+      "question": "天气怎么样",
+      "answer": "云栖塔室外当前 13.3 °C，湿度 57.0%。",
+      "tools": [
+        "get_weather"
+      ],
+      "duration_ms": 21047.0,
+      "first_answer_ms": 21047.0,
+      "correct_with_evidence": true,
+      "success_within_15s": false,
+      "finished_within_15s": false,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 10000.0,
+            "reason": "first_token_timeout",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 17984.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 2984.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "bde68070bab44ecb999294ff01fd3e9f",
+        "context_id": "dd611f99d3b540a089a075a2fa69c744",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none"
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": null,
+          "total_ms": 10000.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 0
+        },
+        {
+          "first_response_ms": 7890.0,
+          "total_ms": 7984.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 352
+        },
+        {
+          "first_response_ms": 2672.0,
+          "total_ms": 2984.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 51
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal"
+    },
+    {
+      "index": 2,
+      "question": "当前能源怎么样",
+      "answer": "当前光伏 114.3 kW，电网 820.1 kW，储能 323.7 kW；电量 36.4%。",
+      "tools": [
+        "current_energy",
+        "current_state"
+      ],
+      "duration_ms": 8812.0,
+      "first_answer_ms": 8812.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 6890.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 1875.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "c5264572ff314d90a9e1110b6cd48a9d",
+        "context_id": "b84c4050a25e48f5beae01ea7d4f7607",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none"
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 6672.0,
+          "total_ms": 6890.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 532
+        },
+        {
+          "first_response_ms": 750.0,
+          "total_ms": 1875.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 112
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal"
+    },
+    {
+      "index": 3,
+      "question": "储能还剩多少电",
+      "answer": "储能剩余电量 36.4%。",
+      "tools": [
+        "current_state"
+      ],
+      "duration_ms": 15031.0,
+      "first_answer_ms": 15031.0,
+      "correct_with_evidence": true,
+      "success_within_15s": false,
+      "finished_within_15s": false,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 5250.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 9734.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "ba3a331592794a82b86a1a15c7ad9c55",
+        "context_id": "4a525c184aeb4f49a1415a2cd1a5bddc",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none"
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 5188.0,
+          "total_ms": 5235.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 267
+        },
+        {
+          "first_response_ms": 9703.0,
+          "total_ms": 9734.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 29
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal"
+    },
+    {
+      "index": 4,
+      "question": "未来24小时峰值什么时候",
+      "answer": "未来 24 小时预计最高负荷约 1,279.7 kW，出现在次日 13:00。",
+      "tools": [
+        "forecast_peak"
+      ],
+      "duration_ms": 3484.0,
+      "first_answer_ms": 3484.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": true,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 2485.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 922.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "2ffbe46067b54b1abac0d527f1a2fd95",
+        "context_id": "a9c7df9347024caba02bd9ce425fa01d",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none"
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 1360.0,
+          "total_ms": 2485.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 357
+        },
+        {
+          "first_response_ms": 578.0,
+          "total_ms": 922.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 97
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal"
+    },
+    {
+      "index": 5,
+      "question": "空调调到24度能省多少钱",
+      "answer": "空调调到 24.0 °C 不会省钱，反而多花 **620.7 元**（按计入的 18 个可自动调度小时）。电费从 **13,173.3 元**升至 **13,794.1 元**，电网峰值相应增加 **57.3 kW**，即 **1,215.3 kW** 变为 **1,272.6 kW**。本次比较仅覆盖可自动调度的 18 个小时，另有 6 个小时未计入，不按整天计算。未计入时段及原因如下：\n- 17:00（预测变化较大）\n- 18:00（预测变化较大）\n- 19:00（预测变化较大）\n- 20:00（预测变化较大）\n- 次日 13:00（预测变化较大）\n- 次日 14:00（预测变化较大）",
+      "tools": [
+        "hvac_compare"
+      ],
+      "duration_ms": 11454.0,
+      "first_answer_ms": 11454.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": true,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 4110.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 2688.0,
+            "reason": "completed",
+            "post_tool": true
+          },
+          {
+            "phase": "agent_decision",
+            "step": 3,
+            "elapsed_ms": 4531.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "45623568581b41f1a007bb02bc9983c8",
+        "context_id": "706ea837cf214a4e89fdb6db9beafdf1",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none"
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 2907.0,
+          "total_ms": 4110.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 427
+        },
+        {
+          "first_response_ms": 656.0,
+          "total_ms": 2688.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 540
+        },
+        {
+          "first_response_ms": 1593.0,
+          "total_ms": 4531.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 765
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal"
+    },
+    {
+      "index": 6,
+      "question": "先查当前能源，再看储能还剩多少电",
+      "answer": "当前能源：光伏 114.3 kW，电网 820.1 kW，储能功率 323.7 kW（放电）。储能剩余电量：36.4%。",
+      "tools": [
+        "current_energy",
+        "current_state"
+      ],
+      "duration_ms": 16375.0,
+      "first_answer_ms": 16375.0,
+      "correct_with_evidence": true,
+      "success_within_15s": false,
+      "finished_within_15s": false,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 10016.0,
+            "reason": "first_token_timeout",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 12766.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 3578.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "a7a055effde842aa8e70db972f9e7403",
+        "context_id": "ecb571701aff4a08be616ef9b0eb5470",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none"
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": null,
+          "total_ms": 10016.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 0
+        },
+        {
+          "first_response_ms": 797.0,
+          "total_ms": 2750.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 558
+        },
+        {
+          "first_response_ms": 3016.0,
+          "total_ms": 3578.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 155
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal"
+    },
+    {
+      "index": 7,
+      "question": "天气和现在时间分别是什么",
+      "answer": "现在 14:00。当前室外 13.3 °C，湿度 57.0%。",
+      "tools": [
+        "get_time",
+        "get_weather"
+      ],
+      "duration_ms": 17109.0,
+      "first_answer_ms": 17109.0,
+      "correct_with_evidence": true,
+      "success_within_15s": false,
+      "finished_within_15s": false,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "template",
+        "mode": "fallback",
+        "reason": "answered",
+        "llm_reason": "first_token_timeout",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 7031.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 10016.0,
+            "reason": "first_token_timeout",
+            "post_tool": true
+          }
+        ],
+        "session_id": "59f935275e9548acb465497a75455f5c",
+        "context_id": "f06f08141c974f57a7a52a450914e1ba",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none"
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 6640.0,
+          "total_ms": 7031.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 611
+        },
+        {
+          "first_response_ms": null,
+          "total_ms": 10016.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 0
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal"
+    },
+    {
+      "index": 8,
+      "question": "请用两句话解释复利",
+      "answer": "我可以帮你解释或计算复利。",
+      "tools": [],
+      "duration_ms": 20000.0,
+      "first_answer_ms": 20000.0,
+      "correct_with_evidence": false,
+      "success_within_15s": false,
+      "finished_within_15s": false,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 828.0,
+            "reason": "completed",
+            "post_tool": false
+          }
+        ],
+        "session_id": "a2099c6897bb423e8645cbd1e996ad6a",
+        "context_id": null,
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none"
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 687.0,
+          "total_ms": 828.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 35
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal"
+    },
+    {
+      "index": 9,
+      "question": "你好，今天辛苦啦",
+      "answer": "谢谢你的关心！云栖塔今天运营平稳，有需要随时找我帮忙～",
+      "tools": [],
+      "duration_ms": 1235.0,
+      "first_answer_ms": 1235.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 1172.0,
+            "reason": "completed",
+            "post_tool": false
+          }
+        ],
+        "session_id": "b5b39a3038354cb5b211f9053f99c0ee",
+        "context_id": null,
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none"
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 1156.0,
+          "total_ms": 1172.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 53
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal"
+    }
+  ],
+  "model": "agnes-3.0-flash",
+  "sessions": {},
+  "complete": true,
+  "single_python_process": true,
+  "resident_changed": false,
+  "owned_backend_stopped": true,
+  "owned_ports": [
+    58800,
+    58871
+  ]
+}

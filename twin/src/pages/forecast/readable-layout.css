@@ -1,0 +1,200 @@
+/* Public typography tokens; only page geometry is owned here. */
+
+/* Hourly data must not renegotiate phone chart or wrapped metric geometry. */
+@media (max-width: 759px) {
+  .forecast-root .forecast-window-host {
+    flex: none;
+    height: 352px;
+    min-height: 352px;
+    max-height: 352px;
+  }
+  .forecast-root .forecast-confidence-plot {
+    flex: none;
+    height: 192px;
+    min-height: 192px;
+    max-height: 192px;
+  }
+  .forecast-root .forecast-floor-plot {
+    flex: none;
+    height: 288px;
+    min-height: 288px;
+    max-height: 288px;
+  }
+  .forecast-root .forecast-metric {
+    min-height: 92px;
+  }
+  .forecast-root .forecast-metric dd {
+    white-space: nowrap;
+  }
+  .forecast-root .forecast-metric > small {
+    min-height: 3em;
+    max-width: 11em;
+  }
+  .forecast-root .forecast-risk-summary-line {
+    min-height: 3em;
+  }
+}
+
+.forecast-root .forecast-page :is(p, summary) {
+  font-size: var(--font-body);
+  line-height: 1.5;
+}
+.forecast-root .forecast-page :is(th, td) {
+  font-size: var(--font-table);
+}
+.forecast-root
+  .forecast-page
+  :is(.forecast-load-key, .forecast-confidence-key) {
+  font-size: var(--font-legend);
+}
+.forecast-root .forecast-metric dt {
+  font-size: var(--font-label);
+}
+.forecast-root .forecast-metric dd .forecast-unit {
+  font-size: var(--font-unit);
+}
+.forecast-root .forecast-page .smooth-value {
+  min-width: 0;
+}
+@container dashboard-content (min-width:1180px) {
+  .forecast-root {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .forecast-root .forecast-page {
+    height: auto;
+    min-height: 100%;
+    --pg-rows: auto auto;
+    align-content: start;
+  }
+  .forecast-root .forecast-page > .card {
+    overflow: visible;
+    padding: 12px;
+    height: auto;
+  }
+  .forecast-root .forecast-main > .page-grid-host {
+    height: auto;
+    flex: none;
+  }
+  .forecast-root .forecast-main .forecast-upper {
+    height: auto;
+  }
+  .forecast-root .forecast-main .forecast-chart-column {
+    overflow: visible;
+  }
+  .forecast-root
+    .forecast-main
+    .forecast-plot:not(.forecast-confidence-plot):not(.forecast-floor-plot) {
+    min-height: 320px;
+  }
+  .forecast-root .forecast-confidence {
+    flex: none;
+  }
+  .forecast-root .forecast-confidence-plot {
+    min-height: 130px;
+    height: 130px;
+  }
+  .forecast-root .forecast-model-scroll {
+    overflow: visible;
+    flex: none;
+  }
+  .forecast-root .forecast-floor-plot {
+    min-height: 160px;
+    height: 160px;
+  }
+  .forecast-root .forecast-heading {
+    margin-bottom: 8px;
+  }
+  .forecast-root .forecast-page :is(th, td) {
+    padding: 6px;
+    line-height: 1.4;
+  }
+  .forecast-root .forecast-note,
+  .forecast-root .forecast-risk-summary-line {
+    min-block-size: 0;
+    line-height: 1.5;
+  }
+}
+
+@container dashboard-content (max-width:1179px) {
+  .forecast-root
+    .forecast-page
+    :is(small, dt, th, td, p, summary, .forecast-badge) {
+    font-size: var(--font-note);
+  }
+  .forecast-root
+    .forecast-page
+    :is(.forecast-load-key, .forecast-confidence-key),
+  .forecast-root .forecast-metric dt {
+    font-size: var(--font-legend);
+  }
+  .forecast-root .forecast-metric dd .forecast-unit {
+    font-size: var(--font-unit);
+  }
+}
+.forecast-root .forecast-page .card h2 {
+  font-size: var(--font-title);
+  line-height: 1.35;
+} /* Wide desktops miss fitting by a few pixels: recover padding, not font sizes. */
+@media (min-width: 1800px) {
+  .forecast-root .forecast-page .forecast-model :is(th, td) {
+    padding-block: 4px;
+  }
+  .forecast-root .forecast-metric {
+    padding-block: 1px;
+  }
+}
+@media (min-width: 2400px) {
+  .forecast-root .forecast-page .forecast-model :is(th, td) {
+    padding-block: 3px;
+  }
+}
+.forecast-root .forecast-page :is(th, td) {
+  font-size: var(--font-table);
+}
+.forecast-root .forecast-page :is(p, summary) {
+  font-size: var(--font-body);
+}
+.forecast-root .forecast-metric dt {
+  font-size: var(--font-label);
+}
+.forecast-root
+  .forecast-page
+  :is(.forecast-load-key, .forecast-confidence-key) {
+  font-size: var(--font-legend);
+}
+
+/* Tables follow their actual grid track, never the legacy 30rem minimum. */
+.forecast-root .forecast-table-scroll {
+  min-width: 0;
+  max-width: 100%;
+}
+.forecast-root .forecast-table-scroll table {
+  width: 100%;
+  min-width: 0;
+  table-layout: fixed;
+}
+.forecast-root .forecast-table-scroll :is(th, td) {
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.forecast-root .forecast-rejections th {
+  width: 32%;
+}
+.forecast-root .forecast-rejections td:nth-child(2) {
+  width: 24%;
+}
+
+/* Phone numbers/hints own stable tracks; digits must not push units or hint origins. */
+@media (max-width: 759px) {
+  .forecast-root .forecast-metric dd:has(.forecast-unit[data-unit="kW"]) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    justify-content: stretch;
+  }
+  .forecast-root .forecast-metric > small {
+    width: 11em;
+    justify-self: start;
+  }
+}

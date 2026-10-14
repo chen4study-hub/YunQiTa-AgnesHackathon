@@ -1,0 +1,687 @@
+{
+  "scope": "twin/src .ts/.tsx excluding test fixtures; read only",
+  "matches": [
+    {
+      "path": "twin/src/components/OverviewVerdict.tsx",
+      "line": 82,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/core/TwinScene.ts",
+      "line": 221,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/data/forecast.ts",
+      "line": 15,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/data/forecast.ts",
+      "line": 28,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/data/interpolate.ts",
+      "line": 23,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/data/interpolate.ts",
+      "line": 24,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/data/overviewForecast.ts",
+      "line": 15,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/data/overviewForecast.ts",
+      "line": 28,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/data/overviewForecast.ts",
+      "line": 31,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/data/types.ts",
+      "line": 12,
+      "fields": [
+        "effective_readings"
+      ]
+    },
+    {
+      "path": "twin/src/data/types.ts",
+      "line": 20,
+      "fields": [
+        "hvac_electric_estimate_kw"
+      ]
+    },
+    {
+      "path": "twin/src/data/types.ts",
+      "line": 22,
+      "fields": [
+        "hvac_electric_estimate_kw",
+        "floors_hvac_electric_estimate_kw"
+      ]
+    },
+    {
+      "path": "twin/src/data/types.ts",
+      "line": 26,
+      "fields": [
+        "hvac_electric_estimate_kw"
+      ]
+    },
+    {
+      "path": "twin/src/data/types.ts",
+      "line": 47,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/data/types.ts",
+      "line": 62,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/data/types.ts",
+      "line": 63,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/data/types.ts",
+      "line": 78,
+      "fields": [
+        "selection_reason"
+      ]
+    },
+    {
+      "path": "twin/src/data/types.ts",
+      "line": 103,
+      "fields": [
+        "weather"
+      ]
+    },
+    {
+      "path": "twin/src/data/validate.ts",
+      "line": 23,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/data/validate.ts",
+      "line": 30,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/data/validate.ts",
+      "line": 33,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/pages/FloorsPage.tsx",
+      "line": 220,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/pages/ForecastPage.tsx",
+      "line": 27,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/ui/floorColors.ts",
+      "line": 22,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/data/adapters/index.ts",
+      "line": 69,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/data/adapters/index.ts",
+      "line": 94,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/data/adapters/index.ts",
+      "line": 101,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/data/adapters/index.ts",
+      "line": 122,
+      "fields": [
+        "weather"
+      ]
+    },
+    {
+      "path": "twin/src/data/adapters/index.ts",
+      "line": 143,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/charts.ts",
+      "line": 32,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/charts.ts",
+      "line": 50,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/charts.ts",
+      "line": 69,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/charts.ts",
+      "line": 75,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/chat-data.ts",
+      "line": 23,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/chat-data.ts",
+      "line": 36,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/ChatProcess.tsx",
+      "line": 7,
+      "fields": [
+        "weather"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 28,
+      "fields": [
+        "costWindowHours"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 30,
+      "fields": [
+        "costWindowHours"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 31,
+      "fields": [
+        "costWindowHours"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 65,
+      "fields": [
+        "costWindowHours"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 203,
+      "fields": [
+        "selection_reason"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 205,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 206,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 230,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 231,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 248,
+      "fields": [
+        "simulation"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 264,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 287,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 290,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 291,
+      "fields": [
+        "costWindowHours"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 292,
+      "fields": [
+        "candidates",
+        "costWindowHours"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 327,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 346,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 363,
+      "fields": [
+        "simulation"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 370,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 386,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 388,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 392,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 429,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 430,
+      "fields": [
+        "candidates",
+        "costWindowHours"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/data.ts",
+      "line": 438,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/DecisionCard.tsx",
+      "line": 63,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/DecisionCard.tsx",
+      "line": 86,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/DecisionCard.tsx",
+      "line": 251,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/types.ts",
+      "line": 30,
+      "fields": [
+        "candidates"
+      ]
+    },
+    {
+      "path": "twin/src/pages/agent/types.ts",
+      "line": 32,
+      "fields": [
+        "costWindowHours"
+      ]
+    },
+    {
+      "path": "twin/src/pages/floors/elevators.ts",
+      "line": 17,
+      "fields": [
+        "simulation"
+      ]
+    },
+    {
+      "path": "twin/src/pages/floors/metrics.ts",
+      "line": 30,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/pages/floors/metrics.ts",
+      "line": 45,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/pages/floors/numbers.ts",
+      "line": 1,
+      "fields": [
+        "simulation"
+      ]
+    },
+    {
+      "path": "twin/src/pages/floors/thermal.ts",
+      "line": 32,
+      "fields": [
+        "weather"
+      ]
+    },
+    {
+      "path": "twin/src/pages/floors/thermal.ts",
+      "line": 35,
+      "fields": [
+        "floors_kw"
+      ]
+    },
+    {
+      "path": "twin/src/pages/floors/thermal.ts",
+      "line": 49,
+      "fields": [
+        "weather"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/charts.ts",
+      "line": 17,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/charts.ts",
+      "line": 229,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/charts.ts",
+      "line": 242,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/charts.ts",
+      "line": 259,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/charts.ts",
+      "line": 266,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/charts.ts",
+      "line": 282,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 54,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 55,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 56,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 77,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 93,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 113,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 116,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 137,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 140,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 149,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 151,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 154,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 156,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 178,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 198,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/data.ts",
+      "line": 208,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/ForecastContent.tsx",
+      "line": 101,
+      "fields": [
+        "forecast_24h"
+      ]
+    },
+    {
+      "path": "twin/src/pages/forecast/types.ts",
+      "line": 22,
+      "fields": [
+        "forecast_24h"
+      ]
+    }
+  ]
+}

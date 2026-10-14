@@ -1,0 +1,54 @@
+/* Each reading is one atomic value/unit group below its label; never shrink type. */
+.responsive-dashboard .overview-metric strong.overview-number {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: none;
+}
+.responsive-dashboard .overview-number > .animated-number-text {
+  flex: 0 0 auto;
+}
+.responsive-dashboard .overview-number > .type-unit {
+  flex: 0 0 auto;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  /* Public unit tier remains .45em; raise its numeric parent, not a local override. */
+  .responsive-dashboard .overview-metric strong.overview-number {
+    font-size: 25px;
+  }
+}
+
+/* Narrow desktop columns and phones cannot fit two full-size readings side by side.
+   Give every metric the whole column; main owns any resulting vertical scrolling. */
+@media (min-width: 1181px) {
+  .responsive-dashboard .overview-grid .overview-left {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(4, minmax(120px, 1fr)) minmax(164px, 1.3fr);
+  }
+}
+@media (max-width: 600px) {
+  .responsive-dashboard .overview-grid .overview-left {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(5, auto);
+  }
+}
+.responsive-dashboard .overview-grid .summary-grid b {
+  white-space: nowrap;
+}
+
+/* Notes and summary readings carry their own value/unit text: move it as a whole. */
+.responsive-dashboard .overview-metric p .animated-number-text,
+.responsive-dashboard .overview-quantity-value {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Keep both file and live-operation markers inside the card content box. */
+.responsive-dashboard .overview-grid .agent-verdict ul {
+  list-style-position: inside;
+}

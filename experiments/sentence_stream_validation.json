@@ -1,0 +1,11 @@
+{
+  "llm_answers": 8,
+  "all_first_events_under1s": true,
+  "first_answers_under5s": 7,
+  "target_all_met": false,
+  "final_tests": {
+    "backend_passed": 422
+  },
+  "partial_source_definition": "llm means at least one verified LLM sentence; template supplement provenance retained in phases/deltas",
+  "post_probe_host_hardening_only": true
+}

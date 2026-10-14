@@ -1,0 +1,117 @@
+{
+  "0.1": {
+    "method": "cqr",
+    "weeks": 2,
+    "validation": {
+      "split": "validation",
+      "rho": 0.1,
+      "method": "cqr",
+      "weeks": 0,
+      "seed": 42,
+      "n": 876,
+      "retained_n": 853,
+      "rejection_rate": 0.026255707762557076,
+      "retained_picp": 0.9167643610785463,
+      "retained_mae": 10.686926589995448,
+      "mae": 11.245466366088376,
+      "rmse": 16.260081581094465,
+      "width": 57.822431616601186,
+      "ci_low": 0.8961669288663126,
+      "ci_high": 0.9344221818953965,
+      "elapsed_seconds": 0.6090000000003783
+    },
+    "selection_basis": "validation coverage then retained width; not champion MAE improvement"
+  },
+  "0.15": {
+    "method": "cqr",
+    "weeks": 2,
+    "validation": {
+      "split": "validation",
+      "rho": 0.15,
+      "method": "cqr",
+      "weeks": 0,
+      "seed": 42,
+      "n": 876,
+      "retained_n": 842,
+      "rejection_rate": 0.03881278538812785,
+      "retained_picp": 0.9168646080760094,
+      "retained_mae": 10.623393891615079,
+      "mae": 11.245466366088376,
+      "rmse": 16.260081581094465,
+      "width": 56.23569048269604,
+      "ci_low": 0.8961290015582812,
+      "ci_high": 0.93462073736868,
+      "elapsed_seconds": 0.7969999999986612
+    },
+    "selection_basis": "validation coverage then retained width; not champion MAE improvement"
+  },
+  "0.2": {
+    "method": "cqr",
+    "weeks": 2,
+    "validation": {
+      "split": "validation",
+      "rho": 0.2,
+      "method": "cqr",
+      "weeks": 0,
+      "seed": 42,
+      "n": 876,
+      "retained_n": 825,
+      "rejection_rate": 0.05821917808219178,
+      "retained_picp": 0.9175757575757576,
+      "retained_mae": 10.403701463857303,
+      "mae": 11.245466366088376,
+      "rmse": 16.260081581094465,
+      "width": 55.2670162017826,
+      "ci_low": 0.8966757110033069,
+      "ci_high": 0.9354281712615231,
+      "elapsed_seconds": 0.9690000000009604
+    },
+    "selection_basis": "validation coverage then retained width; not champion MAE improvement"
+  },
+  "0.28": {
+    "method": "cqr",
+    "weeks": 2,
+    "validation": {
+      "split": "validation",
+      "rho": 0.28,
+      "method": "cqr",
+      "weeks": 0,
+      "seed": 42,
+      "n": 876,
+      "retained_n": 783,
+      "rejection_rate": 0.10616438356164383,
+      "retained_picp": 0.9042145593869731,
+      "retained_mae": 9.89750858694046,
+      "mae": 11.245466366088376,
+      "rmse": 16.260081581094465,
+      "width": 51.425485983224085,
+      "ci_low": 0.8814130000688685,
+      "ci_high": 0.9239130448210606,
+      "elapsed_seconds": 1.1409999999996217
+    },
+    "selection_basis": "validation coverage then retained width; not champion MAE improvement"
+  },
+  "0.3": {
+    "method": "cqr",
+    "weeks": 2,
+    "validation": {
+      "split": "validation",
+      "rho": 0.3,
+      "method": "cqr",
+      "weeks": 0,
+      "seed": 42,
+      "n": 876,
+      "retained_n": 765,
+      "rejection_rate": 0.1267123287671233,
+      "retained_picp": 0.9019607843137255,
+      "retained_mae": 9.75186038493082,
+      "mae": 11.245466366088376,
+      "rmse": 16.260081581094465,
+      "width": 50.34839619762792,
+      "ci_low": 0.878658984375685,
+      "ci_high": 0.9221041934341998,
+      "elapsed_seconds": 1.3280000000013388
+    },
+    "selection_basis": "validation coverage then retained width; not champion MAE improvement"
+  }
+}

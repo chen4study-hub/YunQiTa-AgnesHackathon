@@ -1,0 +1,308 @@
+{
+  "results": [
+    {
+      "endpoint": "/chat/stream",
+      "question": "特朗普的政策立场是什么？",
+      "session_id": "c00b082e2ae8440f815aae1f24de2d40-politics",
+      "expected": "politics",
+      "passed": true,
+      "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+      "done": {
+        "type": "done",
+        "mode": "llm",
+        "session_id": "c00b082e2ae8440f815aae1f24de2d40-politics",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "reason": "out_of_scope",
+        "terminated": true,
+        "category": "politics",
+        "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+        "explanation_source": "policy",
+        "phase_timings": [],
+        "llm_reason": "topic_terminated",
+        "context_id": null
+      },
+      "elapsed_ms": 8391.0,
+      "event_types": [
+        "progress",
+        "progress",
+        "progress",
+        "progress",
+        "progress",
+        "progress",
+        "progress",
+        "answer_delta",
+        "done"
+      ]
+    },
+    {
+      "endpoint": "/chat",
+      "question": "现在几点",
+      "session_id": "c00b082e2ae8440f815aae1f24de2d40-politics",
+      "expected": "terminated",
+      "passed": true,
+      "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+      "done": {
+        "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+        "session_id": "c00b082e2ae8440f815aae1f24de2d40-politics",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "tool_trace": [],
+        "reason": "out_of_scope",
+        "terminated": true,
+        "category": "terminated",
+        "explanation_source": "policy",
+        "llm_mode": "llm",
+        "llm_called": false,
+        "origin": "2017-10-23T14:00:00-05:00"
+      },
+      "elapsed_ms": 0.0,
+      "event_types": []
+    },
+    {
+      "endpoint": "/chat",
+      "question": "今天有哪些社会新闻？",
+      "session_id": "c00b082e2ae8440f815aae1f24de2d40-affairs",
+      "expected": "current_affairs",
+      "passed": false,
+      "answer": "",
+      "done": {
+        "answer": "",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "reason": "no_data",
+        "session_id": "c00b082e2ae8440f815aae1f24de2d40-affairs",
+        "terminated": false,
+        "category": "none",
+        "tool_trace": [],
+        "origin": "2017-10-23T14:00:00-05:00",
+        "llm_mode": "real"
+      },
+      "elapsed_ms": 8015.0,
+      "event_types": []
+    },
+    {
+      "endpoint": "/chat/stream",
+      "question": "天气怎么样",
+      "session_id": "c00b082e2ae8440f815aae1f24de2d40-affairs",
+      "expected": "terminated",
+      "passed": false,
+      "answer": "当前室外 13.3 °C，湿度 57%。",
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [],
+        "llm_reason": "direct_tool_answer",
+        "reason": "answered",
+        "session_id": "c00b082e2ae8440f815aae1f24de2d40-affairs",
+        "terminated": false,
+        "category": "none"
+      },
+      "elapsed_ms": 6985.0,
+      "event_types": [
+        "step",
+        "tool_start",
+        "tool_end",
+        "answer_delta",
+        "done"
+      ]
+    },
+    {
+      "endpoint": "/chat/stream",
+      "question": "今天的天气新闻有哪些？",
+      "session_id": "c00b082e2ae8440f815aae1f24de2d40-weather-news",
+      "expected": "none",
+      "passed": false,
+      "answer": "",
+      "done": {
+        "type": "done",
+        "mode": "llm",
+        "session_id": "c00b082e2ae8440f815aae1f24de2d40-weather-news",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "reason": "no_data",
+        "terminated": false,
+        "category": "none",
+        "answer": ""
+      },
+      "elapsed_ms": 8015.0,
+      "event_types": [
+        "step",
+        "tool_start",
+        "tool_end",
+        "error",
+        "done"
+      ]
+    },
+    {
+      "endpoint": "/chat",
+      "question": "诺贝尔奖是什么？",
+      "session_id": "c00b082e2ae8440f815aae1f24de2d40-nobel",
+      "expected": "none",
+      "passed": false,
+      "answer": "这次回答超时了，可以再问一次",
+      "done": {
+        "answer": "这次回答超时了，可以再问一次",
+        "known": false,
+        "needs_human": false,
+        "grounded": true,
+        "reason": "answered",
+        "tool_trace": [
+          {
+            "tool": "web_search",
+            "result": {
+              "status": "empty",
+              "sources": []
+            }
+          }
+        ],
+        "llm_called": true,
+        "llm_mode": "rule",
+        "answer_source": "service_unavailable",
+        "explanation_source": "template",
+        "llm": {
+          "mode": "rule",
+          "reason": "chat_first_token_timeout"
+        },
+        "phase_timings": [
+          {
+            "phase": "public_answer",
+            "reason": "chat_first_token_timeout"
+          }
+        ],
+        "grounding_scope": "public_knowledge; not building readings",
+        "building_id": "Hog_office_Byron",
+        "origin": "2017-10-23T14:00:00-05:00",
+        "session_id": "c00b082e2ae8440f815aae1f24de2d40-nobel",
+        "terminated": false,
+        "category": "none"
+      },
+      "elapsed_ms": 18188.0,
+      "event_types": []
+    },
+    {
+      "endpoint": "/chat/stream",
+      "question": "现在几点",
+      "session_id": "c00b082e2ae8440f815aae1f24de2d40-time",
+      "expected": "none",
+      "passed": true,
+      "answer": "现在 14:00。",
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [],
+        "llm_reason": "direct_tool_answer",
+        "reason": "answered",
+        "session_id": "c00b082e2ae8440f815aae1f24de2d40-time",
+        "terminated": false,
+        "category": "none"
+      },
+      "elapsed_ms": 2718.0,
+      "event_types": [
+        "tool_start",
+        "tool_end",
+        "answer_delta",
+        "done"
+      ]
+    },
+    {
+      "endpoint": "/chat",
+      "question": "天气怎么样",
+      "session_id": "c00b082e2ae8440f815aae1f24de2d40-weather",
+      "expected": "none",
+      "passed": false,
+      "answer": "",
+      "done": {
+        "answer": "",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "reason": "no_data",
+        "session_id": "c00b082e2ae8440f815aae1f24de2d40-weather",
+        "terminated": false,
+        "category": "none",
+        "tool_trace": [],
+        "origin": "2017-10-23T14:00:00-05:00",
+        "llm_mode": "real"
+      },
+      "elapsed_ms": 8000.0,
+      "event_types": []
+    },
+    {
+      "endpoint": "/chat/stream",
+      "question": "当前能源怎么样",
+      "session_id": "c00b082e2ae8440f815aae1f24de2d40-energy",
+      "expected": "none",
+      "passed": true,
+      "answer": "今天截至 14:00，用电 13,640 kWh，电费 10,249.4 元。当前光伏功率 114.3 kW，电网功率 820.1 kW，储能功率 323.7 kW。储能正值为放电，负值为充电。当前光伏功率 114.3 kW，截至 14:00 发电量 664 kWh。当前储能电量 36.4%。",
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [
+          {
+            "phase": "answer_stream",
+            "first_token_ms": 844.0,
+            "first_token_timeout_seconds": 8.0,
+            "validation_failures": {
+              "prose_repair_failed": 1
+            },
+            "accepted_llm_sentences": 0,
+            "host_supplemented": true,
+            "elapsed_ms": 1187.0,
+            "reason": "chat_grounding_failed",
+            "transport_attempts": [
+              {
+                "reason": "transport_succeeded",
+                "elapsed_ms": 1187.0
+              }
+            ]
+          }
+        ],
+        "llm_reason": null,
+        "reason": "answered",
+        "session_id": "c00b082e2ae8440f815aae1f24de2d40-energy",
+        "terminated": false,
+        "category": "none"
+      },
+      "elapsed_ms": 3688.0,
+      "event_types": [
+        "progress",
+        "progress",
+        "step",
+        "tool_start",
+        "tool_end",
+        "tool_start",
+        "tool_end",
+        "progress",
+        "tool_start",
+        "tool_end",
+        "tool_start",
+        "tool_end",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "done"
+      ]
+    }
+  ],
+  "owned_port": 59231,
+  "completed": true,
+  "owned_server_stopped": true,
+  "resident_changed": false,
+  "questions": 9,
+  "passed": 4
+}

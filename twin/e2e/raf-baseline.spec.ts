@@ -1,0 +1,4 @@
+import {test,expect} from '@playwright/test';
+test('unlimited headless Edge blank-page RAF baseline at 4x CPU exceeds 40fps',async({page,context},info)=>{
+ await page.goto('about:blank');const cdp=await context.newCDPSession(page);await cdp.send('Emulation.setCPUThrottlingRate',{rate:4});const result=await page.evaluate(()=>new Promise<{fps:number;maxMs:number}>(resolve=>{let start=0,last=0;const intervals:number[]=[];const frame=(now:number)=>{if(!start)start=now;if(last)intervals.push(now-last);last=now;if(now-start<2000)requestAnimationFrame(frame);else resolve({fps:intervals.length*1000/(now-start),maxMs:Math.max(...intervals)});};requestAnimationFrame(frame);}));await cdp.send('Emulation.setCPUThrottlingRate',{rate:1});console.log('BLANK_RAF',JSON.stringify(result));await info.attach('blank-raf.json',{body:JSON.stringify(result),contentType:'application/json'});expect(result.fps).toBeGreaterThanOrEqual(40);expect(result.maxMs).toBeLessThanOrEqual(50);
+});

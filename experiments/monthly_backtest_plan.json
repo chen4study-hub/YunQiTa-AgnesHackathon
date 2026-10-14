@@ -1,0 +1,14 @@
+{
+  "year":2017,
+  "candidates":["replay_lgb_cqr","expanded_holiday_lgb_cqr","xgb_static"],
+  "hyperparameters":"frozen configs/byron2017.yaml, byron2017_xgb.yaml and interval_search.yaml; no monthly retuning",
+  "calibration_days":28,
+  "minimum_training_days":60,
+  "history":"replay/XGBoost start2017-01-01; expanded holiday starts2016-01-20, after known121 missing hours",
+  "early_months":"skip and record insufficient history for2017-only candidates; never use future data to fill",
+  "chronology":"train before calibration start, calibration before month start; issue-time lagged history within evaluation month allowed",
+  "holiday_calendar":"USFederalHolidayCalendar2016/2017 observed-date proxy",
+  "rho":0.15,
+  "outputs":"experiments/monthly_backtest_results.json and CSV, data/monthly_backtest predictions, logs/monthly_backtest.log",
+  "limitations":"historical rolling assessment, not an untouched blind test; no artifact/replay replacement or hyperparameter selection"
+}

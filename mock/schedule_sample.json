@@ -1,0 +1,25 @@
+{
+  "building_id": "B001",
+  "model_version": "mock-not-trained",
+  "mode": "shadow",
+  "needs_human": true,
+  "plan": [
+    {
+      "timestamp": "2026-10-09T12:00:00Z",
+      "hvac_setpoint_c": 24.0,
+      "battery_kw": 0.0,
+      "action": "hold",
+      "reason": "shadow_rule_fallback"
+    },
+    {
+      "timestamp": "2026-10-09T13:00:00Z",
+      "hvac_setpoint_c": 24.0,
+      "battery_kw": 0.0,
+      "action": "human_review",
+      "reason": "routing_risk_above_threshold"
+    }
+  ],
+  "estimated_cost": null,
+  "estimated_savings": null,
+  "explanation": "12时维持保守设定；13时预测风险偏高，转交人工。不声明未经验证的节省。"
+}

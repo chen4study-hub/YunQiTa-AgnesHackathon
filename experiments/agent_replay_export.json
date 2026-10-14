@@ -1,0 +1,111 @@
+{
+  "status": "completed",
+  "schema_version": "1.4",
+  "explanation_categories_by_scenario": {
+    "normal": {
+      "llm": 15,
+      "template": 8,
+      "rule": 1
+    },
+    "peak": {
+      "llm": 15,
+      "template": 7,
+      "rule": 2
+    },
+    "abstain": {
+      "llm": 11,
+      "template": 1,
+      "rule": 12
+    }
+  },
+  "llm_status": {
+    "mode": "real",
+    "reason": "configuration_complete"
+  },
+  "hours_by_source": {
+    "llm": 58,
+    "rule": 14
+  },
+  "by_scenario": {
+    "normal": {
+      "llm": 24
+    },
+    "peak": {
+      "llm": 22,
+      "rule": 2
+    },
+    "abstain": {
+      "llm": 12,
+      "rule": 12
+    }
+  },
+  "export_sha256": {
+    "normal.json": "c213d568650047d948f8ef4d31ec8187501f2e373d969bf9ec5c8b4c82a4eeb6",
+    "peak.json": "44b79b8b890b44cd76f309d085b5ed81bcec4821137af9e645026bb2411b8204",
+    "abstain.json": "f877fa1dee70b28e5291ddc91d5dedc93546cb0a31a2cb793d9476ea71f76413"
+  },
+  "fallback_reasons": {
+    "refused_current": 14
+  },
+  "fallback_reasons_by_scenario": {
+    "normal": {},
+    "peak": {
+      "refused_current": 2
+    },
+    "abstain": {
+      "refused_current": 12
+    }
+  },
+  "next_hour_lookahead": false,
+  "current_hour_dispatch_only": true,
+  "device_connected": false,
+  "exported_scenarios": [
+    "normal",
+    "peak",
+    "abstain"
+  ],
+  "abstain_preserved": true,
+  "selection_policy": "upper_grid_peak_tolerance_then_cost_v2",
+  "controls_refreshed": true,
+  "checkpoint_fingerprint": "6a96a758236f3f26d6cfbc9e1a8cf81b63fef5dc808391b7c46d744ff04059d6",
+  "real_mode_requested": true,
+  "llm_export_calls_authorized": true,
+  "source_counts_note": "rule includes current refusal bypass; future refusal does not bypass LLM",
+  "planning_horizon_hours": 24,
+  "forecast_scope": "current execution hour plus origin-issued forecast_24h h1..h23",
+  "terminal_soc_at_least_initial": true,
+  "current_gate_only": true,
+  "distinct_candidate_metric_precision_decimals": 1,
+  "live_display_refresh": {
+    "new_llm_calls": 0,
+    "new_dispatches": 0,
+    "controls_economics_and_sources_preserved": true,
+    "dates": "今天 HH:MM / 次日 HH:MM; optional display_date host decoration only",
+    "receipt": "experiments/live_display_refresh.json"
+  },
+  "payload_schema_version": "1.5",
+  "agent_detail_sha256": {
+    "normal.agent-detail.json": "b16395d3189dc7b903dc54d57e2b263bbf469b9f3f8115eeab7a0e646ab5b248",
+    "peak.agent-detail.json": "08106a8f7101c1a419ef7beea861d59833ead5354f034f30a03e75b66e591652",
+    "abstain.agent-detail.json": "9016f87a4c179b87b5895452f9c53a5d77646a5f853db7e6ff049381164bfb5e"
+  },
+  "round77_offline_refresh": {
+    "receipt": "experiments/round77_export.json",
+    "new_llm_calls": 0,
+    "new_dispatches": 0,
+    "historical_attribution_preserved": true
+  },
+  "round78_daily_comfort_refresh": {
+    "receipt": "experiments/round78_export.json",
+    "new_llm_calls": 0,
+    "new_dispatches": 0,
+    "calibration": "byron-daily10-v1",
+    "zone_comfort_source": "src.ops.metrics.floor_rows"
+  },
+  "round79_operator_text": {
+    "receipt": "experiments/round79_wording_export.json",
+    "new_llm_calls": 0,
+    "new_dispatches": 0,
+    "nonprose_unchanged": true
+  }
+}

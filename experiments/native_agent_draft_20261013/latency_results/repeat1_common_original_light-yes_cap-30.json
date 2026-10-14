@@ -1,0 +1,651 @@
+{
+  "combination": "repeat1_common_original_light-yes_cap-30",
+  "tools": "common",
+  "description": "original",
+  "light": "yes",
+  "total_budget_seconds": 30.0,
+  "request_limit_seconds": 30.0,
+  "model": "agnes-3.0-flash",
+  "tool_count": 6,
+  "tool_json_bytes": 1865,
+  "source_sha256": {
+    "experiments/native_agent_draft_20261013/latency_probe.py": "16a86e3a505b79c3221faacf593970a763c86d68e51931bdb9a5b94b5b6df056",
+    "experiments/native_agent_draft_20261013/latency_cases.json": "42e01e712a8f49cd97301e53cb1b3fbb10cef6f2b8f995ab4cd4e22e555ccfda",
+    "experiments/native_agent_draft_20261013/src/agent/agent_tools.py": "5afc86fb1c4da6646ebe71712b7a0841db6fe73b8040be929cec844f4e36518f",
+    "experiments/native_agent_draft_20261013/src/agent/agent_validation.py": "342a106925a9d9f22dd3bf380021198217844b13a4efa53729bad0f118be7251",
+    "src/agent/building_tools.py": "ff6715753a0fc119984385802520f3932f519bd336b225bb6144c56a8f75b090",
+    "exports/replay/normal.json": "c213d568650047d948f8ef4d31ec8187501f2e373d969bf9ec5c8b4c82a4eeb6"
+  },
+  "completed": true,
+  "results": [
+    {
+      "case_id": "time",
+      "question": "现在几点",
+      "answer": "现在是 14:00。",
+      "success": true,
+      "success_within_15s": true,
+      "failure_reasons": [],
+      "elapsed_ms": 3390.0,
+      "upstream_calls": [
+        {
+          "step": 1,
+          "headers_ms": 1687.0,
+          "first_sse_ms": 1687.0,
+          "first_response_ms": 1922.0,
+          "total_ms": 2672.0,
+          "complete": true,
+          "tool_names": [
+            "get_time",
+            "get_weather"
+          ],
+          "output_chars": 614,
+          "error": null,
+          "request_bytes": 5333,
+          "request_sha256": "f19a65d49a60cdd07b96a43a7cdd4ba3cb829faf3006a71f2b8653176767ba7a",
+          "tool_count": 6,
+          "request_limit_seconds": 30.0
+        },
+        {
+          "step": 2,
+          "headers_ms": 657.0,
+          "first_sse_ms": 657.0,
+          "first_response_ms": 657.0,
+          "total_ms": 703.0,
+          "complete": true,
+          "tool_names": [],
+          "output_chars": 32,
+          "error": null,
+          "request_bytes": 6794,
+          "request_sha256": "a9c4509cd27297567b3e3e1f5d0c69e29e444e4909bea2356813daf8776076a4",
+          "tool_count": 6,
+          "request_limit_seconds": 27.312999999994645
+        }
+      ],
+      "tool_runs": [
+        {
+          "step": 1,
+          "tool": "get_time",
+          "success": true,
+          "elapsed_ms": 0.0,
+          "error": null,
+          "arguments": {}
+        },
+        {
+          "step": 1,
+          "tool": "get_weather",
+          "success": true,
+          "elapsed_ms": 15.0,
+          "error": null,
+          "arguments": {
+            "scope": "future_24h"
+          }
+        }
+      ],
+      "acknowledgements": [
+        "\n"
+      ],
+      "repair_used": false,
+      "validation_issues": [],
+      "expected_tools": [
+        "get_time"
+      ],
+      "retry_count": 0
+    },
+    {
+      "case_id": "weather",
+      "question": "天气怎么样",
+      "answer": "现在云栖塔室外是今天 14:00，今天下午到傍晚偏凉：\n- 今天 15:00：13.3 °C，湿度 57%\n- 今天 16:00：13.3 °C，湿度 57%\n- 今天 17:00：13.3 °C，湿度 57%\n整体来看，接下来几小时室外温度稳定在 13.3 °C 左右，湿度 57%，不算特别闷热。",
+      "success": true,
+      "success_within_15s": true,
+      "failure_reasons": [],
+      "elapsed_ms": 5187.0,
+      "upstream_calls": [
+        {
+          "step": 1,
+          "headers_ms": 797.0,
+          "first_sse_ms": 797.0,
+          "first_response_ms": 859.0,
+          "total_ms": 1469.0,
+          "complete": true,
+          "tool_names": [
+            "get_time",
+            "get_weather"
+          ],
+          "output_chars": 619,
+          "error": null,
+          "request_bytes": 5336,
+          "request_sha256": "cc12a19fdad37e4d1176757e584c17201865aecfc354538463b0da7452074357",
+          "tool_count": 6,
+          "request_limit_seconds": 30.0
+        },
+        {
+          "step": 2,
+          "headers_ms": 860.0,
+          "first_sse_ms": 860.0,
+          "first_response_ms": 3656.0,
+          "total_ms": 3703.0,
+          "complete": true,
+          "tool_names": [],
+          "output_chars": 278,
+          "error": null,
+          "request_bytes": 6802,
+          "request_sha256": "44464ba833eb6e2995fe7fff5d2548262558418769ef4db3634227c1a7b85d80",
+          "tool_count": 6,
+          "request_limit_seconds": 28.515999999974156
+        }
+      ],
+      "tool_runs": [
+        {
+          "step": 1,
+          "tool": "get_time",
+          "success": true,
+          "elapsed_ms": 0.0,
+          "error": null,
+          "arguments": {}
+        },
+        {
+          "step": 1,
+          "tool": "get_weather",
+          "success": true,
+          "elapsed_ms": 15.0,
+          "error": null,
+          "arguments": {
+            "scope": "today_remaining"
+          }
+        }
+      ],
+      "acknowledgements": [
+        "\n"
+      ],
+      "repair_used": false,
+      "validation_issues": [],
+      "expected_tools": [
+        "get_weather"
+      ],
+      "retry_count": 0
+    },
+    {
+      "case_id": "energy",
+      "question": "当前能源怎么样",
+      "answer": "当前 14:00，能源状态如下：\n- 光伏 114.3 kW  \n- 电网负荷 820.1 kW  \n- 储能 323.7 kW（放电）  \n- 储能电量 36.4%  \n- 空调设定 25.5 °C，室外 13.3 °C  \n总体看，光伏有出力，但电网负荷偏高；储能正在放电，电量不到四成，后续放电空间有限。",
+      "success": true,
+      "success_within_15s": true,
+      "failure_reasons": [],
+      "elapsed_ms": 9015.0,
+      "upstream_calls": [
+        {
+          "step": 1,
+          "headers_ms": 6578.0,
+          "first_sse_ms": 6578.0,
+          "first_response_ms": 6656.0,
+          "total_ms": 7031.0,
+          "complete": true,
+          "tool_names": [
+            "current_energy",
+            "current_state",
+            "get_time"
+          ],
+          "output_chars": 791,
+          "error": null,
+          "request_bytes": 5342,
+          "request_sha256": "b88d01c407aa84fe6e09204530bc6de77d717c5da7894d80e71aca6348e0e3b6",
+          "tool_count": 6,
+          "request_limit_seconds": 30.0
+        },
+        {
+          "step": 2,
+          "headers_ms": 703.0,
+          "first_sse_ms": 703.0,
+          "first_response_ms": 703.0,
+          "total_ms": 1984.0,
+          "complete": true,
+          "tool_names": [],
+          "output_chars": 331,
+          "error": null,
+          "request_bytes": 6784,
+          "request_sha256": "68fb3b4903f24eb29cc47258468d5638bf15a2c31c6c842cec083a01bc99963e",
+          "tool_count": 6,
+          "request_limit_seconds": 22.969000000011874
+        }
+      ],
+      "tool_runs": [
+        {
+          "step": 1,
+          "tool": "current_energy",
+          "success": true,
+          "elapsed_ms": 0.0,
+          "error": null,
+          "arguments": {}
+        },
+        {
+          "step": 1,
+          "tool": "current_state",
+          "success": true,
+          "elapsed_ms": 0.0,
+          "error": null,
+          "arguments": {}
+        },
+        {
+          "step": 1,
+          "tool": "get_time",
+          "success": true,
+          "elapsed_ms": 0.0,
+          "error": null,
+          "arguments": {}
+        }
+      ],
+      "acknowledgements": [
+        "\n\n"
+      ],
+      "repair_used": false,
+      "validation_issues": [],
+      "expected_tools": [
+        "current_energy"
+      ],
+      "retry_count": 0
+    },
+    {
+      "case_id": "soc",
+      "question": "储能还剩多少电",
+      "answer": "储能当前电量还剩 36.4%。",
+      "success": true,
+      "success_within_15s": true,
+      "failure_reasons": [],
+      "elapsed_ms": 2500.0,
+      "upstream_calls": [
+        {
+          "step": 1,
+          "headers_ms": 640.0,
+          "first_sse_ms": 640.0,
+          "first_response_ms": 640.0,
+          "total_ms": 875.0,
+          "complete": true,
+          "tool_names": [
+            "current_state"
+          ],
+          "output_chars": 295,
+          "error": null,
+          "request_bytes": 5342,
+          "request_sha256": "e1fa7523c1332984a91ece051e651fb28b639a516a2aab209be04b082e7cc7c3",
+          "tool_count": 6,
+          "request_limit_seconds": 30.0
+        },
+        {
+          "step": 2,
+          "headers_ms": 1016.0,
+          "first_sse_ms": 1016.0,
+          "first_response_ms": 1016.0,
+          "total_ms": 1610.0,
+          "complete": true,
+          "tool_names": [],
+          "output_chars": 43,
+          "error": null,
+          "request_bytes": 5939,
+          "request_sha256": "5ea119d1d5529805dc936890d7f10886cc3ddd99c23b7b4175c3a6a463edc86c",
+          "tool_count": 6,
+          "request_limit_seconds": 29.110000000015134
+        }
+      ],
+      "tool_runs": [
+        {
+          "step": 1,
+          "tool": "current_state",
+          "success": true,
+          "elapsed_ms": 15.0,
+          "error": null,
+          "arguments": {}
+        }
+      ],
+      "acknowledgements": [
+        "我查一下当前储能电量。\n"
+      ],
+      "repair_used": false,
+      "validation_issues": [],
+      "expected_tools": [
+        "current_state"
+      ],
+      "retry_count": 0
+    },
+    {
+      "case_id": "peak",
+      "question": "未来24小时峰值什么时候",
+      "answer": "未来 24 小时峰值预计在次日 13:00，约 1,279.7 kW。",
+      "success": true,
+      "success_within_15s": true,
+      "failure_reasons": [],
+      "elapsed_ms": 10688.0,
+      "upstream_calls": [
+        {
+          "step": 1,
+          "headers_ms": 8953.0,
+          "first_sse_ms": 8953.0,
+          "first_response_ms": 9156.0,
+          "total_ms": 9250.0,
+          "complete": true,
+          "tool_names": [
+            "forecast_peak"
+          ],
+          "output_chars": 357,
+          "error": null,
+          "request_bytes": 5353,
+          "request_sha256": "cb23c0b3a46cd1746b2ed0248bfd34647a2d0d1282a8c633d99fdadadbe7c160",
+          "tool_count": 6,
+          "request_limit_seconds": 30.0
+        },
+        {
+          "step": 2,
+          "headers_ms": 1078.0,
+          "first_sse_ms": 1078.0,
+          "first_response_ms": 1078.0,
+          "total_ms": 1422.0,
+          "complete": true,
+          "tool_names": [],
+          "output_chars": 93,
+          "error": null,
+          "request_bytes": 5917,
+          "request_sha256": "51c934f3518041c3710e2abe3d67dfece7a4a609b17d1660a413cdc3f7dfe591",
+          "tool_count": 6,
+          "request_limit_seconds": 20.73399999999674
+        }
+      ],
+      "tool_runs": [
+        {
+          "step": 1,
+          "tool": "forecast_peak",
+          "success": true,
+          "elapsed_ms": 16.0,
+          "error": null,
+          "arguments": {
+            "scope": "future_24h"
+          }
+        }
+      ],
+      "acknowledgements": [],
+      "repair_used": false,
+      "validation_issues": [],
+      "expected_tools": [
+        "forecast_peak"
+      ],
+      "retry_count": 0
+    },
+    {
+      "case_id": "hvac",
+      "question": "空调调到24度能省多少钱",
+      "answer": "空调 24 °C 比现在 25.5 °C 更冷，费用不会省，反而会增加：\n- 预计费用增加 620.7 元（本时段从 13,173.3 元涨到 13,794.1 元）\n- 负荷峰值增加 57.3 kW（从 1,215.3 kW 到 1,272.6 kW）\n覆盖范围是 18 个可自动调度时段，今天 17:00、18:00、19:00、20:00 这 4 个时段因预测变化较大未计入，不按整天计算。",
+      "success": true,
+      "success_within_15s": true,
+      "failure_reasons": [],
+      "elapsed_ms": 6672.0,
+      "upstream_calls": [
+        {
+          "step": 1,
+          "headers_ms": 906.0,
+          "first_sse_ms": 906.0,
+          "first_response_ms": 906.0,
+          "total_ms": 1688.0,
+          "complete": true,
+          "tool_names": [
+            "hvac_compare"
+          ],
+          "output_chars": 386,
+          "error": null,
+          "request_bytes": 5353,
+          "request_sha256": "21ccd26bfb1d1801807af9b9abfcd9e5038dc1a18b6a806dcd5cdcaf1eb5710a",
+          "tool_count": 6,
+          "request_limit_seconds": 30.0
+        },
+        {
+          "step": 2,
+          "headers_ms": 594.0,
+          "first_sse_ms": 594.0,
+          "first_response_ms": 594.0,
+          "total_ms": 4938.0,
+          "complete": true,
+          "tool_names": [],
+          "output_chars": 470,
+          "error": null,
+          "request_bytes": 8599,
+          "request_sha256": "5f149c5054ad1b5af18c9b3f54546372401b2ccc90a001b8c913aefc2b58a894",
+          "tool_count": 6,
+          "request_limit_seconds": 28.26600000000326
+        }
+      ],
+      "tool_runs": [
+        {
+          "step": 1,
+          "tool": "hvac_compare",
+          "success": true,
+          "elapsed_ms": 46.0,
+          "error": null,
+          "arguments": {
+            "setpoint_c": 24
+          }
+        }
+      ],
+      "acknowledgements": [
+        "我先查一下 24℃ 前后的费用差，稍等。\n"
+      ],
+      "repair_used": false,
+      "validation_issues": [],
+      "expected_tools": [
+        "hvac_compare"
+      ],
+      "retry_count": 0
+    },
+    {
+      "case_id": "energy_soc",
+      "question": "先查当前能源，再看储能还剩多少电",
+      "answer": "当前能源情况：\n- 光伏功率：114.3 kW\n- 电网功率：820.1 kW\n- 储能功率：323.7 kW（正值为放电，负值为充电）\n储能还剩 36.4% 电量。",
+      "success": true,
+      "success_within_15s": true,
+      "failure_reasons": [],
+      "elapsed_ms": 2860.0,
+      "upstream_calls": [
+        {
+          "step": 1,
+          "headers_ms": 1406.0,
+          "first_sse_ms": 1406.0,
+          "first_response_ms": 1406.0,
+          "total_ms": 1422.0,
+          "complete": true,
+          "tool_names": [
+            "current_energy",
+            "current_state"
+          ],
+          "output_chars": 566,
+          "error": null,
+          "request_bytes": 5369,
+          "request_sha256": "2ba4f14827231b6af82aef4e6b394073ff2221de0b1555c41997194eb7b48c3d",
+          "tool_count": 6,
+          "request_limit_seconds": 30.0
+        },
+        {
+          "step": 2,
+          "headers_ms": 1281.0,
+          "first_sse_ms": 1281.0,
+          "first_response_ms": 1281.0,
+          "total_ms": 1438.0,
+          "complete": true,
+          "tool_names": [],
+          "output_chars": 162,
+          "error": null,
+          "request_bytes": 6346,
+          "request_sha256": "e9fe5261742c885224e17b6bbc0becf95eb22151d4e80751d683096d66bf9697",
+          "tool_count": 6,
+          "request_limit_seconds": 28.578000000008615
+        }
+      ],
+      "tool_runs": [
+        {
+          "step": 1,
+          "tool": "current_energy",
+          "success": true,
+          "elapsed_ms": 0.0,
+          "error": null,
+          "arguments": {}
+        },
+        {
+          "step": 1,
+          "tool": "current_state",
+          "success": true,
+          "elapsed_ms": 0.0,
+          "error": null,
+          "arguments": {}
+        }
+      ],
+      "acknowledgements": [
+        "收到，我同时查一下当前功率和储能状态。\n\n"
+      ],
+      "repair_used": false,
+      "validation_issues": [],
+      "expected_tools": [
+        "current_energy",
+        "current_state"
+      ],
+      "retry_count": 0
+    },
+    {
+      "case_id": "weather_time",
+      "question": "天气和现在时间分别是什么",
+      "answer": "现在是 今天 14:00。云栖塔室外未来几小时天气为：\n- 今天 15:00：13.3 °C，湿度 57%\n- 今天 16:00：13.3 °C，湿度 57%\n- 今天 17:00：13.3 °C，湿度 57%",
+      "success": true,
+      "success_within_15s": true,
+      "failure_reasons": [],
+      "elapsed_ms": 3391.0,
+      "upstream_calls": [
+        {
+          "step": 1,
+          "headers_ms": 844.0,
+          "first_sse_ms": 844.0,
+          "first_response_ms": 859.0,
+          "total_ms": 1656.0,
+          "complete": true,
+          "tool_names": [
+            "get_time",
+            "get_weather"
+          ],
+          "output_chars": 665,
+          "error": null,
+          "request_bytes": 5357,
+          "request_sha256": "3a6d28955e6d63a69aaa6bb6f9d66ecb80ab6539a7b786a563372e44659bc29f",
+          "tool_count": 6,
+          "request_limit_seconds": 30.0
+        },
+        {
+          "step": 2,
+          "headers_ms": 656.0,
+          "first_sse_ms": 656.0,
+          "first_response_ms": 656.0,
+          "total_ms": 1735.0,
+          "complete": true,
+          "tool_names": [],
+          "output_chars": 242,
+          "error": null,
+          "request_bytes": 6882,
+          "request_sha256": "adc709e515dae46266980b6a3be99e657c8ff6df473e71ac0dfa9a7c1794810e",
+          "tool_count": 6,
+          "request_limit_seconds": 28.34399999998277
+        }
+      ],
+      "tool_runs": [
+        {
+          "step": 1,
+          "tool": "get_time",
+          "success": true,
+          "elapsed_ms": 0.0,
+          "error": null,
+          "arguments": {}
+        },
+        {
+          "step": 1,
+          "tool": "get_weather",
+          "success": true,
+          "elapsed_ms": 0.0,
+          "error": null,
+          "arguments": {
+            "scope": "today_remaining"
+          }
+        }
+      ],
+      "acknowledgements": [
+        "我顺便查一下当前时间和云栖塔室外天气。\n\n"
+      ],
+      "repair_used": false,
+      "validation_issues": [],
+      "expected_tools": [
+        "get_weather",
+        "get_time"
+      ],
+      "retry_count": 0
+    },
+    {
+      "case_id": "knowledge",
+      "question": "请用两句话解释复利",
+      "answer": "复利是指不仅本金产生收益，之前获得的收益也会继续产生收益，因此财富随时间呈指数式增长。简单说，就是“利滚利”，时间越长，增长效果越明显。",
+      "success": false,
+      "success_within_15s": false,
+      "failure_reasons": [
+        "missing_required_content"
+      ],
+      "elapsed_ms": 1532.0,
+      "upstream_calls": [
+        {
+          "step": 1,
+          "headers_ms": 1125.0,
+          "first_sse_ms": 1125.0,
+          "first_response_ms": 1125.0,
+          "total_ms": 1532.0,
+          "complete": true,
+          "tool_names": [],
+          "output_chars": 158,
+          "error": null,
+          "request_bytes": 5348,
+          "request_sha256": "860c1ad4e7f42b2572b983d6ef5608f52cecfa71002d75418d7cbde59499bf6e",
+          "tool_count": 6,
+          "request_limit_seconds": 30.0
+        }
+      ],
+      "tool_runs": [],
+      "acknowledgements": [],
+      "repair_used": false,
+      "validation_issues": [],
+      "expected_tools": [],
+      "retry_count": 0
+    },
+    {
+      "case_id": "smalltalk",
+      "question": "你好，今天辛苦啦",
+      "answer": "",
+      "success": false,
+      "success_within_15s": false,
+      "failure_reasons": [
+        "answer_validation_failed",
+        "empty_answer"
+      ],
+      "elapsed_ms": 3797.0,
+      "upstream_calls": [
+        {
+          "step": 1,
+          "headers_ms": 3797.0,
+          "first_sse_ms": 3797.0,
+          "first_response_ms": null,
+          "total_ms": 3797.0,
+          "complete": true,
+          "tool_names": [],
+          "output_chars": 6,
+          "error": null,
+          "request_bytes": 5345,
+          "request_sha256": "e6bef8e23ba29874f04da20d83ef1a882d11aefc63ab4f9b701afabc0fb7fb07",
+          "tool_count": 6,
+          "request_limit_seconds": 30.0
+        }
+      ],
+      "tool_runs": [],
+      "acknowledgements": [],
+      "repair_used": false,
+      "validation_issues": [],
+      "expected_tools": [],
+      "retry_count": 0
+    }
+  ]
+}

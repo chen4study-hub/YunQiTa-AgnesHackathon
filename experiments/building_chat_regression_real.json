@@ -1,0 +1,3030 @@
+{
+  "status": "passed",
+  "llm_mode": "real",
+  "mode_note": "Real HTTP/SSE server; fixed question corpus and deterministic tool evidence; live semantic paraphrases assessed separately.",
+  "questions": 86,
+  "correct_with_evidence": 85,
+  "correct_rate": 0.9883720930232558,
+  "first_answer_median_ms": 468.5,
+  "owned_port": 54276,
+  "owned_process_stopped": true,
+  "resident_changed": false,
+  "llm_wording": {
+    "building_narrative_questions": 2,
+    "building_narrative_ratio": 1.0,
+    "new_general_passed": 20,
+    "new_general_questions": 21,
+    "narrative_questions": 14,
+    "llm_composed": 14,
+    "ratio": 1.0,
+    "target": 0.8,
+    "achieved": true,
+    "template_questions": [],
+    "all_questions_llm_composed": 33,
+    "note": "Composition measured by validated answer source, not tool selection or whether an upstream call happened."
+  },
+  "results": [
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "今天用了多少电",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "duration_ms": 172.0,
+      "first_step_ms": 172.0,
+      "first_answer_ms": 172.0,
+      "reason": "answered",
+      "answer": "今天截至 14:00，用电 13,640 kWh，电费 10,249.4 元。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "今日累计用电量",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "duration_ms": 31.0,
+      "first_step_ms": 15.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "今天截至 14:00，用电 13,640 kWh，电费 10,249.4 元。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "今天用电和电费是多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "今天截至 14:00，用电 13,640 kWh，电费 10,249.4 元。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "昨天电费多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "昨天全天，用电 21,852 kWh，电费 18,565.3 元。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "昨天用了多少电",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "昨天全天，用电 21,852 kWh，电费 18,565.3 元。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "前天用电量多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "10 月 10 日全天，用电 23,977.9 kWh，电费 21,092.5 元。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "这几天的总能耗如何",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "duration_ms": 62.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 46.0,
+      "reason": "answered",
+      "answer": "最近 3 天（截至今天 14:00），用电 59,469.9 kWh，电费 49,907.2 元。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "近3天总用电和电费",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals",
+        "energy_totals"
+      ],
+      "duration_ms": 63.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "最近 3 天（截至今天 14:00），用电 59,469.9 kWh，电费 49,907.2 元。今天截至 14:00，用电 13,640 kWh，电费 10,249.4 元。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "2026-10-10电费是多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "duration_ms": 46.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 46.0,
+      "reason": "answered",
+      "answer": "10 月 10 日全天，用电 23,977.9 kWh，电费 21,092.5 元。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "现在空调用电占多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "duration_ms": 32.0,
+      "first_step_ms": 32.0,
+      "first_answer_ms": 32.0,
+      "reason": "answered",
+      "answer": "当前空调 170.6 kW，占 13.6%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "当前照明用电占比",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "duration_ms": 32.0,
+      "first_step_ms": 32.0,
+      "first_answer_ms": 32.0,
+      "reason": "answered",
+      "answer": "当前照明 388.9 kW，占 30.9%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "插座用电占比",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "当前插座 521.8 kW，占 41.5%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "电梯用电占比",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "duration_ms": 31.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "当前电梯 64.4 kW，占 5.1%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "现在分项用电有哪些",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "当前空调 170.6 kW，占 13.6%；照明 388.9 kW，占 30.9%；插座 521.8 kW，占 41.5%；电梯 64.4 kW，占 5.1%；其他 112.4 kW，占 8.9%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "今天累计分项用电",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "10 月 12 日截至 14:00累计分项电量：空调 2,169.9 kWh，占 15.9%；照明 4,045.6 kWh，占 29.7%；插座 3,672.3 kWh，占 26.9%；电梯 449 kWh，占 3.3%；其他 3,303.2 kWh，占 24.2%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "昨天分项用电量",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "10 月 11 日全天累计分项电量：空调 9,765.8 kWh，占 44.7%；照明 4,227.1 kWh，占 19.3%；插座 2,606.1 kWh，占 11.9%；电梯 101.6 kWh，占 0.5%；其他 5,151.4 kWh，占 23.6%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": 0,
+      "question": "今天有哪些告警",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "alerts_orders"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "截至 14:00，共有 0 条告警记录。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "现在有哪些报警",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "alerts_orders"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "截至 14:00，共有 0 条告警记录。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "今日工单有哪些",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "alerts_orders"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "截至 14:00，共有 0 条工单记录。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "今天告警和工单情况",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "alerts_orders"
+      ],
+      "duration_ms": 63.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 63.0,
+      "reason": "answered",
+      "answer": "截至 14:00，共有 0 条告警记录。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "电梯运行正常吗",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "elevator_state"
+      ],
+      "duration_ms": 62.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "L1 停靠 20 层，载客 0 人，载重 0%。L2 从 20 层驶向 2 层，载客 9 人，载重 45%。L3 停靠 2 层，载客 0 人，载重 0%。H1 从 21 层驶向 40 层，载客 9 人，载重 45%。H2 停靠 21 层，载客 0 人，载重 0%。H3 停靠 21 层，载客 0 人，载重 0%。这些是运行记录，当前没有设备故障诊断数据。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "L1电梯在哪层",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "elevator_state"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "L1 停靠 20 层，载客 0 人，载重 0%。L2 从 20 层驶向 2 层，载客 9 人，载重 45%。L3 停靠 2 层，载客 0 人，载重 0%。H1 从 21 层驶向 40 层，载客 9 人，载重 45%。H2 停靠 21 层，载客 0 人，载重 0%。H3 停靠 21 层，载客 0 人，载重 0%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "H1电梯载重是多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "elevator_state"
+      ],
+      "duration_ms": 62.0,
+      "first_step_ms": 46.0,
+      "first_answer_ms": 46.0,
+      "reason": "answered",
+      "answer": "L1 停靠 20 层，载客 0 人，载重 0%。L2 从 20 层驶向 2 层，载客 9 人，载重 45%。L3 停靠 2 层，载客 0 人，载重 0%。H1 从 21 层驶向 40 层，载客 9 人，载重 45%。H2 停靠 21 层，载客 0 人，载重 0%。H3 停靠 21 层，载客 0 人，载重 0%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "电梯载客人数多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "elevator_state"
+      ],
+      "duration_ms": 63.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "L1 停靠 20 层，载客 0 人，载重 0%。L2 从 20 层驶向 2 层，载客 9 人，载重 45%。L3 停靠 2 层，载客 0 人，载重 0%。H1 从 21 层驶向 40 层，载客 9 人，载重 45%。H2 停靠 21 层，载客 0 人，载重 0%。H3 停靠 21 层，载客 0 人，载重 0%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "1层人数多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "duration_ms": 78.0,
+      "first_step_ms": 46.0,
+      "first_answer_ms": 78.0,
+      "reason": "answered",
+      "answer": "1 层当前负荷 40.7 kW，人数 61 人，温度 26.1 °C，CO₂ 640 ppm，新风量 1,830 m³/h，风机 79.9%，照明 91%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "18层温度是多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "duration_ms": 63.0,
+      "first_step_ms": 32.0,
+      "first_answer_ms": 63.0,
+      "reason": "answered",
+      "answer": "18 层当前负荷 22.4 kW，人数 104 人，温度 25.9 °C，CO₂ 794 ppm，新风量 3,120 m³/h，风机 73.8%，照明 84%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "40层负荷是多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "duration_ms": 63.0,
+      "first_step_ms": 32.0,
+      "first_answer_ms": 63.0,
+      "reason": "answered",
+      "answer": "40 层当前负荷 33 kW，人数 98 人，温度 26 °C，CO₂ 773 ppm，新风量 2,940 m³/h，风机 71.8%，照明 79.4%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "27层CO₂是多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "duration_ms": 62.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "27 层当前负荷 26.3 kW，人数 36 人，温度 26 °C，CO₂ 550 ppm，新风量 1,080 m³/h，风机 76.4%，照明 87.8%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "10层新风量是多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "duration_ms": 62.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "10 层当前负荷 29.9 kW，人数 108 人，温度 26 °C，CO₂ 809 ppm，新风量 3,240 m³/h，风机 76.3%，照明 87.1%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "12层风机状态",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "duration_ms": 62.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "12 层当前负荷 36.4 kW，人数 103 人，温度 26 °C，CO₂ 791 ppm，新风量 3,090 m³/h，风机 74.5%，照明 83.2%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "14层照明多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "duration_ms": 62.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "14 层当前负荷 26.1 kW，人数 37 人，温度 26 °C，CO₂ 553 ppm，新风量 1,110 m³/h，风机 77.8%，照明 90.1%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "储能充放电记录",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "storage_history"
+      ],
+      "duration_ms": 109.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 109.0,
+      "reason": "answered",
+      "answer": "当前储能电量 36.4%，功率 323.7 kW（正值放电，负值充电）。截至 14:00，充电 802.4 kWh，放电 750 kWh。08:00，功率 0 kW。09:00，功率 0 kW。10:00，功率 500 kW。11:00，功率 0 kW。12:00，功率 0 kW。13:00，功率 250 kW。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "今天储能充电量",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "storage_history"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "当前储能电量 36.4%，功率 323.7 kW（正值放电，负值充电）。截至 14:00，充电 802.4 kWh，放电 750 kWh。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "今天储能放电量",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "storage_history"
+      ],
+      "duration_ms": 62.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 46.0,
+      "reason": "answered",
+      "answer": "当前储能电量 36.4%，功率 323.7 kW（正值放电，负值充电）。截至 14:00，充电 802.4 kWh，放电 750 kWh。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "储能功率和充放电记录",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "storage_history",
+        "current_energy"
+      ],
+      "duration_ms": 2578.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 2578.0,
+      "reason": "answered",
+      "answer": "当前储能电量 36.4%，功率 323.7 kW（正值放电，负值充电）。截至 14:00，充电 802.4 kWh，放电 750 kWh。08:00，功率 0 kW。09:00，功率 0 kW。10:00，功率 500 kW。11:00，功率 0 kW。12:00，功率 0 kW。13:00，功率 250 kW。当前储能功率为 323.7 kW，正在放电。**关键数据：**- 储能功率：323.7 kW（正值代表放电状态）",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 2000.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {
+            "prose_repair_failed": 3
+          },
+          "accepted_llm_sentences": 3,
+          "host_supplemented": false,
+          "elapsed_ms": 2500.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2500.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "今天光伏发电量多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "pv_generation"
+      ],
+      "duration_ms": 62.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "当前光伏功率 114.3 kW，截至 14:00 发电量 664 kWh。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "光伏累计发电量",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "pv_generation"
+      ],
+      "duration_ms": 63.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 63.0,
+      "reason": "answered",
+      "answer": "当前光伏功率 114.3 kW，截至 14:00 发电量 664 kWh。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "楼宇运行概览",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "building_state"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "当前负荷 1,258.1 kW，人数 3,869 人，室内温度 26 °C，湿度 40%，CO₂ 768 ppm，PM2.5 21.4 μg/m³，空调设定 25.5 °C。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "室内湿度多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "building_state"
+      ],
+      "duration_ms": 62.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "当前负荷 1,258.1 kW，人数 3,869 人，室内温度 26 °C，湿度 40%，CO₂ 768 ppm，PM2.5 21.4 μg/m³，空调设定 25.5 °C。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "室内PM2.5多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "building_state"
+      ],
+      "duration_ms": 63.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 63.0,
+      "reason": "answered",
+      "answer": "当前负荷 1,258.1 kW，人数 3,869 人，室内温度 26 °C，湿度 40%，CO₂ 768 ppm，PM2.5 21.4 μg/m³，空调设定 25.5 °C。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [],
+      "expected_alert_count": null,
+      "question": "现在几点",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_time"
+      ],
+      "duration_ms": 46.0,
+      "first_step_ms": null,
+      "first_answer_ms": 46.0,
+      "reason": "answered",
+      "answer": "现在 14:00。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "天气怎么样",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_weather"
+      ],
+      "duration_ms": 47.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "当前室外 13.3 °C，湿度 57%。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "空调设定多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "current_state"
+      ],
+      "duration_ms": 1016.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 1016.0,
+      "reason": "answered",
+      "answer": "空调设定为 25.5 °C。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 1,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 719.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 1,
+          "host_supplemented": false,
+          "elapsed_ms": 954.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 954.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "储能SOC多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "current_state"
+      ],
+      "duration_ms": 1219.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 1219.0,
+      "reason": "answered",
+      "answer": "储能电量当前为 36.4%。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 1,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 1156.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 1,
+          "host_supplemented": false,
+          "elapsed_ms": 1172.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 1156.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "当前电网功率多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "current_energy"
+      ],
+      "duration_ms": 859.0,
+      "first_step_ms": 62.0,
+      "first_answer_ms": 859.0,
+      "reason": "answered",
+      "answer": "电网负荷功率为 820.1 kW。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 1,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 766.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 1,
+          "host_supplemented": false,
+          "elapsed_ms": 797.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 782.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "为什么这样调度",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "selection_reason"
+      ],
+      "duration_ms": 1219.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 860.0,
+      "reason": "answered",
+      "answer": "选用全额调度，预计节省 2,274.4 元。电网峰值为 1,156.0 kW，电费为 12,894.3 元，相对基准预计节省 2,274.4 元。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 2,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 703.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 2,
+          "host_supplemented": false,
+          "elapsed_ms": 1172.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 1172.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "执行回执是什么",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "execution_receipt"
+      ],
+      "duration_ms": 1172.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 1156.0,
+      "reason": "answered",
+      "answer": "回执是 BA/EMS 下发日志回执，共 0 条指令，耗时 0.0 毫秒。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 1,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 906.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 1,
+          "host_supplemented": false,
+          "elapsed_ms": 1125.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 1125.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "明天负荷峰值",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "forecast_peak"
+      ],
+      "duration_ms": 891.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 891.0,
+      "reason": "answered",
+      "answer": "本次预测中最高负荷约 1,279.7 kW，出现在明天 13:00。该峰值时段预测风险偏高，暂不自动执行，请值班人员检查表计和设备记录。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 1
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 688.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {
+            "scope_or_format": 1
+          },
+          "accepted_llm_sentences": 0,
+          "host_supplemented": true,
+          "elapsed_ms": 844.0,
+          "reason": "chat_grounding_failed",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 844.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "空调改26度能省多少电费",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "duration_ms": 2407.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 1422.0,
+      "reason": "answered",
+      "answer": "空调从 25.5 °C 改为 26.0 °C，计入时段电费从 13,173.3 元降至 12,966.4 元，可节省 206.9 元。同一批时段电网峰值从 1,215.3 kW 降至 1,196.2 kW，降低 19.1 kW。可自动调度 18 个小时；未计入 6 个小时；本次只覆盖可自动调度时段，不按整天计算；未计入时段：17:00–20:00、次日 13:00–14:00（预测变化较大），请值班人员检查表计和设备记录。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 2,
+        "template": 1
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 844.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {
+            "prose_repair_failed": 1
+          },
+          "accepted_llm_sentences": 2,
+          "host_supplemented": true,
+          "elapsed_ms": 2297.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2281.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "储能还剩多少电",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "current_state"
+      ],
+      "duration_ms": 890.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 875.0,
+      "reason": "answered",
+      "answer": "当前储能电量 36.4%。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 1,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 750.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 1,
+          "host_supplemented": false,
+          "elapsed_ms": 813.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 813.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": 0,
+      "question": "今天有哪些告警",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "alerts_orders"
+      ],
+      "duration_ms": 31.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "截至 14:00，共有 0 条告警记录。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "执行回执",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "execution_receipt"
+      ],
+      "duration_ms": 984.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 984.0,
+      "reason": "answered",
+      "answer": "14:00 当前小时 BA/EMS 下发日志回执确认 0 条，耗时 0.0 毫秒。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 1,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 703.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 1,
+          "host_supplemented": false,
+          "elapsed_ms": 953.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 953.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "为什么转人工",
+      "scenario": "abstain",
+      "origin_index": 14,
+      "origin": "2017-07-04T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "handoff_reason"
+      ],
+      "duration_ms": 890.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 875.0,
+      "reason": "answered",
+      "answer": "当前交值班人员处理，本小时因预测变化较大需核对表计和设备记录。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 1,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 672.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 1,
+          "host_supplemented": false,
+          "elapsed_ms": 844.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 844.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [],
+      "expected_alert_count": null,
+      "question": "你好，今天有点累，陪我聊两句",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [],
+      "duration_ms": 2391.0,
+      "first_step_ms": null,
+      "first_answer_ms": 2047.0,
+      "reason": "answered",
+      "answer": "辛苦了，摸摸头。累了就先停一停，什么都别想，发发呆或者闭目养神一会儿也挺好。想聊点轻松的，还是就安安静静待着？",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "call_succeeded"
+        }
+      ]
+    },
+    {
+      "steps": [],
+      "expected_alert_count": null,
+      "question": "讲一个简短的笑话",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [],
+      "duration_ms": 1172.0,
+      "first_step_ms": null,
+      "first_answer_ms": 765.0,
+      "reason": "answered",
+      "answer": "问：小明问你，世界上最长的笑话有多长？\n答：世界上最长的笑话没有尽头。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "call_succeeded"
+        }
+      ]
+    },
+    {
+      "steps": [],
+      "expected_alert_count": null,
+      "question": "什么是光合作用",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [],
+      "duration_ms": 1734.0,
+      "first_step_ms": null,
+      "first_answer_ms": 1015.0,
+      "reason": "answered",
+      "answer": "光合作用是绿色植物、藻类及部分细菌利用光能，将二氧化碳和水转化为有机物（如葡萄糖）并释放氧气的生物化学过程。其核心公式可概括为：\n\n$$6CO_2 + 6H_2O + 光能 \\rightarrow C_6H_{12}O_6 + 6O_2$$\n\n该过程主要发生在植物叶片的叶绿体中，是地球生态系统中氧气的主要来源和食物链的基础能量输入途径。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 6,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "call_succeeded"
+        }
+      ]
+    },
+    {
+      "steps": [],
+      "expected_alert_count": null,
+      "question": "解释一下复利，给一个简单例子",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [],
+      "duration_ms": 6453.0,
+      "first_step_ms": null,
+      "first_answer_ms": 921.0,
+      "reason": "answered",
+      "answer": "复利（Compound Interest）是指不仅本金产生利息，利息在后续周期中也会继续产生利息，即俗称的“利滚利”。\n\n简单例子：\n假设你本金为 10000 元，年化利率 5%，按年复利计算：\n- 第1年末：10000 × (1 + 5%) = 10500 元\n- 第2年末：10500 × (1 + 5%) = 11025 元\n\n可以看出，第2年的利息是基于10500 元计算的，而非最初的10000 元。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 9,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "call_succeeded"
+        }
+      ]
+    },
+    {
+      "steps": [],
+      "expected_alert_count": null,
+      "question": "水为什么会沸腾",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [],
+      "duration_ms": 4750.0,
+      "first_step_ms": null,
+      "first_answer_ms": 1938.0,
+      "reason": "answered",
+      "answer": "水沸腾是液体变为气体的物理相变过程，主要由温度达到特定条件下的饱和蒸气压所驱动。具体原因如下：\n\n1. **热量输入**：水吸收热量后，分子热运动加剧，动能增加。\n2. **蒸气压升高**：随着温度上升，水分子从液面逃逸的能力增强，液体的饱和蒸气压逐渐升高。\n3. **达到沸点**：当水的饱和蒸气压等于外界大气压（或容器顶部的气压）时，水内部任何位置都能形成气泡并上升到液面破裂，这种现象即为沸腾。\n4. **沸点与气压的关系**：液体的沸点并非固定值，而是随外界气压变化而改变。例如，在标准大气压（101.3 kPa）下，纯水的沸点约为 100 °C；在高海拔地区气压较低，水在更低的温度（如 90 °C 左右）即可沸腾。\n\n简言之，水沸腾是因为加热使水温达到该压力环境下的沸点，此时水的饱和蒸气压足以克服外界压力，使液态水整体转化为气态水蒸气。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 14,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "call_succeeded"
+        }
+      ]
+    },
+    {
+      "steps": [],
+      "expected_alert_count": null,
+      "question": "什么是碳中和",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [],
+      "duration_ms": 1610.0,
+      "first_step_ms": null,
+      "first_answer_ms": 1610.0,
+      "reason": "answered",
+      "answer": "碳中和是指通过植树造林、节能减排、碳捕获等方式，抵消自身直接或间接产生的二氧化碳排放，实现净零排放，以应对气候变暖。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 1,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "call_succeeded"
+        }
+      ]
+    },
+    {
+      "steps": [],
+      "expected_alert_count": null,
+      "question": "介绍一下电梯的工作原理",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [],
+      "duration_ms": 4047.0,
+      "first_step_ms": null,
+      "first_answer_ms": 828.0,
+      "reason": "answered",
+      "answer": "电梯工作原理主要包含以下核心部分：\n\n1.  **曳引驱动**：这是最常见的工作原理。电机通过减速箱驱动曳引轮旋转，钢丝绳缠绕在曳引轮上，连接轿厢和对重。利用钢丝绳与曳引轮之间的摩擦力（曳引力），电机带动轿厢和对重反向运行，实现升降。\n2.  **配重平衡**：电梯系统中设有“对重”装置，其重量通常等于轿厢自重加上额定载重的40%-50%。对重的作用是平衡轿厢的大部分重量，减少电机所需功率，提高能效。\n3.  **控制系统**：通过按钮选择目标楼层，控制系统计算最佳运行方向（上行/下行），控制电机启停及调速，并管理楼层信号与门机动作。\n4.  **导向与限位**：轿厢和对重在导轨框架引导下沿垂直方向运动，确保平稳不晃动。上下端设有缓冲器，作为极端情况下的安全保护，吸收撞击能量。\n5.  **安全保护**：配备限速器、安全钳等装置。当电梯超速（如断绳、失控下行）时，限速器触发安全钳，将轿厢卡在导轨上强制停止，防止坠落。\n\n简言之，电梯通过电机驱动曳引系统，利用对重平衡负荷，在导轨约束下由控制系统精准定位楼层，并依靠多重机械与电气安全装置保障运行安全。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 19,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "call_succeeded"
+        }
+      ]
+    },
+    {
+      "steps": [],
+      "expected_alert_count": null,
+      "question": "储能电池的SOC是什么意思",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [],
+      "duration_ms": 1953.0,
+      "first_step_ms": null,
+      "first_answer_ms": 1047.0,
+      "reason": "answered",
+      "answer": "SOC（State of Charge）指荷电状态，即储能电池当前剩余的电量比例。\n\n它通常用百分比表示：\n*   0% 表示电池电量耗尽（完全放电）；\n*   100% 表示电池电量满（完全充电）。\n\nSOC 是衡量电池剩余能量的核心指标，BMS（电池管理系统）会实时监控 SOC，以判断何时需要充电或放电，保护电池不过充或过放。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 9,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "call_succeeded"
+        }
+      ]
+    },
+    {
+      "steps": [],
+      "expected_alert_count": null,
+      "question": "楼宇运维有哪些基础知识",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [],
+      "duration_ms": 9281.0,
+      "first_step_ms": null,
+      "first_answer_ms": 1062.0,
+      "reason": "answered",
+      "answer": "楼宇运维的基础知识主要涵盖技术、管理、法规和安全等多个维度，以下是核心板块：\n\n### 1. 建筑设备系统（BAS 及子系统）\n*   **暖通空调（HVAC）**：制冷/制热原理、风机盘管、空调箱、冷水机组维护；能耗控制策略。\n*   **给排水系统**：生活供水、消防供水、污水/雨水排放；水泵运行、管道维护、水质管理。\n*   **供配电系统**：高压/低压配电、变压器、UPS/EPS、发电机；电能质量、负荷平衡、故障排查。\n*   **照明与电气**：照明控制、插座检修、防雷接地。\n*   **电梯系统**：曳引原理、年检标准、困人救援流程。\n*   **消防系统**：火灾报警、喷淋系统、排烟系统、防火卷帘；联动测试、月度/年度维保。\n\n### 2. 设施管理与维护策略\n*   **预防性维护（PM）**：按计划周期进行的检查与保养，减少突发故障。\n*   **纠正性维护（CM）**：故障发生后的应急修理。\n*   **预测性维护（PdM）**：利用振动、温度、油液分析等数据预判设备劣化。\n*   **设施生命周期管理**：从采购、安装、运维到报废的全周期成本考量（全生命周期成本 LCC）。\n\n### 3. 法规、标准与合规\n*   **行业规范**：遵循国家/地方《民用建筑电气设计标准》、《暖通空调设计规范》等。\n*   **消防法规**：严格遵守《消防法》，确保疏散通道畅通、消防设施完好。\n*   **环保与能效**：建筑节能标准、垃圾分类、碳排放核算、绿色运维（如 ISO 50001 能源管理体系）。\n*   **劳动安全**：高空作业、电气作业、受限空间作业的安全规程与许可制度。\n\n### 4. 数字化运维（O&M 4.0）\n*   **建筑信息模型（BIM）**：用于空间管理、管线碰撞检测、运维资产可视化。\n",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 39,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "call_succeeded"
+        }
+      ]
+    },
+    {
+      "steps": [],
+      "expected_alert_count": null,
+      "question": "帮我写两句生日祝福",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [],
+      "duration_ms": 3594.0,
+      "first_step_ms": null,
+      "first_answer_ms": 3500.0,
+      "reason": "answered",
+      "answer": "生日快乐，愿你的每一天都充满阳光和欢笑。\n祝你健康平安，幸福常在。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "call_succeeded"
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在联网查询…"
+      ],
+      "expected_alert_count": null,
+      "question": "联网查询5个楼宇运维的基础知识点",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": false,
+      "tools": [
+        "web_search"
+      ],
+      "duration_ms": 4297.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 2422.0,
+      "reason": "answered",
+      "answer": "没有查到网上资料，下面是常识整理：1. **建筑自动控制系统（BAS）**：作为楼宇的“中枢神经”，负责实时监控和调节暖通空调、给排水、供电等系统，是实现节能与舒适运行的核心基础。\n2. ** HVAC（暖通空调）运行原理**：涉及冷水机组、冷却塔、风机盘管等设备的协同工作，需掌握空气处理流程及温湿度控制逻辑，直接影响室内环境质量。\n3. **供配电系统安全规范**：涵盖双回路供电、无功补偿及负荷分配等知识，重点在于确保电力供应的连续性与安全性，防范电气火灾及设备过载风险。\n4. **消防设施联动机制**：包括火灾自动报警系统（FAS）与防排烟、应急照明、防火卷帘等设施的自动联动逻辑，是保障人员疏散与火灾控制的关键。\n5. **预防性维护（PM）策略**：基于设备状态监测和周期性计划进行的主动维护，相较于故障后的被动抢修，能显著延长设备寿命并降低突发故障对楼宇运营的影响。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 9,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "call_succeeded"
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在联网查询…"
+      ],
+      "expected_alert_count": null,
+      "question": "今天北京的天气新闻有哪些？给出来源链接",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "web_search"
+      ],
+      "duration_ms": 953.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 953.0,
+      "reason": "answered",
+      "answer": "最近两周查到的相关报道：2026-10-12，今天北京多地有雾或轻雾 雨水上线最高气温22 °C需添衣防着凉。2026-10-11，北京近三天昼夜温差达13 °C，今日空气轻度污染，明起转优适宜户外活动。2026-10-11，今天白天北京晴转多云 明后天冷空气来袭雨水上线气温下降。2026-10-09，北京天气“雾蒙蒙”到什么时候？后天有雨来袭——。2026-10-08，未来三天北京天气晴好昼夜温差大 早晚凉意明显注意添衣。\n来源：\n今天北京多地有雾或轻雾 雨水上线最高气温22℃需添衣防着凉：https://www.msn.cn/zh-cn/news/other/%E4%BB%8A%E5%A4%A9%E5%8C%97%E4%BA%AC%E5%A4%9A%E5%9C%B0%E6%9C%89%E9%9B%BE%E6%88%96%E8%BD%BB%E9%9B%BE-%E9%9B%A8%E6%B0%B4%E4%B8%8A%E7%BA%BF%E6%9C%80%E9%AB%98%E6%B0%94%E6%B8%A922-%E9%9C%80%E6%B7%BB%E8%A1%A3%E9%98%B2%E7%9D%80%E5%87%89/ar-AA2e20mO\n北京近三天昼夜温差达13℃，今日空气轻度污染，明起转优适宜户外活动：https://news.qq.com/rain/a/20261012A02FDL00\n今天白天北京晴转多云 明后天冷空气来袭雨水上线气温下降：https://news.qq.com/rain/a/20261011A0336600\n北京天气“雾蒙蒙”到什么时候？后天有雨来袭——：https://www.sohu.com/a/1085630867_121123772\n未来三天北京天气晴好昼夜温差大 早晚凉意明显注意添衣：https://www.msn.cn/zh-cn/news/other/%E6%9C%AA%E6%9D%A5%E4%B8%89%E5%A4%A9%E5%8C%97%E4%BA%AC%E5%A4%A9%E6%B0%94%E6%99%B4%E5%A5%BD%E6%98%BC%E5%A4%9C%E6%B8%A9%E5%B7%AE%E5%A4%A7-%E6%97%A9%E6%99%9A%E5%87%89%E6%84%8F%E6%98%8E%E6%98%BE%E6%B3%A8%E6%84%8F%E6%B7%BB%E8%A1%A3/ar-AA2dNTfS",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "direct_recent_news"
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在联网查询…"
+      ],
+      "expected_alert_count": null,
+      "question": "上海今天的天气怎么样？请附来源",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "web_search",
+        "city_weather"
+      ],
+      "duration_ms": 4015.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 4015.0,
+      "reason": "answered",
+      "answer": "上海（中国）当前气温 19.7 °C，降水 0.0 mm，阴。次日最低 17.9 °C、最高 23.4 °C，降水 0.0 mm，阴。\n来源：\nOpen-Meteo 上海（中国）天气：https://api.open-meteo.com/v1/forecast?latitude=31.22222&longitude=121.45806&current=temperature_2m%2Cprecipitation%2Cweather_code&daily=temperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cweather_code&timezone=auto&forecast_days=2",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "direct_public_weather"
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在联网查询…"
+      ],
+      "expected_alert_count": null,
+      "question": "查一下深圳最新的天气新闻和链接",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "web_search"
+      ],
+      "duration_ms": 1313.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 1313.0,
+      "reason": "answered",
+      "answer": "最近两周查到的相关报道：2026-10-09，深圳：创意“天气排班表”走红网络 12小时播放量破千万。2026-10-04，深圳最新通知：预警解除！机场航班运行受影响。2026-10-02，局地暴雨！深圳解除3个预警，但天气仍不稳定！国庆出行注意。2026-10-01，冷空气就位，深圳“渗透式”降温!。2026-09-29，深圳国庆：双股冷空气接力上线，最低气温将降至…。\n来源：\n深圳：创意“天气排班表”走红网络 12小时播放量破千万：https://finance.sina.com.cn/jjxw/2026-10-09/doc-iniurmnk1129508.shtml\n深圳最新通知：预警解除！机场航班运行受影响：https://news.qq.com/rain/a/20261004A09WML00\n局地暴雨！深圳解除3个预警，但天气仍不稳定！国庆出行注意：https://view.inews.qq.com/a/20261002A06YVL00\n冷空气就位，深圳“渗透式”降温!：https://www.msn.cn/zh-cn/news/other/%E5%86%B7%E7%A9%BA%E6%B0%94%E5%B0%B1%E4%BD%8D-%E6%B7%B1%E5%9C%B3-%E6%B8%97%E9%80%8F%E5%BC%8F-%E9%99%8D%E6%B8%A9/ar-AA2dnZnx\n深圳国庆：双股冷空气接力上线，最低气温将降至…：https://www.sohu.com/a/1082310436_121106875",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "direct_recent_news"
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在联网查询…"
+      ],
+      "expected_alert_count": null,
+      "question": "伦敦现在气温多少？",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "web_search",
+        "city_weather"
+      ],
+      "duration_ms": 3406.0,
+      "first_step_ms": 46.0,
+      "first_answer_ms": 3406.0,
+      "reason": "answered",
+      "answer": "倫敦（英国）当前气温 17.7 °C，降水 0.0 mm，阴。次日最低 14.6 °C、最高 20.3 °C，降水 0.1 mm，毛毛雨。\n来源：\nOpen-Meteo 倫敦（英国）天气：https://api.open-meteo.com/v1/forecast?latitude=51.50853&longitude=-0.12574&current=temperature_2m%2Cprecipitation%2Cweather_code&daily=temperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cweather_code&timezone=auto&forecast_days=2",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "direct_public_weather"
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在联网查询…"
+      ],
+      "expected_alert_count": null,
+      "question": "上海明天天气如何",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "web_search",
+        "city_weather"
+      ],
+      "duration_ms": 3406.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 3406.0,
+      "reason": "answered",
+      "answer": "上海（中国）当前气温 19.7 °C，降水 0.0 mm，阴。次日最低 17.9 °C、最高 23.4 °C，降水 0.0 mm，阴。\n来源：\nOpen-Meteo 上海（中国）天气：https://api.open-meteo.com/v1/forecast?latitude=31.22222&longitude=121.45806&current=temperature_2m%2Cprecipitation%2Cweather_code&daily=temperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cweather_code&timezone=auto&forecast_days=2",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "direct_public_weather"
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在联网查询…"
+      ],
+      "expected_alert_count": null,
+      "question": "北京近期有哪些天气新闻？",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "web_search"
+      ],
+      "duration_ms": 953.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 953.0,
+      "reason": "answered",
+      "answer": "最近两周没有查到相关报道。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "direct_recent_news"
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在联网查询…"
+      ],
+      "expected_alert_count": null,
+      "question": "北京 天气 新闻 给出来源链接",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "web_search"
+      ],
+      "duration_ms": 938.0,
+      "first_step_ms": 32.0,
+      "first_answer_ms": 922.0,
+      "reason": "answered",
+      "answer": "最近两周查到的相关报道：2026-10-12，今天北京多地有雾或轻雾 雨水上线最高气温22 °C需添衣防着凉。2026-10-11，北京近三天昼夜温差达13 °C，今日空气轻度污染，明起转优适宜户外活动。2026-10-11，今天白天北京晴转多云 明后天冷空气来袭雨水上线气温下降。2026-10-09，北京天气“雾蒙蒙”到什么时候？后天有雨来袭——。2026-10-08，未来三天北京天气晴好昼夜温差大 早晚凉意明显注意添衣。\n来源：\n今天北京多地有雾或轻雾 雨水上线最高气温22℃需添衣防着凉：https://www.msn.cn/zh-cn/news/other/%E4%BB%8A%E5%A4%A9%E5%8C%97%E4%BA%AC%E5%A4%9A%E5%9C%B0%E6%9C%89%E9%9B%BE%E6%88%96%E8%BD%BB%E9%9B%BE-%E9%9B%A8%E6%B0%B4%E4%B8%8A%E7%BA%BF%E6%9C%80%E9%AB%98%E6%B0%94%E6%B8%A922-%E9%9C%80%E6%B7%BB%E8%A1%A3%E9%98%B2%E7%9D%80%E5%87%89/ar-AA2e20mO\n北京近三天昼夜温差达13℃，今日空气轻度污染，明起转优适宜户外活动：https://news.qq.com/rain/a/20261012A02FDL00\n今天白天北京晴转多云 明后天冷空气来袭雨水上线气温下降：https://news.qq.com/rain/a/20261011A0336600\n北京天气“雾蒙蒙”到什么时候？后天有雨来袭——：https://www.sohu.com/a/1085630867_121123772\n未来三天北京天气晴好昼夜温差大 早晚凉意明显注意添衣：https://www.msn.cn/zh-cn/news/other/%E6%9C%AA%E6%9D%A5%E4%B8%89%E5%A4%A9%E5%8C%97%E4%BA%AC%E5%A4%A9%E6%B0%94%E6%99%B4%E5%A5%BD%E6%98%BC%E5%A4%9C%E6%B8%A9%E5%B7%AE%E5%A4%A7-%E6%97%A9%E6%99%9A%E5%87%89%E6%84%8F%E6%98%8E%E6%98%BE%E6%B3%A8%E6%84%8F%E6%B7%BB%E8%A1%A3/ar-AA2dNTfS",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "direct_recent_news"
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在联网查询…"
+      ],
+      "expected_alert_count": null,
+      "question": "2024 年物理学奖得主是谁？给出来源链接",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "web_search"
+      ],
+      "duration_ms": 2141.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 2141.0,
+      "reason": "answered",
+      "answer": "2024年诺贝尔物理学奖得主是约翰·霍普菲尔德（John J. Hopfield）和杰弗里·辛顿（Geoffrey Hinton），他们因在基于人工神经网络的计算学习方面的开创性工作而获奖。\n来源：\n2024 年物理学奖：https://api.nobelprize.org/2/nobelPrize/phy/2024",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 2,
+        "template": 0
+      },
+      "narrative_required": true,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "call_succeeded"
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查看天气…"
+      ],
+      "expected_alert_count": null,
+      "question": "今天适合出去散步吗",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_weather"
+      ],
+      "duration_ms": 31.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "当前室外 13.3 °C，湿度 57%。气温适合短时散步，穿着舒适并留意路面。当前只有温湿度记录，降雨、风力和空气质量还需留意现场情况。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": []
+    },
+    {
+      "steps": [
+        "正在联网查询…"
+      ],
+      "expected_alert_count": null,
+      "question": "今天北京的天气新闻有哪些？来源链接请参考公开资料",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "web_search"
+      ],
+      "duration_ms": 1234.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 1219.0,
+      "reason": "answered",
+      "answer": "最近两周查到的相关报道：2026-10-12，今天北京多地有雾或轻雾 雨水上线最高气温22 °C需添衣防着凉。2026-10-11，北京近三天昼夜温差达13 °C，今日空气轻度污染，明起转优适宜户外活动。2026-10-11，今天白天北京晴转多云 明后天冷空气来袭雨水上线气温下降。2026-10-09，北京天气“雾蒙蒙”到什么时候？后天有雨来袭——。2026-10-08，未来三天北京天气晴好昼夜温差大 早晚凉意明显注意添衣。\n来源：\n今天北京多地有雾或轻雾 雨水上线最高气温22℃需添衣防着凉：https://www.msn.cn/zh-cn/news/other/%E4%BB%8A%E5%A4%A9%E5%8C%97%E4%BA%AC%E5%A4%9A%E5%9C%B0%E6%9C%89%E9%9B%BE%E6%88%96%E8%BD%BB%E9%9B%BE-%E9%9B%A8%E6%B0%B4%E4%B8%8A%E7%BA%BF%E6%9C%80%E9%AB%98%E6%B0%94%E6%B8%A922-%E9%9C%80%E6%B7%BB%E8%A1%A3%E9%98%B2%E7%9D%80%E5%87%89/ar-AA2e20mO\n北京近三天昼夜温差达13℃，今日空气轻度污染，明起转优适宜户外活动：https://news.qq.com/rain/a/20261012A02FDL00\n今天白天北京晴转多云 明后天冷空气来袭雨水上线气温下降：https://news.qq.com/rain/a/20261011A0336600\n北京天气“雾蒙蒙”到什么时候？后天有雨来袭——：https://www.sohu.com/a/1085630867_121123772\n未来三天北京天气晴好昼夜温差大 早晚凉意明显注意添衣：https://www.msn.cn/zh-cn/news/other/%E6%9C%AA%E6%9D%A5%E4%B8%89%E5%A4%A9%E5%8C%97%E4%BA%AC%E5%A4%A9%E6%B0%94%E6%99%B4%E5%A5%BD%E6%98%BC%E5%A4%9C%E6%B8%A9%E5%B7%AE%E5%A4%A7-%E6%97%A9%E6%99%9A%E5%87%89%E6%84%8F%E6%98%8E%E6%98%BE%E6%B3%A8%E6%84%8F%E6%B7%BB%E8%A1%A3/ar-AA2dNTfS",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "direct_recent_news"
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "空调改24度电费多少",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "duration_ms": 2079.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 1375.0,
+      "reason": "answered",
+      "answer": "空调设定从 25.5 °C 改为 24.0 °C，计入时段电费从 13,173.3 元变为 13,794.1 元，预计多花 620.7 元。同一批时段电网峰值从 1,215.3 kW 变为 1,272.6 kW，增加 57.3 kW。本次结果只覆盖可自动调度的 18 个小时，另有 6 个小时未计入，原因均为预测变化较大。未计入时段：17:00–20:00、次日 13:00–14:00（预测变化较大），请值班人员检查表计和设备记录。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 1
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 734.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {
+            "prose_repair_failed": 2
+          },
+          "accepted_llm_sentences": 3,
+          "host_supplemented": true,
+          "elapsed_ms": 2000.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2000.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "把空调调低一度会怎样",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "duration_ms": 2938.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 2188.0,
+      "reason": "answered",
+      "answer": "空调设定从 25.5 °C 降至 24.5 °C，计入时段电费由 13,173.3 元升至 13,587.1 元，预计多花 413.8 元。同一批时段电网峰值由 1,215.3 kW 升至 1,253.5 kW，增加 38.2 kW。本次结果只覆盖可自动调度的 18 小时，6 小时因预测变化较大未计入，请值班人员核对表计和设备记录。未计入时段：17:00–20:00、次日 13:00–14:00（预测变化较大），请值班人员检查表计和设备记录。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 1
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 625.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {
+            "prose_repair_failed": 2
+          },
+          "accepted_llm_sentences": 3,
+          "host_supplemented": true,
+          "elapsed_ms": 2859.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2859.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "空调设定降低1度，电费和峰值有什么变化",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "duration_ms": 2453.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 1828.0,
+      "reason": "answered",
+      "answer": "设定从 25.5 °C 降为 24.5 °C，计入时段电费从 13,173.3 元升至 13,587.1 元，预计多花 413.8 元。同期电网峰值由 1,215.3 kW 增至 1,253.5 kW，增加 38.2 kW。本次只覆盖可自动调度的 18 个小时，未计入 6 个小时因预测变化较大，请值班人员检查表计和设备记录。未计入时段：17:00–20:00、次日 13:00–14:00（预测变化较大），请值班人员检查表计和设备记录。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 1
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 1031.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 3,
+          "host_supplemented": true,
+          "elapsed_ms": 2375.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2359.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "空调降温一度要多花多少钱",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "duration_ms": 4062.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 4047.0,
+      "reason": "answered",
+      "answer": "从 25.5 °C 改为 24.5 °C，计入时段电费从 13,173.3 元升至 13,587.1 元，预计多花 413.8 元。同一批时段电网峰值从 1,215.3 kW 升至 1,253.5 kW，增加 38.2 kW。本次仅覆盖 18 个可自动调度小时，6 个未计入时段因预测变化较大被排除，请值班人员检查表计和设备记录。本次只覆盖可自动调度时段，不按整天计算；未计入时段：17:00–20:00、次日 13:00–14:00（预测变化较大），请值班人员检查表计和设备记录。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 1
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 1328.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {
+            "prose_repair_failed": 2
+          },
+          "accepted_llm_sentences": 3,
+          "host_supplemented": true,
+          "elapsed_ms": 3984.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 3984.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "把空调温度下调一度呢",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "duration_ms": 2734.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 1984.0,
+      "reason": "answered",
+      "answer": "空调设定从 25.5 °C 改为 24.5 °C，计入时段改前电费 13,173.3 元，改后 13,587.1 元，预计多花 413.8 元；同一批时段电网峰值从 1,215.3 kW 升至 1,253.5 kW，峰值增加 38.2 kW。可自动调度 18 个小时；未计入 6 个小时；本次只覆盖可自动调度时段，不按整天计算；未计入时段：17:00–20:00、次日 13:00–14:00（预测变化较大），请值班人员检查表计和设备记录。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 1,
+        "template": 1
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 969.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {
+            "prose_repair_failed": 1
+          },
+          "accepted_llm_sentences": 1,
+          "host_supplemented": true,
+          "elapsed_ms": 2672.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2672.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在联网查询…"
+      ],
+      "expected_alert_count": null,
+      "question": "北京最近有什么天气新闻",
+      "scenario": "normal",
+      "origin_index": 14,
+      "origin": "2017-10-23T14:00:00-05:00",
+      "display_time": "14:00",
+      "correct_with_evidence": true,
+      "tools": [
+        "web_search"
+      ],
+      "duration_ms": 1406.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 1406.0,
+      "reason": "answered",
+      "answer": "最近两周没有查到相关报道。",
+      "errors": [],
+      "explanation_source": "template",
+      "sentence_sources": {
+        "llm": 0,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": true,
+      "phase_timings": [
+        {
+          "phase": "public_answer",
+          "reason": "direct_recent_news"
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "把空调调低一度会怎样",
+      "scenario": "normal",
+      "origin_index": 2,
+      "origin": "2017-10-23T02:00:00-05:00",
+      "display_time": "02:45",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "duration_ms": 1812.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 1234.0,
+      "reason": "answered",
+      "answer": "空调设定从 25.8 °C 调低到 24.8 °C，计入时段电费由 15,984.9 元升至 16,491.8 元，预计多花 506.9 元。同一批时段电网峰值从 1,194.6 kW 增至 1,232.5 kW，增加 37.9 kW。此结果只覆盖可自动调度的 21 小时，未计入 3 小时因预测变化较大，请值班人员核对相关时段记录。未计入时段：13:00–14:00、17:00（预测变化较大），请值班人员检查表计和设备记录。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 1
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 687.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 3,
+          "host_supplemented": true,
+          "elapsed_ms": 1672.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 1672.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "空调设定调到24度会多花多少钱",
+      "scenario": "normal",
+      "origin_index": 2,
+      "origin": "2017-10-23T02:00:00-05:00",
+      "display_time": "02:45",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "duration_ms": 3235.0,
+      "first_step_ms": 63.0,
+      "first_answer_ms": 1563.0,
+      "reason": "answered",
+      "answer": "空调设定从 25.8 °C 改为 24.0 °C，计入时段电费从 15,984.9 元变为 16,897.4 元，预计多花 912.5 元。同一批时段电网峰值从 1,194.6 kW 增至 1,262.8 kW，增加 68.2 kW。本次只覆盖可自动调度的 21 个小时，3 小时未计入；因 13:00–14:00、17:00 预测变化较大，交值班人员处理。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 906.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 3,
+          "host_supplemented": false,
+          "elapsed_ms": 3125.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 3125.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "把空调调低一度会怎样",
+      "scenario": "normal",
+      "origin_index": 10,
+      "origin": "2017-10-23T10:00:00-05:00",
+      "display_time": "10:30",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "duration_ms": 5907.0,
+      "first_step_ms": 47.0,
+      "first_answer_ms": 5250.0,
+      "reason": "answered",
+      "answer": "空调设定从 25.5 °C 改为 24.5 °C，计入时段电费从 9,313.8 元变为 9,606.4 元，预计多花 292.6 元。同一批时段电网峰值从 1,192.6 kW 变为 1,230.1 kW，增加 37.5 kW。本次只覆盖可自动调度的 16 小时，8 小时因预测变化较大未计入，请值班人员核对表计和设备记录。未计入时段：11:00–18:00（预测变化较大），请值班人员检查表计和设备记录。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 1
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 5062.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 3,
+          "host_supplemented": true,
+          "elapsed_ms": 5797.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 5797.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "空调设定调到24度会多花多少钱",
+      "scenario": "normal",
+      "origin_index": 10,
+      "origin": "2017-10-23T10:00:00-05:00",
+      "display_time": "10:30",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "duration_ms": 2313.0,
+      "first_step_ms": 31.0,
+      "first_answer_ms": 1828.0,
+      "reason": "answered",
+      "answer": "改前设定 25.5 °C 电费 9,313.8 元，改后 24.0 °C 为 9,752.7 元，预计多花 438.9 元。同一批时段电网峰值从 1,192.6 kW 升至 1,248.8 kW，增加 56.2 kW。本次只覆盖可自动调度的 16 个小时，另有 8 个小时未计入，原因是 11:00–18:00 逐小时预测变化较大，请值班人员核对这些时段的表计和设备记录。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 0
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 813.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 3,
+          "host_supplemented": false,
+          "elapsed_ms": 2235.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2235.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "把空调调低一度会怎样",
+      "scenario": "normal",
+      "origin_index": 19,
+      "origin": "2017-10-23T19:00:00-05:00",
+      "display_time": "19:30",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "duration_ms": 2094.0,
+      "first_step_ms": 32.0,
+      "first_answer_ms": 1328.0,
+      "reason": "answered",
+      "answer": "空调设定从 26.4 °C 降至 25.4 °C，电费从 9,060.3 元变为 9,353.2 元，预计多花 292.9 元。同批时段电网峰值由 1,176.2 kW 升至 1,214.3 kW，增加 38.0 kW。此结果仅覆盖可自动调度的 15 小时，另有 9 小时因预测变化较大未计入。本次只覆盖可自动调度时段，不按整天计算；未计入时段：次日 08:00–09:00、13:00–19:00（预测变化较大），请值班人员检查表计和设备记录。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 1
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 641.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {
+            "prose_repair_failed": 2
+          },
+          "accepted_llm_sentences": 3,
+          "host_supplemented": true,
+          "elapsed_ms": 2016.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2016.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        "正在查询相关数据…"
+      ],
+      "expected_alert_count": null,
+      "question": "空调设定调到24度会多花多少钱",
+      "scenario": "normal",
+      "origin_index": 19,
+      "origin": "2017-10-23T19:00:00-05:00",
+      "display_time": "19:30",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "duration_ms": 2203.0,
+      "first_step_ms": 93.0,
+      "first_answer_ms": 1640.0,
+      "reason": "answered",
+      "answer": "空调从 26.4 °C 调到 24.0 °C，计入时段改前电费 9,060.3 元，改后电费 9,763.3 元，预计多花 703.0 元。同一批时段的电网峰值从 1,176.2 kW 变为 1,267.5 kW，增加 91.3 kW。本次只覆盖可自动调度的 15 个小时，另有 9 个小时未计入，排除时段因预测变化较大而不按整天计算。未计入时段：次日 08:00–09:00、13:00–19:00（预测变化较大），请值班人员检查表计和设备记录。",
+      "errors": [],
+      "explanation_source": "llm",
+      "sentence_sources": {
+        "llm": 3,
+        "template": 1
+      },
+      "narrative_required": false,
+      "general_answer": false,
+      "phase_timings": [
+        {
+          "phase": "answer_stream",
+          "first_token_ms": 1078.0,
+          "first_token_timeout_seconds": 8.0,
+          "validation_failures": {},
+          "accepted_llm_sentences": 3,
+          "host_supplemented": true,
+          "elapsed_ms": 2078.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2078.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "public_queries": []
+}

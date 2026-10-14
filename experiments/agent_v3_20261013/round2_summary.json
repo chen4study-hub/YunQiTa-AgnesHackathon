@@ -1,0 +1,89 @@
+{
+  "frozen_manifest_sha256": "baec8dd7d61f6b8906a3f8d87ce070668cd6a8301e2b954d8634243a4005d9f8",
+  "receipt_sha256": "ab734c0b1ccfeef572361e66533578bc1d024ad3d8d74c640aae10f718d4edfe",
+  "frozen_inputs_unchanged": true,
+  "backend_stopped": true,
+  "classifiers_stopped": true,
+  "batches": 10,
+  "model": "agnes-3.0-flash",
+  "default_enabled": false,
+  "failed31": {
+    "count": 31,
+    "correct": 22,
+    "correct_rate": 0.7096774193548387,
+    "model_correct": 19,
+    "median_ms": 10125.0,
+    "p90_nearest_rank_ms": 23125.0,
+    "slowest_original_index": 34,
+    "slowest_question": "储能功率和充放电记录",
+    "max_ms": 24484.0,
+    "provider_errors": {
+      "first_token_timeout": 7,
+      "agent_deadline": 1
+    },
+    "template_count": 7,
+    "empty_count": 0,
+    "over25_count": 0,
+    "failures": [
+      17,
+      20,
+      32,
+      33,
+      52,
+      63,
+      65,
+      66,
+      69
+    ]
+  },
+  "passed15": {
+    "count": 15,
+    "correct": 14,
+    "correct_rate": 0.9333333333333333,
+    "model_correct": 12,
+    "median_ms": 3719.0,
+    "p90_nearest_rank_ms": 17343.0,
+    "slowest_original_index": 35,
+    "slowest_question": "今天光伏发电量多少",
+    "max_ms": 17625.0,
+    "provider_errors": {
+      "first_token_timeout": 1
+    },
+    "template_count": 2,
+    "empty_count": 0,
+    "over25_count": 0,
+    "failures": [
+      51
+    ]
+  },
+  "all46": {
+    "count": 46,
+    "correct": 36,
+    "correct_rate": 0.782608695652174,
+    "model_correct": 31,
+    "median_ms": 8203.0,
+    "p90_nearest_rank_ms": 18937.0,
+    "slowest_original_index": 34,
+    "slowest_question": "储能功率和充放电记录",
+    "max_ms": 24484.0,
+    "provider_errors": {
+      "first_token_timeout": 8,
+      "agent_deadline": 1
+    },
+    "template_count": 9,
+    "empty_count": 0,
+    "over25_count": 0,
+    "failures": [
+      17,
+      20,
+      32,
+      33,
+      52,
+      63,
+      65,
+      66,
+      69,
+      51
+    ]
+  }
+}

@@ -1,0 +1,387 @@
+.viewport {
+  width: 100%;
+  height: 100dvh;
+  min-width: 0;
+}
+.shell {
+  width: 100% !important;
+  height: 100dvh !important;
+  min-height: 0 !important;
+  padding: var(--space) !important;
+  display: grid !important;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: var(--space);
+}
+.content {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden !important;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  container: dashboard-content / inline-size;
+}
+/* Readable cards grow naturally; their main viewport owns vertical scrolling. */
+.content:is([data-page="about"], [data-page="overview"]) {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+.slot {
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+}
+.slot[hidden] {
+  display: none !important;
+}
+.top {
+  height: auto !important;
+  min-height: 4.25rem;
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  padding: 0.3rem var(--space) !important;
+  gap: var(--space);
+  min-width: 0;
+}
+.top :global(.brand) {
+  width: auto;
+  margin: 0;
+}
+.top nav {
+  display: flex;
+  overflow-x: auto;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 !important;
+  height: 100%;
+  scrollbar-width: thin;
+  scroll-snap-type: x proximity;
+}
+.top :global(.nav-item) {
+  position: relative;
+  flex: 1 0 clamp(6.5rem, 6.6vw, 9rem);
+  width: auto;
+  min-height: 44px;
+  padding: 0.65rem 0.5rem;
+  font-size: clamp(0.85rem, 0.85vw, 1rem);
+  scroll-snap-align: start;
+}
+.top :global(.nav-item[aria-busy="true"])::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+/* Returning to the persistent scene must not fade its entire slot from zero. */
+.slot:global(.overview-persistent):not([hidden]) {
+  animation: none;
+}
+.top :global(.nav-item.active) {
+  background: #4fd1d90c;
+  border-bottom: 2px solid var(--cyan);
+}
+.currentDate {
+  min-width: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.bottom {
+  height: auto !important;
+  display: grid !important;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  align-items: center;
+  padding: 0.5rem var(--space) !important;
+  gap: 0.35rem var(--space);
+  min-width: 0;
+}
+.bottom :global(.footer-details) {
+  grid-column: 1 / -1;
+}
+.bottom :global(.footer-popover) {
+  display: flex;
+  gap: var(--space);
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom :global(.footer-details-toggle) {
+  display: none;
+}
+.bottom :global(.credit) {
+  grid-column: 1 / -1;
+  width: auto;
+  white-space: normal;
+  overflow: visible;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  padding: 0.2rem 0;
+}
+.clockControls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 2px 8px;
+  min-width: 0;
+}
+/* Reserve the desktop slot so appearing during pointer-down cannot shift the time axis. */
+.currentReturn {
+  width: 6.5rem;
+}
+.bottom :global(.clock) {
+  font-size: clamp(0.78rem, 0.75vw, 0.95rem);
+  width: 26em;
+  white-space: nowrap;
+}
+@media (min-width: 1181px) and (max-width: 1650px) {
+  .top {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+  .top nav {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+  .currentDate {
+    grid-column: 2;
+    justify-self: end;
+  }
+  .top :global(.top-badge.green) {
+    display: none;
+  }
+  .top :global(.top-badge.cyan) {
+    display: inline-block;
+    grid-column: 3;
+  }
+}
+@media (max-width: 1180px) {
+  .top {
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+  }
+  .top nav {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+  .currentDate {
+    justify-self: end;
+  }
+}
+@media (max-width: 1000px) {
+  .currentReturn {
+    width: auto;
+  }
+  .currentReturn:empty {
+    display: none;
+  }
+  .top {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .top :global(.top-badge) {
+    display: none;
+  }
+  .bottom {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .bottom :global(.timeline-scroll) {
+    grid-column: 1 / -1;
+  }
+  .bottom :global(.footer-details) {
+    position: relative;
+    grid-row: 1;
+    grid-column: 3;
+  }
+  .bottom :global(.footer-details-toggle) {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--cyan);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+  }
+  .bottom :global(.footer-popover) {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 0.7rem);
+    right: 0;
+    width: min(26rem, calc(100vw - 2rem));
+    padding: 1rem;
+    background: #0c131b;
+    border: 1px solid #397789;
+    z-index: 10;
+  }
+  .bottom :global(.footer-details[data-expanded="true"] .footer-popover) {
+    display: grid;
+  }
+  .bottom :global(.credit) {
+    min-height: 44px;
+  }
+  .bottom {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+  .bottom :global(.timeline-scroll) {
+    grid-row: 2;
+  }
+  .bottom :global(.clock) {
+    width: auto;
+    white-space: normal;
+    text-align: right;
+  }
+}
+@media (max-width: 1180px) {
+  .viewport {
+    height: auto;
+    min-height: 100dvh;
+  }
+  .shell {
+    height: auto !important;
+    min-height: 100dvh !important;
+    grid-template-rows: auto auto auto;
+  }
+  .content {
+    overflow: visible !important;
+  }
+  .slot {
+    height: auto;
+  }
+}
+.mobileCredit {
+  display: none;
+}
+@media (max-width: 600px) {
+  .mobileCredit {
+    display: block;
+    grid-row: 3;
+    grid-column: 1 / -1;
+    color: var(--muted);
+    font-size: var(--font-note);
+    line-height: 1.4;
+  }
+  .shell {
+    padding-bottom: var(--space) !important;
+  }
+  .content {
+    padding-bottom: calc(
+      var(--footer-height, 100px) + env(safe-area-inset-bottom, 0px)
+    );
+  }
+  .top {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px 6px;
+    min-height: 0;
+    padding: 4px 6px !important;
+  }
+  .top :global(.brand) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .top :global(.brand span) {
+    display: block;
+    font-size: var(--font-note);
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+  .top :global(.top-logo) {
+    width: 100px;
+    max-height: 28px;
+  }
+  .currentDate {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
+    font-size: var(--font-note);
+  }
+  .top nav {
+    grid-row: 2;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: hidden;
+  }
+  .top :global(.nav-item) {
+    min-height: 36px;
+    min-width: 0;
+    padding: 4px;
+    font-size: var(--font-note);
+  }
+  .top :global(.nav-item small) {
+    display: none;
+  }
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 2px 8px !important;
+    padding: 0 8px !important;
+    border-radius: 8px 8px 0 0;
+    background: #0c131b;
+  }
+  .bottom :global(.button) {
+    min-width: 60px;
+    min-height: 36px;
+    font-size: var(--font-note);
+    padding: 4px 8px;
+  }
+  .bottom :global(.clock) {
+    width: auto;
+    white-space: nowrap;
+    font-size: var(--font-note);
+  }
+  .bottom :global(.footer-details) {
+    display: none;
+  }
+  .bottom :global(.timeline-scroll) {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    overflow: hidden;
+    padding: 0;
+  }
+}
+
+/* Text dimensions are token-owned; footer rows grow instead of squeezing clocks. */
+.currentDate {
+  font-size: var(--font-body);
+}
+.mobileCredit {
+  font-size: var(--font-note);
+}
+.bottom :global(.clock) {
+  width: auto;
+  line-height: 1.5;
+}
+.top :global(.nav-item) {
+  font-size: var(--font-body);
+}
+.top :global(.top-badge) {
+  white-space: normal;
+}
+@media (min-width: 1181px) {
+  .content[data-page="overview"] > .slot {
+    height: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .bottom :global(.clock) {
+    white-space: normal;
+  }
+  .clockControls {
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 1180px) {
+  .viewport:has(.content:is([data-page="overview"], [data-page="about"])) {
+    height: 100dvh;
+  }
+  .shell:has(.content:is([data-page="overview"], [data-page="about"])) {
+    height: 100dvh !important;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+}

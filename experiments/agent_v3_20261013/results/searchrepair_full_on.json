@@ -1,0 +1,1836 @@
+{
+  "kind": "full",
+  "switch": "on",
+  "source_hash": {
+    "src/api/app.py": "84e71bab041777869f246860204529e1da2e71e4b96e9152c91ad004b50bc18e",
+    "src/agent/agent_runner.py": "911042e7c9adf8d034f50187393dc4d43481b8b1fb341331fa5664c57b09aee5",
+    "src/agent/agent_provider.py": "07f63023152da79d093d57088442fa2eb6fe39ddcf03d19f41534ea9cb90c5fa",
+    "src/agent/agent_tools.py": "ee555c94af9a0d4aff5fa875a98fc007e9f851801d35d76b1b93f030c1f2b285",
+    "src/agent/agent_validation.py": "f2bd4ee15a9feeb5bf1e3c7f346ee68d3e275866e2928d30f1b7877382bd0111",
+    "tests/building_chat_cases.json": "dccb868255eabb22041971894f4e08a66f737043c9fc91cd71c761cac233d127",
+    "src/agent/chat_tools.py": "cc427e5f357ee0d75259948c83199f1f841d744f0299e8b2efad47fc3dd2f893",
+    "src/agent/chat_evidence.py": "bcc2a56da7a566256f21d0805c81ad3a13c5fc884138c5638846912d7c8261aa",
+    "src/agent/chat_display.py": "28295553f491c2ed43c74bba87b754eaf42a6b0e4defc3da59a03a2dc0cdad2e",
+    "src/agent/display_text.py": "41a907f53db84e09f1cc192926b2459b20b574c90d5076a9d01b32184d637cc8",
+    "src/agent/orchestrator.py": "eb22d407634c5ea4bd000ae8d1ecd956735a66bf46d857501f9f55b18ad54b78",
+    "src/agent/tools.py": "edd1361e55d633c9123b68a5ab3e18bd72213aa6bcbd000ea2b8681b4a6af3dc",
+    "src/agent/topic_guard.py": "11d2e39093ac14e195e3691d453331e4183f27eba8074cb3f9c526872525e5ec",
+    "src/agent/provider.py": "b9aefd37bfd3fc2b0a259dc70d84297a10ae33f3e5cf3c298f9541da303287bd",
+    "src/agent/city_weather.py": "f21c705425a166f572d71f2bb5376d0bda51cf8fc2949c78d65c1af123934309",
+    "src/agent/web_search.py": "80f81714a1bae26eb5336154378d6b6c4deb69452e37928882a3c5b46ac4dfca",
+    "src/data/replay_payload.py": "c9c5f89de9c7e6c0d9d1427a2e39df6b05b9d60f847221c0d43e4f75110176ad",
+    "configs/agent_tools.json": "599b9c7a0186be978d01d9db64d9f51fb7926dd39ea3d316fd3949f58f871b70",
+    "probe.py": "d0fde7bc4080f4ddaf316aefd188a7bb9c4b74fb6ad791f39ca65023e732e425",
+    "multi_cases.json": "d045f887ac6c765d97dceddc51c97c01841c84de004a2802ddb7eeb4e3011644",
+    "src/agent/chat_progress.py": "c9d51777d96455296d4322f0ac885411c5397a61d004aa5c5a51397308f56ad6",
+    "src/agent/building_tools.py": "74bbb292121d3a9b45fddb59e809fddaa49ba25fa359271c0ce360d8d5a6bc51",
+    "src/agent/chat_router.py": "d90f01b996564ae47ddc78562603b4f49b87a09bf1362612a793f61030e9d032",
+    "src/agent/chat_sentence_stream.py": "dc26a916f461b5e73107d9cdb16165b0ed08472b17cc28eb3779c119946058b6",
+    "src/agent/chat_topic_hook.py": "1e53c5ad43e4df9c7c9b0cb2f1c77d3f9f292cda676d6deb50ecee1ea275d63a",
+    "src/agent/tariff_periods.py": "eba919140d8fa25d32852e61209cfab431af0bfb6ce36a4f254c167c2ab07e13",
+    "src/agent/storage_scope.py": "e69f96762990d7b34a452a34e1ecba27c9aa88b71871e0698d083a415dd725aa",
+    "src/agent/answer_filter.py": "c72501f85742e0073358380e154fe61880d90f345e465332856ff65b5dfd3961",
+    "src/agent/agent_prefetch.py": "93da50cb96aea5d4a86f788ab79bdcfad54972ab70025618f3bf18cb00f8c376",
+    "src/agent/agent_relevance.py": "71520a3a749196d07283350bf837268c4f4d1bde1760a6f840eca028768b3e07",
+    "experiments/agent_v3_20261013/semantic_assertions.py": "178b670f2b98981d1e9c9f0c989d8b1633097c9886d16f2d9edb27b3fc28fdd1",
+    "experiments/agent_v3_20261013/searchrepair_cases.json": "17697f845028df85710a5339f00c1f748ac29584a87d7a64ac82f189022ef9d6"
+  },
+  "results": [
+    {
+      "index": 0,
+      "question": "2026年诺奖得主 联网查询",
+      "answer": "公开来源摘要：\n2026 年化学奖：2026 年诺贝尔奖 化学奖：Henri B. Kagan、Kenso Soai。2026 年经济学奖：2026 年诺贝尔奖 经济学奖：Robert E. Hall、Michael Woodford。2026 年文学奖：2026 年诺贝尔奖 文学奖：Anne Carson。2026 年生理学或医学奖：2026 年诺贝尔奖 生理学或医学奖：Karl Deisseroth、Peter Hegemann、Georg Nagel。2026 年和平奖：2026 年诺贝尔奖 和平奖：Navi Pillay。来源：\n2026 年化学奖：https://api.nobelprize.org/2/nobelPrize/che/2026\n2026 年经济学奖：https://api.nobelprize.org/2/nobelPrize/eco/2026\n2026 年文学奖：https://api.nobelprize.org/2/nobelPrize/lit/2026\n2026 年生理学或医学奖：https://api.nobelprize.org/2/nobelPrize/med/2026\n2026 年和平奖：https://api.nobelprize.org/2/nobelPrize/pea/2026",
+      "tools": [
+        "web_search"
+      ],
+      "duration_ms": 9219.0,
+      "first_answer_ms": 9203.0,
+      "correct_with_evidence": true,
+      "scoring_error": null,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "template",
+        "mode": "fallback",
+        "reason": "answered",
+        "llm_reason": "public_source_reference",
+        "phase_timings": [
+          {
+            "phase": "agent_public_lookup",
+            "tool": "web_search",
+            "elapsed_ms": 2719.0
+          },
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 4515.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "c1e2ff5f813748218cd613c3d933ba20",
+        "context_id": "d90509729d754d28b925105cae5427d3",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 1938.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 593.0,
+          "total_ms": 4515.0,
+          "tool_count": 9,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "web_search",
+            "city_weather",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 960
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9031.0
+        }
+      ],
+      "started_utc": "2026-10-13T14:05:00.822356+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "tool_start",
+          "id": "5c6d9f7a69a6441c922d9be94a9e946e",
+          "tool": "web_search",
+          "args": {
+            "query": "2026年诺奖得主 联网查询"
+          },
+          "name": "联网查询"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "tool_end",
+          "id": "5c6d9f7a69a6441c922d9be94a9e946e",
+          "tool": "web_search",
+          "ms": 2719.0,
+          "summary": "联网查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "answer_delta",
+          "text": "公开来源摘要：\n",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年化学奖：2026 年诺贝尔奖 化学奖：Henri B. Kagan、Kenso Soai。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年经济学奖：2026 年诺贝尔奖 经济学奖：Robert E. Hall、Michael Woodford。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年文学奖：2026 年诺贝尔奖 文学奖：Anne Carson。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年生理学或医学奖：2026 年诺贝尔奖 生理学或医学奖：Karl Deisseroth、Peter Hegemann、Georg Nagel。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年和平奖：2026 年诺贝尔奖 和平奖：Navi Pillay。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "来源：\n",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年化学奖：https://api.nobelprize.org/2/nobelPrize/che/2026\n",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年经济学奖：https://api.nobelprize.org/2/nobelPrize/eco/2026\n",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年文学奖：https://api.nobelprize.org/2/nobelPrize/lit/2026\n",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年生理学或医学奖：https://api.nobelprize.org/2/nobelPrize/med/2026\n",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年和平奖：https://api.nobelprize.org/2/nobelPrize/pea/2026",
+          "sentence_source": "template"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "template",
+          "mode": "fallback",
+          "reason": "answered",
+          "llm_reason": "public_source_reference",
+          "phase_timings": [
+            {
+              "phase": "agent_public_lookup",
+              "tool": "web_search",
+              "elapsed_ms": 2719.0
+            },
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 4515.0,
+              "reason": "completed",
+              "post_tool": true
+            }
+          ],
+          "session_id": "c1e2ff5f813748218cd613c3d933ba20",
+          "context_id": "d90509729d754d28b925105cae5427d3",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 1938.0
+          }
+        }
+      ],
+      "original_index": null,
+      "semantic_evidence": null,
+      "pipeline_captured": true,
+      "final_trace": [
+        {
+          "tool": "web_search",
+          "result": {
+            "status": "ok",
+            "sources": [
+              {
+                "title": "2026 年化学奖",
+                "url": "https://api.nobelprize.org/2/nobelPrize/che/2026",
+                "snippet": "2026 年诺贝尔奖 化学奖：Henri B. Kagan、Kenso Soai。",
+                "engine": "nobel",
+                "relevance": 1.2
+              },
+              {
+                "title": "2026 年经济学奖",
+                "url": "https://api.nobelprize.org/2/nobelPrize/eco/2026",
+                "snippet": "2026 年诺贝尔奖 经济学奖：Robert E. Hall、Michael Woodford。",
+                "engine": "nobel",
+                "relevance": 1.2
+              },
+              {
+                "title": "2026 年文学奖",
+                "url": "https://api.nobelprize.org/2/nobelPrize/lit/2026",
+                "snippet": "2026 年诺贝尔奖 文学奖：Anne Carson。",
+                "engine": "nobel",
+                "relevance": 1.2
+              },
+              {
+                "title": "2026 年生理学或医学奖",
+                "url": "https://api.nobelprize.org/2/nobelPrize/med/2026",
+                "snippet": "2026 年诺贝尔奖 生理学或医学奖：Karl Deisseroth、Peter Hegemann、Georg Nagel。",
+                "engine": "nobel",
+                "relevance": 1.2
+              },
+              {
+                "title": "2026 年和平奖",
+                "url": "https://api.nobelprize.org/2/nobelPrize/pea/2026",
+                "snippet": "2026 年诺贝尔奖 和平奖：Navi Pillay。",
+                "engine": "nobel",
+                "relevance": 1.2
+              }
+            ],
+            "answer": null,
+            "searched_at": "2026-10-13T22:05:05.512210+08:00",
+            "engines": [
+              {
+                "name": "bing",
+                "status": "unavailable"
+              },
+              {
+                "name": "duckduckgo",
+                "status": "ok"
+              },
+              {
+                "name": "wikipedia",
+                "status": "unavailable"
+              },
+              {
+                "name": "nobel",
+                "status": "ok"
+              }
+            ]
+          }
+        }
+      ],
+      "model_correct": false,
+      "template_answer": true,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 1,
+      "question": "2026年诺奖得主",
+      "answer": "公开来源摘要：\n2026 年化学奖：2026 年诺贝尔奖 化学奖：Henri B. Kagan、Kenso Soai。2026 年经济学奖：2026 年诺贝尔奖 经济学奖：Robert E. Hall、Michael Woodford。2026 年文学奖：2026 年诺贝尔奖 文学奖：Anne Carson。2026 年生理学或医学奖：2026 年诺贝尔奖 生理学或医学奖：Karl Deisseroth、Peter Hegemann、Georg Nagel。2026 年和平奖：2026 年诺贝尔奖 和平奖：Navi Pillay。来源：\n2026 年化学奖：https://api.nobelprize.org/2/nobelPrize/che/2026\n2026 年经济学奖：https://api.nobelprize.org/2/nobelPrize/eco/2026\n2026 年文学奖：https://api.nobelprize.org/2/nobelPrize/lit/2026\n2026 年生理学或医学奖：https://api.nobelprize.org/2/nobelPrize/med/2026\n2026 年和平奖：https://api.nobelprize.org/2/nobelPrize/pea/2026",
+      "tools": [
+        "web_search"
+      ],
+      "duration_ms": 15765.0,
+      "first_answer_ms": 15765.0,
+      "correct_with_evidence": true,
+      "scoring_error": null,
+      "success_within_15s": false,
+      "finished_within_15s": false,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "template",
+        "mode": "fallback",
+        "reason": "answered",
+        "llm_reason": "public_source_reference",
+        "phase_timings": [
+          {
+            "phase": "agent_public_lookup",
+            "tool": "web_search",
+            "elapsed_ms": 2344.0
+          },
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 4406.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "7afa16a0282e4f089df84fba9eae76cd",
+        "context_id": "a9520aef3da74637adc2f50d4ca21ee5",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 9015.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 906.0,
+          "total_ms": 4406.0,
+          "tool_count": 8,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "web_search",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 949
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11,
+          "received_ms": 11015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12,
+          "received_ms": 12015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13,
+          "received_ms": 13000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14,
+          "received_ms": 14015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15,
+          "received_ms": 15000.0
+        }
+      ],
+      "started_utc": "2026-10-13T14:05:10.046253+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "tool_start",
+          "id": "759fa1ceceac47bd94da8f98a690d4e9",
+          "tool": "web_search",
+          "args": {
+            "query": "2026年诺奖得主"
+          },
+          "name": "联网查询"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11
+        },
+        {
+          "type": "tool_end",
+          "id": "759fa1ceceac47bd94da8f98a690d4e9",
+          "tool": "web_search",
+          "ms": 2344.0,
+          "summary": "联网查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15
+        },
+        {
+          "type": "answer_delta",
+          "text": "公开来源摘要：\n",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年化学奖：2026 年诺贝尔奖 化学奖：Henri B. Kagan、Kenso Soai。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年经济学奖：2026 年诺贝尔奖 经济学奖：Robert E. Hall、Michael Woodford。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年文学奖：2026 年诺贝尔奖 文学奖：Anne Carson。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年生理学或医学奖：2026 年诺贝尔奖 生理学或医学奖：Karl Deisseroth、Peter Hegemann、Georg Nagel。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年和平奖：2026 年诺贝尔奖 和平奖：Navi Pillay。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "来源：\n",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年化学奖：https://api.nobelprize.org/2/nobelPrize/che/2026\n",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年经济学奖：https://api.nobelprize.org/2/nobelPrize/eco/2026\n",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年文学奖：https://api.nobelprize.org/2/nobelPrize/lit/2026\n",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年生理学或医学奖：https://api.nobelprize.org/2/nobelPrize/med/2026\n",
+          "sentence_source": "template"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年和平奖：https://api.nobelprize.org/2/nobelPrize/pea/2026",
+          "sentence_source": "template"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "template",
+          "mode": "fallback",
+          "reason": "answered",
+          "llm_reason": "public_source_reference",
+          "phase_timings": [
+            {
+              "phase": "agent_public_lookup",
+              "tool": "web_search",
+              "elapsed_ms": 2344.0
+            },
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 4406.0,
+              "reason": "completed",
+              "post_tool": true
+            }
+          ],
+          "session_id": "7afa16a0282e4f089df84fba9eae76cd",
+          "context_id": "a9520aef3da74637adc2f50d4ca21ee5",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 9015.0
+          }
+        }
+      ],
+      "original_index": null,
+      "semantic_evidence": null,
+      "pipeline_captured": true,
+      "final_trace": [
+        {
+          "tool": "web_search",
+          "result": {
+            "status": "ok",
+            "sources": [
+              {
+                "title": "2026 年化学奖",
+                "url": "https://api.nobelprize.org/2/nobelPrize/che/2026",
+                "snippet": "2026 年诺贝尔奖 化学奖：Henri B. Kagan、Kenso Soai。",
+                "engine": "nobel",
+                "relevance": 1.2
+              },
+              {
+                "title": "2026 年经济学奖",
+                "url": "https://api.nobelprize.org/2/nobelPrize/eco/2026",
+                "snippet": "2026 年诺贝尔奖 经济学奖：Robert E. Hall、Michael Woodford。",
+                "engine": "nobel",
+                "relevance": 1.2
+              },
+              {
+                "title": "2026 年文学奖",
+                "url": "https://api.nobelprize.org/2/nobelPrize/lit/2026",
+                "snippet": "2026 年诺贝尔奖 文学奖：Anne Carson。",
+                "engine": "nobel",
+                "relevance": 1.2
+              },
+              {
+                "title": "2026 年生理学或医学奖",
+                "url": "https://api.nobelprize.org/2/nobelPrize/med/2026",
+                "snippet": "2026 年诺贝尔奖 生理学或医学奖：Karl Deisseroth、Peter Hegemann、Georg Nagel。",
+                "engine": "nobel",
+                "relevance": 1.2
+              },
+              {
+                "title": "2026 年和平奖",
+                "url": "https://api.nobelprize.org/2/nobelPrize/pea/2026",
+                "snippet": "2026 年诺贝尔奖 和平奖：Navi Pillay。",
+                "engine": "nobel",
+                "relevance": 1.2
+              }
+            ],
+            "answer": null,
+            "searched_at": "2026-10-13T22:05:21.392841+08:00",
+            "engines": [
+              {
+                "name": "bing",
+                "status": "unavailable"
+              },
+              {
+                "name": "duckduckgo",
+                "status": "ok"
+              },
+              {
+                "name": "wikipedia",
+                "status": "unavailable"
+              },
+              {
+                "name": "nobel",
+                "status": "ok"
+              }
+            ]
+          }
+        }
+      ],
+      "model_correct": false,
+      "template_answer": true,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 2,
+      "question": "2026年杭州马拉松男子冠军是谁",
+      "answer": "根据检索结果，目前没有查到 2026 年杭州马拉松男子冠军的公开资料。2026 年杭州马拉松尚未举行，比赛日期通常在 11 月左右，因此该赛事的获奖名单还不存在。",
+      "tools": [
+        "web_search"
+      ],
+      "duration_ms": 4375.0,
+      "first_answer_ms": 4375.0,
+      "correct_with_evidence": true,
+      "scoring_error": null,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_public_lookup",
+            "tool": "web_search",
+            "elapsed_ms": 1641.0
+          },
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 1437.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "85a3e783b742454aa8e77c0aa3ad68c1",
+        "context_id": "8f9d5949594d4ac8b0ee0881d4aff82c",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 1297.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 703.0,
+          "total_ms": 1437.0,
+          "tool_count": 8,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "web_search",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 187
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4000.0
+        }
+      ],
+      "started_utc": "2026-10-13T14:05:25.818317+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "tool_start",
+          "id": "3f0354fc2b694128ab646d6cff48a302",
+          "tool": "web_search",
+          "args": {
+            "query": "2026年杭州马拉松男子冠军是谁"
+          },
+          "name": "联网查询"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "tool_end",
+          "id": "3f0354fc2b694128ab646d6cff48a302",
+          "tool": "web_search",
+          "ms": 1641.0,
+          "summary": "联网查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "answer_delta",
+          "text": "根据检索结果，目前没有查到 2026 年杭州马拉松男子冠军的公开资料。",
+          "sentence_source": "llm"
+        },
+        {
+          "type": "answer_delta",
+          "text": "2026 年杭州马拉松尚未举行，比赛日期通常在 11 月左右，因此该赛事的获奖名单还不存在。",
+          "sentence_source": "llm"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "llm",
+          "mode": "llm",
+          "reason": "answered",
+          "llm_reason": "agent_completed",
+          "phase_timings": [
+            {
+              "phase": "agent_public_lookup",
+              "tool": "web_search",
+              "elapsed_ms": 1641.0
+            },
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 1437.0,
+              "reason": "completed",
+              "post_tool": true
+            }
+          ],
+          "session_id": "85a3e783b742454aa8e77c0aa3ad68c1",
+          "context_id": "8f9d5949594d4ac8b0ee0881d4aff82c",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 1297.0
+          }
+        }
+      ],
+      "original_index": null,
+      "semantic_evidence": null,
+      "pipeline_captured": true,
+      "final_trace": [
+        {
+          "tool": "web_search",
+          "result": {
+            "status": "empty",
+            "sources": [],
+            "answer": null,
+            "searched_at": "2026-10-13T22:05:28.767038+08:00",
+            "engines": [
+              {
+                "name": "bing",
+                "status": "unavailable"
+              },
+              {
+                "name": "duckduckgo",
+                "status": "ok"
+              },
+              {
+                "name": "wikipedia",
+                "status": "unavailable"
+              }
+            ]
+          }
+        }
+      ],
+      "model_correct": true,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 3,
+      "question": "2027年诺贝尔物理学奖得主",
+      "answer": "目前未查到 2027 年诺贝尔物理学奖得主资料；该奖项通常要到 2027 年才会公布结果。",
+      "tools": [
+        "web_search"
+      ],
+      "duration_ms": 12063.0,
+      "first_answer_ms": 12063.0,
+      "correct_with_evidence": true,
+      "scoring_error": null,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_public_lookup",
+            "tool": "web_search",
+            "elapsed_ms": 2312.0
+          },
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 8438.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "419bf586a32140d5a3167458b3be5ae8",
+        "context_id": "7d94f860ca494bdab3b123ed936a9f48",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 1297.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 8109.0,
+          "total_ms": 8438.0,
+          "tool_count": 9,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "web_search",
+            "city_weather",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 111
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11,
+          "received_ms": 11031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12,
+          "received_ms": 12016.0
+        }
+      ],
+      "started_utc": "2026-10-13T14:05:30.206160+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "tool_start",
+          "id": "70055420be2149e1a33ee5af3655bb91",
+          "tool": "web_search",
+          "args": {
+            "query": "2027年诺贝尔物理学奖得主"
+          },
+          "name": "联网查询"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "tool_end",
+          "id": "70055420be2149e1a33ee5af3655bb91",
+          "tool": "web_search",
+          "ms": 2312.0,
+          "summary": "联网查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12
+        },
+        {
+          "type": "answer_delta",
+          "text": "目前未查到 2027 年诺贝尔物理学奖得主资料；该奖项通常要到 2027 年才会公布结果。",
+          "sentence_source": "llm"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "llm",
+          "mode": "llm",
+          "reason": "answered",
+          "llm_reason": "agent_completed",
+          "phase_timings": [
+            {
+              "phase": "agent_public_lookup",
+              "tool": "web_search",
+              "elapsed_ms": 2312.0
+            },
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 8438.0,
+              "reason": "completed",
+              "post_tool": true
+            }
+          ],
+          "session_id": "419bf586a32140d5a3167458b3be5ae8",
+          "context_id": "7d94f860ca494bdab3b123ed936a9f48",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 1297.0
+          }
+        }
+      ],
+      "original_index": null,
+      "semantic_evidence": null,
+      "pipeline_captured": true,
+      "final_trace": [
+        {
+          "tool": "web_search",
+          "result": {
+            "status": "empty",
+            "sources": [],
+            "answer": null,
+            "searched_at": "2026-10-13T22:05:33.823875+08:00",
+            "engines": [
+              {
+                "name": "bing",
+                "status": "unavailable"
+              },
+              {
+                "name": "nobel",
+                "status": "empty"
+              },
+              {
+                "name": "duckduckgo",
+                "status": "ok"
+              },
+              {
+                "name": "wikipedia",
+                "status": "unavailable"
+              }
+            ]
+          }
+        }
+      ],
+      "model_correct": true,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 4,
+      "question": "当前总负荷是多少",
+      "answer": "当前总负荷为 1,258.1 kW。",
+      "tools": [
+        "building_state"
+      ],
+      "duration_ms": 1281.0,
+      "first_answer_ms": 1281.0,
+      "correct_with_evidence": true,
+      "scoring_error": null,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_prefetch",
+            "tool": "building_state",
+            "elapsed_ms": 0.0
+          },
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 1187.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "e64e94267eae4335a3a1d52670fadb48",
+        "context_id": "377426ca77d941709449b3c0d4b0c3ce",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 1187.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 1016.0,
+          "total_ms": 1187.0,
+          "tool_count": 10,
+          "tools": [
+            "floor_state",
+            "building_state",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "web_search",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 52
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1047.0
+        }
+      ],
+      "started_utc": "2026-10-13T14:06:16.043326+00:00",
+      "events": [
+        {
+          "type": "tool_start",
+          "id": "b4ad61fe35a941eabfdb244161a394ea",
+          "tool": "building_state",
+          "args": {},
+          "name": "楼宇运行概览"
+        },
+        {
+          "type": "tool_end",
+          "id": "b4ad61fe35a941eabfdb244161a394ea",
+          "tool": "building_state",
+          "ms": 0.0,
+          "summary": "楼宇运行概览查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "answer_delta",
+          "text": "当前总负荷为 1,258.1 kW。",
+          "sentence_source": "llm"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "llm",
+          "mode": "llm",
+          "reason": "answered",
+          "llm_reason": "agent_completed",
+          "phase_timings": [
+            {
+              "phase": "agent_prefetch",
+              "tool": "building_state",
+              "elapsed_ms": 0.0
+            },
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 1187.0,
+              "reason": "completed",
+              "post_tool": true
+            }
+          ],
+          "session_id": "e64e94267eae4335a3a1d52670fadb48",
+          "context_id": "377426ca77d941709449b3c0d4b0c3ce",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 1187.0
+          }
+        }
+      ],
+      "original_index": null,
+      "semantic_evidence": null,
+      "pipeline_captured": true,
+      "final_trace": [
+        {
+          "tool": "building_state",
+          "result": {
+            "source": "exports/replay/normal.ops.json",
+            "as_of": "14:00",
+            "date": "2026-10-13",
+            "environment": {
+              "co2_ppm": 768,
+              "humidity_basis": "dewpoint_at_indoor_temperature; active_hvac_bound_40_65",
+              "indoor_temp_c": 26.0,
+              "outdoor_temp_c": 13.3,
+              "people": 3869,
+              "pm25_ug_m3": 21.4,
+              "relative_humidity_pct": 40.0
+            },
+            "actual_kw": 1258.1,
+            "setpoint": 25.5
+          }
+        }
+      ],
+      "model_correct": true,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 5,
+      "question": "储能SOC是多少",
+      "answer": "储能 电量 当前为 36.4%。",
+      "tools": [
+        "current_state"
+      ],
+      "duration_ms": 6453.0,
+      "first_answer_ms": 6453.0,
+      "correct_with_evidence": true,
+      "scoring_error": null,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_prefetch",
+            "tool": "current_state",
+            "elapsed_ms": 0.0
+          },
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 6422.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "b5d07e06f9f44c6d959a04681928ed6e",
+        "context_id": "62ece3fa0b9542ad8ac6d94983ef865c",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 1375.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 6297.0,
+          "total_ms": 6406.0,
+          "tool_count": 8,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "web_search",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 47
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6031.0
+        }
+      ],
+      "started_utc": "2026-10-13T14:06:17.331312+00:00",
+      "events": [
+        {
+          "type": "tool_start",
+          "id": "363a8b3b4d6540b6a68e261f39346bb1",
+          "tool": "current_state",
+          "args": {},
+          "name": "设备当前状态"
+        },
+        {
+          "type": "tool_end",
+          "id": "363a8b3b4d6540b6a68e261f39346bb1",
+          "tool": "current_state",
+          "ms": 0.0,
+          "summary": "设备当前状态查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "answer_delta",
+          "text": "储能 电量 当前为 36.4%。",
+          "sentence_source": "llm"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "llm",
+          "mode": "llm",
+          "reason": "answered",
+          "llm_reason": "agent_completed",
+          "phase_timings": [
+            {
+              "phase": "agent_prefetch",
+              "tool": "current_state",
+              "elapsed_ms": 0.0
+            },
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 6422.0,
+              "reason": "completed",
+              "post_tool": true
+            }
+          ],
+          "session_id": "b5d07e06f9f44c6d959a04681928ed6e",
+          "context_id": "62ece3fa0b9542ad8ac6d94983ef865c",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 1375.0
+          }
+        }
+      ],
+      "original_index": null,
+      "semantic_evidence": null,
+      "pipeline_captured": true,
+      "final_trace": [
+        {
+          "tool": "current_state",
+          "result": {
+            "soc": 0.3643251619728348,
+            "soc_percent": 36.4,
+            "soc_source": "replay.storage.soc",
+            "soc_basis": "current exported snapshot; derived from exported executed commands",
+            "outdoor_temp_c": 13.3,
+            "hvac_setpoint_c": 25.5
+          }
+        }
+      ],
+      "model_correct": true,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": null
+    }
+  ],
+  "model": "agnes-3.0-flash",
+  "sessions": {},
+  "complete": true,
+  "single_python_process": true,
+  "resident_changed": false,
+  "background_classifiers_stopped": true,
+  "owned_pid": 30208,
+  "owned_backend_stopped": true,
+  "owned_ports": [
+    58971,
+    59157
+  ]
+}

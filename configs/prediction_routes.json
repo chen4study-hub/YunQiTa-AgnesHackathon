@@ -1,0 +1,13 @@
+{
+  "Hog_office_Byron": {
+    "enabled": true,
+    "version": "byron-expanded-holiday-monthly-v1",
+    "receipt": "experiments/demo_monthly_index.json",
+    "supported_years": [
+      2017
+    ],
+    "mode": "auto",
+    "calendar": "US federal observed dates, closure unconfirmed",
+    "daily_calibration": "byron-daily10-v1"
+  }
+}

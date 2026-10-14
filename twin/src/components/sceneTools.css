@@ -1,0 +1,4 @@
+@media(max-width:600px){
+ .responsive-dashboard .overview-scene .scene-tools {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible;gap:4px;}
+ .responsive-dashboard .overview-scene .scene-tools button {min-width:0;padding:6px 2px;}
+}

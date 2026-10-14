@@ -1,0 +1,32 @@
+Third-party data notices — 云栖塔 energy digital twin
+
+Building Data Genome Project 2 (BDG2)
+License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+License deed: https://creativecommons.org/licenses/by-sa/4.0/
+Legal code: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+Upstream license: https://github.com/buds-lab/building-data-genome-project-2/blob/master/LICENSE
+Repository: https://github.com/buds-lab/building-data-genome-project-2
+
+Attribution: Miller, C., Kathirgamanathan, A., Picchetti, B. et al.
+The Building Data Genome Project 2, energy meter data from the ASHRAE
+Great Energy Predictor III competition. Scientific Data 7, 368 (2020).
+https://doi.org/10.1038/s41597-020-00712-x
+
+Used files: electricity_cleaned.csv, chilledwater_cleaned.csv,
+steam_cleaned.csv, metadata.csv, weather.csv. Raw downloads are ignored
+by Git. Thermal downloads are byte-for-byte checked against official LFS
+SHA256 OIDs listed in experiments/bdg2_thermal_sources.json; audit log:
+logs/download_bdg2_thermal.jsonl. Download does not alter license.
+
+Changes in this project: selected Byron/Hog records, hourly local-time
+alignment, causal forecast outputs, bounded past-only thermal missing-value
+fill, season-dependent thermal power interpretation, explicitly assumed
+building-only fan/secondary-pump auxiliary electrical attribution with caps
+(district production excluded by explicit assumption), synthetic floor
+partition, and derived energy summaries. These are adaptations, not
+original meter readings and not author-endorsed results. Adapted exports
+remain CC BY-SA 4.0; keep attribution, license link and change notice on
+redistribution. No additional restrictions or endorsement are implied.
+Sample data are authored examples and clearly separated from measurements.
+
+Dependency scope: the following section covers installed frontend runtime and build packages. Python package licensing is outside this frontend audit.

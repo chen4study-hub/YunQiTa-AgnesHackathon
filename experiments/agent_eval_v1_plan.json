@@ -1,0 +1,28 @@
+{
+  "version": "agent_13day_eval_v1",
+  "building_id": "Hog_office_Byron",
+  "year": 2017,
+  "day_selection": {
+    "typical": {"normal": "2017-10-23", "peak": "2017-07-20", "abstain": "2017-07-04"},
+    "additional_rule": "For January/April/July/October select first Wednesday and first Saturday of month, then first Wednesday of February and US Thanksgiving fourth Thursday of November. Calendar only, no load/risk/coverage/cost/revenue ranking. No replacements for poor outcomes; incomplete input stops and reports.",
+    "additional_dates": ["2017-01-04", "2017-01-07", "2017-04-05", "2017-04-01", "2017-07-05", "2017-07-01", "2017-10-04", "2017-10-07", "2017-02-01", "2017-11-23"],
+    "season_convention": "meteorological: DJF winter, MAM spring, JJA summer, SON autumn",
+    "holiday": "Thanksgiving2017-11-23; typical IndependenceDay2017-07-04",
+    "prior_visibility": "Three typical days already investigated/selected, not a blind unbiased sample. Ten added dates frozen by calendar before this Agent evaluation.2017forecast model evaluation already existed, no forecasting retune."
+  },
+  "llm_requested_mode": "real",
+  "execution": "New run_agent call at every hour of each day, forecast horizon current+next hourly historical one-step cache as existing export protocol. Execute/log current command only. Day initial SOC0.5 resets independently; actual first commands propagate SOC. At most4days concurrently, each day serial; no rerun failed LLM hours to improve success counts.",
+  "selection_policy": "upper_grid_peak_then_cost_v1",
+  "baseline": "No new dispatch:24C, battery0, same PV and tariff. Primary cost/upperpeak compare only current hours accepted by model. Rejected hours excluded from economic sums/maxima, never invent their cost or savings. Extra25.5C/battery0 baseline reported to isolate benefit from changed holding temperature.",
+  "metrics": {
+    "cost": "Sum point-load linear scenario grid*tariff for current executed accepted hour once, baseline-minus-Agent absolute/percentage. CNY configured demonstration prices not real billing.",
+    "upper_peak": "Daily maximum accepted-hour upper*temperature/precoolfactor-PV-battery floored0, compare no-dispatch24C upper-PV. Not joint interval guarantee or measured peak reduction.",
+    "constraints": "Independently check full returned2hplan at initialSOC and current command + day propagatedSOC; count violating hourly runs and violations by code, count invalid candidateplans too. Comfortdegreehours reported separately (not hard selected-temp rule).",
+    "handoff": "Current-hour refusal numerator: human_review action,0battery,current matching workorder and no current dispatchreceipt. Denominator current model-refused hours, null if none. Also inspect every refused step in returned2hplan.",
+    "grounding": "Count numeric tokens in final reason absent from rounded forecast/candidate tool values, plus provider failed-output numeric-token count before grounding retry recorded as separate diagnostic (no raw rejected response saved).",
+    "degradation": "source=rule runs split refused_horizon(no provider attempted) vs attempted provider failures/rejected format/schema/objective/grounding; count safe reasons. ValidatedLLMhour source=llm, provider successful responses separate from validatedhours."
+  },
+  "limitations": ["historical next-hour cache/weather lookahead, not validated causal live2hAgent", "linear unvalidated counterfactual, unit battery efficiency and no terminalSOC valuation; initial/finalSOC explicit", "economics exclude model refused hours, do not claim complete daily bill or full-daymax", "PV is synthetic/configured and thermal auxiliary proxy not integrated into existing controlsavings model", "no test-set tuning or winner-day selection after output"],
+  "security": "No credentials/request bodies/raw rejected provider responses in logs or artifacts. Provider reads existing.env key file at runtime, metadata only. No Task Scheduler or environment/config changes. Evaluation log dispatch separate from production and exports unchanged.",
+  "artifacts": ["experiments/agent_eval_v1_hours.jsonl", "experiments/agent_eval_v1_summary.json", "experiments/agent_eval_v1_days.csv", "experiments/agent_eval_v1_report.md"]
+}

@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/buds-lab/building-data-genome-project-2",
+  "pointer_ref": "master",
+  "license": "CC BY-SA 4.0",
+  "unit_source": "https://raw.githubusercontent.com/wiki/buds-lab/building-data-genome-project-2/Meters-data-description.md",
+  "source_unit": "kWh per hourly interval; chilledwater/steam are delivered thermal energy, not electric submeters",
+  "files": {
+    "chilledwater_cleaned.csv": {
+      "pointer_url": "https://raw.githubusercontent.com/buds-lab/building-data-genome-project-2/master/data/meters/cleaned/chilledwater_cleaned.csv",
+      "download_url": "https://media.githubusercontent.com/media/buds-lab/building-data-genome-project-2/master/data/meters/cleaned/chilledwater_cleaned.csv",
+      "sha256": "8211aaf210379af50cbf7af87579d12414c3500d3e3f4dea725761c93a172bcd",
+      "bytes": 77005463
+    },
+    "steam_cleaned.csv": {
+      "pointer_url": "https://raw.githubusercontent.com/buds-lab/building-data-genome-project-2/master/data/meters/cleaned/steam_cleaned.csv",
+      "download_url": "https://media.githubusercontent.com/media/buds-lab/building-data-genome-project-2/master/data/meters/cleaned/steam_cleaned.csv",
+      "sha256": "ea5956c49ed1d6cc1b611a752b5a9dc3bcd4d45ddcd674e53b3c41661a6d3b9b",
+      "bytes": 45422530
+    }
+  }
+}

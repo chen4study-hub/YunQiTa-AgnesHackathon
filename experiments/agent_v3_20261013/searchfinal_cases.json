@@ -1,0 +1,9 @@
+[
+  {"question":"2026年诺奖得主","tool":"web_search","contains":["化学奖","经济学奖","文学奖","生理学或医学奖","和平奖","物理学奖","来源："],"excludes":["北京天气","没有查到"]},
+  {"question":"现在电价多少？","tool":"tariff_periods","contains":["1.20 元/kWh"],"excludes":["联网","明晚"]},
+  {"question":"现在电价多少？","origin_index":22,"display_time":"22:10","tool":"tariff_periods","contains":["22:10","0.70 元/kWh","次日 00:00","0.35 元/kWh"],"excludes":["明晚","明天","联网"]},
+  {"question":"2026年杭州马拉松男子冠军是谁","tool":"web_search","contains":["暂时没有查到相关公开资料。"],"excludes":["尚未举行","11 月","不存在","尚未产生"]},
+  {"question":"2027年诺贝尔物理学奖得主","tool":"web_search","contains":["暂时没有查到相关公开资料。"],"excludes":["尚未举行","11 月","不存在","尚未产生"]},
+  {"question":"当前总负荷是多少","tool":"building_state","contains":["1,258.1 kW"],"excludes":["联网","北京天气"]},
+  {"question":"储能SOC是多少","tool":"current_state","contains":["36.4%"],"excludes":["联网","北京天气"]}
+]

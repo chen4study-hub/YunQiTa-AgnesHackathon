@@ -1,0 +1,26 @@
+[
+  {
+    "scenario": "normal",
+    "title": "普通工作日",
+    "date": "2017-10-23",
+    "building_id": "Hog_office_Byron",
+    "model_version": "byron-expanded-holiday-monthly-v1",
+    "mode": "auto"
+  },
+  {
+    "scenario": "peak",
+    "title": "高负荷日",
+    "date": "2017-07-20",
+    "building_id": "Hog_office_Byron",
+    "model_version": "byron-expanded-holiday-monthly-v1",
+    "mode": "auto"
+  },
+  {
+    "scenario": "abstain",
+    "title": "高拒绝日",
+    "date": "2017-07-04",
+    "building_id": "Hog_office_Byron",
+    "model_version": "byron-expanded-holiday-monthly-v1",
+    "mode": "auto"
+  }
+]

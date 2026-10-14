@@ -1,0 +1,311 @@
+{
+  "manifest_sha256": "7cdc0ba0eee91554204e7c26e3a2b417ddf6fdba406d3e6ceb8fae055bcd877a",
+  "frozen_files": 78,
+  "post_run_drift": [
+    "src/agent/agent_relevance.py"
+  ],
+  "post_run_change_commit": "dc6ed8f",
+  "note": "No requests rerun or automatic false upgraded. Hash equality was verified immediately after all batches; current drift is disclosed.",
+  "runs": {
+    "full_on": {
+      "count": 10,
+      "automatic": 8,
+      "deducted": 1,
+      "after_review": 7,
+      "model_text": 8,
+      "model_self": 8,
+      "model_plus_host": 0,
+      "templates": 2,
+      "median_seconds": 6.789,
+      "p90_seconds": 12.25,
+      "max_seconds": 16.547,
+      "slowest_index": 4,
+      "slowest_question": "把空调调低一度会怎样",
+      "empty_answers": 0,
+      "over_25_seconds": 0,
+      "timeout_counts": {
+        "first_response": 0,
+        "whole_call": 1,
+        "transport_timeout": 0,
+        "total": 1
+      },
+      "timeout_cases": [
+        {
+          "index": 5,
+          "question": "把空调调低一度会怎样",
+          "llm_reason": "agent_deadline",
+          "first_response": 0,
+          "whole_call": 1,
+          "transport_timeout": 0,
+          "total": 1
+        }
+      ],
+      "false_indices": [
+        4,
+        6
+      ],
+      "deducted_indices": [
+        2
+      ],
+      "receipt_sha256": "ea0c297960819c834ea7affdca30461874ba7c2b9d88adec5f39b8a0dc95e759",
+      "batches": 2
+    },
+    "full_off": {
+      "count": 10,
+      "automatic": 10,
+      "deducted": 1,
+      "after_review": 9,
+      "model_text": 3,
+      "model_self": 1,
+      "model_plus_host": 2,
+      "templates": 7,
+      "median_seconds": 3.0155000000000003,
+      "p90_seconds": 12.046,
+      "max_seconds": 12.094,
+      "slowest_index": 4,
+      "slowest_question": "把空调调低一度会怎样",
+      "empty_answers": 0,
+      "over_25_seconds": 0,
+      "timeout_counts": {
+        "first_response": 2,
+        "whole_call": 0,
+        "transport_timeout": 0,
+        "total": 2
+      },
+      "timeout_cases": [
+        {
+          "index": 4,
+          "question": "把空调调低一度会怎样",
+          "llm_reason": "chat_first_token_timeout",
+          "first_response": 1,
+          "whole_call": 0,
+          "transport_timeout": 0,
+          "total": 1
+        },
+        {
+          "index": 6,
+          "question": "空调设定调到24度会多花多少钱",
+          "llm_reason": "chat_first_token_timeout",
+          "first_response": 1,
+          "whole_call": 0,
+          "transport_timeout": 0,
+          "total": 1
+        }
+      ],
+      "false_indices": [],
+      "deducted_indices": [
+        9
+      ],
+      "receipt_sha256": "b412a99c263f8b7bb595b6d0a77b96060cf6d065240d0b25f4ed94084ebe9dbc",
+      "batches": 2
+    },
+    "multi_on": {
+      "count": 20,
+      "automatic": 20,
+      "deducted": 2,
+      "after_review": 18,
+      "model_text": 7,
+      "model_self": 7,
+      "model_plus_host": 0,
+      "templates": 13,
+      "median_seconds": 3.3205,
+      "p90_seconds": 9.781,
+      "max_seconds": 16.0,
+      "slowest_index": 4,
+      "slowest_question": "空调改到24度能省多少钱",
+      "empty_answers": 0,
+      "over_25_seconds": 0,
+      "timeout_counts": {
+        "first_response": 1,
+        "whole_call": 0,
+        "transport_timeout": 0,
+        "total": 1
+      },
+      "timeout_cases": [
+        {
+          "index": 0,
+          "question": "电池SOC是多少",
+          "llm_reason": "first_token_timeout",
+          "first_response": 1,
+          "whole_call": 0,
+          "transport_timeout": 0,
+          "total": 1
+        }
+      ],
+      "false_indices": [],
+      "deducted_indices": [
+        15,
+        19
+      ],
+      "receipt_sha256": "e154903033156caac5e510dfc0074ae78ac9b1b01e28b09424b1277c418e1d50",
+      "batches": 5,
+      "groups": [
+        {
+          "group": "soc",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": false
+        },
+        {
+          "group": "weather",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": false
+        },
+        {
+          "group": "hvac",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": false
+        },
+        {
+          "group": "unknown",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": false
+        },
+        {
+          "group": "energy",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": false
+        },
+        {
+          "group": "time",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": false
+        },
+        {
+          "group": "peak",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": false
+        },
+        {
+          "group": "injection",
+          "automatic": true,
+          "after_review": false,
+          "both_model_self": true
+        },
+        {
+          "group": "knowledge",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": true
+        },
+        {
+          "group": "comfort",
+          "automatic": true,
+          "after_review": false,
+          "both_model_self": false
+        }
+      ],
+      "automatic_groups": 10,
+      "reviewed_groups": 8,
+      "model_self_groups": 2
+    },
+    "multi_off": {
+      "count": 20,
+      "automatic": 14,
+      "deducted": 1,
+      "after_review": 13,
+      "model_text": 11,
+      "model_self": 9,
+      "model_plus_host": 2,
+      "templates": 9,
+      "median_seconds": 2.3354999999999997,
+      "p90_seconds": 11.735,
+      "max_seconds": 13.781,
+      "slowest_index": 18,
+      "slowest_question": "空调设定多少",
+      "empty_answers": 0,
+      "over_25_seconds": 0,
+      "timeout_counts": {
+        "first_response": 0,
+        "whole_call": 0,
+        "transport_timeout": 0,
+        "total": 0
+      },
+      "timeout_cases": [],
+      "false_indices": [
+        2,
+        3,
+        4,
+        5,
+        17,
+        19
+      ],
+      "deducted_indices": [
+        16
+      ],
+      "receipt_sha256": "761f3c33e917ed0baf94cc1f740e1be5fb0a35df79e66e47bb992e722abb76ac",
+      "batches": 5,
+      "groups": [
+        {
+          "group": "soc",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": true
+        },
+        {
+          "group": "weather",
+          "automatic": false,
+          "after_review": false,
+          "both_model_self": false
+        },
+        {
+          "group": "hvac",
+          "automatic": false,
+          "after_review": false,
+          "both_model_self": false
+        },
+        {
+          "group": "unknown",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": false
+        },
+        {
+          "group": "energy",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": true
+        },
+        {
+          "group": "time",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": false
+        },
+        {
+          "group": "peak",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": false
+        },
+        {
+          "group": "injection",
+          "automatic": true,
+          "after_review": true,
+          "both_model_self": false
+        },
+        {
+          "group": "knowledge",
+          "automatic": false,
+          "after_review": false,
+          "both_model_self": true
+        },
+        {
+          "group": "comfort",
+          "automatic": false,
+          "after_review": false,
+          "both_model_self": false
+        }
+      ],
+      "automatic_groups": 6,
+      "reviewed_groups": 6,
+      "model_self_groups": 3
+    }
+  }
+}

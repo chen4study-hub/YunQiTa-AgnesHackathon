@@ -1,0 +1,668 @@
+[
+  {
+    "question": "今天用了多少电",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh"
+    ],
+    "narrative_required": false,
+    "original_index": 0,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "energy_kwh"
+  },
+  {
+    "question": "今日累计用电量",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh"
+    ],
+    "narrative_required": false,
+    "original_index": 1,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "energy_kwh"
+  },
+  {
+    "question": "2026-10-10电费是多少",
+    "tool": "energy_totals",
+    "contains": [
+      "元"
+    ],
+    "narrative_required": false,
+    "original_index": 8,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "energy_cost"
+  },
+  {
+    "question": "现在分项用电有哪些",
+    "tool": "end_use",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false,
+    "original_index": 13,
+    "semantic_evidence": true,
+    "cohort": "failed31"
+  },
+  {
+    "question": "今天有哪些告警",
+    "tool": "alerts_orders",
+    "contains": [],
+    "narrative_required": false,
+    "excludes": [],
+    "evidence_alert_count": true,
+    "original_index": 16,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "alerts_count"
+  },
+  {
+    "question": "现在有哪些报警",
+    "tool": "alerts_orders",
+    "contains": [],
+    "narrative_required": false,
+    "original_index": 17,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "alerts_count"
+  },
+  {
+    "question": "电梯运行正常吗",
+    "tool": "elevator_state",
+    "contains": [
+      "层"
+    ],
+    "narrative_required": false,
+    "original_index": 20,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "lift_health"
+  },
+  {
+    "question": "H1电梯载重是多少",
+    "tool": "elevator_state",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false,
+    "original_index": 22,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "lift_field",
+    "expected_field": "load_pct",
+    "expected_unit": "%"
+  },
+  {
+    "question": "电梯载客人数多少",
+    "tool": "elevator_state",
+    "contains": [
+      "人"
+    ],
+    "narrative_required": false,
+    "original_index": 23,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "lift_field",
+    "expected_field": "passengers",
+    "expected_unit": "人"
+  },
+  {
+    "question": "1层人数多少",
+    "tool": "floor_state",
+    "contains": [
+      "人"
+    ],
+    "narrative_required": false,
+    "original_index": 24,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "floor_field",
+    "expected_field": "occupancy_people",
+    "expected_unit": "人"
+  },
+  {
+    "question": "18层温度是多少",
+    "tool": "floor_state",
+    "contains": [
+      "°C"
+    ],
+    "narrative_required": false,
+    "original_index": 25,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "floor_field",
+    "expected_field": "mean_temp_c",
+    "expected_unit": "°C"
+  },
+  {
+    "question": "40层负荷是多少",
+    "tool": "floor_state",
+    "contains": [
+      "kW"
+    ],
+    "narrative_required": false,
+    "original_index": 26,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "floor_field",
+    "expected_field": "floor_actual_kw",
+    "expected_unit": "kW"
+  },
+  {
+    "question": "27层CO₂是多少",
+    "tool": "floor_state",
+    "contains": [
+      "ppm"
+    ],
+    "narrative_required": false,
+    "original_index": 27,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "floor_field",
+    "expected_field": "co2_ppm",
+    "expected_unit": "ppm"
+  },
+  {
+    "question": "14层照明多少",
+    "tool": "floor_state",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false,
+    "original_index": 30,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "floor_field",
+    "expected_field": "lighting_pct",
+    "expected_unit": "%"
+  },
+  {
+    "question": "今天储能充电量",
+    "tool": "storage_history",
+    "contains": [
+      "kWh"
+    ],
+    "narrative_required": false,
+    "original_index": 32,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "storage_field",
+    "expected_field": "charge_kwh",
+    "expected_label": "充电"
+  },
+  {
+    "question": "今天储能放电量",
+    "tool": "storage_history",
+    "contains": [
+      "kWh"
+    ],
+    "narrative_required": false,
+    "original_index": 33,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "storage_field",
+    "expected_field": "discharge_kwh",
+    "expected_label": "放电"
+  },
+  {
+    "question": "储能功率和充放电记录",
+    "tool": "storage_history",
+    "contains": [
+      "kWh",
+      "kW"
+    ],
+    "narrative_required": false,
+    "original_index": 34,
+    "semantic_evidence": true,
+    "cohort": "failed31"
+  },
+  {
+    "question": "楼宇运行概览",
+    "tool": "building_state",
+    "contains": [
+      "kW",
+      "CO₂"
+    ],
+    "narrative_required": false,
+    "original_index": 37,
+    "semantic_evidence": true,
+    "cohort": "failed31"
+  },
+  {
+    "question": "室内湿度多少",
+    "tool": "building_state",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false,
+    "original_index": 38,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "building_field",
+    "expected_field": "relative_humidity_pct",
+    "expected_unit": "%"
+  },
+  {
+    "question": "室内PM2.5多少",
+    "tool": "building_state",
+    "contains": [
+      "μg/m³"
+    ],
+    "narrative_required": false,
+    "original_index": 39,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "building_field",
+    "expected_field": "pm25_ug_m3",
+    "expected_unit": "μg/m³"
+  },
+  {
+    "question": "为什么转人工",
+    "tool": "handoff_reason",
+    "scenario": "abstain",
+    "contains": [
+      "交值班人员处理"
+    ],
+    "excludes": [
+      "门控",
+      "风险评分",
+      "阈值",
+      "当前无转人工",
+      "没有转人工"
+    ],
+    "narrative_required": true,
+    "original_index": 52,
+    "semantic_evidence": true,
+    "cohort": "failed31"
+  },
+  {
+    "question": "介绍一下电梯的工作原理",
+    "tool": null,
+    "contains": [
+      "电梯"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true,
+    "original_index": 59,
+    "semantic_evidence": true,
+    "cohort": "failed31"
+  },
+  {
+    "question": "联网查询5个楼宇运维的基础知识点",
+    "tool": "web_search",
+    "contains": [
+      "运维"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true,
+    "original_index": 63,
+    "semantic_evidence": true,
+    "cohort": "failed31"
+  },
+  {
+    "question": "今天北京的天气新闻有哪些？给出来源链接",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000,
+    "original_index": 64,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "news"
+  },
+  {
+    "question": "上海今天的天气怎么样？请附来源",
+    "tool": "city_weather",
+    "contains": [
+      "Open-Meteo",
+      "°C",
+      "来源：",
+      "https://api.open-meteo.com/v1/forecast"
+    ],
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "original_index": 65,
+    "semantic_evidence": true,
+    "cohort": "failed31"
+  },
+  {
+    "question": "查一下深圳最新的天气新闻和链接",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000,
+    "original_index": 66,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "news"
+  },
+  {
+    "question": "北京近期有哪些天气新闻？",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "当前室外",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000,
+    "original_index": 69,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "news"
+  },
+  {
+    "question": "今天北京的天气新闻有哪些？来源链接请参考公开资料",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "宿主",
+      "当前室外",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000,
+    "original_index": 73,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "news"
+  },
+  {
+    "question": "北京最近有什么天气新闻",
+    "tool": "web_search",
+    "contains": [],
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000,
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "宿主"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "original_index": 79,
+    "semantic_evidence": true,
+    "cohort": "failed31",
+    "semantic_check": "news"
+  },
+  {
+    "question": "现在用电情况如何",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "excludes": [
+      "公开资料",
+      "常识整理"
+    ],
+    "narrative_required": false,
+    "original_index": 87,
+    "semantic_evidence": true,
+    "cohort": "failed31"
+  },
+  {
+    "question": "现在的总负荷是多少",
+    "tool": "building_state",
+    "contains": [
+      "1,258.1 kW"
+    ],
+    "excludes": [
+      "820.1",
+      "kWh",
+      "电费"
+    ],
+    "narrative_required": false,
+    "original_index": 90,
+    "semantic_evidence": true,
+    "cohort": "failed31"
+  },
+  {
+    "question": "昨天电费多少",
+    "tool": "energy_totals",
+    "contains": [
+      "元"
+    ],
+    "narrative_required": false,
+    "original_index": 3,
+    "semantic_evidence": true,
+    "cohort": "passed15",
+    "semantic_check": "energy_cost"
+  },
+  {
+    "question": "当前照明用电占比",
+    "tool": "end_use",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false,
+    "original_index": 10,
+    "semantic_evidence": true,
+    "cohort": "passed15"
+  },
+  {
+    "question": "今天累计分项用电",
+    "tool": "end_use",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false,
+    "original_index": 14,
+    "semantic_evidence": true,
+    "cohort": "passed15"
+  },
+  {
+    "question": "今日工单有哪些",
+    "tool": "alerts_orders",
+    "contains": [
+      "记录"
+    ],
+    "narrative_required": false,
+    "original_index": 18,
+    "semantic_evidence": true,
+    "cohort": "passed15"
+  },
+  {
+    "question": "L1电梯在哪层",
+    "tool": "elevator_state",
+    "contains": [
+      "层"
+    ],
+    "narrative_required": false,
+    "original_index": 21,
+    "semantic_evidence": true,
+    "cohort": "passed15",
+    "semantic_check": "lift_field",
+    "expected_field": "floor",
+    "expected_unit": "层"
+  },
+  {
+    "question": "12层风机状态",
+    "tool": "floor_state",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false,
+    "original_index": 29,
+    "semantic_evidence": true,
+    "cohort": "passed15",
+    "semantic_check": "floor_field",
+    "expected_field": "fan_pct",
+    "expected_unit": "%"
+  },
+  {
+    "question": "今天光伏发电量多少",
+    "tool": "pv_generation",
+    "contains": [
+      "kWh",
+      "kW"
+    ],
+    "narrative_required": false,
+    "original_index": 35,
+    "semantic_evidence": true,
+    "cohort": "passed15"
+  },
+  {
+    "question": "现在几点",
+    "tool": "get_time",
+    "contains": [
+      "14:00"
+    ],
+    "narrative_required": false,
+    "original_index": 40,
+    "semantic_evidence": true,
+    "cohort": "passed15"
+  },
+  {
+    "question": "天气怎么样",
+    "tool": "get_weather",
+    "contains": [
+      "°C"
+    ],
+    "narrative_required": false,
+    "original_index": 41,
+    "semantic_evidence": true,
+    "cohort": "passed15"
+  },
+  {
+    "question": "储能SOC多少",
+    "tool": "current_state",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false,
+    "original_index": 43,
+    "semantic_evidence": true,
+    "cohort": "passed15"
+  },
+  {
+    "question": "明天负荷峰值",
+    "tool": "forecast_peak",
+    "contains": [
+      "kW"
+    ],
+    "narrative_required": false,
+    "original_index": 47,
+    "semantic_evidence": true,
+    "cohort": "passed15"
+  },
+  {
+    "question": "执行回执",
+    "tool": "execution_receipt",
+    "contains": [
+      " 条",
+      " 毫秒"
+    ],
+    "narrative_required": false,
+    "original_index": 51,
+    "semantic_evidence": true,
+    "cohort": "passed15"
+  },
+  {
+    "question": "什么是光合作用",
+    "tool": null,
+    "contains": [
+      "植物"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true,
+    "original_index": 55,
+    "semantic_evidence": true,
+    "cohort": "passed15"
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "tool": "compare_costs",
+    "scenario": "normal",
+    "origin_index": 2,
+    "display_time": "02:45",
+    "contains": [
+      "24.8 °C",
+      "预计多花",
+      "506.9 元",
+      "电网峰值",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "这个数现在查不到",
+      "下调空调设定不会自动增加费用",
+      "单台",
+      "几毛钱",
+      "节省"
+    ],
+    "query_step_count": 0,
+    "narrative_required": false,
+    "original_index": 80,
+    "semantic_evidence": true,
+    "cohort": "passed15"
+  },
+  {
+    "question": "当前能源怎么样",
+    "tool": "current_energy",
+    "contains": [
+      "光伏",
+      "电网",
+      "储能",
+      "kW"
+    ],
+    "excludes": [
+      "公开资料",
+      "常识整理"
+    ],
+    "narrative_required": true,
+    "original_index": 86,
+    "semantic_evidence": true,
+    "cohort": "passed15"
+  }
+]

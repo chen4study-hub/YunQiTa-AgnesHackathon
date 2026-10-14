@@ -1,0 +1,203 @@
+{
+  "status": "passed",
+  "year": 2016,
+  "final_year_used_for_selection": false,
+  "plan_sha256": "349d2bf860b52f4c51a8a1c0752dca8fed2b640206862bc070231b58e3502842",
+  "assumptions": {
+    "method_version": "building_auxiliary_thermal_v2",
+    "cooling_cop": null,
+    "cooling_auxiliary_electric_fraction": 0.04470201832676245,
+    "steam_auxiliary_electric_fraction": 0.020642017845394618,
+    "engineering_parameters": {
+      "fan_pressure_pa": 500.0,
+      "fan_total_efficiency": 0.6,
+      "air_density_kg_m3": 1.2,
+      "air_cp_j_kg_k": 1006.0,
+      "air_handled_thermal_fraction": 0.6,
+      "cooling_air_delta_k": 12.0,
+      "heating_air_delta_k": 25.0,
+      "pump_head_pa": 179352.0,
+      "pump_shaft_w_per_flow_head": 1.282051,
+      "pump_motor_efficiency": 0.9,
+      "water_density_kg_m3": 1000.0,
+      "water_cp_j_kg_k": 4180.0,
+      "cooling_water_delta_k": 6.0,
+      "heating_water_delta_k": 15.0
+    },
+    "interval_hours": 1.0,
+    "max_past_gap_hours": 24,
+    "cooling_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "heating_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_months": [
+      4,
+      5,
+      10
+    ],
+    "policy": "district production excluded; cooling:cold*derivedfanpumpfactor; heating:steam*derivedfanpumpfactor; shoulder:sum; no compressor or boiler electricity; not measured electrical submeter",
+    "cap": "current:min(actual_kw,point_kw); future:point_kw only, no future measured electricity",
+    "future": "thermal readings held from origin; mode switches by known target month; no target-time meters",
+    "missing": "past-only last valid reading within24h, else null; missing not zero; seasonal inactive meter not needed",
+    "share_denominator": "current:actual_kw; future:point_kw; null for absent estimate or zero denominator",
+    "units": "raw meters:kWh thermal per1h; thermal_kw:kW thermal; electric estimates:kW electrical; share:fraction0-1",
+    "floor_partition": "HVAC estimate is a subset of existing predicted electric floors; exact0.1kW bounded largest remainder, no double counting",
+    "unit_source": "https://github.com/buds-lab/building-data-genome-project-2/wiki/Meters-data-features"
+  },
+  "sources": {
+    "chilledwater_cleaned.csv": {
+      "sha256": "8211aaf210379af50cbf7af87579d12414c3500d3e3f4dea725761c93a172bcd",
+      "bytes": 77005463,
+      "pointer_url": "https://raw.githubusercontent.com/buds-lab/building-data-genome-project-2/master/data/meters/cleaned/chilledwater_cleaned.csv"
+    },
+    "steam_cleaned.csv": {
+      "sha256": "ea5956c49ed1d6cc1b611a752b5a9dc3bcd4d45ddcd674e53b3c41661a6d3b9b",
+      "bytes": 45422530,
+      "pointer_url": "https://raw.githubusercontent.com/buds-lab/building-data-genome-project-2/master/data/meters/cleaned/steam_cleaned.csv"
+    }
+  },
+  "maximum_input_timestamp": "2016-12-31 23:00:00",
+  "summary": {
+    "n": 8663,
+    "pooled_uncapped_share": 0.29153896855855405,
+    "median_share": 0.29610844786526325,
+    "p05_share": 0.12738772625264472,
+    "p95_share": 0.4580556348996584,
+    "max_share": 0.6485243333519827,
+    "cap_n": 0,
+    "cap_fraction": 0.0
+  },
+  "months": {
+    "1": {
+      "n": 623,
+      "pooled_uncapped_share": 0.34402025440045764,
+      "median_share": 0.3516628951924043,
+      "p05_share": 0.2395883922784165,
+      "p95_share": 0.49646760983248417,
+      "max_share": 0.5811660347894679,
+      "cap_n": 0,
+      "cap_fraction": 0.0
+    },
+    "2": {
+      "n": 696,
+      "pooled_uncapped_share": 0.30983938700009017,
+      "median_share": 0.3085297757110107,
+      "p05_share": 0.2084587850914153,
+      "p95_share": 0.45415608110408673,
+      "max_share": 0.5290012157704191,
+      "cap_n": 0,
+      "cap_fraction": 0.0
+    },
+    "3": {
+      "n": 744,
+      "pooled_uncapped_share": 0.202787328488623,
+      "median_share": 0.21771915133056102,
+      "p05_share": 0.06244975595726154,
+      "p95_share": 0.3369774594542189,
+      "max_share": 0.44283459560117616,
+      "cap_n": 0,
+      "cap_fraction": 0.0
+    },
+    "4": {
+      "n": 720,
+      "pooled_uncapped_share": 0.24797655938435798,
+      "median_share": 0.245770164434762,
+      "p05_share": 0.15643867719326016,
+      "p95_share": 0.36513887817358026,
+      "max_share": 0.41275717285644314,
+      "cap_n": 0,
+      "cap_fraction": 0.0
+    },
+    "5": {
+      "n": 744,
+      "pooled_uncapped_share": 0.30071691728980887,
+      "median_share": 0.2906400778062167,
+      "p05_share": 0.1825951716194088,
+      "p95_share": 0.4241803362551488,
+      "max_share": 0.48012057282681686,
+      "cap_n": 0,
+      "cap_fraction": 0.0
+    },
+    "6": {
+      "n": 720,
+      "pooled_uncapped_share": 0.30433639491102865,
+      "median_share": 0.30442127311449957,
+      "p05_share": 0.14048832309579737,
+      "p95_share": 0.4524982253376874,
+      "max_share": 0.5619809266431555,
+      "cap_n": 0,
+      "cap_fraction": 0.0
+    },
+    "7": {
+      "n": 744,
+      "pooled_uncapped_share": 0.3578797816000437,
+      "median_share": 0.3545679542156812,
+      "p05_share": 0.2384298076736552,
+      "p95_share": 0.47952905355978825,
+      "max_share": 0.5487938158070106,
+      "cap_n": 0,
+      "cap_fraction": 0.0
+    },
+    "8": {
+      "n": 744,
+      "pooled_uncapped_share": 0.359614870109295,
+      "median_share": 0.36087906502772804,
+      "p05_share": 0.23090796635788874,
+      "p95_share": 0.4750230009326783,
+      "max_share": 0.5728305584833564,
+      "cap_n": 0,
+      "cap_fraction": 0.0
+    },
+    "9": {
+      "n": 720,
+      "pooled_uncapped_share": 0.26210009893102354,
+      "median_share": 0.2718623836195183,
+      "p05_share": 0.07839824983326546,
+      "p95_share": 0.4246788871462566,
+      "max_share": 0.4925500392373856,
+      "cap_n": 0,
+      "cap_fraction": 0.0
+    },
+    "10": {
+      "n": 744,
+      "pooled_uncapped_share": 0.35774227450750856,
+      "median_share": 0.3768077505976648,
+      "p05_share": 0.1987699904100789,
+      "p95_share": 0.5255947146575511,
+      "max_share": 0.6485243333519827,
+      "cap_n": 0,
+      "cap_fraction": 0.0
+    },
+    "11": {
+      "n": 720,
+      "pooled_uncapped_share": 0.16673739417027147,
+      "median_share": 0.16968277383459882,
+      "p05_share": 0.10561207508024043,
+      "p95_share": 0.24229453202126244,
+      "max_share": 0.30415723519058924,
+      "cap_n": 0,
+      "cap_fraction": 0.0
+    },
+    "12": {
+      "n": 744,
+      "pooled_uncapped_share": 0.27955140891648717,
+      "median_share": 0.27205960415125297,
+      "p05_share": 0.191843059533792,
+      "p95_share": 0.41047651274345714,
+      "max_share": 0.4803690646037187,
+      "cap_n": 0,
+      "cap_fraction": 0.0
+    }
+  },
+  "parameters_retuned": false,
+  "code_sha256": "568140e7ba15dda525ea625ad4c035fee8b206446cef5807bf3d7480f246619e"
+}

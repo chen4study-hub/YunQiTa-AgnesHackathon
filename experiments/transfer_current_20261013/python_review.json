@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "language": "python",
+  "reviewed_files": ["scripts/evaluate_transfer_current.py", "experiments/transfer_current_20261013/verify_replay.py", "scripts/export_model_card.py", "tests/test_transfer_current.py"],
+  "checks": {
+    "syntax": {"status": "PASS", "evidence": ["Full evaluation exited 0; full deterministic replay exited 0; 24 related tests passed."]},
+    "input_contract": {"status": "PASS", "evidence": ["Five metadata-selected uses verified independently; each target has complete 8760-hour 2017 grid and finite nonnegative load; adapter preserves raw input, no interpolation; data hash recorded."]},
+    "method_alignment": {"status": "PASS", "evidence": ["Current monthly artifact hashes/version/chronology checked; same source features/expanded holidays/CQR/risk and width gate; target estimators frozen. Strict early-only and deployed past10 protocol separately labeled and pooled. Baseline is same-algorithm, limited-history target self-training as pre-registered."]},
+    "reproducibility": {"status": "PASS", "evidence": ["Second full replay compared all 153600 rows; retrained five baselines have identical estimator hashes; max numeric CSV roundtrip error 5.684341886080802e-14; all 11 source artifacts unchanged. Seed/runtime/dependency/script/data/plan hashes recorded."]},
+    "output_contract": {"status": "PASS", "evidence": ["Per-building and pooled metrics independently recomputed from saved predictions in test_result_counts_integrity_and_card_semantics; retained coverage uses final gate-passed count denominator; CV(RMSE) uses observed mean load; all-rejected and zero-mean cases tested; model-card strict-primary fields match receipt and multi-horizon remains null."]},
+    "leakage": {"status": "PASS", "evidence": ["Tests mutate all primary test labels and confirm all issued decisions unchanged; daily tests mutate today/future labels and confirm same-day decisions unchanged; real source feature and primitive tests mutate target/future load/weather and confirm issue-time values unchanged; saved cal_end precedes every issue day, primary cal_end always before test_start; baseline training/scale fit ends before CQR calibration."]}
+  },
+  "findings": [
+    {"severity": "LIMITATION", "detail": "Early-only is intentionally not adaptive deployed daily10. The plan resolves conflicting requirements via strict primary and separate prequential supplement; model-card states which one is used."},
+    {"severity": "LIMITATION", "detail": "Target baseline has only 21 days point training (336 eligible lag rows) versus expanded Byron history; compare as limited-history self-training, not equal-history/full-history upper bound."},
+    {"severity": "LIMITATION", "detail": "Source confidence lookup is reused for display even on target self-trained baseline; it is not a calibrated target probability. Metrics and gate use risk/width, not lookup thresholds to select samples."},
+    {"severity": "LIMITATION", "detail": "Same-site/year 5-building cohort is not unseen-station/year or multi-horizon validation. High pooled retained coverage coexists with 67% rejection and poor MAE; no deployment promotion performed."}
+  ],
+  "verdict": "PASSED_WITH_LIMITATIONS",
+  "reviewed_at": "2026-10-13",
+  "reviewer": "Current-session code inspection plus executed causal tests and independent deterministic replay. Child-review tools did not return a review; no independent reviewer approval is claimed."
+}

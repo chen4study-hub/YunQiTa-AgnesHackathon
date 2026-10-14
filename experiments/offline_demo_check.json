@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "requests": [
+    {
+      "path": "/health",
+      "status": 200,
+      "llm_mode": "demo"
+    },
+    {
+      "path": "/replay",
+      "status": 200,
+      "runtime_llm_mode": "demo",
+      "mode_basis": "health; static export index has no llm_mode"
+    },
+    {
+      "path": "/replay/peak",
+      "status": 200,
+      "runtime_llm_mode": "demo",
+      "mode_basis": "health; historical agent.llm_mode preserved, not a runtime call"
+    },
+    {
+      "path": "/schedule",
+      "status": 200,
+      "llm_mode": "demo",
+      "commands": 2
+    },
+    {
+      "path": "/chat",
+      "status": 200,
+      "llm_mode": "demo",
+      "grounded": true
+    },
+    {
+      "path": "/chat/stream",
+      "status": 200,
+      "runtime_llm_mode": "demo",
+      "mode_basis": "same demo process; SSE done contract intentionally has no llm_mode",
+      "event_types": [
+        "step",
+        "tool_start",
+        "tool_end",
+        "answer_delta",
+        "done"
+      ]
+    }
+  ],
+  "dotenv_absent": true,
+  "credentials_absent": true,
+  "external_attempts": 0,
+  "guard": "loopback-only DNS/connect/connect_ex",
+  "managed_backend_stopped": true
+}

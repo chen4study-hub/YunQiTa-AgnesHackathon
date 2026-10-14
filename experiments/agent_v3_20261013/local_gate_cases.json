@@ -1,0 +1,7 @@
+[
+ {"question":"27层CO₂是多少","tool":"floor_state","contains":["768.0 ppm"]},
+ {"question":"今天电费多少","tool":"energy_totals","contains":["10,249.4 元"]},
+ {"question":"今天下午哪个时段电费最贵？为什么？","tool":"tariff_periods","contains":["12:00–18:00 都是峰时电价 1.20 元/kWh","13:00–14:00 电费最高","1,518.8 元"],"excludes":["分/kWh"]},
+ {"question":"什么时候电费最便宜？","tool":"tariff_periods","contains":["00:00–07:00 最便宜","0.35 元/kWh"],"excludes":["分/kWh"]},
+ {"question":"明天负荷峰值","tool":"forecast_peak","contains":["这个时段预测把握不大，暂不自动执行"],"excludes":["预测被拒绝"]}
+]

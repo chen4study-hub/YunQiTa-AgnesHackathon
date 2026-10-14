@@ -1,0 +1,8 @@
+{
+  "command": "python -m pytest tests/test_daily_local_calibration.py tests/test_monthly_backtest.py tests/test_rolling_cqr.py -q --tb=short",
+  "result": "10 passed in 17.73s",
+  "foreground": true,
+  "numeric_threads": 1,
+  "backtests_rerun": false,
+  "report_sha256": "4730cbd6bc7f6a23b1ddd2793ddf801ac3af537b72a0b301c1429c958c5af55c"
+}

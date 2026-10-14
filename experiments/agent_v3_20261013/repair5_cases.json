@@ -1,0 +1,167 @@
+[
+  {
+    "question": "现在有哪些报警",
+    "tool": "alerts_orders",
+    "contains": [],
+    "narrative_required": false,
+    "semantic_check": "alerts_count",
+    "original_index": 17,
+    "semantic_evidence": true
+  },
+  {
+    "question": "L1电梯在哪层",
+    "tool": "elevator_state",
+    "contains": [
+      "层"
+    ],
+    "narrative_required": false,
+    "semantic_check": "lift_field",
+    "expected_field": "floor",
+    "expected_unit": "层",
+    "original_index": 21,
+    "semantic_evidence": true
+  },
+  {
+    "question": "楼宇运行概览",
+    "tool": "building_state",
+    "contains": [
+      "kW",
+      "CO₂"
+    ],
+    "narrative_required": false,
+    "original_index": 37,
+    "semantic_evidence": true
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "tool": "compare_costs",
+    "contains": [
+      "元",
+      "kW"
+    ],
+    "excludes": [
+      "单台",
+      "几毛钱",
+      "6%",
+      "10%",
+      "家用",
+      "费用差额 -"
+    ],
+    "narrative_required": false,
+    "original_index": 75,
+    "semantic_evidence": true,
+    "semantic_check": "hvac"
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "tool": "compare_costs",
+    "scenario": "normal",
+    "origin_index": 2,
+    "display_time": "02:45",
+    "contains": [
+      "元",
+      "kW"
+    ],
+    "excludes": [
+      "这个数现在查不到",
+      "下调空调设定不会自动增加费用",
+      "单台",
+      "几毛钱",
+      "节省"
+    ],
+    "query_step_count": 0,
+    "narrative_required": false,
+    "original_index": 80,
+    "semantic_evidence": true,
+    "semantic_check": "hvac"
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "tool": "compare_costs",
+    "scenario": "normal",
+    "origin_index": 19,
+    "display_time": "19:30",
+    "contains": [
+      "元",
+      "kW"
+    ],
+    "excludes": [
+      "这个数现在查不到",
+      "下调空调设定不会自动增加费用",
+      "单台",
+      "几毛钱",
+      "节省"
+    ],
+    "query_step_count": 0,
+    "narrative_required": false,
+    "original_index": 84,
+    "semantic_evidence": true,
+    "semantic_check": "hvac"
+  },
+  {
+    "question": "空调设定调到24度会多花多少钱",
+    "tool": "compare_costs",
+    "scenario": "normal",
+    "origin_index": 19,
+    "display_time": "19:30",
+    "contains": [
+      "元",
+      "kW"
+    ],
+    "excludes": [
+      "这个数现在查不到",
+      "下调空调设定不会自动增加费用",
+      "单台",
+      "几毛钱",
+      "节省"
+    ],
+    "query_step_count": 0,
+    "narrative_required": false,
+    "original_index": 85,
+    "semantic_evidence": true,
+    "semantic_check": "hvac"
+  },
+  {
+    "question": "现在的总负荷是多少",
+    "tool": "building_state",
+    "contains": [
+      "1,258.1 kW"
+    ],
+    "excludes": [
+      "820.1",
+      "kWh",
+      "电费"
+    ],
+    "narrative_required": false,
+    "original_index": 90,
+    "semantic_evidence": true
+  },
+  {
+    "question": "下午哪个时段电费最贵，为什么？",
+    "tool": "tariff_periods",
+    "contains": [
+      "13:00–14:00",
+      "1,518.8 元",
+      "1.20 元/kWh"
+    ],
+    "excludes": [
+      "未能取得可用"
+    ],
+    "display_time": "19:30",
+    "semantic_evidence": true
+  },
+  {
+    "question": "今天储能一共充了多少电？",
+    "tool": "storage_history",
+    "contains": [
+      "802.4 kWh"
+    ],
+    "excludes": [
+      "SOC",
+      "当前电量",
+      "未能取得可用"
+    ],
+    "display_time": "19:30",
+    "semantic_evidence": true
+  }
+]

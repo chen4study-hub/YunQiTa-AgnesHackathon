@@ -1,0 +1,16 @@
+{
+ "scope": "building catalogue, refusal reasons, public lookup, schedule isolation",
+ "catalogue": "src/agent/chat_router.py: FULL_CATALOG",
+ "question_corpus": "tests/building_chat_cases.json",
+ "regression_receipts": ["experiments/building_chat_regression.json", "experiments/building_chat_regression_real.json"],
+ "concurrency_receipt": "experiments/schedule_isolation_probe.json",
+ "native_search_capability": "experiments/web_search_capability.json",
+ "llm_selection_timeout_seconds": 2.5,
+ "choice_total_budget_seconds": 15,
+ "circuit": {"failures":3,"window_seconds":60,"cooldown_seconds":90,"half_open_probes":1},
+ "separate_capacity": {"schedule":4,"chat":4,"actual_choice_workers":4,"search_workers":4},
+ "semantic_paraphrase_limit": "Fixed corpus accuracy is not a guarantee for arbitrary paraphrases or upstream availability.",
+ "resident_changed": false,
+ "ops_exports_modified": false,
+ "planner_files_modified": false
+}

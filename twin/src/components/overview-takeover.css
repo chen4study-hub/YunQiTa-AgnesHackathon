@@ -1,0 +1,67 @@
+/* Keep the original summary in layout: takeover never changes card geometry. */
+.verdict-body.overview-verdict-stack {
+  position: relative;
+}
+.overview-verdict-stack > .overview-verdict-default[aria-hidden="true"] {
+  visibility: hidden;
+  pointer-events: none;
+}
+.overview-verdict-stack > .overview-takeover {
+  position: absolute;
+  inset: 0;
+}
+.responsive-dashboard .overview-takeover .dispatch-banner b {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.responsive-dashboard .agent-verdict small.overview-takeover-cancelled {
+  display: block;
+  position: static;
+  height: auto;
+  font-size: max(12px, var(--font-label));
+  margin-bottom: 4px;
+  white-space: normal;
+  overflow: visible;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+  color: var(--text-secondary, #a9bdca);
+}
+.overview-verdict-scroll-shell {
+  position: relative;
+  min-height: 0;
+}
+.responsive-dashboard .overview-grid .overview-verdict-footer {
+  flex: 0 0 auto;
+}
+.overview-verdict-footer[aria-hidden="true"] { visibility: hidden; }
+@media (min-width: 1181px) {
+  .overview-verdict-scroll-shell {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    overflow: hidden;
+  }
+  .overview-verdict-scroll-shell[data-more-below="true"]::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 28px;
+    pointer-events: none;
+    background: linear-gradient(transparent, #0c131b);
+  }
+}
+/* Narrow screens use content height; only desktop reserves a fixed track. */
+@media (max-width: 1180px) {
+  .responsive-dashboard .overview-grid .card.agent-verdict {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+  .overview-verdict-footer[aria-hidden="true"],
+  .overview-verdict-stack > .overview-verdict-default[aria-hidden="true"] {
+    display: none;
+  }
+  .overview-verdict-stack > .overview-takeover {
+    position: static;
+  }
+}

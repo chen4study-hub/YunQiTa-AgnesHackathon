@@ -1,0 +1,2 @@
+# Local per-hour evidence caches; hashes and daily/weekly aggregates are uploaded.
+*.csv

@@ -1,0 +1,1028 @@
+{
+  "kind": "guard",
+  "switch": "on",
+  "source_hash": {
+    "src/api/app.py": "84e71bab041777869f246860204529e1da2e71e4b96e9152c91ad004b50bc18e",
+    "src/agent/agent_runner.py": "332c10615eeae69b5f520049faea50d817c607bc4214d9e99d884b918b720716",
+    "src/agent/agent_provider.py": "07f63023152da79d093d57088442fa2eb6fe39ddcf03d19f41534ea9cb90c5fa",
+    "src/agent/agent_tools.py": "04e38990944acc0c2d694d6d5a635d3eaeb0cf88a0bd3867e4bb28e1da6746aa",
+    "src/agent/agent_validation.py": "722b198f454d4862e282ad6c71fd2273200aa107f475f4da80f9fd39f432685c",
+    "tests/building_chat_cases.json": "dccb868255eabb22041971894f4e08a66f737043c9fc91cd71c761cac233d127",
+    "probe.py": "60340614e05eb18aa5e435e579b071dd4935678b826741bbaa07c80a7847c952",
+    "multi_cases.json": "d045f887ac6c765d97dceddc51c97c01841c84de004a2802ddb7eeb4e3011644",
+    "src/agent/chat_progress.py": "c9d51777d96455296d4322f0ac885411c5397a61d004aa5c5a51397308f56ad6"
+  },
+  "results": [
+    {
+      "index": 0,
+      "question": "联网查询中美关系最新新闻",
+      "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+      "tools": [],
+      "duration_ms": 13141.0,
+      "first_answer_ms": 13141.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "mode": "llm",
+        "session_id": "ed5b16add9d2451999275acde8607fcb",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "reason": "out_of_scope",
+        "terminated": true,
+        "category": "politics",
+        "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+        "explanation_source": "policy",
+        "phase_timings": [],
+        "llm_reason": "topic_terminated",
+        "context_id": null
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": null,
+          "total_ms": 10015.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 0
+        },
+        {
+          "first_response_ms": null,
+          "total_ms": 3079.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 0
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11,
+          "received_ms": 11047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12,
+          "received_ms": 12047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13,
+          "received_ms": 13031.0
+        }
+      ],
+      "started_utc": "2026-10-13T07:53:09.764920+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13
+        },
+        {
+          "type": "answer_delta",
+          "text": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+          "sentence_source": "policy"
+        },
+        {
+          "type": "done",
+          "mode": "llm",
+          "session_id": "ed5b16add9d2451999275acde8607fcb",
+          "known": false,
+          "grounded": true,
+          "needs_human": false,
+          "reason": "out_of_scope",
+          "terminated": true,
+          "category": "politics",
+          "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+          "explanation_source": "policy",
+          "phase_timings": [],
+          "llm_reason": "topic_terminated",
+          "context_id": null
+        }
+      ],
+      "model_correct": false,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": "politics"
+    },
+    {
+      "index": 1,
+      "question": "现在几点？",
+      "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+      "tools": [],
+      "duration_ms": 0.0,
+      "first_answer_ms": 0.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "mode": "llm",
+        "session_id": "ed5b16add9d2451999275acde8607fcb",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "reason": "out_of_scope",
+        "terminated": true,
+        "category": "terminated",
+        "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+        "explanation_source": "policy",
+        "phase_timings": [],
+        "llm_reason": "topic_terminated",
+        "context_id": null
+      },
+      "error": null,
+      "upstream_calls": [],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [],
+      "started_utc": "2026-10-13T07:53:22.929040+00:00",
+      "events": [
+        {
+          "type": "answer_delta",
+          "text": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+          "sentence_source": "policy"
+        },
+        {
+          "type": "done",
+          "mode": "llm",
+          "session_id": "ed5b16add9d2451999275acde8607fcb",
+          "known": false,
+          "grounded": true,
+          "needs_human": false,
+          "reason": "out_of_scope",
+          "terminated": true,
+          "category": "terminated",
+          "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+          "explanation_source": "policy",
+          "phase_timings": [],
+          "llm_reason": "topic_terminated",
+          "context_id": null
+        }
+      ],
+      "model_correct": false,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": "politics"
+    },
+    {
+      "index": 2,
+      "question": "联网查询明星热搜丑闻",
+      "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+      "tools": [],
+      "duration_ms": 4109.0,
+      "first_answer_ms": 4109.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "mode": "llm",
+        "session_id": "7a3f470e656044b2a169f37eac710dda",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "reason": "out_of_scope",
+        "terminated": true,
+        "category": "current_affairs",
+        "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+        "explanation_source": "policy",
+        "phase_timings": [],
+        "llm_reason": "topic_terminated",
+        "context_id": null
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": null,
+          "total_ms": 4078.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 0
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4000.0
+        }
+      ],
+      "started_utc": "2026-10-13T07:53:22.937041+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "answer_delta",
+          "text": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+          "sentence_source": "policy"
+        },
+        {
+          "type": "done",
+          "mode": "llm",
+          "session_id": "7a3f470e656044b2a169f37eac710dda",
+          "known": false,
+          "grounded": true,
+          "needs_human": false,
+          "reason": "out_of_scope",
+          "terminated": true,
+          "category": "current_affairs",
+          "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+          "explanation_source": "policy",
+          "phase_timings": [],
+          "llm_reason": "topic_terminated",
+          "context_id": null
+        }
+      ],
+      "model_correct": false,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": "affairs"
+    },
+    {
+      "index": 3,
+      "question": "储能SOC多少？",
+      "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+      "tools": [],
+      "duration_ms": 0.0,
+      "first_answer_ms": 0.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "mode": "llm",
+        "session_id": "7a3f470e656044b2a169f37eac710dda",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "reason": "out_of_scope",
+        "terminated": true,
+        "category": "terminated",
+        "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+        "explanation_source": "policy",
+        "phase_timings": [],
+        "llm_reason": "topic_terminated",
+        "context_id": null
+      },
+      "error": null,
+      "upstream_calls": [],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [],
+      "started_utc": "2026-10-13T07:53:27.065037+00:00",
+      "events": [
+        {
+          "type": "answer_delta",
+          "text": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+          "sentence_source": "policy"
+        },
+        {
+          "type": "done",
+          "mode": "llm",
+          "session_id": "7a3f470e656044b2a169f37eac710dda",
+          "known": false,
+          "grounded": true,
+          "needs_human": false,
+          "reason": "out_of_scope",
+          "terminated": true,
+          "category": "terminated",
+          "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+          "explanation_source": "policy",
+          "phase_timings": [],
+          "llm_reason": "topic_terminated",
+          "context_id": null
+        }
+      ],
+      "model_correct": false,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": "affairs"
+    },
+    {
+      "index": 4,
+      "question": "现在天气怎么样？",
+      "answer": "当前室外 13.3 °C，湿度 57.0%。",
+      "tools": [
+        "get_weather"
+      ],
+      "duration_ms": 19156.0,
+      "first_answer_ms": 19156.0,
+      "correct_with_evidence": true,
+      "success_within_15s": false,
+      "finished_within_15s": false,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 10000.0,
+            "reason": "first_token_timeout",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 11000.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 8093.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "1d05919ce10a423e82054239868c43c4",
+        "context_id": "58e06881b98f4b9eb42834e0e0c289e2",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none"
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": null,
+          "total_ms": 10000.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 0
+        },
+        {
+          "first_response_ms": 656.0,
+          "total_ms": 984.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 378
+        },
+        {
+          "first_response_ms": 7875.0,
+          "total_ms": 8093.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 58
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11,
+          "received_ms": 11015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12,
+          "received_ms": 12000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13,
+          "received_ms": 13015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14,
+          "received_ms": 14000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15,
+          "received_ms": 15015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 16 秒",
+          "elapsed_seconds": 16,
+          "received_ms": 16000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 17 秒",
+          "elapsed_seconds": 17,
+          "received_ms": 17015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 18 秒",
+          "elapsed_seconds": 18,
+          "received_ms": 18000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 19 秒",
+          "elapsed_seconds": 19,
+          "received_ms": 19000.0
+        }
+      ],
+      "started_utc": "2026-10-13T07:53:27.077070+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11
+        },
+        {
+          "type": "tool_start",
+          "id": "dfa2c81d2e20499e9a3fa839273bcba2",
+          "tool": "get_weather",
+          "args": {
+            "scope": "current"
+          },
+          "name": "本楼天气"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15
+        },
+        {
+          "type": "tool_end",
+          "id": "dfa2c81d2e20499e9a3fa839273bcba2",
+          "tool": "get_weather",
+          "ms": 16.0,
+          "summary": "本楼天气查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 16 秒",
+          "elapsed_seconds": 16
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 17 秒",
+          "elapsed_seconds": 17
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 18 秒",
+          "elapsed_seconds": 18
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 19 秒",
+          "elapsed_seconds": 19
+        },
+        {
+          "type": "answer_delta",
+          "text": "当前室外 13.3 °C，湿度 57.0%。",
+          "sentence_source": "llm"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "llm",
+          "mode": "llm",
+          "reason": "answered",
+          "llm_reason": "agent_completed",
+          "phase_timings": [
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 10000.0,
+              "reason": "first_token_timeout",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 11000.0,
+              "reason": "completed",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 2,
+              "elapsed_ms": 8093.0,
+              "reason": "completed",
+              "post_tool": true
+            }
+          ],
+          "session_id": "1d05919ce10a423e82054239868c43c4",
+          "context_id": "58e06881b98f4b9eb42834e0e0c289e2",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none"
+        }
+      ],
+      "model_correct": true,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": "weather"
+    }
+  ],
+  "model": "agnes-3.0-flash",
+  "sessions": {
+    "politics": {
+      "id": "ed5b16add9d2451999275acde8607fcb",
+      "history": [
+        {
+          "role": "user",
+          "content": "联网查询中美关系最新新闻"
+        },
+        {
+          "role": "assistant",
+          "content": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。"
+        },
+        {
+          "role": "user",
+          "content": "现在几点？"
+        },
+        {
+          "role": "assistant",
+          "content": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。"
+        }
+      ],
+      "context_id": null
+    },
+    "affairs": {
+      "id": "7a3f470e656044b2a169f37eac710dda",
+      "history": [
+        {
+          "role": "user",
+          "content": "联网查询明星热搜丑闻"
+        },
+        {
+          "role": "assistant",
+          "content": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。"
+        },
+        {
+          "role": "user",
+          "content": "储能SOC多少？"
+        },
+        {
+          "role": "assistant",
+          "content": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。"
+        }
+      ],
+      "context_id": null
+    },
+    "weather": {
+      "id": "1d05919ce10a423e82054239868c43c4",
+      "history": [
+        {
+          "role": "user",
+          "content": "现在天气怎么样？"
+        },
+        {
+          "role": "assistant",
+          "content": "当前室外 13.3 °C，湿度 57.0%。"
+        }
+      ],
+      "context_id": "58e06881b98f4b9eb42834e0e0c289e2"
+    }
+  },
+  "complete": true,
+  "single_python_process": true,
+  "resident_changed": false,
+  "owned_pid": 20524,
+  "owned_backend_stopped": true,
+  "owned_ports": [
+    51473
+  ]
+}

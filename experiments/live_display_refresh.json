@@ -1,0 +1,98 @@
+{
+  "status": "passed",
+  "changed_text_fields": {
+    "exports/replay/abstain.json": 2,
+    "exports/replay/normal.json": 6,
+    "exports/replay/peak.json": 4
+  },
+  "visible_strings_scanned": 5093,
+  "new_llm_calls": 0,
+  "new_dispatches": 0,
+  "controls_economics_and_sources_preserved": true,
+  "before_export_sha256": {
+    "exports/buildings.json": "f7897edf4d9f6834f634c1bfdb3b69c0834fa3b1f5e90f80cf88370b7d16ab16",
+    "exports/model_card.json": "371e104ef9f5e37352ecf63965b665f29f161c4497e3c3ef1ffc0c1a9ddb27df",
+    "exports/replay/abstain.json": "cf8bda701219061daae8388a4d67973915cca28874e6bf67702b35b50b1eddab",
+    "exports/replay/index.json": "626e5f929e79cd3d61fa4f1187e8108836fc470f3e5f7a91c16e72852ae05373",
+    "exports/replay/normal.json": "d1a9f53d195eb905b6ef3e30fae8f065895e13e4112f02889eda132c51867276",
+    "exports/replay/peak.json": "914f315746b2eab3800aa110d40291bf578321256b1f722bd4be20ff1d88000b",
+    "exports/replay/sample.json": "56d06985b254b0e59de5a082df959a52b22dc9ff296f113f48ee1e2470471a72"
+  },
+  "after_export_sha256": {
+    "exports/buildings.json": "f7897edf4d9f6834f634c1bfdb3b69c0834fa3b1f5e90f80cf88370b7d16ab16",
+    "exports/model_card.json": "371e104ef9f5e37352ecf63965b665f29f161c4497e3c3ef1ffc0c1a9ddb27df",
+    "exports/replay/abstain.json": "6c0736efdd8633b9a2d3c6fac2483fa2cca7db1cde27ad418c983c47d0ab8160",
+    "exports/replay/index.json": "626e5f929e79cd3d61fa4f1187e8108836fc470f3e5f7a91c16e72852ae05373",
+    "exports/replay/normal.json": "83c95f5ebe145c04fe44995f9b909ef682d6ca60e473dd0513a277afc4c72044",
+    "exports/replay/peak.json": "d659dffd7356a8820dd8cdda0d795ac78ca3275cacdf3a493f1a325c9707def7",
+    "exports/replay/sample.json": "56d06985b254b0e59de5a082df959a52b22dc9ff296f113f48ee1e2470471a72"
+  },
+  "current_wording_categories": {
+    "normal": {
+      "template": 12,
+      "rule": 5,
+      "llm": 7
+    },
+    "peak": {
+      "template": 15,
+      "llm": 6,
+      "rule": 3
+    },
+    "abstain": {
+      "template": 9,
+      "llm": 3,
+      "rule": 12
+    }
+  },
+  "normal_historical_comparison": {
+    "773db56": {
+      "actual_wording_counts": {
+        "template": 12,
+        "llm": 12
+      },
+      "llm_choice_hours": 24,
+      "rule_hours_by_reason": {}
+    },
+    "c28a18e": {
+      "actual_wording_counts": {
+        "template": 12,
+        "llm": 12
+      },
+      "llm_choice_hours": 24,
+      "rule_hours_by_reason": {}
+    },
+    "907a450": {
+      "actual_wording_counts": {
+        "template": 12,
+        "rule": 5,
+        "llm": 7
+      },
+      "llm_choice_hours": 19,
+      "rule_hours_by_reason": {
+        "grounding_failed": 2,
+        "call_failed": 3
+      }
+    }
+  },
+  "limits": "historical raw timestamps retained; display_date never retimes data or asserts a new model evaluation; failed drafts not saved, per-template rejection cause unavailable",
+  "pytest": {
+    "status": "passed",
+    "passed": 330,
+    "split_processes": [
+      137,
+      193
+    ],
+    "new_regressions": 62,
+    "native_threads_limited": true
+  },
+  "credential_scan": {
+    "status": "passed",
+    "scanned_files": 25,
+    "exact_configured_key_checked": true,
+    "matched_contents_logged": false
+  },
+  "test_log_sha256": {
+    "logs/live_display_tests_part1_final.log": "ba3b30250623a91cd035e71d07e1492367fbceda7b6a483ebedf0e04f0a1c6d6",
+    "logs/live_display_tests_part2_final.log": "058c7cae16239d93a81017338834900b61423f8d89a613377c3a1a2a37229083"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "date": "2017-04-09",
+  "weekday": "Sunday",
+  "federal_holiday": false,
+  "risk_min": 0.8370762711864406,
+  "risk_max": 0.9309322033898304,
+  "threshold": 0.8173728813559321,
+  "rejected": 24,
+  "components": {
+    "scale": {
+      "raw_min": 39.88005048064442,
+      "raw_max": 61.87147437065895,
+      "calibration_min": 0.001,
+      "calibration_max": 60.19684663251899,
+      "weighted_mean": 0.6917196327683616
+    },
+    "lag_disagreement": {
+      "raw_min": 0.9659999999996671,
+      "raw_max": 38.243999999999915,
+      "calibration_min": 0.03300000000012915,
+      "calibration_max": 484.78499999999997,
+      "weighted_mean": 0.040625
+    },
+    "building_prior": {
+      "raw_min": 7.319591102824102,
+      "raw_max": 7.319591102824102,
+      "calibration_min": 7.319591102824102,
+      "calibration_max": 7.319591102824102,
+      "weighted_mean": 0.10000000000000002
+    },
+    "usage_prior": {
+      "raw_min": 7.319591102824102,
+      "raw_max": 7.319591102824102,
+      "calibration_min": 7.319591102824102,
+      "calibration_max": 7.319591102824102,
+      "weighted_mean": 0.05000000000000001
+    }
+  },
+  "calibration_start": "2017-03-22 04:00:00+00:00",
+  "calibration_end": "2017-03-31 23:00:00+00:00",
+  "weekend_fraction_cq": 0.2033898305084746,
+  "actual_min": 787.2339999999997,
+  "actual_max": 855.4989999999997,
+  "missing_actual": 0,
+  "max_hourly_change": 21.368000000000052,
+  "holiday_comparison": {
+    "False": {
+      "n": 8520,
+      "rejection": 0.15669014084507044,
+      "coverage": 0.9042449547668754
+    },
+    "True": {
+      "n": 240,
+      "rejection": 0.3375,
+      "coverage": 0.8867924528301887
+    }
+  }
+}

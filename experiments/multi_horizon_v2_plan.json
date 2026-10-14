@@ -1,0 +1,18 @@
+{
+ "version":"byron-shortfix24-monthly-v2",
+ "seed":42,
+ "parameters":{"n_estimators":150,"learning_rate":0.05,"num_leaves":31,"n_jobs":2},
+ "development":"2016July-December past-only monthly rolling origins; data clipped to2016 before all development operations, observed target labels2016only",
+ "baseline":"unchanged v1 pooled seasonal-anchor direct24 (development refit only)",
+ "candidates":["latest_pooled","latest_segmented"],
+ "candidate_rules":"Both route h1 through original holiday-expanded1step LightGBM/CQR using origin-month past-only bundle. h2-24 extra y(t-23),y(t-167),target-aligned daily/weekly lag, target lag disagreement, short anchor y(t) instead of daily for h<=3. latest_pooled shares h2-24 model. latest_segmented uses fixed bands2-3/4-6/7-12/13-24. No post-result blending or smoothing.",
+ "selection":"Among candidates, eligible if pooled2016h1-3 MAE improves baseline>=10%, retained coverageh1-3>=0.875, and h4-24MAE<=baseline*1.05; minimize h1-3MAE then h4-24MAE then name. If neither eligible, minimize mean all-horizon MAE and mark development gate failed. Freeze decision before2017evaluation; no final retuning.",
+ "split":"Same prior28day calibration and65/35scale/Cq split; all point/scale/Cq labels strictly before following fit boundary; per-horizon risk refs/CQR/gate. h1 deliberately reproduces original1step split and Cq rather than pooled-direct split.",
+ "one_step_alignment":"h1 at origin t predicts targett+1 with same monthly1step model, target lag features and CQR as legacy replay rowt+1. Same-month predictions/interval/risk match. Across month boundary keep origin-month model fit before t; do not borrow target-month model or confidence using unobserved labels. Report boundary difference explicitly.",
+ "weather":"persist observed t, never future target observation; original1step weather_past matches weather(t)",
+ "risk_weights":[0.7,0.15,0.1,0.05],"rho":0.15,"alpha":0.095,"min_scale":0.001,"max_relative_width":1.0,
+ "confidence":"h>=2per-horizon past completed-target isotonic risk bins; Dec2016warmup. h1 uses existing original bundle lookup in2017so full same-month口径一致; its validation end predates origin month.",
+ "final":"one fixed monthly2017rolling evaluation after development freeze. Use originalv1cached2017only for comparison after freeze; do not search it. n=8760-h observed targets, issue8760per step.",
+ "legacy_champion_changed":false,"contract":"1.2 unchanged","LLM_calls":0,
+ "limitations":"2017previously inspected forv1; not blind. Sparse2016period; conditional or joint24hcoverage not guaranteed. Segmented point paths may have band discontinuities; no fitted smoothing from test data."
+}

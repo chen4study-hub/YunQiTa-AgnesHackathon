@@ -1,0 +1,14 @@
+{
+  "plan_sha256": "7e100afbc240910ba9a4727e093c9a7a012d6fe07b6caeaf03cfbe4ae407ec4d",
+  "code_sha256": {
+    "scripts/evaluate_agent13.py": "a70fcd5259d1fbb3b4fbcbf57b9cf02bff5d665f6dbf40d3dc1e77988364f393",
+    "src/agent/orchestrator.py": "c1b254faf0cf6331953ad039d74c88ed539f6abec6db5c8cfa4cfce2586e6d13",
+    "src/agent/tools.py": "50edb99954bcb953e68e0e1296aa4c563d65adb23a9321a62d721e5dfa22c9b7",
+    "src/agent/selection.py": "d1351903f18cc341a9741fca3b9feb72986b9e7c0a7ec876e8dad654c053864a",
+    "src/agent/provider.py": "c69e14e029ce0e68b1d76b8effdbf23ece6456689d9b8b1db6f2f4b299375d9b",
+    "configs/agent_tools.json": "599b9c7a0186be978d01d9db64d9f51fb7926dd39ea3d316fd3949f58f871b70"
+  },
+  "monthly_index_sha256": "0539b485db9021657708f1ead89ce507a92d6bf96a349bc4193a622ff1853dab",
+  "weather_sha256": "691a7c14644d3fae764978307c6c7eeb1b58a93845bf4bac759cba16cf04c74c",
+  "requested_llm_mode": "real"
+}

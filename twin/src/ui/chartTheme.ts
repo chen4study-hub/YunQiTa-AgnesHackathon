@@ -1,0 +1,32 @@
+export const darkTheme = {
+  color: ["#4FD1D9", "#7AA7FF", "#F2B33D", "#2FBF8F", "#FF6A3D", "#FF4D5E"],
+  backgroundColor: "transparent",
+  textStyle: { color: "#8597A3", fontFamily: "JetBrains Mono", fontSize: 12 },
+  categoryAxis: {
+    nameTextStyle: { fontSize: 12 },
+    axisLine: { lineStyle: { color: "#24384A" } },
+    axisTick: { show: false },
+    axisLabel: { color: "#5B6B76", fontSize: 12 },
+    splitLine: { show: false },
+  },
+  valueAxis: {
+    nameTextStyle: { fontSize: 12 },
+    axisLine: { show: false },
+    axisTick: { show: false },
+    axisLabel: { color: "#5B6B76", fontSize: 12 },
+    splitLine: { lineStyle: { color: "#1C2A36" } },
+  },
+  timeAxis: { axisLabel: { fontSize: 12 }, nameTextStyle: { fontSize: 12 } },
+  logAxis: { axisLabel: { fontSize: 12 }, nameTextStyle: { fontSize: 12 } },
+  axisPointer: { label: { fontSize: 12 } },
+  markLine: { label: { fontSize: 12 }, emphasis: { label: { fontSize: 12 } } },
+  markPoint: { label: { fontSize: 12 }, emphasis: { label: { fontSize: 12 } } },
+  markArea: { label: { fontSize: 12 }, emphasis: { label: { fontSize: 12 } } },
+  legend: { textStyle: { color: "#8597A3", fontSize: 12 } },
+  tooltip: {
+    renderMode: "richText",
+    backgroundColor: "#111B25",
+    borderColor: "#24384A",
+    textStyle: { color: "#E4ECF1", fontSize: 13 },
+  },
+};

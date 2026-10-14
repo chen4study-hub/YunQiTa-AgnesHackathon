@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "changed_text_fields": {
+    "exports/buildings.json": 0,
+    "exports/model_card.json": 3,
+    "exports/replay/abstain.json": 72,
+    "exports/replay/index.json": 0,
+    "exports/replay/normal.json": 102,
+    "exports/replay/peak.json": 97,
+    "exports/replay/sample.json": 1
+  },
+  "visible_strings_scanned": 5152,
+  "new_llm_calls": 0,
+  "new_dispatches": 0,
+  "nonprose_unchanged": true,
+  "before_sha256": {
+    "exports/buildings.json": "f7897edf4d9f6834f634c1bfdb3b69c0834fa3b1f5e90f80cf88370b7d16ab16",
+    "exports/model_card.json": "371e104ef9f5e37352ecf63965b665f29f161c4497e3c3ef1ffc0c1a9ddb27df",
+    "exports/replay/abstain.json": "5bb0f1af42983a474b382a6d2ba4789117bed510df080ee92965318c291c899b",
+    "exports/replay/index.json": "626e5f929e79cd3d61fa4f1187e8108836fc470f3e5f7a91c16e72852ae05373",
+    "exports/replay/normal.json": "273af2632d7cfa1da83e7d7b6b78fa62a6eaca3e83dc8bba4d6a833c08bab6b0",
+    "exports/replay/peak.json": "8b1ce28aa7d03de361432806e414a305326abf056d49208dd365be7455e8c6f4",
+    "exports/replay/sample.json": "56d06985b254b0e59de5a082df959a52b22dc9ff296f113f48ee1e2470471a72"
+  },
+  "after_sha256": {
+    "normal.json": "53d9f153c73262dc89f46b9146f74f9b8ebcfc68a5db86ee14e938f30b74c137",
+    "peak.json": "3718500f5d0d12ef74efc0435b762dea6f9a01b4468e526f913e296b6e7b12f3",
+    "abstain.json": "e15b393ca62c034f2132bbc0f8704fc1662e5c2ef5c6812bc834ea67e92e02f9"
+  }
+}

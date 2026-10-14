@@ -1,0 +1,38 @@
+{
+  "pairs": 259,
+  "arms": {
+    "before": {
+      "hours": 259,
+      "validated_real_hours": 164,
+      "fallback_hours": 95,
+      "fallback_rate": 0.3667953667953668,
+      "fallback_reasons": {
+        "grounding_failed": 41,
+        "explanation_format_failed": 47,
+        "missing_upper_preparation": 7
+      },
+      "final_unsourced_numeric_tokens": 0,
+      "provider_calls": 416,
+      "template_prose_hours": 0
+    },
+    "after": {
+      "hours": 259,
+      "validated_real_hours": 254,
+      "fallback_hours": 5,
+      "fallback_rate": 0.019305019305019305,
+      "fallback_reasons": {
+        "grounding_failed": 5
+      },
+      "final_unsourced_numeric_tokens": 0,
+      "provider_calls": 279,
+      "template_prose_hours": 70
+    }
+  },
+  "paired_transitions": {
+    "llm -> llm": 162,
+    "fallback -> llm": 92,
+    "llm -> fallback": 2,
+    "fallback -> fallback": 3
+  },
+  "status": "completed"
+}

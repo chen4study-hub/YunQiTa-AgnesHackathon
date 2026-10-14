@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "requests": 45,
+  "status_counts": {
+    "200": 4,
+    "503": 41
+  },
+  "health_ms": [
+    516.0,
+    31.0,
+    125.0
+  ],
+  "first_step_ms": 282.0,
+  "all_requests_seconds": 17.39,
+  "upstream": "blocks until host closes client",
+  "choice_budget_seconds": 15,
+  "owned_port": 52955,
+  "owned_process_stopped": true,
+  "resident_changed": false
+}

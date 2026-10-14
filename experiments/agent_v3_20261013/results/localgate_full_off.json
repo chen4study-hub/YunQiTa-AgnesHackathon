@@ -1,0 +1,589 @@
+{
+  "kind": "full",
+  "switch": "off",
+  "source_hash": {
+    "src/api/app.py": "84e71bab041777869f246860204529e1da2e71e4b96e9152c91ad004b50bc18e",
+    "src/agent/agent_runner.py": "c000f332fcf7bd27b14c9b9ea98bbdba9f2bc7e917bef24e9a8d6b33b1748d7f",
+    "src/agent/agent_provider.py": "07f63023152da79d093d57088442fa2eb6fe39ddcf03d19f41534ea9cb90c5fa",
+    "src/agent/agent_tools.py": "9b640b0bc9b52450be9608e751133c760d212ca6698b22738262b7c77e261119",
+    "src/agent/agent_validation.py": "324fc55b94533e311e9727a9de7aee1a48a6780036333e252306c7de57a2c481",
+    "tests/building_chat_cases.json": "dccb868255eabb22041971894f4e08a66f737043c9fc91cd71c761cac233d127",
+    "probe.py": "e3012b7c5237411506e039e219dc2e422ee9e3afd8234fe19131f24080676511",
+    "multi_cases.json": "d045f887ac6c765d97dceddc51c97c01841c84de004a2802ddb7eeb4e3011644",
+    "src/agent/chat_progress.py": "c9d51777d96455296d4322f0ac885411c5397a61d004aa5c5a51397308f56ad6",
+    "src/agent/building_tools.py": "669183dbc365e9b1261223aed095340677790478e4f88230165323fa2bc1a605",
+    "src/agent/chat_router.py": "5b3a1a651bc176cb33b9bf924b90a0499e6a042ee0f75781345063a69160e4c6",
+    "src/agent/chat_sentence_stream.py": "89569953494c9b6a0117e96ce22ac79bd18a8f8928d345d2ce5a0d7c28e232d6",
+    "src/agent/chat_topic_hook.py": "6de85c54ea6385bb1d7347c9d6f1654879583a4c063cecde35ae34841e1f2570",
+    "src/agent/tariff_periods.py": "f392a141738c2860927a1ec8e801b6b6bc77f828465915e05045963fde6170b5",
+    "experiments/agent_v3_20261013/local_gate_cases.json": "a627495e0e5e5a412f431a570848e3e0c9c700ba300c439b53350e803efa89ba"
+  },
+  "results": [
+    {
+      "index": 0,
+      "question": "27层CO₂是多少",
+      "answer": "27 层当前负荷 26.3 kW，人数 36 人，温度 26.0 °C，CO₂ 550.0 ppm，新风量 1,080.0 m³/h，风机 76.4%，照明 87.8%。",
+      "tools": [
+        "floor_state"
+      ],
+      "duration_ms": 93.0,
+      "first_answer_ms": 93.0,
+      "correct_with_evidence": false,
+      "success_within_15s": false,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [],
+        "llm_reason": null,
+        "reason": "answered",
+        "mode": "fallback",
+        "session_id": "04b98286dfe7479194bd070dab73bd45",
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "answer_ready_ms": 62.0,
+          "pipeline_ms": 62.0,
+          "answer_gate_wait_ms": 0.0,
+          "local_data_bypass": true
+        },
+        "classification_pending": true
+      },
+      "error": null,
+      "upstream_calls": [],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [],
+      "started_utc": "2026-10-13T09:04:08.781700+00:00",
+      "events": [
+        {
+          "type": "tool_start",
+          "tool": "floor_state",
+          "args": {
+            "floor": 27
+          },
+          "name": "楼层环境与负荷"
+        },
+        {
+          "type": "tool_end",
+          "tool": "floor_state",
+          "ms": 15.0,
+          "summary": "楼层环境与负荷查询完成。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "27 层当前负荷 26.3 kW，人数 36 人，温度 26.0 °C，CO₂ 550.0 ppm，新风量 1,080.0 m³/h，风机 76.4%，照明 87.8%。"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "needs_human": false,
+          "grounded": true,
+          "explanation_source": "template",
+          "phase_timings": [],
+          "llm_reason": null,
+          "reason": "answered",
+          "mode": "fallback",
+          "session_id": "04b98286dfe7479194bd070dab73bd45",
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "answer_ready_ms": 62.0,
+            "pipeline_ms": 62.0,
+            "answer_gate_wait_ms": 0.0,
+            "local_data_bypass": true
+          },
+          "classification_pending": true
+        }
+      ],
+      "original_index": null,
+      "model_correct": false,
+      "template_answer": true,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 1,
+      "question": "今天电费多少",
+      "answer": "今天截至 14:00，用电 13,640.0 kWh，电费 10,249.4 元。",
+      "tools": [
+        "energy_totals"
+      ],
+      "duration_ms": 62.0,
+      "first_answer_ms": 62.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [],
+        "llm_reason": null,
+        "reason": "answered",
+        "mode": "fallback",
+        "session_id": "60175aaf1eaa494ead7708014cda4229",
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "answer_ready_ms": 62.0,
+          "pipeline_ms": 62.0,
+          "answer_gate_wait_ms": 0.0,
+          "local_data_bypass": true
+        },
+        "classification_pending": true
+      },
+      "error": null,
+      "upstream_calls": [],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [],
+      "started_utc": "2026-10-13T09:04:08.891011+00:00",
+      "events": [
+        {
+          "type": "tool_start",
+          "tool": "energy_totals",
+          "args": {},
+          "name": "用电与电费"
+        },
+        {
+          "type": "tool_end",
+          "tool": "energy_totals",
+          "ms": 15.0,
+          "summary": "用电与电费查询完成。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "今天截至 14:00，用电 13,640.0 kWh，电费 10,249.4 元。"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "needs_human": false,
+          "grounded": true,
+          "explanation_source": "template",
+          "phase_timings": [],
+          "llm_reason": null,
+          "reason": "answered",
+          "mode": "fallback",
+          "session_id": "60175aaf1eaa494ead7708014cda4229",
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "answer_ready_ms": 62.0,
+            "pipeline_ms": 62.0,
+            "answer_gate_wait_ms": 0.0,
+            "local_data_bypass": true
+          },
+          "classification_pending": true
+        }
+      ],
+      "original_index": null,
+      "model_correct": false,
+      "template_answer": true,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 2,
+      "question": "今天下午哪个时段电费最贵？为什么？",
+      "answer": "按已配置分时电价，12:00–18:00 都是峰时电价 1.20 元/kWh。按整栋小时用电量比较，13:00–14:00 电费最高，为 1,518.8 元；17:00–18:00 电费最低，为 1,374.2 元。13:00–14:00 是峰时电价 1.20 元/kWh，用电 1,265.7 kWh；单价和用电量共同决定费用，所以这段电费最高。这段储能放电 250.0 kW；储能放电会减少电网购电，但这里电费按整栋用电量计，不是扣除光伏和储能后的结算账单。未结束的小时仅供时段比较，不计入截至当前的累计电费。",
+      "tools": [
+        "tariff_periods"
+      ],
+      "duration_ms": 63.0,
+      "first_answer_ms": 63.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [],
+        "llm_reason": null,
+        "reason": "answered",
+        "mode": "fallback",
+        "session_id": "9400a3e142db40399405f5a8e76c7565",
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "answer_ready_ms": 63.0,
+          "pipeline_ms": 63.0,
+          "answer_gate_wait_ms": 0.0,
+          "local_data_bypass": true
+        },
+        "classification_pending": true
+      },
+      "error": null,
+      "upstream_calls": [],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [],
+      "started_utc": "2026-10-13T09:04:08.973051+00:00",
+      "events": [
+        {
+          "type": "tool_start",
+          "tool": "tariff_periods",
+          "args": {},
+          "name": "分时电价与用电"
+        },
+        {
+          "type": "tool_end",
+          "tool": "tariff_periods",
+          "ms": 16.0,
+          "summary": "分时电价与用电查询完成。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "按已配置分时电价，12:00–18:00 都是峰时电价 1.20 元/kWh。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "按整栋小时用电量比较，13:00–14:00 电费最高，为 1,518.8 元；17:00–18:00 电费最低，为 1,374.2 元。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "13:00–14:00 是峰时电价 1.20 元/kWh，用电 1,265.7 kWh；单价和用电量共同决定费用，所以这段电费最高。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "这段储能放电 250.0 kW；储能放电会减少电网购电，但这里电费按整栋用电量计，不是扣除光伏和储能后的结算账单。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "未结束的小时仅供时段比较，不计入截至当前的累计电费。"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "needs_human": false,
+          "grounded": true,
+          "explanation_source": "template",
+          "phase_timings": [],
+          "llm_reason": null,
+          "reason": "answered",
+          "mode": "fallback",
+          "session_id": "9400a3e142db40399405f5a8e76c7565",
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "answer_ready_ms": 63.0,
+            "pipeline_ms": 63.0,
+            "answer_gate_wait_ms": 0.0,
+            "local_data_bypass": true
+          },
+          "classification_pending": true
+        }
+      ],
+      "original_index": null,
+      "model_correct": false,
+      "template_answer": true,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 3,
+      "question": "什么时候电费最便宜？",
+      "answer": "按已配置分时电价，10:00–20:00 单价最高，为 1.20 元/kWh；00:00–07:00 最便宜，为 0.35 元/kWh。按整栋小时用电量比较，13:00–14:00 电费最高，为 1,518.8 元；03:00–04:00 电费最低，为 271.9 元。13:00–14:00 是峰时电价 1.20 元/kWh，用电 1,265.7 kWh；单价和用电量共同决定费用，所以这段电费最高。这段储能放电 250.0 kW；储能放电会减少电网购电，但这里电费按整栋用电量计，不是扣除光伏和储能后的结算账单。未结束的小时仅供时段比较，不计入截至当前的累计电费。",
+      "tools": [
+        "tariff_periods"
+      ],
+      "duration_ms": 63.0,
+      "first_answer_ms": 63.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [],
+        "llm_reason": null,
+        "reason": "answered",
+        "mode": "fallback",
+        "session_id": "5e3dfdf4331f4c8bab6b3ebab7c9b287",
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "answer_ready_ms": 63.0,
+          "pipeline_ms": 63.0,
+          "answer_gate_wait_ms": 0.0,
+          "local_data_bypass": true
+        },
+        "classification_pending": true
+      },
+      "error": null,
+      "upstream_calls": [],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [],
+      "started_utc": "2026-10-13T09:04:09.050043+00:00",
+      "events": [
+        {
+          "type": "tool_start",
+          "tool": "tariff_periods",
+          "args": {},
+          "name": "分时电价与用电"
+        },
+        {
+          "type": "tool_end",
+          "tool": "tariff_periods",
+          "ms": 16.0,
+          "summary": "分时电价与用电查询完成。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "按已配置分时电价，10:00–20:00 单价最高，为 1.20 元/kWh；00:00–07:00 最便宜，为 0.35 元/kWh。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "按整栋小时用电量比较，13:00–14:00 电费最高，为 1,518.8 元；03:00–04:00 电费最低，为 271.9 元。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "13:00–14:00 是峰时电价 1.20 元/kWh，用电 1,265.7 kWh；单价和用电量共同决定费用，所以这段电费最高。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "这段储能放电 250.0 kW；储能放电会减少电网购电，但这里电费按整栋用电量计，不是扣除光伏和储能后的结算账单。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "未结束的小时仅供时段比较，不计入截至当前的累计电费。"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "needs_human": false,
+          "grounded": true,
+          "explanation_source": "template",
+          "phase_timings": [],
+          "llm_reason": null,
+          "reason": "answered",
+          "mode": "fallback",
+          "session_id": "5e3dfdf4331f4c8bab6b3ebab7c9b287",
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "answer_ready_ms": 63.0,
+            "pipeline_ms": 63.0,
+            "answer_gate_wait_ms": 0.0,
+            "local_data_bypass": true
+          },
+          "classification_pending": true
+        }
+      ],
+      "original_index": null,
+      "model_correct": false,
+      "template_answer": true,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 4,
+      "question": "明天负荷峰值",
+      "answer": "本次预测中最高负荷约 1,279.7 kW，出现在明天 13:00。这个时段预测把握不大，暂不自动执行。",
+      "tools": [
+        "get_forecast",
+        "forecast_peak"
+      ],
+      "duration_ms": 2282.0,
+      "first_answer_ms": 2282.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": true,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [
+          {
+            "phase": "answer_stream",
+            "first_token_ms": 2219.0,
+            "first_token_timeout_seconds": 12.0,
+            "validation_failures": {
+              "scope_or_format": 1
+            },
+            "accepted_llm_sentences": 0,
+            "host_supplemented": true,
+            "elapsed_ms": 2219.0,
+            "reason": "chat_grounding_failed",
+            "transport_attempts": [
+              {
+                "reason": "transport_succeeded",
+                "elapsed_ms": 2219.0
+              }
+            ]
+          }
+        ],
+        "llm_reason": "chat_grounding_failed",
+        "reason": "answered",
+        "mode": "fallback",
+        "session_id": "00e16ba0a510464494f15d677b88564c",
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 0.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "phase": "legacy_answer_stream",
+          "error": null,
+          "first_response_ms": 2219.0,
+          "status": {
+            "mode": "real",
+            "reason": "call_succeeded",
+            "transport_attempts": [
+              {
+                "reason": "transport_succeeded",
+                "elapsed_ms": 2219.0
+              }
+            ]
+          },
+          "total_ms": 2219.0
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2016.0
+        }
+      ],
+      "started_utc": "2026-10-13T09:04:09.131275+00:00",
+      "events": [
+        {
+          "type": "tool_start",
+          "tool": "get_forecast",
+          "args": {
+            "origin": "2017-10-23T14:00:00-05:00",
+            "scope": "next_day"
+          }
+        },
+        {
+          "type": "tool_end",
+          "tool": "get_forecast",
+          "ms": 0.0,
+          "summary": "已读取指定当地日期范围内、起报后的逐步预测及预测风险检查。"
+        },
+        {
+          "type": "tool_start",
+          "tool": "forecast_peak",
+          "args": {
+            "origin": "2017-10-23T14:00:00-05:00"
+          }
+        },
+        {
+          "type": "tool_end",
+          "tool": "forecast_peak",
+          "ms": 0.0,
+          "summary": "已找到预测峰值及其当地时刻。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "answer_delta",
+          "text": "本次预测中最高负荷约 1,279.7 kW，出现在明天 13:00。这个时段预测把握不大，暂不自动执行。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "needs_human": true,
+          "grounded": true,
+          "explanation_source": "template",
+          "phase_timings": [
+            {
+              "phase": "answer_stream",
+              "first_token_ms": 2219.0,
+              "first_token_timeout_seconds": 12.0,
+              "validation_failures": {
+                "scope_or_format": 1
+              },
+              "accepted_llm_sentences": 0,
+              "host_supplemented": true,
+              "elapsed_ms": 2219.0,
+              "reason": "chat_grounding_failed",
+              "transport_attempts": [
+                {
+                  "reason": "transport_succeeded",
+                  "elapsed_ms": 2219.0
+                }
+              ]
+            }
+          ],
+          "llm_reason": "chat_grounding_failed",
+          "reason": "answered",
+          "mode": "fallback",
+          "session_id": "00e16ba0a510464494f15d677b88564c",
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 0.0
+          }
+        }
+      ],
+      "original_index": null,
+      "model_correct": false,
+      "template_answer": true,
+      "within_25s_with_answer": true,
+      "group": null
+    }
+  ],
+  "model": "agnes-3.0-flash",
+  "sessions": {},
+  "complete": true,
+  "single_python_process": true,
+  "resident_changed": false,
+  "background_classifiers_stopped": true,
+  "owned_pid": 28204,
+  "owned_backend_stopped": true,
+  "owned_ports": [
+    56929
+  ]
+}

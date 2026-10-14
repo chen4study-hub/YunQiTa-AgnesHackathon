@@ -1,0 +1,73 @@
+{
+  "scope": "validation only, chronological splits, shadow mode",
+  "executed": [
+    "rolling_1week",
+    "rolling_2weeks",
+    "rolling_4weeks",
+    "ACI_gamma_0.02",
+    "Mondrian_6hour_period",
+    "LightGBM_CQR"
+  ],
+  "pending": [
+    {
+      "model": "XGBoost",
+      "status": "validation_screen_completed",
+      "worker": "AgnesHackathon_PointSearch",
+      "requires": [
+        "xgboost"
+      ],
+      "results": "experiments/point_validation_screen.csv"
+    },
+    {
+      "model": "CatBoost",
+      "status": "validation_screen_completed",
+      "worker": "AgnesHackathon_PointSearch",
+      "requires": [
+        "catboost"
+      ],
+      "results": "experiments/point_validation_screen.csv"
+    },
+    {
+      "model": "N-HiTS",
+      "status": "blocked_dependency",
+      "requires": [
+        "torch",
+        "neuralforecast"
+      ]
+    },
+    {
+      "model": "PatchTST",
+      "status": "blocked_dependency",
+      "requires": [
+        "torch",
+        "neuralforecast"
+      ]
+    },
+    {
+      "model": "Chronos",
+      "status": "blocked_dependency",
+      "requires": [
+        "torch",
+        "chronos",
+        "reviewed pretrained weight/license"
+      ]
+    },
+    {
+      "model": "TimesFM",
+      "status": "blocked_dependency",
+      "requires": [
+        "timesfm",
+        "reviewed pretrained weight/license"
+      ]
+    },
+    {
+      "model": "NREL BuildingsBench Transformer",
+      "status": "blocked_dependency",
+      "requires": [
+        "reviewed exact package/checkpoint/license"
+      ]
+    }
+  ],
+  "champion_updated": false,
+  "notes": "Two tree validation screens completed exit0. No final test assessment or champion/replay change. Deep/foundation entries are not running."
+}

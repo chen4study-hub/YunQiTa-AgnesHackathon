@@ -1,0 +1,8 @@
+[
+  {"question":"2026年诺奖得主 联网查询","tool":"web_search","contains":["来源：","https://"],"excludes":["北京天气","暂时没有查到相关公开资料","如果提供联网"]},
+  {"question":"2026年诺奖得主","tool":"web_search","contains":["来源：","https://"],"excludes":["北京天气","暂时没有查到相关公开资料","如果提供联网"]},
+  {"question":"2026年杭州马拉松男子冠军是谁","tool":"web_search","contains":[],"excludes":["北京天气"]},
+  {"question":"2027年诺贝尔物理学奖得主","tool":"web_search","contains":[],"excludes":["北京天气"]},
+  {"question":"当前总负荷是多少","tool":"building_state","contains":["kW"],"excludes":["北京天气"]},
+  {"question":"储能SOC是多少","tool":"current_state","contains":["%"],"excludes":["北京天气"]}
+]

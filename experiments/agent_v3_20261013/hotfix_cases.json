@@ -1,0 +1,4 @@
+[
+  {"question":"下午哪个时段电费最贵，为什么？","tool":"tariff_periods","contains":["13:00–14:00","1,518.8 元","1.20 元/kWh"],"excludes":["未能取得可用"],"display_time":"19:30","semantic_evidence":true},
+  {"question":"今天储能一共充了多少电？","tool":"storage_history","contains":["802.4 kWh"],"excludes":["SOC","当前电量","未能取得可用"],"display_time":"19:30","semantic_evidence":true}
+]

@@ -1,0 +1,110 @@
+{
+  "status": "passed",
+  "schema_version": "1.5",
+  "source_main_commit": "58c7142",
+  "scenarios": {
+    "normal": {
+      "source_counts_before": {
+        "llm": 15,
+        "template": 8,
+        "rule": 1
+      },
+      "source_counts_after": {
+        "llm": 15,
+        "template": 8,
+        "rule": 1
+      },
+      "explanation_hours_changed": 23,
+      "refused_hours": [
+        11
+      ],
+      ".json": {
+        "before_sha256": "e92421d1dc33de5c4fb743594bef8ddd0640493f02c8370fb56067aa0a05bc4b",
+        "after_sha256": "c213d568650047d948f8ef4d31ec8187501f2e373d969bf9ec5c8b4c82a4eeb6",
+        "bytes": 489614
+      },
+      ".agent-detail.json": {
+        "before_sha256": "978ae4c7c1947d88d2e37c507e00b5f61bd89f726285ad2151dd1d7082aa4604",
+        "after_sha256": "b16395d3189dc7b903dc54d57e2b263bbf469b9f3f8115eeab7a0e646ab5b248",
+        "bytes": 1660319
+      }
+    },
+    "peak": {
+      "source_counts_before": {
+        "llm": 15,
+        "template": 7,
+        "rule": 2
+      },
+      "source_counts_after": {
+        "llm": 15,
+        "template": 7,
+        "rule": 2
+      },
+      "explanation_hours_changed": 22,
+      "refused_hours": [
+        8,
+        18
+      ],
+      ".json": {
+        "before_sha256": "1f5de807c038d669f641b4b0bb85bafa2effd3cce2cccfb8c09e5c5ea23d14c8",
+        "after_sha256": "44b79b8b890b44cd76f309d085b5ed81bcec4821137af9e645026bb2411b8204",
+        "bytes": 473935
+      },
+      ".agent-detail.json": {
+        "before_sha256": "e464baaa4cbfac9d18c7cf40fc94c812eecb07d082fd4517bcf60d6759d4dd08",
+        "after_sha256": "08106a8f7101c1a419ef7beea861d59833ead5354f034f30a03e75b66e591652",
+        "bytes": 1541199
+      }
+    },
+    "abstain": {
+      "source_counts_before": {
+        "llm": 11,
+        "template": 1,
+        "rule": 12
+      },
+      "source_counts_after": {
+        "llm": 11,
+        "template": 1,
+        "rule": 12
+      },
+      "explanation_hours_changed": 12,
+      "refused_hours": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      ".json": {
+        "before_sha256": "748ac4e0e9c36fa9c5122122518516a81e64618733b1417fdfde27a4a10411b2",
+        "after_sha256": "f877fa1dee70b28e5291ddc91d5dedc93546cb0a31a2cb793d9476ea71f76413",
+        "bytes": 462833
+      },
+      ".agent-detail.json": {
+        "before_sha256": "7cb2004fcdb319cb2faf568e28887c1f6aef805ce01b976331c912f584cf401c",
+        "after_sha256": "9016f87a4c179b87b5895452f9c53a5d77646a5f853db7e6ff049381164bfb5e",
+        "bytes": 1370952
+      }
+    }
+  },
+  "new_llm_calls": 0,
+  "new_dispatches": 0,
+  "nonprose_unchanged": true,
+  "exact_runtime_roundtrip": true,
+  "pair_idempotent": true,
+  "llm_audit_unchanged": true,
+  "ops_regeneration_required": true,
+  "ops_files_changed": false,
+  "replacements": [
+    "number/unit/Chinese spacing",
+    "相对基准上界削峰→比常规运行的高峰低",
+    "需人工复核→交值班人员处理"
+  ]
+}

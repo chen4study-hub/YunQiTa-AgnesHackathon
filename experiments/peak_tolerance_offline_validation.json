@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "saved_eval_hours": 312,
+  "controls_and_host_summary_identical": true,
+  "saved_real_wording_passes_final_guard": true,
+  "export_hours_screened": 72,
+  "export_sha256": {
+    "normal.json": "d1a9f53d195eb905b6ef3e30fae8f065895e13e4112f02889eda132c51867276",
+    "peak.json": "914f315746b2eab3800aa110d40291bf578321256b1f722bd4be20ff1d88000b",
+    "abstain.json": "cf8bda701219061daae8388a4d67973915cca28874e6bf67702b35b50b1eddab"
+  },
+  "export_wording_categories": {
+    "normal": {
+      "template": 12,
+      "rule": 5,
+      "llm": 7
+    },
+    "peak": {
+      "template": 15,
+      "llm": 6,
+      "rule": 3
+    },
+    "abstain": {
+      "template": 9,
+      "llm": 3,
+      "rule": 12
+    }
+  },
+  "export_mutations": 0,
+  "new_llm_calls": 0,
+  "new_dispatches": 0,
+  "selection_evaluated_snapshot_sha256": "6e08774e7f8b69c22cfa5c42c86272c558ec0009ffb04d6de0bb4e9407257ea3",
+  "selection_final_sha256": "8f4fc51c6191746cae958a681d57b351cf412f3571a33d97ea906163cf1bd8da",
+  "independent_subagent_status": "failed; no independent pass claimed",
+  "pytest": {
+    "status": "passed",
+    "passed": 268,
+    "split_processes": [
+      137,
+      131
+    ],
+    "reason": "Windows native access violation in single-process run; split with native threads limited",
+    "log_sha256": {
+      "logs/peak_tolerance_tests_part1_final.log": "dc3f2d53579ed42d6d49f9f7a06d49decd2e35d99cf2a6f105f061f473ad39dd",
+      "logs/peak_tolerance_tests_part2_final.log": "e112472357c77425f5914f1584451bbaf074666ee94622dd13dd29d4883195e3"
+    }
+  },
+  "credential_scan": {
+    "status": "passed",
+    "scanned_files": 67,
+    "exact_configured_key_checked": true,
+    "token_pattern_checked": true,
+    "matched_contents_logged": false
+  },
+  "additional_final_code_sha256": {
+    "src/agent/chat_engine.py": "d4c4329e7633d04b6aa952f1ca23d9b3b0fd35d54a1a84a8851a495f6aa35b9f",
+    "scripts/check_offline_demo.py": "a343c5317d89afec5dd1433af03f2993d0bd95607fdc6c6861412bbb2b0e442e",
+    "scripts/report_peak_tolerance.py": "4666809c5f411707a95d05df1704062c76196907ec00fcaf191e6fe2aa1a4e25",
+    "scripts/verify_peak_tolerance_offline.py": "4b3b67d76a23bb2d3a567d77af590160720c32b664b581099231e418945a3709"
+  }
+}

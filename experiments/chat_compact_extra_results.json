@@ -1,0 +1,109 @@
+{
+  "status": "completed",
+  "endpoint": "owned loopback instance of actual HTTP app, not production resident",
+  "resident_unchanged": true,
+  "questions_frozen": [
+    "现在几点、天气怎么样？",
+    "今天几号",
+    "现在几点天气怎么样？"
+  ],
+  "llm_answers": 1,
+  "llm_pct": 33.333333333333336,
+  "host_direct_answers": 1,
+  "all_first_events_under1s": true,
+  "results": [
+    {
+      "correction_steps": [
+        "先核对当前起报记录，再读取对应工具；只输出有依据的回答。",
+        "先核对起报当前记录，再按工具依据回答；无法核验的数字不输出。"
+      ],
+      "host_direct": false,
+      "question": "现在几点、天气怎么样？",
+      "first_event_ms": 2.2,
+      "total_ms": 4996.6,
+      "explanation_source": "llm",
+      "known": true,
+      "grounded": true,
+      "llm_reason": null,
+      "fallback_phase": null,
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 2079.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 1907.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 2860.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2688.0
+            }
+          ]
+        }
+      ],
+      "tool_names": [
+        "get_time",
+        "get_weather"
+      ],
+      "answer": "现在 13:44。 14:00–17:00 室外气温 13.3 °C，湿度 57.2%。"
+    },
+    {
+      "correction_steps": [
+        "先核对当前起报记录，再读取对应工具；只输出有依据的回答。"
+      ],
+      "host_direct": true,
+      "question": "今天几号",
+      "first_event_ms": 1.6,
+      "total_ms": 30.5,
+      "explanation_source": "template",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "configuration_complete",
+      "fallback_phase": null,
+      "phase_timings": [],
+      "tool_names": [
+        "get_time"
+      ],
+      "answer": "今天是 10 月 12 日。"
+    },
+    {
+      "correction_steps": [
+        "先核对当前起报记录，再读取对应工具；只输出有依据的回答。",
+        "先核对起报当前记录，再按工具依据回答；无法核验的数字不输出。",
+        "工具选择服务未及时返回，改用已有工具依据回答。"
+      ],
+      "host_direct": false,
+      "question": "现在几点天气怎么样？",
+      "first_event_ms": 1.5,
+      "total_ms": 10043.1,
+      "explanation_source": "template",
+      "known": true,
+      "grounded": true,
+      "llm_reason": null,
+      "fallback_phase": "select",
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 10000.0,
+          "reason": "chat_deadline",
+          "transport_attempts": []
+        }
+      ],
+      "tool_names": [
+        "get_time",
+        "get_weather"
+      ],
+      "answer": "现在 13:44。 14:00–17:00：室外 13.3 °C，湿度 57.2%。"
+    }
+  ],
+  "failed_fallback_answers": 1
+}

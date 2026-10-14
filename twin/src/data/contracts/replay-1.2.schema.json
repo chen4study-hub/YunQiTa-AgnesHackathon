@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/agnes/replay/1.2",
+  "title": "Origin-causal24step building forecast replay v1.2",
+  "type": "object",
+  "required": ["schema_version", "meta", "hours", "campus"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "1.2"},
+    "meta": {
+      "type": "object", "additionalProperties": false,
+      "required": ["scenario", "title", "date", "building_id", "display_name", "sqm", "floors", "floors_source", "floor_uses", "alpha", "model_version", "operating_point", "mode", "data_source", "confidence_threshold", "multi_horizon_model_version", "forecast_weather", "units", "simulated_fields", "estimated_fields"],
+      "properties": {
+        "scenario": {"type": "string", "minLength": 1}, "title": {"type": "string"},
+        "date": {"type": "string", "format": "date"}, "building_id": {"type": "string"},
+        "display_name": {"type": "string"}, "sqm": {"type": "number", "exclusiveMinimum": 0},
+        "floors": {"const": 40}, "floors_source": {"const": "estimated_from_area"},
+        "floor_uses": {"type": "array", "minItems": 40, "maxItems": 40, "items": {"enum": ["lobby", "office", "garden", "equipment"]}},
+        "alpha": {"type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 1},
+        "model_version": {"type": "string"}, "operating_point": {"type": "string"},
+        "mode": {"const": "auto"},
+        "multi_horizon_model_version":{"type":"string"}, "forecast_weather":{"const":"persistence_at_origin"},
+        "confidence_threshold":{"type":"number","minimum":0,"maximum":1},
+        "data_source": {"type":"object","required":["name","attribution","url","license","modifications"],"additionalProperties":false,
+          "properties":{"name":{"type":"string"},"attribution":{"type":"string"},"url":{"type":"string"},"license":{"const":"CC BY-SA 4.0"},"modifications":{"type":"string"}}},
+        "units": {"type": "object", "required": ["power", "temperature"], "additionalProperties": false,
+          "properties": {"power": {"const": "kW"}, "temperature": {"const": "°C"}}},
+        "simulated_fields": {"type": "array", "items": {"type": "string"}, "contains": {"const": "storage"}},
+        "estimated_fields": {"type": "array", "items": {"type": "string"}, "contains": {"const": "floors_kw"}}
+      }
+    },
+    "hours": {"type": "array", "minItems": 24, "maxItems": 24, "items": {"$ref": "#/$defs/hour"}},
+    "campus": {"type": "array", "maxItems": 150, "items": {"$ref": "#/$defs/building"}}
+  },
+  "$defs": {
+    "number": {"type": "number"},
+    "hour": {
+      "type": "object", "additionalProperties": false,
+      "required": ["t", "actual_kw", "point_kw", "lower_kw", "upper_kw", "confidence", "risk_score", "risk_threshold", "abstain", "abstain_reason", "outdoor_temp_c", "floors_kw", "storage", "pv", "grid_kw", "agent", "forecast_24h", "recent_actual"],
+      "properties": {
+        "t": {"type": "string", "format": "date-time"}, "actual_kw": {"$ref": "#/$defs/number"},
+        "point_kw": {"$ref": "#/$defs/number"}, "lower_kw": {"$ref": "#/$defs/number"},
+        "upper_kw": {"$ref": "#/$defs/number"}, "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "risk_score": {"type":"number","minimum":0,"maximum":1},
+        "risk_threshold": {"type":"number","minimum":0,"maximum":1},
+        "abstain": {"type": "boolean"}, "abstain_reason": {"type": ["string", "null"]},
+        "outdoor_temp_c": {"type": ["number", "null"]},
+        "floors_kw": {"type": "array", "minItems": 40, "maxItems": 40, "items": {"$ref": "#/$defs/number"}},
+        "storage": {"type": "object", "required": ["power_kw", "soc"], "additionalProperties": false,
+          "properties": {"power_kw": {"$ref": "#/$defs/number"}, "soc": {"type": "number", "minimum": 0, "maximum": 0.95}}},
+        "pv": {"type": "object", "required": ["power_kw"], "additionalProperties": false,
+          "properties": {"power_kw": {"$ref": "#/$defs/number"}}},
+        "grid_kw": {"$ref": "#/$defs/number"},
+        "forecast_24h":{"type":"array","minItems":24,"maxItems":24,"items":{"$ref":"#/$defs/forecast"}},
+        "recent_actual":{"type":"array","minItems":2,"maxItems":2,"items":{"type":"object","additionalProperties":false,"required":["t","actual_kw"],"properties":{"t":{"type":"string","format":"date-time"},"actual_kw":{"type":"number","minimum":0}}}},
+        "agent": {"type": "object", "additionalProperties": false,
+          "required": ["status", "source", "hvac_setpoint_c", "actions", "explanation"],
+          "properties": {"status": {"enum": ["executed", "handoff"]}, "source": {"enum": ["llm", "rule", "mock"]},
+            "hvac_setpoint_c": {"type": "number"}, "actions": {"type": "array", "items": {"type": "string"}},
+            "explanation": {"type": "string"}, "work_orders":{"type":"array","items":{"type":"object"}},
+            "receipt":{"type":"object"}}}
+      }
+    },
+    "forecast":{"type":"object","additionalProperties":false,
+      "required":["t","horizon","point_kw","lower_kw","upper_kw","confidence","abstain","risk_score","risk_threshold","confidence_threshold","floors_kw"],
+      "properties":{"t":{"type":"string","format":"date-time"},"horizon":{"type":"integer","minimum":1,"maximum":24},
+        "point_kw":{"type":"number","minimum":0},"lower_kw":{"type":"number","minimum":0},"upper_kw":{"type":"number","minimum":0},
+        "confidence":{"type":"number","minimum":0,"maximum":1},"abstain":{"type":"boolean"},
+        "risk_score":{"type":"number","minimum":0,"maximum":1},"risk_threshold":{"type":"number","minimum":0,"maximum":1},
+        "confidence_threshold":{"type":"number","minimum":0,"maximum":1},
+        "floors_kw":{"type":"array","minItems":40,"maxItems":40,"items":{"type":"number","minimum":0}}}},
+    "building": {"type": "object", "additionalProperties": false,
+      "required": ["building_id", "primary_use", "sqm", "hourly"],
+      "properties": {"building_id": {"type": "string"}, "primary_use": {"type": "string"},
+        "sqm": {"type": ["number", "null"]},
+        "hourly": {"type": "array", "minItems": 24, "maxItems": 24,
+          "items": {"type": "object", "required": ["point_kw", "abstain"], "additionalProperties": false,
+            "properties": {"point_kw": {"type": ["number", "null"]}, "abstain": {"type": "boolean"}}}}}
+    }
+  }
+}

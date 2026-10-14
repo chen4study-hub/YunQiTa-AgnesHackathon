@@ -1,0 +1,12 @@
+replay 2017-02: PASS
+replay 2017-03: PASS
+replay 2017-04: PASS
+replay 2017-05: PASS
+replay 2017-06: PASS
+replay 2017-07: PASS
+replay 2017-08: PASS
+replay 2017-09: PASS
+replay 2017-10: PASS
+replay 2017-11: PASS
+replay 2017-12: PASS
+{"status": "PASS", "replay_rows": 153600, "max_numeric_csv_roundtrip_error": 5.684341886080802e-14, "deterministic_self_fits": 5, "source_artifacts_unchanged": 11, "metadata_selection_verified": true, "no_outputs_overwritten": true}

@@ -1,0 +1,22 @@
+import { it, expect, vi } from 'vitest';
+import { observeSize } from '../src/components/observeSize';
+it('coalesces observer callbacks, ignores unchanged size, resumes from zero and cancels on disposal', () => {
+  let callback!: () => void;
+  const frames = new Map<number, FrameRequestCallback>(); let id = 0;
+  vi.stubGlobal('ResizeObserver', class { constructor(fn: () => void) { callback = fn; } observe() {} disconnect() {} });
+  vi.stubGlobal('requestAnimationFrame', (fn: FrameRequestCallback) => { frames.set(++id, fn); return id; });
+  vi.stubGlobal('cancelAnimationFrame', (key: number) => frames.delete(key));
+  const flush = () => { const pending = [...frames.values()]; frames.clear(); pending.forEach(fn => fn(0)); };
+  const element = { clientWidth: 0, clientHeight: 0 };
+  const changed = vi.fn();
+  const stop = observeSize(element as HTMLElement, changed);
+  callback(); callback(); expect(frames.size).toBe(1); flush();
+  expect(changed).toHaveBeenCalledTimes(1);
+  element.clientWidth = 300; element.clientHeight = 200;
+  callback(); callback(); flush(); expect(changed).toHaveBeenCalledTimes(2);
+  callback(); flush(); expect(changed).toHaveBeenCalledTimes(2);
+  element.clientWidth = 0; callback(); flush();
+  element.clientWidth = 300; callback(); flush(); expect(changed).toHaveBeenCalledTimes(4);
+  callback(); stop(); expect(frames.size).toBe(0);
+  vi.unstubAllGlobals();
+});

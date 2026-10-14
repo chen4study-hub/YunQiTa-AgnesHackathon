@@ -1,0 +1,18 @@
+{
+  "user_direction_verbatim": "继续研究 综合更优就行 不用全线优秀",
+  "scope": "exploratory development-window trade-offs, not an unbiased new final test",
+  "hard_constraints": ["shadow only", "abstain requires handoff", "issue-time causality", "no retuning on final 15 percent", "no automatic control", "no automatic champion or replay change"],
+  "development_folds": [[0.35,0.45,0.55],[0.40,0.50,0.60],[0.45,0.55,0.65]],
+  "fold_boundary_meaning": "train_end, calibration_end, evaluation_end; expanding training with overlapping evaluation windows",
+  "main_hypothesis": "XGBoost with two-week rolling residual calibration balances point error and interval drift",
+  "baseline": "LightGBM CQR, matching current replay method",
+  "diagnostics": ["LightGBM static", "XGBoost static"],
+  "rejection_fraction": 0.15,
+  "alpha": 0.095,
+  "rolling_weeks": 2,
+  "metrics": ["all-row MAE", "all-row interval score", "retained PICP", "actual rejection", "retained interval width", "fit-and-evaluate seconds"],
+  "ranking": "Pareto and baseline-relative exploratory composite; no claim of user-approved exact weights",
+  "loss_terms": ["MAE relative to baseline", "interval score relative to baseline", "(1+rejection) relative to baseline", "1+max(0,target-retained coverage)/alpha"],
+  "weight_sensitivity": {"balanced":[0.25,0.25,0.25,0.25],"error_priority":[0.50,0.20,0.15,0.15],"coverage_priority":[0.20,0.25,0.15,0.40]},
+  "caveats": ["Historical development outcomes already inspected", "folds overlap: no independent confidence claim", "rolling assumes observed preceding hourly outcomes are available"]
+}

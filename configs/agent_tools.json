@@ -1,0 +1,5 @@
+{
+  "tariff": {"currency":"CNY","source":"configured demonstration tariff, not verified site billing","valley":0.35,"flat":0.75,"peak":1.2,"valley_hours":[0,1,2,3,4,5,6],"peak_hours":[10,11,12,13,14,15,16,17,18,19]},
+  "equipment": {"battery_capacity_kwh":2000,"battery_max_kw":500,"initial_soc":0.5,"min_soc":0.1,"max_soc":0.95,"min_temp_c":24,"max_temp_c":27},
+  "linear_model": {"baseline_setpoint_c":24,"load_fraction_per_degree":0.03,"precool_extra_fraction":0.05,"comfort_temperature_gain":1.0,"outdoor_gain":0.02,"outdoor_reference_c":30}
+}

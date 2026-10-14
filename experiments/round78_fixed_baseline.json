@@ -1,0 +1,3251 @@
+{
+  "status": "passed",
+  "source_main_commit": "58c7142",
+  "source_sha256": {
+    "exports\\replay\\normal.json": "e92421d1dc33de5c4fb743594bef8ddd0640493f02c8370fb56067aa0a05bc4b",
+    "exports\\replay\\normal.agent-detail.json": "978ae4c7c1947d88d2e37c507e00b5f61bd89f726285ad2151dd1d7082aa4604",
+    "exports\\replay\\peak.json": "1f5de807c038d669f641b4b0bb85bafa2effd3cce2cccfb8c09e5c5ea23d14c8",
+    "exports\\replay\\peak.agent-detail.json": "e464baaa4cbfac9d18c7cf40fc94c812eecb07d082fd4517bcf60d6759d4dd08",
+    "exports\\replay\\abstain.json": "748ac4e0e9c36fa9c5122122518516a81e64618733b1417fdfde27a4a10411b2",
+    "exports\\replay\\abstain.agent-detail.json": "7cb2004fcdb319cb2faf568e28887c1f6aef805ce01b976331c912f584cf401c",
+    "configs/agent_tools.json": "599b9c7a0186be978d01d9db64d9f51fb7926dd39ea3d316fd3949f58f871b70",
+    "src/agent/storage_planner.py": "2762804390f436e6f6ec9d3799fb7f4f0ef827ca436eabf623eae2ae239e2413",
+    "src/agent/selection.py": "1edffa83086db76eb91d773c97944715f04d43a6d573c81e641d55ca1b39210c",
+    "src/agent/temperature_planner.py": "124dbd80f07219b2b98e57beb62e0176ca8d6cfe5b1077e2efd37529dc813476"
+  },
+  "baseline": "25.5 C every hour; original storage_planner rolling_candidate full/half/hold (500/250/0 kW), selection.policy unchanged; independent propagated SOC from 0.5",
+  "clock": "current one-step + origin-issued h1..h23, current known PV and tariff, future zero PV; no future observations",
+  "scope": "sum only 24 daily first-step executions that current daily10 permits, identical accepted hours; not sum of overlapping rolling windows",
+  "limitations": [
+    "configured linear response and tariff, not measured site-billing savings",
+    "fixed25.5 is an unconstrained counterfactual and may exceed the 27C zone limit; never recommended for dispatch",
+    "terminal SOC constrained in each rolling window, not forced equal at day-end; final SOC reported, no invented settlement credit",
+    "manual/refused hours excluded completely from both costs; no whole-day realized savings claim"
+  ],
+  "new_llm_calls": 0,
+  "new_dispatches": 0,
+  "source_files_unchanged": true,
+  "scenarios": {
+    "normal": {
+      "accepted_hours": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "excluded_hours": [
+        11
+      ],
+      "fixed_metrics": {
+        "energy_cost_cny": 16749.68196626077,
+        "point_grid_peak_kw": 1112.1926347339993,
+        "upper_grid_peak_kw": 1125.851
+      },
+      "new_metrics": {
+        "energy_cost_cny": 16395.880296584146,
+        "point_grid_peak_kw": 1105.1510347339993,
+        "upper_grid_peak_kw": 1112.8136347339994
+      },
+      "new_minus_fixed_cny": -353.80166967662444,
+      "savings_cny": 353.80166967662444,
+      "new_minus_fixed_percent": -2.112288880405577,
+      "fixed_initial_soc": 0.5,
+      "fixed_final_soc": 0.32517340988856525,
+      "new_initial_soc": 0.5,
+      "new_final_soc": 0.2948533225233065,
+      "fixed_occupied_over_27_hours": [
+        11,
+        12
+      ],
+      "new_occupied_over_27_hours": [],
+      "temperature_only_diagnostic": {
+        "scope": "fixed25.5 but NEW executed storage powers, not original-rule baseline",
+        "fixed_metrics": {
+          "energy_cost_cny": 16676.91375658415,
+          "point_grid_peak_kw": 1112.1926347339993,
+          "upper_grid_peak_kw": 1125.851
+        },
+        "new_minus_fixed_cny": -281.0334600000024
+      },
+      "hours": [
+        {
+          "hour": 0,
+          "timestamp": "2017-10-23T00:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-10-23T00:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": -249.99974975000023,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 796.5,
+            "reason": "按负荷区间上界 796.5 kW准备，储能功率 -250.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T00:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": -249.99974975000023,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 796.5,
+            "reason": "按负荷区间上界 796.5 kW准备，设定温度 25.8 °C，储能功率 -250.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 351.15631241250003,
+            "point_grid_peak_kw": 1003.3037497500002,
+            "upper_grid_peak_kw": 1010.6572497500001
+          },
+          "new_metrics": {
+            "energy_cost_cny": 348.6715924125,
+            "point_grid_peak_kw": 996.2045497500001,
+            "upper_grid_peak_kw": 1003.4887497500001
+          },
+          "fixed_soc_before": 0.5,
+          "fixed_soc_after": 0.6249998748750001,
+          "new_soc_before": 0.5,
+          "new_soc_after": 0.6249998748750001,
+          "fixed_max_zone_c": 24.8,
+          "new_max_zone_c": 25.0,
+          "occupied": false
+        },
+        {
+          "hour": 1,
+          "timestamp": "2017-10-23T01:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T01:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": -365.00063473399933,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 790.5,
+            "reason": "按负荷区间上界 790.5 kW准备，储能功率 -365.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T01:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": -365.00063473399933,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 790.5,
+            "reason": "按负荷区间上界 790.5 kW准备，设定温度 25.8 °C，储能功率 -365.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 389.2674221568997,
+            "point_grid_peak_kw": 1112.1926347339993,
+            "upper_grid_peak_kw": 1119.9281347339993
+          },
+          "new_metrics": {
+            "energy_cost_cny": 386.8028621568997,
+            "point_grid_peak_kw": 1105.1510347339993,
+            "upper_grid_peak_kw": 1112.8136347339994
+          },
+          "fixed_soc_before": 0.6249998748750001,
+          "fixed_soc_after": 0.8075001922419998,
+          "new_soc_before": 0.6249998748750001,
+          "new_soc_after": 0.8075001922419998,
+          "fixed_max_zone_c": 24.8,
+          "new_max_zone_c": 25.0,
+          "occupied": false
+        },
+        {
+          "hour": 2,
+          "timestamp": "2017-10-23T02:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T02:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 787.2,
+            "reason": "按负荷区间上界 787.2 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T02:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 787.2,
+            "reason": "按负荷区间上界 787.2 kW准备，设定温度 25.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 261.9183,
+            "point_grid_peak_kw": 748.338,
+            "upper_grid_peak_kw": 751.7760000000001
+          },
+          "new_metrics": {
+            "energy_cost_cny": 259.44996,
+            "point_grid_peak_kw": 741.2855999999999,
+            "upper_grid_peak_kw": 744.6912
+          },
+          "fixed_soc_before": 0.8075001922419998,
+          "fixed_soc_after": 0.8075001922419998,
+          "new_soc_before": 0.8075001922419998,
+          "new_soc_after": 0.8075001922419998,
+          "fixed_max_zone_c": 24.8,
+          "new_max_zone_c": 25.0,
+          "occupied": false
+        },
+        {
+          "hour": 3,
+          "timestamp": "2017-10-23T03:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T03:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 791.3,
+            "reason": "按负荷区间上界 791.3 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T03:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 791.3,
+            "reason": "按负荷区间上界 791.3 kW准备，设定温度 25.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 261.416925,
+            "point_grid_peak_kw": 746.9055,
+            "upper_grid_peak_kw": 755.6914999999999
+          },
+          "new_metrics": {
+            "energy_cost_cny": 258.95331,
+            "point_grid_peak_kw": 739.8666,
+            "upper_grid_peak_kw": 748.5697999999999
+          },
+          "fixed_soc_before": 0.8075001922419998,
+          "fixed_soc_after": 0.8075001922419998,
+          "new_soc_before": 0.8075001922419998,
+          "new_soc_after": 0.8075001922419998,
+          "fixed_max_zone_c": 24.7,
+          "new_max_zone_c": 25.0,
+          "occupied": false
+        },
+        {
+          "hour": 4,
+          "timestamp": "2017-10-23T04:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T04:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": -187.37081254162914,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 794.5,
+            "reason": "按负荷区间上界 794.5 kW准备，储能功率 -187.4 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T04:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": -187.37081254162914,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 794.5,
+            "reason": "按负荷区间上界 794.5 kW准备，设定温度 25.8 °C，储能功率 -187.4 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 328.13315938957015,
+            "point_grid_peak_kw": 937.523312541629,
+            "upper_grid_peak_kw": 946.118312541629
+          },
+          "new_metrics": {
+            "energy_cost_cny": 325.65883438957013,
+            "point_grid_peak_kw": 930.4538125416291,
+            "upper_grid_peak_kw": 938.9678125416291
+          },
+          "fixed_soc_before": 0.8075001922419998,
+          "fixed_soc_after": 0.9011855985128143,
+          "new_soc_before": 0.8075001922419998,
+          "new_soc_after": 0.9011855985128143,
+          "fixed_max_zone_c": 24.6,
+          "new_max_zone_c": 24.9,
+          "occupied": false
+        },
+        {
+          "hour": 5,
+          "timestamp": "2017-10-23T05:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T05:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 825.3,
+            "reason": "按负荷区间上界 825.3 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T05:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 825.3,
+            "reason": "按负荷区间上界 825.3 kW准备，设定温度 25.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 270.37482499999993,
+            "point_grid_peak_kw": 772.4994999999999,
+            "upper_grid_peak_kw": 788.1614999999999
+          },
+          "new_metrics": {
+            "energy_cost_cny": 267.82678999999996,
+            "point_grid_peak_kw": 765.2194,
+            "upper_grid_peak_kw": 780.7338
+          },
+          "fixed_soc_before": 0.9011855985128143,
+          "fixed_soc_after": 0.9011855985128143,
+          "new_soc_before": 0.9011855985128143,
+          "new_soc_after": 0.9011855985128143,
+          "fixed_max_zone_c": 24.6,
+          "new_max_zone_c": 24.9,
+          "occupied": false
+        },
+        {
+          "hour": 6,
+          "timestamp": "2017-10-23T06:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T06:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 850.0,
+            "reason": "按负荷区间上界 850.0 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T06:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 850.0,
+            "reason": "按负荷区间上界 850.0 kW准备，设定温度 25.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 280.06807499999996,
+            "point_grid_peak_kw": 800.1945,
+            "upper_grid_peak_kw": 811.75
+          },
+          "new_metrics": {
+            "energy_cost_cny": 277.42868999999996,
+            "point_grid_peak_kw": 792.6533999999999,
+            "upper_grid_peak_kw": 804.0999999999999
+          },
+          "fixed_soc_before": 0.9011855985128143,
+          "fixed_soc_after": 0.9011855985128143,
+          "new_soc_before": 0.9011855985128143,
+          "new_soc_after": 0.9011855985128143,
+          "fixed_max_zone_c": 24.7,
+          "new_max_zone_c": 25.0,
+          "occupied": false
+        },
+        {
+          "hour": 7,
+          "timestamp": "2017-10-23T07:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T07:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 928.3,
+            "reason": "按负荷区间上界 928.3 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T07:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 928.3,
+            "reason": "按负荷区间上界 928.3 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 639.51375,
+            "point_grid_peak_kw": 852.685,
+            "upper_grid_peak_kw": 853.9264999999999
+          },
+          "new_metrics": {
+            "energy_cost_cny": 629.085,
+            "point_grid_peak_kw": 838.78,
+            "upper_grid_peak_kw": 840.0019999999998
+          },
+          "fixed_soc_before": 0.9011855985128143,
+          "fixed_soc_after": 0.9011855985128143,
+          "new_soc_before": 0.9011855985128143,
+          "new_soc_after": 0.9011855985128143,
+          "fixed_max_zone_c": 25.2,
+          "new_max_zone_c": 25.7,
+          "occupied": true
+        },
+        {
+          "hour": 8,
+          "timestamp": "2017-10-23T08:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T08:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1047.0,
+            "reason": "按负荷区间上界 1047.0 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T08:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1047.0,
+            "reason": "按负荷区间上界 1,047.0 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 687.879375,
+            "point_grid_peak_kw": 917.1725,
+            "upper_grid_peak_kw": 933.885
+          },
+          "new_metrics": {
+            "energy_cost_cny": 676.2974999999999,
+            "point_grid_peak_kw": 901.7299999999999,
+            "upper_grid_peak_kw": 918.18
+          },
+          "fixed_soc_before": 0.9011855985128143,
+          "fixed_soc_after": 0.9011855985128143,
+          "new_soc_before": 0.9011855985128143,
+          "new_soc_after": 0.9011855985128143,
+          "fixed_max_zone_c": 26.0,
+          "new_max_zone_c": 26.5,
+          "occupied": true
+        },
+        {
+          "hour": 9,
+          "timestamp": "2017-10-23T09:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T09:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1172.4,
+            "reason": "按负荷区间上界 1172.4 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T09:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1172.4,
+            "reason": "按负荷区间上界 1,172.4 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 756.362625,
+            "point_grid_peak_kw": 1008.4835,
+            "upper_grid_peak_kw": 1026.342
+          },
+          "new_metrics": {
+            "energy_cost_cny": 743.3835000000001,
+            "point_grid_peak_kw": 991.1780000000001,
+            "upper_grid_peak_kw": 1008.7560000000001
+          },
+          "fixed_soc_before": 0.9011855985128143,
+          "fixed_soc_after": 0.9011855985128143,
+          "new_soc_before": 0.9011855985128143,
+          "new_soc_after": 0.9011855985128143,
+          "fixed_max_zone_c": 26.5,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 10,
+          "timestamp": "2017-10-23T10:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T10:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 499.9994993823536,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1230.4,
+            "reason": "按负荷区间上界 1230.4 kW准备，储能功率 500.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T10:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 499.9994993823536,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1230.4,
+            "reason": "按负荷区间上界 1,230.4 kW准备，设定温度 25.5 °C，储能功率 500.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 658.7202007411756,
+            "point_grid_peak_kw": 548.9335006176464,
+            "upper_grid_peak_kw": 565.9325006176464
+          },
+          "new_metrics": {
+            "energy_cost_cny": 658.7202007411756,
+            "point_grid_peak_kw": 548.9335006176464,
+            "upper_grid_peak_kw": 565.9325006176464
+          },
+          "fixed_soc_before": 0.9011855985128143,
+          "fixed_soc_after": 0.6511858488216375,
+          "new_soc_before": 0.9011855985128143,
+          "new_soc_after": 0.6511858488216375,
+          "fixed_max_zone_c": 26.8,
+          "new_max_zone_c": 26.8,
+          "occupied": true
+        },
+        {
+          "hour": 11,
+          "timestamp": "2017-10-23T11:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T11:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1259.4,
+            "reason": "按负荷区间上界 1259.4 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T11:00:00-05:00",
+            "hvac_setpoint_c": 25.4,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1259.4,
+            "reason": "按负荷区间上界 1,259.4 kW准备，设定温度 25.4 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.6511858488216375,
+          "fixed_soc_after": 0.6511858488216375,
+          "new_soc_before": 0.6511858488216375,
+          "new_soc_after": 0.6511858488216375,
+          "fixed_max_zone_c": 27.1,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 12,
+          "timestamp": "2017-10-23T12:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T12:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1270.4,
+            "reason": "按负荷区间上界 1270.4 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T12:00:00-05:00",
+            "hvac_setpoint_c": 25.4,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1270.4,
+            "reason": "按负荷区间上界 1,270.4 kW准备，设定温度 25.4 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1309.776,
+            "point_grid_peak_kw": 1091.48,
+            "upper_grid_peak_kw": 1105.232
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1314.2976,
+            "point_grid_peak_kw": 1095.248,
+            "upper_grid_peak_kw": 1109.0432
+          },
+          "fixed_soc_before": 0.6511858488216375,
+          "fixed_soc_after": 0.6511858488216375,
+          "new_soc_before": 0.6511858488216375,
+          "new_soc_after": 0.6511858488216375,
+          "fixed_max_zone_c": 27.1,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 13,
+          "timestamp": "2017-10-23T13:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-10-23T13:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 102.37159505155897,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1283.5,
+            "reason": "按负荷区间上界 1283.5 kW准备，储能功率 102.4 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T13:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 249.99974975000023,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1283.5,
+            "reason": "按负荷区间上界 1,283.5 kW准备，设定温度 25.5 °C，储能功率 250.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1169.718485938129,
+            "point_grid_peak_kw": 974.765404948441,
+            "upper_grid_peak_kw": 995.8709049484409
+          },
+          "new_metrics": {
+            "energy_cost_cny": 992.5647002999997,
+            "point_grid_peak_kw": 827.1372502499997,
+            "upper_grid_peak_kw": 848.2427502499996
+          },
+          "fixed_soc_before": 0.6511858488216375,
+          "fixed_soc_after": 0.6000000512958581,
+          "new_soc_before": 0.6511858488216375,
+          "new_soc_after": 0.5261859739466375,
+          "fixed_max_zone_c": 27.0,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 14,
+          "timestamp": "2017-10-23T14:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T14:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.00010259161350533255,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1281.8,
+            "reason": "按负荷区间上界 1281.8 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T14:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 323.72162394760534,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1281.8,
+            "reason": "按负荷区间上界 1,281.8 kW准备，设定温度 25.5 °C，储能功率 323.7 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1306.6852768900637,
+            "point_grid_peak_kw": 1088.9043974083866,
+            "upper_grid_peak_kw": 1109.8188974083864
+          },
+          "new_metrics": {
+            "energy_cost_cny": 918.2194512628736,
+            "point_grid_peak_kw": 765.1828760523947,
+            "upper_grid_peak_kw": 786.0973760523946
+          },
+          "fixed_soc_before": 0.6000000512958581,
+          "fixed_soc_after": 0.6000000000000514,
+          "new_soc_before": 0.5261859739466375,
+          "new_soc_after": 0.3643251619728348,
+          "fixed_max_zone_c": 26.8,
+          "new_max_zone_c": 26.8,
+          "occupied": true
+        },
+        {
+          "hour": 15,
+          "timestamp": "2017-10-23T15:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T15:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1272.2,
+            "reason": "按负荷区间上界 1272.2 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T15:00:00-05:00",
+            "hvac_setpoint_c": 26.1,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1272.2,
+            "reason": "按负荷区间上界 1,272.2 kW准备，设定温度 26.1 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1325.6946,
+            "point_grid_peak_kw": 1104.7455,
+            "upper_grid_peak_kw": 1125.851
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1298.69244,
+            "point_grid_peak_kw": 1082.2437,
+            "upper_grid_peak_kw": 1102.9514000000001
+          },
+          "fixed_soc_before": 0.6000000000000514,
+          "fixed_soc_after": 0.6000000000000514,
+          "new_soc_before": 0.3643251619728348,
+          "new_soc_after": 0.3643251619728348,
+          "fixed_max_zone_c": 26.4,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 16,
+          "timestamp": "2017-10-23T16:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-10-23T16:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1232.0,
+            "reason": "按负荷区间上界 1232.0 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T16:00:00-05:00",
+            "hvac_setpoint_c": 26.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1232.0,
+            "reason": "按负荷区间上界 1,232.0 kW准备，设定温度 26.5 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1315.7585999999997,
+            "point_grid_peak_kw": 1096.4654999999998,
+            "upper_grid_peak_kw": 1113.56
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1272.051,
+            "point_grid_peak_kw": 1060.0425,
+            "upper_grid_peak_kw": 1076.6000000000001
+          },
+          "fixed_soc_before": 0.6000000000000514,
+          "fixed_soc_after": 0.6000000000000514,
+          "new_soc_before": 0.3643251619728348,
+          "new_soc_after": 0.3643251619728348,
+          "fixed_max_zone_c": 26.1,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 17,
+          "timestamp": "2017-10-23T17:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T17:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1180.3,
+            "reason": "按负荷区间上界 1180.3 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T17:00:00-05:00",
+            "hvac_setpoint_c": 26.7,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1180.3,
+            "reason": "按负荷区间上界 1,180.3 kW准备，设定温度 26.7 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1275.4566,
+            "point_grid_peak_kw": 1062.8805,
+            "upper_grid_peak_kw": 1094.5865
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1225.90188,
+            "point_grid_peak_kw": 1021.5849,
+            "upper_grid_peak_kw": 1052.0957
+          },
+          "fixed_soc_before": 0.6000000000000514,
+          "fixed_soc_after": 0.6000000000000514,
+          "new_soc_before": 0.3643251619728348,
+          "new_soc_after": 0.3643251619728348,
+          "fixed_max_zone_c": 25.7,
+          "new_max_zone_c": 26.8,
+          "occupied": true
+        },
+        {
+          "hour": 18,
+          "timestamp": "2017-10-23T18:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T18:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 52.07428110689131,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1103.1,
+            "reason": "按负荷区间上界 1103.1 kW准备，储能功率 52.1 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T18:00:00-05:00",
+            "hvac_setpoint_c": 26.6,
+            "battery_kw": 98.01762905698249,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1103.1,
+            "reason": "按负荷区间上界 1,103.1 kW准备，设定温度 26.6 °C，储能功率 98.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1168.3148626717302,
+            "point_grid_peak_kw": 973.5957188931085,
+            "upper_grid_peak_kw": 1001.3862188931085
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1070.6524451316209,
+            "point_grid_peak_kw": 892.2103709430174,
+            "upper_grid_peak_kw": 919.0405709430173
+          },
+          "fixed_soc_before": 0.6000000000000514,
+          "fixed_soc_after": 0.5739628594466057,
+          "new_soc_before": 0.3643251619728348,
+          "new_soc_after": 0.31531634744434356,
+          "fixed_max_zone_c": 25.0,
+          "new_max_zone_c": 26.1,
+          "occupied": true
+        },
+        {
+          "hour": 19,
+          "timestamp": "2017-10-23T19:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T19:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 497.57889911608106,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1024.3,
+            "reason": "按负荷区间上界 1024.3 kW准备，储能功率 497.6 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T19:00:00-05:00",
+            "hvac_setpoint_c": 26.4,
+            "battery_kw": 40.92604984207411,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1024.3,
+            "reason": "按负荷区间上界 1,024.3 kW准备，设定温度 26.4 °C，储能功率 40.9 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 503.6383210607026,
+            "point_grid_peak_kw": 419.69860088391886,
+            "upper_grid_peak_kw": 480.62760088391883
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1020.501540189511,
+            "point_grid_peak_kw": 850.4179501579259,
+            "upper_grid_peak_kw": 909.6243501579258
+          },
+          "fixed_soc_before": 0.5739628594466057,
+          "fixed_soc_after": 0.32517340988856525,
+          "new_soc_before": 0.31531634744434356,
+          "new_soc_after": 0.2948533225233065,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.9,
+          "occupied": true
+        },
+        {
+          "hour": 20,
+          "timestamp": "2017-10-23T20:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T20:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 934.2,
+            "reason": "按负荷区间上界 934.2 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T20:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 934.2,
+            "reason": "按负荷区间上界 934.2 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 651.715875,
+            "point_grid_peak_kw": 868.9544999999999,
+            "upper_grid_peak_kw": 892.1610000000001
+          },
+          "new_metrics": {
+            "energy_cost_cny": 641.4794999999999,
+            "point_grid_peak_kw": 855.3059999999999,
+            "upper_grid_peak_kw": 878.148
+          },
+          "fixed_soc_before": 0.32517340988856525,
+          "fixed_soc_after": 0.32517340988856525,
+          "new_soc_before": 0.2948533225233065,
+          "new_soc_after": 0.2948533225233065,
+          "fixed_max_zone_c": 24.8,
+          "new_max_zone_c": 25.3,
+          "occupied": true
+        },
+        {
+          "hour": 21,
+          "timestamp": "2017-10-23T21:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T21:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 892.1,
+            "reason": "按负荷区间上界 892.1 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T21:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 892.1,
+            "reason": "按负荷区间上界 892.1 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 630.0135,
+            "point_grid_peak_kw": 840.018,
+            "upper_grid_peak_kw": 851.9555
+          },
+          "new_metrics": {
+            "energy_cost_cny": 620.1179999999999,
+            "point_grid_peak_kw": 826.824,
+            "upper_grid_peak_kw": 838.574
+          },
+          "fixed_soc_before": 0.32517340988856525,
+          "fixed_soc_after": 0.32517340988856525,
+          "new_soc_before": 0.2948533225233065,
+          "new_soc_after": 0.2948533225233065,
+          "fixed_max_zone_c": 24.6,
+          "new_max_zone_c": 25.1,
+          "occupied": false
+        },
+        {
+          "hour": 22,
+          "timestamp": "2017-10-23T22:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T22:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 867.3,
+            "reason": "按负荷区间上界 867.3 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T22:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 867.3,
+            "reason": "按负荷区间上界 867.3 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 613.25325,
+            "point_grid_peak_kw": 817.671,
+            "upper_grid_peak_kw": 828.2715
+          },
+          "new_metrics": {
+            "energy_cost_cny": 603.621,
+            "point_grid_peak_kw": 804.828,
+            "upper_grid_peak_kw": 815.262
+          },
+          "fixed_soc_before": 0.32517340988856525,
+          "fixed_soc_after": 0.32517340988856525,
+          "new_soc_before": 0.2948533225233065,
+          "new_soc_after": 0.2948533225233065,
+          "fixed_max_zone_c": 24.6,
+          "new_max_zone_c": 25.0,
+          "occupied": false
+        },
+        {
+          "hour": 23,
+          "timestamp": "2017-10-23T23:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-10-23T23:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 844.7,
+            "reason": "按负荷区间上界 844.7 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-10-23T23:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 844.7,
+            "reason": "按负荷区间上界 844.7 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 594.8456249999999,
+            "point_grid_peak_kw": 793.1274999999999,
+            "upper_grid_peak_kw": 806.6885
+          },
+          "new_metrics": {
+            "energy_cost_cny": 585.5024999999999,
+            "point_grid_peak_kw": 780.67,
+            "upper_grid_peak_kw": 794.018
+          },
+          "fixed_soc_before": 0.32517340988856525,
+          "fixed_soc_after": 0.32517340988856525,
+          "new_soc_before": 0.2948533225233065,
+          "new_soc_after": 0.2948533225233065,
+          "fixed_max_zone_c": 24.5,
+          "new_max_zone_c": 25.0,
+          "occupied": false
+        }
+      ]
+    },
+    "peak": {
+      "accepted_hours": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "excluded_hours": [
+        8,
+        18
+      ],
+      "fixed_metrics": {
+        "energy_cost_cny": 17122.43586276235,
+        "point_grid_peak_kw": 1177.805,
+        "upper_grid_peak_kw": 1199.579
+      },
+      "new_metrics": {
+        "energy_cost_cny": 17471.017157462353,
+        "point_grid_peak_kw": 1193.777,
+        "upper_grid_peak_kw": 1215.8246
+      },
+      "new_minus_fixed_cny": 348.5812947000013,
+      "savings_cny": -348.5812947000013,
+      "new_minus_fixed_percent": 2.0358160339679903,
+      "fixed_initial_soc": 0.5,
+      "fixed_final_soc": 0.35000060071751643,
+      "new_initial_soc": 0.5,
+      "new_final_soc": 0.47500047559251657,
+      "fixed_occupied_over_27_hours": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "new_occupied_over_27_hours": [],
+      "temperature_only_diagnostic": {
+        "scope": "fixed25.5 but NEW executed storage powers, not original-rule baseline",
+        "fixed_metrics": {
+          "energy_cost_cny": 17422.43556246235,
+          "point_grid_peak_kw": 1177.805,
+          "upper_grid_peak_kw": 1199.579
+        },
+        "new_minus_fixed_cny": 48.58159500000329
+      },
+      "hours": [
+        {
+          "hour": 0,
+          "timestamp": "2017-07-20T00:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-20T00:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": -249.99974975000023,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 860.1,
+            "reason": "按负荷区间上界 860.1 kW准备，储能功率 -250.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T00:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": -249.99974975000023,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 860.1,
+            "reason": "按负荷区间上界 860.1 kW准备，设定温度 25.8 °C，储能功率 -250.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 368.8047124125,
+            "point_grid_peak_kw": 1053.7277497500002,
+            "upper_grid_peak_kw": 1071.3952497500002
+          },
+          "new_metrics": {
+            "energy_cost_cny": 366.15367241250004,
+            "point_grid_peak_kw": 1046.1533497500002,
+            "upper_grid_peak_kw": 1063.6543497500002
+          },
+          "fixed_soc_before": 0.5,
+          "fixed_soc_after": 0.6249998748750001,
+          "new_soc_before": 0.5,
+          "new_soc_after": 0.6249998748750001,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.4,
+          "occupied": false
+        },
+        {
+          "hour": 1,
+          "timestamp": "2017-07-20T01:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T01:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": -390.2126094967872,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 834.0,
+            "reason": "按负荷区间上界 834.0 kW准备，储能功率 -390.2 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T01:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": -390.2126094967872,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 834.0,
+            "reason": "按负荷区间上界 834.0 kW准备，设定温度 25.8 °C，储能功率 -390.2 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 409.9574883238755,
+            "point_grid_peak_kw": 1171.3071094967872,
+            "upper_grid_peak_kw": 1186.682609496787
+          },
+          "new_metrics": {
+            "energy_cost_cny": 407.3811033238755,
+            "point_grid_peak_kw": 1163.9460094967872,
+            "upper_grid_peak_kw": 1179.176609496787
+          },
+          "fixed_soc_before": 0.6249998748750001,
+          "fixed_soc_after": 0.8201061796233937,
+          "new_soc_before": 0.6249998748750001,
+          "new_soc_after": 0.8201061796233937,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.4,
+          "occupied": false
+        },
+        {
+          "hour": 2,
+          "timestamp": "2017-07-20T02:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T02:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 825.0,
+            "reason": "按负荷区间上界 825.0 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T02:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 825.0,
+            "reason": "按负荷区间上界 825.0 kW准备，设定温度 25.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 269.973725,
+            "point_grid_peak_kw": 771.3535,
+            "upper_grid_peak_kw": 787.875
+          },
+          "new_metrics": {
+            "energy_cost_cny": 267.42947,
+            "point_grid_peak_kw": 764.0842,
+            "upper_grid_peak_kw": 780.4499999999999
+          },
+          "fixed_soc_before": 0.8201061796233937,
+          "fixed_soc_after": 0.8201061796233937,
+          "new_soc_before": 0.8201061796233937,
+          "new_soc_after": 0.8201061796233937,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.4,
+          "occupied": false
+        },
+        {
+          "hour": 3,
+          "timestamp": "2017-07-20T03:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T03:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 823.8,
+            "reason": "按负荷区间上界 823.8 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T03:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 823.8,
+            "reason": "按负荷区间上界 823.8 kW准备，设定温度 25.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 270.34139999999996,
+            "point_grid_peak_kw": 772.4039999999999,
+            "upper_grid_peak_kw": 786.7289999999999
+          },
+          "new_metrics": {
+            "energy_cost_cny": 267.79367999999994,
+            "point_grid_peak_kw": 765.1247999999999,
+            "upper_grid_peak_kw": 779.3147999999999
+          },
+          "fixed_soc_before": 0.8201061796233937,
+          "fixed_soc_after": 0.8201061796233937,
+          "new_soc_before": 0.8201061796233937,
+          "new_soc_after": 0.8201061796233937,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.4,
+          "occupied": false
+        },
+        {
+          "hour": 4,
+          "timestamp": "2017-07-20T04:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T04:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 825.0,
+            "reason": "按负荷区间上界 825.0 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T04:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 825.0,
+            "reason": "按负荷区间上界 825.0 kW准备，设定温度 25.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 271.41099999999994,
+            "point_grid_peak_kw": 775.4599999999999,
+            "upper_grid_peak_kw": 787.875
+          },
+          "new_metrics": {
+            "energy_cost_cny": 268.85319999999996,
+            "point_grid_peak_kw": 768.1519999999999,
+            "upper_grid_peak_kw": 780.4499999999999
+          },
+          "fixed_soc_before": 0.8201061796233937,
+          "fixed_soc_after": 0.8201061796233937,
+          "new_soc_before": 0.8201061796233937,
+          "new_soc_after": 0.8201061796233937,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.4,
+          "occupied": false
+        },
+        {
+          "hour": 5,
+          "timestamp": "2017-07-20T05:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T05:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 849.4,
+            "reason": "按负荷区间上界 849.4 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T05:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 849.4,
+            "reason": "按负荷区间上界 849.4 kW准备，设定温度 25.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 279.70039999999995,
+            "point_grid_peak_kw": 799.1439999999999,
+            "upper_grid_peak_kw": 811.1769999999999
+          },
+          "new_metrics": {
+            "energy_cost_cny": 277.06447999999995,
+            "point_grid_peak_kw": 791.6127999999999,
+            "upper_grid_peak_kw": 803.5323999999999
+          },
+          "fixed_soc_before": 0.8201061796233937,
+          "fixed_soc_after": 0.8201061796233937,
+          "new_soc_before": 0.8201061796233937,
+          "new_soc_after": 0.8201061796233937,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.4,
+          "occupied": false
+        },
+        {
+          "hour": 6,
+          "timestamp": "2017-07-20T06:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T06:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": -259.78738070578436,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 889.2,
+            "reason": "按负荷区间上界 889.2 kW准备，储能功率 -259.8 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T06:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": -259.78738070578436,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 889.2,
+            "reason": "按负荷区间上界 889.2 kW准备，设定温度 25.8 °C，储能功率 -259.8 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 383.6617332470244,
+            "point_grid_peak_kw": 1096.1763807057841,
+            "upper_grid_peak_kw": 1108.9733807057844
+          },
+          "new_metrics": {
+            "energy_cost_cny": 380.90296324702445,
+            "point_grid_peak_kw": 1088.2941807057841,
+            "upper_grid_peak_kw": 1100.9705807057844
+          },
+          "fixed_soc_before": 0.8201061796233937,
+          "fixed_soc_after": 0.9499998699762859,
+          "new_soc_before": 0.8201061796233937,
+          "new_soc_after": 0.9499998699762859,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.4,
+          "occupied": false
+        },
+        {
+          "hour": 7,
+          "timestamp": "2017-07-20T07:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-20T07:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 979.1,
+            "reason": "按负荷区间上界 979.1 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T07:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 979.1,
+            "reason": "按负荷区间上界 979.1 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 665.442,
+            "point_grid_peak_kw": 887.256,
+            "upper_grid_peak_kw": 902.4404999999999
+          },
+          "new_metrics": {
+            "energy_cost_cny": 654.606,
+            "point_grid_peak_kw": 872.808,
+            "upper_grid_peak_kw": 887.7539999999999
+          },
+          "fixed_soc_before": 0.9499998699762859,
+          "fixed_soc_after": 0.9499998699762859,
+          "new_soc_before": 0.9499998699762859,
+          "new_soc_after": 0.9499998699762859,
+          "fixed_max_zone_c": 25.7,
+          "new_max_zone_c": 26.2,
+          "occupied": true
+        },
+        {
+          "hour": 8,
+          "timestamp": "2017-07-20T08:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-20T08:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1090.8,
+            "reason": "按负荷区间上界 1090.8 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T08:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1090.8,
+            "reason": "按负荷区间上界 1,090.8 kW准备，设定温度 25.5 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.9499998699762859,
+          "fixed_soc_after": 0.9499998699762859,
+          "new_soc_before": 0.9499998699762859,
+          "new_soc_after": 0.9499998699762859,
+          "fixed_max_zone_c": 26.6,
+          "new_max_zone_c": 26.6,
+          "occupied": true
+        },
+        {
+          "hour": 9,
+          "timestamp": "2017-07-20T09:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-20T09:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1232.0,
+            "reason": "按负荷区间上界 1232.0 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T09:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1232.0,
+            "reason": "按负荷区间上界 1,232.0 kW准备，设定温度 25.5 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 794.6088750000001,
+            "point_grid_peak_kw": 1059.4785000000002,
+            "upper_grid_peak_kw": 1087.46
+          },
+          "new_metrics": {
+            "energy_cost_cny": 794.6088750000001,
+            "point_grid_peak_kw": 1059.4785000000002,
+            "upper_grid_peak_kw": 1087.46
+          },
+          "fixed_soc_before": 0.9499998699762859,
+          "fixed_soc_after": 0.9499998699762859,
+          "new_soc_before": 0.9499998699762859,
+          "new_soc_after": 0.9499998699762859,
+          "fixed_max_zone_c": 27.0,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 10,
+          "timestamp": "2017-07-20T10:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-20T10:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1264.5,
+            "reason": "按负荷区间上界 1264.5 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T10:00:00-05:00",
+            "hvac_setpoint_c": 25.1,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1264.5,
+            "reason": "按负荷区间上界 1,264.5 kW准备，设定温度 25.1 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1293.3287999999998,
+            "point_grid_peak_kw": 1077.774,
+            "upper_grid_peak_kw": 1098.4975
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1311.2251199999998,
+            "point_grid_peak_kw": 1092.6876,
+            "upper_grid_peak_kw": 1113.6715000000002
+          },
+          "fixed_soc_before": 0.9499998699762859,
+          "fixed_soc_after": 0.9499998699762859,
+          "new_soc_before": 0.9499998699762859,
+          "new_soc_after": 0.9499998699762859,
+          "fixed_max_zone_c": 27.4,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 11,
+          "timestamp": "2017-07-20T11:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-20T11:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1293.1,
+            "reason": "按负荷区间上界 1293.1 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T11:00:00-05:00",
+            "hvac_setpoint_c": 24.9,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1293.1,
+            "reason": "按负荷区间上界 1,293.1 kW准备，设定温度 24.9 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1311.9012,
+            "point_grid_peak_kw": 1093.251,
+            "upper_grid_peak_kw": 1113.2105
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1339.38072,
+            "point_grid_peak_kw": 1116.1506000000002,
+            "upper_grid_peak_kw": 1136.4863
+          },
+          "fixed_soc_before": 0.9499998699762859,
+          "fixed_soc_after": 0.9499998699762859,
+          "new_soc_before": 0.9499998699762859,
+          "new_soc_after": 0.9499998699762859,
+          "fixed_max_zone_c": 27.6,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 12,
+          "timestamp": "2017-07-20T12:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-20T12:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1323.9,
+            "reason": "按负荷区间上界 1323.9 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T12:00:00-05:00",
+            "hvac_setpoint_c": 24.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1323.9,
+            "reason": "按负荷区间上界 1,323.9 kW准备，设定温度 24.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1358.2517999999998,
+            "point_grid_peak_kw": 1131.8764999999999,
+            "upper_grid_peak_kw": 1156.3245
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1390.96896,
+            "point_grid_peak_kw": 1159.1408,
+            "upper_grid_peak_kw": 1184.1264
+          },
+          "fixed_soc_before": 0.9499998699762859,
+          "fixed_soc_after": 0.9499998699762859,
+          "new_soc_before": 0.9499998699762859,
+          "new_soc_after": 0.9499998699762859,
+          "fixed_max_zone_c": 27.7,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 13,
+          "timestamp": "2017-07-20T13:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T13:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1342.9,
+            "reason": "按负荷区间上界 1342.9 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T13:00:00-05:00",
+            "hvac_setpoint_c": 24.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1342.9,
+            "reason": "按负荷区间上界 1,342.9 kW准备，设定温度 24.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1363.9295999999997,
+            "point_grid_peak_kw": 1136.6079999999997,
+            "upper_grid_peak_kw": 1160.7694999999999
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1397.1331199999997,
+            "point_grid_peak_kw": 1164.2776,
+            "upper_grid_peak_kw": 1188.9704
+          },
+          "fixed_soc_before": 0.9499998699762859,
+          "fixed_soc_after": 0.9499998699762859,
+          "new_soc_before": 0.9499998699762859,
+          "new_soc_after": 0.9499998699762859,
+          "fixed_max_zone_c": 27.7,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 14,
+          "timestamp": "2017-07-20T14:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T14:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1339.4,
+            "reason": "按负荷区间上界 1339.4 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T14:00:00-05:00",
+            "hvac_setpoint_c": 24.9,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1339.4,
+            "reason": "按负荷区间上界 1,339.4 kW准备，设定温度 24.9 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1373.7264000000002,
+            "point_grid_peak_kw": 1144.7720000000002,
+            "upper_grid_peak_kw": 1164.827
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1402.2038400000004,
+            "point_grid_peak_kw": 1168.5032000000003,
+            "upper_grid_peak_kw": 1188.9362000000003
+          },
+          "fixed_soc_before": 0.9499998699762859,
+          "fixed_soc_after": 0.9499998699762859,
+          "new_soc_before": 0.9499998699762859,
+          "new_soc_after": 0.9499998699762859,
+          "fixed_max_zone_c": 27.5,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 15,
+          "timestamp": "2017-07-20T15:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T15:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1353.8,
+            "reason": "按负荷区间上界 1353.8 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T15:00:00-05:00",
+            "hvac_setpoint_c": 25.1,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1353.8,
+            "reason": "按负荷区间上界 1,353.8 kW准备，设定温度 25.1 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1413.366,
+            "point_grid_peak_kw": 1177.805,
+            "upper_grid_peak_kw": 1199.579
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1432.5324,
+            "point_grid_peak_kw": 1193.777,
+            "upper_grid_peak_kw": 1215.8246
+          },
+          "fixed_soc_before": 0.9499998699762859,
+          "fixed_soc_after": 0.9499998699762859,
+          "new_soc_before": 0.9499998699762859,
+          "new_soc_after": 0.9499998699762859,
+          "fixed_max_zone_c": 27.4,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 16,
+          "timestamp": "2017-07-20T16:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T16:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 199.99953963518533,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1334.4,
+            "reason": "按负荷区间上界 1334.4 kW准备，储能功率 200.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T16:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 199.99953963518533,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1334.4,
+            "reason": "按负荷区间上界 1,334.4 kW准备，设定温度 25.5 °C，储能功率 200.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 1149.7433524377775,
+            "point_grid_peak_kw": 958.1194603648146,
+            "upper_grid_peak_kw": 1008.3524603648148
+          },
+          "new_metrics": {
+            "energy_cost_cny": 1149.7433524377775,
+            "point_grid_peak_kw": 958.1194603648146,
+            "upper_grid_peak_kw": 1008.3524603648148
+          },
+          "fixed_soc_before": 0.9499998699762859,
+          "fixed_soc_after": 0.8500001001586933,
+          "new_soc_before": 0.9499998699762859,
+          "new_soc_after": 0.8500001001586933,
+          "fixed_max_zone_c": 27.0,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 17,
+          "timestamp": "2017-07-20T17:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T17:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 499.99949938235346,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1284.5,
+            "reason": "按负荷区间上界 1284.5 kW准备，储能功率 500.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T17:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 499.99949938235346,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1284.5,
+            "reason": "按负荷区间上界 1,284.5 kW准备，设定温度 25.5 °C，储能功率 500.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 791.8044007411758,
+            "point_grid_peak_kw": 659.8370006176465,
+            "upper_grid_peak_kw": 692.4980006176465
+          },
+          "new_metrics": {
+            "energy_cost_cny": 791.8044007411758,
+            "point_grid_peak_kw": 659.8370006176465,
+            "upper_grid_peak_kw": 692.4980006176465
+          },
+          "fixed_soc_before": 0.8500001001586933,
+          "fixed_soc_after": 0.6000003504675167,
+          "new_soc_before": 0.8500001001586933,
+          "new_soc_after": 0.6000003504675167,
+          "fixed_max_zone_c": 26.6,
+          "new_max_zone_c": 26.6,
+          "occupied": true
+        },
+        {
+          "hour": 18,
+          "timestamp": "2017-07-20T18:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T18:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1213.9,
+            "reason": "按负荷区间上界 1213.9 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T18:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1213.9,
+            "reason": "按负荷区间上界 1,213.9 kW准备，设定温度 25.5 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.6000003504675167,
+          "fixed_soc_after": 0.6000003504675167,
+          "new_soc_before": 0.6000003504675167,
+          "new_soc_after": 0.6000003504675167,
+          "fixed_max_zone_c": 26.1,
+          "new_max_zone_c": 26.1,
+          "occupied": true
+        },
+        {
+          "hour": 19,
+          "timestamp": "2017-07-20T19:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-20T19:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 499.99949950000047,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1142.9,
+            "reason": "按负荷区间上界 1142.9 kW准备，储能功率 500.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T19:00:00-05:00",
+            "hvac_setpoint_c": 26.5,
+            "battery_kw": 249.99974975000023,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 1142.9,
+            "reason": "按负荷区间上界 1,142.9 kW准备，设定温度 26.5 °C，储能功率 250.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 620.4906005999993,
+            "point_grid_peak_kw": 517.0755004999994,
+            "upper_grid_peak_kw": 591.4700004999997
+          },
+          "new_metrics": {
+            "energy_cost_cny": 882.1503002999997,
+            "point_grid_peak_kw": 735.1252502499998,
+            "upper_grid_peak_kw": 807.1827502499999
+          },
+          "fixed_soc_before": 0.6000003504675167,
+          "fixed_soc_after": 0.35000060071751643,
+          "new_soc_before": 0.6000003504675167,
+          "new_soc_after": 0.47500047559251657,
+          "fixed_max_zone_c": 26.1,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 20,
+          "timestamp": "2017-07-20T20:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-20T20:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1022.5,
+            "reason": "按负荷区间上界 1022.5 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T20:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 1022.5,
+            "reason": "按负荷区间上界 1,022.5 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 718.756875,
+            "point_grid_peak_kw": 958.3425,
+            "upper_grid_peak_kw": 976.4875
+          },
+          "new_metrics": {
+            "energy_cost_cny": 707.4675,
+            "point_grid_peak_kw": 943.29,
+            "upper_grid_peak_kw": 961.15
+          },
+          "fixed_soc_before": 0.35000060071751643,
+          "fixed_soc_after": 0.35000060071751643,
+          "new_soc_before": 0.47500047559251657,
+          "new_soc_after": 0.47500047559251657,
+          "fixed_max_zone_c": 25.7,
+          "new_max_zone_c": 26.2,
+          "occupied": true
+        },
+        {
+          "hour": 21,
+          "timestamp": "2017-07-20T21:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-20T21:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 970.5,
+            "reason": "按负荷区间上界 970.5 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T21:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 970.5,
+            "reason": "按负荷区间上界 970.5 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 691.969125,
+            "point_grid_peak_kw": 922.6255,
+            "upper_grid_peak_kw": 926.8275
+          },
+          "new_metrics": {
+            "energy_cost_cny": 681.1005,
+            "point_grid_peak_kw": 908.134,
+            "upper_grid_peak_kw": 912.27
+          },
+          "fixed_soc_before": 0.35000060071751643,
+          "fixed_soc_after": 0.35000060071751643,
+          "new_soc_before": 0.47500047559251657,
+          "new_soc_after": 0.47500047559251657,
+          "fixed_max_zone_c": 25.4,
+          "new_max_zone_c": 25.9,
+          "occupied": false
+        },
+        {
+          "hour": 22,
+          "timestamp": "2017-07-20T22:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-20T22:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 947.7,
+            "reason": "按负荷区间上界 947.7 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T22:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 947.7,
+            "reason": "按负荷区间上界 947.7 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 667.330125,
+            "point_grid_peak_kw": 889.7735,
+            "upper_grid_peak_kw": 905.0535
+          },
+          "new_metrics": {
+            "energy_cost_cny": 656.8485000000001,
+            "point_grid_peak_kw": 875.798,
+            "upper_grid_peak_kw": 890.838
+          },
+          "fixed_soc_before": 0.35000060071751643,
+          "fixed_soc_after": 0.35000060071751643,
+          "new_soc_before": 0.47500047559251657,
+          "new_soc_after": 0.47500047559251657,
+          "fixed_max_zone_c": 25.4,
+          "new_max_zone_c": 25.8,
+          "occupied": false
+        },
+        {
+          "hour": 23,
+          "timestamp": "2017-07-20T23:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-20T23:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 920.8,
+            "reason": "按负荷区间上界 920.8 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-20T23:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 920.8,
+            "reason": "按负荷区间上界 920.8 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 653.93625,
+            "point_grid_peak_kw": 871.915,
+            "upper_grid_peak_kw": 879.3639999999999
+          },
+          "new_metrics": {
+            "energy_cost_cny": 643.665,
+            "point_grid_peak_kw": 858.2199999999999,
+            "upper_grid_peak_kw": 865.5519999999999
+          },
+          "fixed_soc_before": 0.35000060071751643,
+          "fixed_soc_after": 0.35000060071751643,
+          "new_soc_before": 0.47500047559251657,
+          "new_soc_after": 0.47500047559251657,
+          "fixed_max_zone_c": 25.3,
+          "new_max_zone_c": 25.8,
+          "occupied": false
+        }
+      ]
+    },
+    "abstain": {
+      "accepted_hours": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        20,
+        21,
+        22,
+        23
+      ],
+      "excluded_hours": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "fixed_metrics": {
+        "energy_cost_cny": 5317.4551249993,
+        "point_grid_peak_kw": 1122.6021409477069,
+        "upper_grid_peak_kw": 1134.5396409477069
+      },
+      "new_metrics": {
+        "energy_cost_cny": 5250.388685563001,
+        "point_grid_peak_kw": 1115.4039409477068,
+        "upper_grid_peak_kw": 1127.2289409477069
+      },
+      "new_minus_fixed_cny": -67.06643943629933,
+      "savings_cny": 67.06643943629933,
+      "new_minus_fixed_percent": -1.2612506896578306,
+      "fixed_initial_soc": 0.5,
+      "fixed_final_soc": 0.949999999999,
+      "new_initial_soc": 0.5,
+      "new_final_soc": 0.9499999793757166,
+      "fixed_occupied_over_27_hours": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "new_occupied_over_27_hours": [],
+      "temperature_only_diagnostic": {
+        "scope": "fixed25.5 but NEW executed storage powers, not original-rule baseline",
+        "fixed_metrics": {
+          "energy_cost_cny": 5317.455110563002,
+          "point_grid_peak_kw": 1122.6021409477069,
+          "upper_grid_peak_kw": 1134.5396409477069
+        },
+        "new_minus_fixed_cny": -67.06642500000089
+      },
+      "hours": [
+        {
+          "hour": 0,
+          "timestamp": "2017-07-04T00:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-04T00:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": -249.99974975000023,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 833.2,
+            "reason": "按负荷区间上界 833.2 kW准备，储能功率 -250.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T00:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": -249.99974975000023,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 833.2,
+            "reason": "按负荷区间上界 833.2 kW准备，设定温度 25.8 °C，储能功率 -250.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 360.3147624125001,
+            "point_grid_peak_kw": 1029.4707497500003,
+            "upper_grid_peak_kw": 1045.7057497500002
+          },
+          "new_metrics": {
+            "energy_cost_cny": 357.74373241250004,
+            "point_grid_peak_kw": 1022.1249497500002,
+            "upper_grid_peak_kw": 1038.2069497500004
+          },
+          "fixed_soc_before": 0.5,
+          "fixed_soc_after": 0.6249998748750001,
+          "new_soc_before": 0.5,
+          "new_soc_after": 0.6249998748750001,
+          "fixed_max_zone_c": 25.2,
+          "new_max_zone_c": 25.4,
+          "occupied": false
+        },
+        {
+          "hour": 1,
+          "timestamp": "2017-07-04T01:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T01:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": -358.79314094770683,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 812.3,
+            "reason": "按负荷区间上界 812.3 kW准备，储能功率 -358.8 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T01:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": -358.79314094770683,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 812.3,
+            "reason": "按负荷区间上界 812.3 kW准备，设定温度 25.8 °C，储能功率 -358.8 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 392.9107493316974,
+            "point_grid_peak_kw": 1122.6021409477069,
+            "upper_grid_peak_kw": 1134.5396409477069
+          },
+          "new_metrics": {
+            "energy_cost_cny": 390.39137933169735,
+            "point_grid_peak_kw": 1115.4039409477068,
+            "upper_grid_peak_kw": 1127.2289409477069
+          },
+          "fixed_soc_before": 0.6249998748750001,
+          "fixed_soc_after": 0.8043964453488535,
+          "new_soc_before": 0.6249998748750001,
+          "new_soc_after": 0.8043964453488535,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.4,
+          "occupied": false
+        },
+        {
+          "hour": 2,
+          "timestamp": "2017-07-04T02:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T02:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 818.0,
+            "reason": "按负荷区间上界 818.0 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T02:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 818.0,
+            "reason": "按负荷区间上界 818.0 kW准备，设定温度 25.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 268.8372749999999,
+            "point_grid_peak_kw": 768.1064999999999,
+            "upper_grid_peak_kw": 781.1899999999999
+          },
+          "new_metrics": {
+            "energy_cost_cny": 266.3037299999999,
+            "point_grid_peak_kw": 760.8677999999999,
+            "upper_grid_peak_kw": 773.828
+          },
+          "fixed_soc_before": 0.8043964453488535,
+          "fixed_soc_after": 0.8043964453488535,
+          "new_soc_before": 0.8043964453488535,
+          "new_soc_after": 0.8043964453488535,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.4,
+          "occupied": false
+        },
+        {
+          "hour": 3,
+          "timestamp": "2017-07-04T03:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T03:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 807.7,
+            "reason": "按负荷区间上界 807.7 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T03:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 807.7,
+            "reason": "按负荷区间上界 807.7 kW准备，设定温度 25.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 265.82902499999994,
+            "point_grid_peak_kw": 759.5115,
+            "upper_grid_peak_kw": 771.3535
+          },
+          "new_metrics": {
+            "energy_cost_cny": 263.32382999999993,
+            "point_grid_peak_kw": 752.3537999999999,
+            "upper_grid_peak_kw": 764.0842
+          },
+          "fixed_soc_before": 0.8043964453488535,
+          "fixed_soc_after": 0.8043964453488535,
+          "new_soc_before": 0.8043964453488535,
+          "new_soc_after": 0.8043964453488535,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.3,
+          "occupied": false
+        },
+        {
+          "hour": 4,
+          "timestamp": "2017-07-04T04:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-04T04:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 802.1,
+            "reason": "按负荷区间上界 802.1 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T04:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": -249.99974975000023,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 802.1,
+            "reason": "按负荷区间上界 802.1 kW准备，设定温度 25.8 °C，储能功率 -250.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 263.38899999999995,
+            "point_grid_peak_kw": 752.54,
+            "upper_grid_peak_kw": 766.0055
+          },
+          "new_metrics": {
+            "energy_cost_cny": 348.40671241250004,
+            "point_grid_peak_kw": 995.4477497500002,
+            "upper_grid_peak_kw": 1008.7863497500002
+          },
+          "fixed_soc_before": 0.8043964453488535,
+          "fixed_soc_after": 0.8043964453488535,
+          "new_soc_before": 0.8043964453488535,
+          "new_soc_after": 0.9293963202238535,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.4,
+          "occupied": false
+        },
+        {
+          "hour": 5,
+          "timestamp": "2017-07-04T05:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T05:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": -291.2068178039769,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 827.5,
+            "reason": "按负荷区间上界 827.5 kW准备，储能功率 -291.2 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T05:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 827.5,
+            "reason": "按负荷区间上界 827.5 kW准备，设定温度 25.8 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 373.53393623139186,
+            "point_grid_peak_kw": 1067.2398178039768,
+            "upper_grid_peak_kw": 1081.4693178039768
+          },
+          "new_metrics": {
+            "energy_cost_cny": 269.05186,
+            "point_grid_peak_kw": 768.7196,
+            "upper_grid_peak_kw": 782.8149999999999
+          },
+          "fixed_soc_before": 0.8043964453488535,
+          "fixed_soc_after": 0.9499998542508419,
+          "new_soc_before": 0.9293963202238535,
+          "new_soc_after": 0.9293963202238535,
+          "fixed_max_zone_c": 25.0,
+          "new_max_zone_c": 25.3,
+          "occupied": false
+        },
+        {
+          "hour": 6,
+          "timestamp": "2017-07-04T06:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-04T06:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": -0.0002914963161517171,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 858.9,
+            "reason": "按负荷区间上界 858.9 kW准备，储能功率 -0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T06:00:00-05:00",
+            "hvac_setpoint_c": 25.8,
+            "battery_kw": -41.20731830372595,
+            "action": "dispatch",
+            "source": "rule",
+            "prepared_upper_kw": 858.9,
+            "reason": "按负荷区间上界 858.9 kW准备，设定温度 25.8 °C，储能功率 -41.2 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 282.70875202371064,
+            "point_grid_peak_kw": 807.7392914963161,
+            "upper_grid_peak_kw": 820.2497914963161
+          },
+          "new_metrics": {
+            "energy_cost_cny": 294.46694140630404,
+            "point_grid_peak_kw": 841.3341183037259,
+            "upper_grid_peak_kw": 853.7267183037259
+          },
+          "fixed_soc_before": 0.9499998542508419,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9293963202238535,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 25.1,
+          "new_max_zone_c": 25.4,
+          "occupied": false
+        },
+        {
+          "hour": 7,
+          "timestamp": "2017-07-04T07:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-04T07:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 945.0,
+            "reason": "按负荷区间上界 945.0 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T07:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 945.0,
+            "reason": "按负荷区间上界 945.0 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 620.389875,
+            "point_grid_peak_kw": 827.1864999999999,
+            "upper_grid_peak_kw": 869.8749999999999
+          },
+          "new_metrics": {
+            "energy_cost_cny": 610.2615,
+            "point_grid_peak_kw": 813.6819999999999,
+            "upper_grid_peak_kw": 855.6999999999999
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 25.6,
+          "new_max_zone_c": 26.0,
+          "occupied": true
+        },
+        {
+          "hour": 8,
+          "timestamp": "2017-07-04T08:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T08:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1056.6,
+            "reason": "按负荷区间上界 1056.6 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T08:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1056.6,
+            "reason": "按负荷区间上界 1,056.6 kW准备，设定温度 25.5 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 26.5,
+          "new_max_zone_c": 26.5,
+          "occupied": true
+        },
+        {
+          "hour": 9,
+          "timestamp": "2017-07-04T09:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T09:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1090.2,
+            "reason": "按负荷区间上界 1090.2 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T09:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1090.2,
+            "reason": "按负荷区间上界 1,090.2 kW准备，设定温度 25.5 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 27.0,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 10,
+          "timestamp": "2017-07-04T10:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_conservative",
+          "fixed_command": {
+            "timestamp": "2017-07-04T10:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1042.9,
+            "reason": "按负荷区间上界 1042.9 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T10:00:00-05:00",
+            "hvac_setpoint_c": 25.2,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1042.9,
+            "reason": "按负荷区间上界 1,042.9 kW准备，设定温度 25.2 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 27.3,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 11,
+          "timestamp": "2017-07-04T11:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T11:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1010.0,
+            "reason": "按负荷区间上界 1010.0 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T11:00:00-05:00",
+            "hvac_setpoint_c": 25.0,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1010.0,
+            "reason": "按负荷区间上界 1,010.0 kW准备，设定温度 25.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 27.5,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 12,
+          "timestamp": "2017-07-04T12:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T12:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1012.0,
+            "reason": "按负荷区间上界 1012.0 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T12:00:00-05:00",
+            "hvac_setpoint_c": 24.9,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1012.0,
+            "reason": "按负荷区间上界 1,012.0 kW准备，设定温度 24.9 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 27.6,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 13,
+          "timestamp": "2017-07-04T13:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T13:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1020.5,
+            "reason": "按负荷区间上界 1020.5 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T13:00:00-05:00",
+            "hvac_setpoint_c": 24.9,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1020.5,
+            "reason": "按负荷区间上界 1,020.5 kW准备，设定温度 24.9 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 27.6,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 14,
+          "timestamp": "2017-07-04T14:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T14:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1021.3,
+            "reason": "按负荷区间上界 1021.3 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T14:00:00-05:00",
+            "hvac_setpoint_c": 25.0,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1021.3,
+            "reason": "按负荷区间上界 1,021.3 kW准备，设定温度 25.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 27.5,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 15,
+          "timestamp": "2017-07-04T15:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T15:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1034.2,
+            "reason": "按负荷区间上界 1034.2 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T15:00:00-05:00",
+            "hvac_setpoint_c": 25.3,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1034.2,
+            "reason": "按负荷区间上界 1,034.2 kW准备，设定温度 25.3 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 27.2,
+          "new_max_zone_c": 27.0,
+          "occupied": true
+        },
+        {
+          "hour": 16,
+          "timestamp": "2017-07-04T16:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T16:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1014.1,
+            "reason": "按负荷区间上界 1014.1 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T16:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1014.1,
+            "reason": "按负荷区间上界 1,014.1 kW准备，设定温度 25.5 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 26.9,
+          "new_max_zone_c": 26.9,
+          "occupied": true
+        },
+        {
+          "hour": 17,
+          "timestamp": "2017-07-04T17:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_full",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T17:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1002.6,
+            "reason": "按负荷区间上界 1002.6 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T17:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1002.6,
+            "reason": "按负荷区间上界 1,002.6 kW准备，设定温度 25.5 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 26.5,
+          "new_max_zone_c": 26.5,
+          "occupied": true
+        },
+        {
+          "hour": 18,
+          "timestamp": "2017-07-04T18:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T18:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 997.8,
+            "reason": "按负荷区间上界 997.8 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T18:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 997.8,
+            "reason": "按负荷区间上界 997.8 kW准备，设定温度 25.5 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 25.5,
+          "new_max_zone_c": 25.5,
+          "occupied": true
+        },
+        {
+          "hour": 19,
+          "timestamp": "2017-07-04T19:00:00-05:00",
+          "included": false,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T19:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1000.0,
+            "reason": "按负荷区间上界 1000.0 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T19:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "human_review",
+            "source": "rule",
+            "prepared_upper_kw": 1000.0,
+            "reason": "按负荷区间上界 1,000.0 kW准备，设定温度 25.5 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "new_metrics": {
+            "energy_cost_cny": null,
+            "point_grid_peak_kw": null,
+            "upper_grid_peak_kw": null
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 25.5,
+          "new_max_zone_c": 25.5,
+          "occupied": true
+        },
+        {
+          "hour": 20,
+          "timestamp": "2017-07-04T20:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T20:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 928.9,
+            "reason": "按负荷区间上界 928.9 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T20:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 928.9,
+            "reason": "按负荷区间上界 928.9 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 647.06025,
+            "point_grid_peak_kw": 862.747,
+            "upper_grid_peak_kw": 887.0994999999999
+          },
+          "new_metrics": {
+            "energy_cost_cny": 636.8969999999999,
+            "point_grid_peak_kw": 849.1959999999999,
+            "upper_grid_peak_kw": 873.1659999999999
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 25.4,
+          "new_max_zone_c": 25.9,
+          "occupied": true
+        },
+        {
+          "hour": 21,
+          "timestamp": "2017-07-04T21:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T21:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 887.1,
+            "reason": "按负荷区间上界 887.1 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T21:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 887.1,
+            "reason": "按负荷区间上界 887.1 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 619.6995,
+            "point_grid_peak_kw": 826.266,
+            "upper_grid_peak_kw": 847.1804999999999
+          },
+          "new_metrics": {
+            "energy_cost_cny": 609.966,
+            "point_grid_peak_kw": 813.288,
+            "upper_grid_peak_kw": 833.874
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 25.4,
+          "new_max_zone_c": 25.9,
+          "occupied": false
+        },
+        {
+          "hour": 22,
+          "timestamp": "2017-07-04T22:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T22:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 874.1,
+            "reason": "按负荷区间上界 874.1 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T22:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 874.1,
+            "reason": "按负荷区间上界 874.1 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 616.3331249999999,
+            "point_grid_peak_kw": 821.7774999999999,
+            "upper_grid_peak_kw": 834.7655
+          },
+          "new_metrics": {
+            "energy_cost_cny": 606.6525,
+            "point_grid_peak_kw": 808.87,
+            "upper_grid_peak_kw": 821.654
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 25.4,
+          "new_max_zone_c": 25.8,
+          "occupied": false
+        },
+        {
+          "hour": 23,
+          "timestamp": "2017-07-04T23:00:00-05:00",
+          "included": true,
+          "fixed_candidate_id": "rule_conservative",
+          "new_candidate_id": "rule_full",
+          "fixed_command": {
+            "timestamp": "2017-07-04T23:00:00-05:00",
+            "hvac_setpoint_c": 25.5,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 861.5,
+            "reason": "按负荷区间上界 861.5 kW准备，储能功率 0.0 kW；低置信时段不充放电。"
+          },
+          "new_command": {
+            "timestamp": "2017-07-04T23:00:00-05:00",
+            "hvac_setpoint_c": 26.0,
+            "battery_kw": 0.0,
+            "action": "hold",
+            "source": "rule",
+            "prepared_upper_kw": 861.5,
+            "reason": "按负荷区间上界 861.5 kW准备，设定温度 26.0 °C，储能功率 0.0 kW。"
+          },
+          "fixed_metrics": {
+            "energy_cost_cny": 606.448875,
+            "point_grid_peak_kw": 808.5985000000001,
+            "upper_grid_peak_kw": 822.7325
+          },
+          "new_metrics": {
+            "energy_cost_cny": 596.9235,
+            "point_grid_peak_kw": 795.898,
+            "upper_grid_peak_kw": 809.81
+          },
+          "fixed_soc_before": 0.949999999999,
+          "fixed_soc_after": 0.949999999999,
+          "new_soc_before": 0.9499999793757166,
+          "new_soc_after": 0.9499999793757166,
+          "fixed_max_zone_c": 25.4,
+          "new_max_zone_c": 25.8,
+          "occupied": false
+        }
+      ]
+    }
+  }
+}

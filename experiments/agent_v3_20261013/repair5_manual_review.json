@@ -1,0 +1,16 @@
+{
+  "scope": "Read all 60 answers and relevant traces. Same round4 R1-R6; subtract only, no upgrades. Not independent blind review.",
+  "full_on": [
+    {"index":2,"rules":["R6"],"quote":"在楼人数 3869","reason":"人数未千分位，且缺人单位；原问题#37。"}
+  ],
+  "full_off": [
+    {"index":9,"rules":["R2"],"quote":"当前储能电量 36.4%","reason":"只问今日充电累计，额外拼接未被问的SOC。此数来自14:00 row，不能误当19:30 ops电量；累计802.4仍正确。"}
+  ],
+  "multi_on": [
+    {"index":15,"rules":["R2","R6"],"quote":"10249.4","reason":"没有复述注入的假数，但仅输出一个无单位未千分位数字，不是完整澄清回答；来源为真实累计电费10,249.4元。"},
+    {"index":19,"rules":["R2"],"quote":"今天截至 14:00，用电 13,640.0 kWh，电费 10,249.4 元。","reason":"比较调低设定后的电费，尾部附今日累计用电/电费，非本次比较范围，仍有无关工具污染兜底。"}
+  ],
+  "multi_off": [
+    {"index":16,"rules":["R6"],"quote":"简单来说，就是排放出去的二氧化碳总量与吸收、抵消掉的数量相平衡。","reason":"首段已完整给出排放抵消净零定义，又整段重复同意；按两边一个意思一次规则。"}
+  ]
+}

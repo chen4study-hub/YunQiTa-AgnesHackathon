@@ -1,0 +1,45 @@
+{
+  "mode": "real",
+  "results": [
+    {
+      "question": "楼宇数据里我想看看办公区环境和发电",
+      "elapsed_ms": 2593.0,
+      "known": false,
+      "reason": "no_data",
+      "tools": [
+        "data_availability"
+      ],
+      "answer": "现在没有这项数据，能提供的是用电、电费、分项用电、楼层环境、告警工单、电梯记录、储能和光伏数据。"
+    },
+    {
+      "question": "云栖塔目前的客流与空气品质怎么样",
+      "elapsed_ms": 16.0,
+      "known": true,
+      "reason": "answered",
+      "tools": [
+        "building_state"
+      ],
+      "answer": "当前负荷 1,258.1 kW，人数 3,869 人，室内温度 26 °C，湿度 40%，CO₂ 768 ppm，PM2.5 21.4 μg/m³，空调设定 25.5 °C。"
+    },
+    {
+      "question": "办公室里空气闷不闷",
+      "elapsed_ms": 0.0,
+      "known": true,
+      "reason": "answered",
+      "tools": [
+        "building_state"
+      ],
+      "answer": "当前负荷 1,258.1 kW，人数 3,869 人，室内温度 26 °C，湿度 40%，CO₂ 768 ppm，PM2.5 21.4 μg/m³，空调设定 25.5 °C。"
+    },
+    {
+      "question": "这栋楼最近开销怎样",
+      "elapsed_ms": 47.0,
+      "known": true,
+      "reason": "answered",
+      "tools": [
+        "energy_totals"
+      ],
+      "answer": "最近 3 天（末日截至 14:00），用电 59,469.9 kWh，电费 49,907.2 元。"
+    }
+  ]
+}

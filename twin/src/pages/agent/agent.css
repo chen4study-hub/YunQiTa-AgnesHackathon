@@ -1,0 +1,1493 @@
+/* Agent page internals only; shared responsive/scale shell is not overridden. */
+.agent-root {
+  min-width: 0;
+}
+.agent-root .page-grid-host,
+.agent-root .page-grid {
+  height: auto;
+}
+.agent-page {
+  align-items: start;
+}
+.agent-decision-card {
+  grid-area: decision;
+}
+.agent-record-card {
+  grid-area: records;
+}
+.agent-page > .agent-chat-slot {
+  grid-area: chat;
+  position: relative;
+  min-width: 0;
+  min-height: 38rem;
+  align-self: stretch;
+}
+.agent-page .card {
+  padding: clamp(0.9rem, 1vw, 1.35rem);
+  min-width: 0;
+  min-height: 0;
+}
+.agent-decision-card,
+.agent-record-card {
+  overflow: visible;
+}
+.agent-decision-card {
+  display: flex;
+  flex-direction: column;
+}
+.agent-decision-card > .agent-heading,
+.agent-decision-card > .agent-status-bar,
+.agent-decision-card > .agent-chart-block,
+.agent-decision-card > .agent-actions,
+.agent-decision-card > .agent-note {
+  flex-shrink: 0;
+}
+.agent-decision-card > .agent-auto-grid {
+  flex: none;
+  overflow: visible;
+  align-items: start;
+}
+.agent-decision-card > .agent-handoff-top {
+  flex-shrink: 0;
+}
+.agent-decision-card > .agent-ticket {
+  flex: none;
+  overflow: visible;
+}
+.agent-receipt {
+  flex-shrink: 0;
+}
+.agent-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+.agent-heading h2 {
+  font-size: var(--font-title);
+}
+.agent-page small,
+.agent-note {
+  color: #a8bdc9;
+  font-size: var(--font-note);
+  line-height: 1.6;
+}
+.agent-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.agent-tag {
+  color: #72e0e7;
+  border: 1px solid #3d6774;
+  background: #11313b;
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  font-size: var(--font-note);
+}
+.agent-status-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.35rem;
+  font-size: var(--font-subtitle);
+  margin-bottom: 0.9rem;
+}
+.agent-success {
+  color: #93e4bf;
+  border: 1px solid #34735f;
+  background: #12362e;
+}
+.agent-danger {
+  color: #ffb0b8;
+  border: 1px solid #985562;
+  background: #3b2028;
+}
+.agent-auto-grid {
+  align-items: start;
+}
+.agent-workflow-body {
+  display: grid;
+}
+.agent-workflow-panel {
+  grid-area: 1 / 1;
+  min-width: 0;
+}
+.agent-workflow-panel[aria-hidden="true"] {
+  visibility: hidden;
+  pointer-events: none;
+}
+.agent-plan > p {
+  min-block-size: 4.5em;
+}
+.agent-status-bar {
+  min-block-size: 4.5rem;
+}
+.agent-table-scroll {
+  overflow-y: visible;
+}
+.agent-page .smooth-value {
+  display: inline-block;
+  min-width: 5ch;
+  max-width: 100%;
+  font-variant-numeric: tabular-nums;
+}
+.agent-plan strong .smooth-value {
+  white-space: nowrap;
+}
+.agent-page .agent-status-bar,
+.agent-page .agent-tag,
+.agent-page .agent-record-state,
+.agent-page td,
+.agent-page .agent-plan strong,
+.agent-page button {
+  transition:
+    color 280ms ease,
+    background-color 280ms ease,
+    border-color 280ms ease;
+}
+.agent-heading small {
+  display: block;
+  min-block-size: 1.6em;
+}
+.agent-page .agent-record-card table {
+  table-layout: fixed;
+}
+.agent-record-card tbody tr {
+  height: 3.5rem;
+}
+.agent-record-card th:first-child {
+  width: 5.5rem;
+}
+.agent-record-card th:nth-child(3) {
+  width: 38%;
+}
+.agent-record-card td:last-child {
+  white-space: nowrap;
+}
+.agent-chat-welcome {
+  width: 100%;
+}
+.agent-page h3 {
+  margin: 0 0 0.55rem;
+  font-size: var(--font-subtitle);
+  font-weight: 500;
+  color: #c5d9e3;
+}
+.agent-page p {
+  margin: 0.35rem 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.agent-page ul {
+  margin: 0.35rem 0;
+  padding-left: 1.35rem;
+  line-height: 1.6;
+}
+.agent-handoff-top p {
+  font-size: var(--font-note);
+  line-height: 1.4;
+  margin: 0.2rem 0;
+}
+.agent-handoff-top h3 {
+  margin-bottom: 0.3rem;
+}
+.agent-handoff-top .agent-steps {
+  gap: 0.5rem;
+}
+.agent-ticket {
+  min-height: min-content;
+}
+.agent-ticket ul {
+  margin: 0.2rem 0;
+  line-height: 1.35;
+}
+.agent-ticket p {
+  line-height: 1.35;
+  margin: 0.2rem 0;
+}
+.agent-plan-column {
+  min-width: 0;
+}
+.agent-plan {
+  padding: 0.8rem;
+  background: #10202a;
+  border: 1px solid #29404e;
+  border-radius: 0.4rem;
+}
+.agent-plan strong {
+  color: #72e0e7;
+  font-variant-numeric: tabular-nums;
+}
+.agent-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: agent-step;
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+}
+.agent-steps > li {
+  position: relative;
+  counter-increment: agent-step;
+  padding-left: 2rem;
+  min-width: 0;
+}
+.agent-steps > li::before {
+  content: counter(agent-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.35rem;
+  height: 1.35rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid #397183;
+  background: #14303e;
+  color: #72e0e7;
+  border-radius: 50%;
+  font-size: var(--font-note);
+}
+.agent-steps code {
+  color: #72e0e7;
+  display: block;
+  font-size: var(--font-note);
+  overflow-wrap: anywhere;
+}
+.agent-steps span {
+  color: #b8cbd4;
+  display: block;
+  font-size: var(--font-note);
+  line-height: 1.6;
+  margin-top: 0.12rem;
+}
+.agent-table-scroll {
+  min-width: 0;
+  max-width: 100%;
+  overflow: auto;
+  scrollbar-color: #476471 #101e28;
+}
+.agent-page table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+  font-size: var(--font-note);
+}
+.agent-page table th,
+.agent-page table td {
+  padding: 0.22rem 0.45rem;
+  border-bottom: 1px solid #263b49;
+  line-height: 1.45;
+  vertical-align: top;
+}
+.agent-page th {
+  font-weight: 400;
+  color: #b8cbd4;
+}
+.agent-page thead th {
+  background: #132733;
+  color: #e4ecf1;
+  white-space: nowrap;
+}
+.agent-page table small {
+  display: block;
+  font-size: var(--font-note);
+}
+.agent-selected {
+  background: #12362e66;
+}
+.agent-chart-block {
+  margin-top: 0.7rem;
+}
+.agent-chart-block h3 {
+  margin-bottom: 0.3rem;
+}
+.agent-chart-block h3 small {
+  margin-left: 0.6rem;
+}
+.agent-decision-plot {
+  height: 100px;
+  min-height: 0;
+  flex: none;
+}
+.agent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+}
+.agent-page button {
+  border: 1px solid #3d6774;
+  background: #11313b;
+  color: #9ae7eb;
+  border-radius: 0.3rem;
+  padding: 0.5rem 0.8rem;
+  font-size: var(--font-note);
+}
+.agent-page button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.agent-page button:focus-visible,
+.agent-page input:focus-visible,
+.agent-table-scroll:focus-visible {
+  outline: 2px solid #72e0e7;
+  outline-offset: 2px;
+}
+.agent-note {
+  margin: 0.4rem 0 0;
+}
+.agent-receipt {
+  border: 1px solid #397183;
+  background: #102733;
+  padding: 0.7rem;
+  margin-top: 0.6rem;
+}
+.agent-handoff-top {
+  align-items: start;
+}
+.agent-ticket {
+  border: 1px solid #985562;
+  background: #311c2566;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  margin-top: 0.6rem;
+}
+.agent-ticket h3 {
+  color: #ffb0b8;
+}
+.agent-ticket-grid {
+  align-items: start;
+}
+.agent-ticket h4 {
+  color: #ffb0b8;
+  margin: 0;
+  font-size: var(--font-note);
+  font-weight: 400;
+}
+.agent-ticket ul,
+.agent-ticket p {
+  font-size: var(--font-note);
+  line-height: 1.65;
+}
+.agent-record-card {
+  display: flex;
+  flex-direction: column;
+}
+.agent-record-card .agent-table-scroll {
+  flex: 1;
+}
+.agent-record-card table {
+  min-width: 36rem;
+}
+.agent-record-state {
+  white-space: nowrap;
+}
+.agent-green {
+  color: #93e4bf;
+}
+.agent-red {
+  color: #ffb0b8;
+}
+.agent-page .agent-chat-card {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.agent-chat-card > .agent-heading,
+.agent-chat-card > .agent-quick-questions,
+.agent-chat-card > .agent-chat-form,
+.agent-chat-card > .agent-note {
+  flex-shrink: 0;
+}
+.agent-chat-messages {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 0.5rem 0.35rem 0.8rem 0;
+  scrollbar-color: #476471 #101e28;
+}
+.agent-bubble {
+  flex-shrink: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: 0.8rem 1rem;
+  border-radius: 0.65rem;
+  max-width: 92%;
+  font-size: var(--font-note);
+}
+.agent-assistant {
+  border: 1px solid #294757;
+  background: #11212d;
+}
+.agent-user {
+  align-self: flex-end;
+  border: 1px solid #386572;
+  background: #14353c;
+  color: #d8f6f7;
+}
+.agent-tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+}
+.agent-tool-tags code {
+  border: 1px solid #315266;
+  color: #91d6e2;
+  background: #0b1c29;
+  padding: 0.18rem 0.35rem;
+  font-size: var(--font-note);
+  border-radius: 0.25rem;
+}
+.agent-quick-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding: 0.6rem 0;
+}
+.agent-quick-questions button {
+  padding: 0.4rem 0.65rem;
+  font-size: var(--font-note);
+}
+.agent-chat-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.6rem;
+}
+.agent-chat-form input {
+  width: 100%;
+  min-width: 0;
+  font: inherit;
+  color: #e4ecf1;
+  background: #0d1e29;
+  border: 1px solid #315266;
+  padding: 0.8rem;
+  border-radius: 0.35rem;
+}
+.agent-chat-form input::placeholder {
+  color: #a8bdc9;
+}
+.agent-sr-only {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.agent-loading {
+  padding: clamp(1rem, 3vw, 3rem);
+}
+.agent-plan-number {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  font-size: var(--font-value-md);
+}
+.agent-page .agent-plan-number small {
+  font-size: var(--font-unit);
+  color: var(--muted);
+}
+@container dashboard-content (max-width: 639px) {
+  .agent-root {
+    font-size: var(--font-note);
+  }
+  .agent-root .agent-page :is(small, code, span, p, th, td, button, input, h4) {
+    font-size: var(--font-note);
+  }
+  .agent-root .agent-page .agent-plan-number small {
+    font-size: var(--font-unit);
+  }
+  .agent-root .agent-page :is(button, .agent-tag, .agent-tool-tags code) {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.6rem;
+  }
+  .agent-heading {
+    gap: 0.6rem;
+  }
+  .agent-tags {
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .agent-request-status {
+    display: inline-block;
+    margin-left: 0.3rem;
+  }
+  .agent-steps {
+    gap: 0.7rem;
+  }
+  .agent-steps code {
+    line-height: 1.5;
+  }
+  .agent-auto-grid .agent-plan-column {
+    min-height: 285px;
+  }
+  .agent-auto-grid .agent-plan > p {
+    min-block-size: 8em;
+  }
+  .agent-auto-grid .agent-steps > li > span {
+    min-block-size: 3em;
+  }
+  .agent-auto-grid .agent-steps tbody tr {
+    height: 58px;
+  }
+  .agent-handoff-top > div {
+    min-height: 190px;
+  }
+  .agent-handoff-top .agent-handoff-reason {
+    min-block-size: 5em;
+  }
+  .agent-handoff-top > div > p:not(.agent-handoff-reason) {
+    min-block-size: 3em;
+  }
+  .agent-chart-block h3 {
+    min-height: 36px;
+  }
+  .agent-steps > li {
+    padding-left: 2rem;
+  }
+  .agent-steps > li::before {
+    font-size: var(--font-note);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+/* Keep controls and records in view; only long evidence scrolls inside its panel. */
+@container dashboard-content (min-width: 1180px) {
+  .agent-root,
+  .agent-root > .page-grid-host,
+  .agent-root .agent-page {
+    height: 100%;
+    min-height: 0;
+  }
+  .agent-page {
+    align-items: stretch;
+  }
+  .agent-page > .agent-chat-slot {
+    min-height: 0;
+  }
+  .agent-root .agent-page .card {
+    padding: 0.65rem 0.85rem;
+  }
+  .agent-decision-card,
+  .agent-record-card {
+    overflow: hidden;
+  }
+  .agent-heading {
+    margin-bottom: 0.35rem;
+    gap: 0.35rem;
+  }
+  .agent-heading h2 {
+    font-size: var(--font-title);
+  }
+  .agent-status-bar {
+    min-block-size: 0;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 0.45rem;
+  }
+  .agent-workflow-body {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+  }
+  .agent-workflow-panel[aria-hidden="true"] {
+    display: none;
+  }
+  .agent-auto-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    grid-template-rows: auto auto minmax(0, 1fr) 96px auto auto;
+    column-gap: 0.65rem;
+  }
+  .agent-auto-card > .agent-heading {
+    grid-area: 1 / 1 / 2 / -1;
+  }
+  .agent-auto-card > .agent-status-bar {
+    grid-area: 2 / 1 / 3 / -1;
+  }
+  .agent-auto-card > .agent-actions {
+    grid-area: 5 / 1 / 6 / -1;
+  }
+  .agent-auto-card > .agent-note {
+    grid-area: 6 / 1 / 7 / -1;
+  }
+  .agent-auto-card > .agent-chart-block {
+    grid-area: 4 / 1;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding-top: 0.8rem;
+    margin: 0;
+  }
+  .agent-auto-card > .agent-chart-block > small {
+    display: none;
+  }
+  .agent-auto-card .agent-decision-plot {
+    flex: 1;
+    height: 0;
+    min-height: 65px;
+    max-height: 145px;
+  }
+  .agent-handoff-card .agent-decision-plot {
+    height: 80px;
+  }
+  .agent-auto-card .agent-workflow-body,
+  .agent-auto-card .agent-workflow-panel[aria-hidden="false"],
+  .agent-auto-card .agent-workflow-panel[aria-hidden="false"] > .page-grid-host,
+  .agent-auto-card .agent-auto-grid {
+    display: contents;
+  }
+  .agent-auto-card .agent-plan-column {
+    grid-area: 3 / 1;
+    align-self: start;
+    height: 100%;
+    overflow: auto;
+  }
+  .agent-auto-card .agent-auto-grid > .agent-steps {
+    grid-area: 3 / 2 / 5 / 3;
+    grid-auto-rows: minmax(min-content, auto);
+    min-height: 0;
+    overflow: auto;
+    scrollbar-gutter: stable;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem 0.65rem;
+  }
+  .agent-auto-card .agent-auto-grid > .agent-steps > li:nth-child(3),
+  .agent-auto-card .agent-auto-grid > .agent-steps > li:nth-child(6) {
+    grid-column: 1 / -1;
+  }
+  .agent-auto-card .agent-table-scroll table small {
+    display: none;
+  }
+  .agent-auto-card .agent-steps span {
+    margin: 0;
+  }
+  .agent-auto-card .agent-plan {
+    padding: 0.3rem;
+  }
+  .agent-auto-card .agent-plan ul li {
+    font-size: var(--font-note);
+  }
+  .agent-auto-card .agent-chart-block h3 small {
+    font-size: var(--font-subtitle);
+  }
+  .agent-auto-card .agent-plan-number {
+    font-size: var(--font-value-md);
+  }
+  .agent-root .agent-auto-card .agent-plan ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.3rem;
+  }
+  .agent-auto-card .agent-plan-number {
+    display: flex;
+  }
+  .agent-auto-card .agent-plan > small {
+    display: none;
+  }
+  .agent-auto-card .agent-plan h3 {
+    display: none;
+  }
+  .agent-root .agent-auto-card .agent-plan p {
+    min-block-size: 0;
+    margin: 0.25rem 0 0;
+    font-size: var(--font-note);
+    line-height: 1.35;
+  }
+  .agent-root .agent-auto-card .agent-steps {
+    margin: 0;
+  }
+  .agent-root .agent-auto-card .agent-steps :is(code, span) {
+    font-size: var(--font-note);
+    line-height: 1.5;
+  }
+  .agent-root .agent-auto-card .agent-steps :is(th, td) {
+    padding: 0.3rem 0.4rem;
+    line-height: 1.4;
+  }
+  .agent-root .agent-auto-card .agent-receipt {
+    grid-area: 3 / 1 / 5 / 2;
+    align-self: stretch;
+    z-index: 2;
+    max-height: 100%;
+    margin: 0;
+  }
+  .agent-root .agent-auto-card:has(.agent-receipt) .agent-plan-column,
+  .agent-root .agent-auto-card:has(.agent-receipt) > .agent-chart-block {
+    visibility: hidden;
+  }
+  .agent-plan {
+    padding: 0.5rem;
+  }
+  .agent-plan > p {
+    min-block-size: 0;
+  }
+  .agent-page ul {
+    line-height: 1.4;
+  }
+  .agent-page h3 {
+    margin-bottom: 0.3rem;
+    font-size: var(--font-subtitle);
+  }
+  .agent-steps {
+    gap: 0.3rem;
+  }
+  .agent-steps > li {
+    padding-left: 1.7rem;
+  }
+  .agent-steps span {
+    line-height: 1.35;
+  }
+  .agent-page table th,
+  .agent-page table td {
+    padding: 0.16rem 0.35rem;
+    line-height: 1.3;
+  }
+  .agent-page table {
+    font-size: var(--font-note);
+  }
+  .agent-record-card tbody tr {
+    height: 1.9rem;
+  }
+  .agent-record-card table {
+    min-width: 0;
+  }
+  .agent-record-card .agent-table-scroll {
+    min-height: 0;
+  }
+  .agent-chart-block {
+    margin-top: 0.4rem;
+  }
+  .agent-actions {
+    margin-top: 0.4rem;
+  }
+  .agent-root .agent-page button {
+    min-height: 36px;
+    padding: 0.4rem 0.65rem;
+  }
+  .agent-record-card .agent-heading small {
+    font-size: var(--font-note);
+  }
+  .agent-root .agent-record-card table {
+    height: 100%;
+  }
+  .agent-root .agent-record-card .agent-table-scroll {
+    overflow-y: hidden;
+  }
+  .agent-root .agent-record-card tbody tr {
+    height: auto;
+  }
+  .agent-root .agent-record-card :is(th, td) {
+    padding: 1px 5px;
+    font-size: var(--font-note);
+    line-height: 1.15;
+    vertical-align: middle;
+  }
+  .agent-root .agent-record-card .smooth-value {
+    line-height: 1.15;
+  }
+  .agent-root .agent-record-card .agent-table-scroll {
+    padding-bottom: 1px;
+  }
+  .agent-auto-card .agent-table-scroll {
+    overflow-y: hidden;
+    padding-bottom: 1px;
+  }
+
+  .agent-root .agent-record-card .agent-heading {
+    margin-bottom: 0.2rem;
+  }
+  .agent-root .agent-record-card .agent-heading small {
+    min-block-size: 0;
+    line-height: 1.3;
+  }
+  .agent-root .agent-handoff-card > .agent-chart-block > small {
+    display: none;
+  }
+  .agent-page .agent-note {
+    font-size: var(--font-note);
+    line-height: 1.3;
+    margin-top: 0.3rem;
+  }
+  .agent-ticket {
+    padding: 0.5rem;
+    margin-top: 0.4rem;
+    min-height: 0;
+  }
+  .agent-ticket ul,
+  .agent-ticket p {
+    line-height: 1.35;
+  }
+  .agent-receipt {
+    max-height: 30%;
+    overflow: auto;
+    padding: 0.4rem;
+  }
+}
+
+/* The process is contained in the existing chat log, not the page grid. */
+.agent-root .agent-chat-process {
+  width: 100%;
+  min-width: 0;
+  margin: 0.5rem 0;
+  font-size: var(--font-note);
+}
+.agent-root .agent-chat-process summary {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #9edce1;
+}
+.agent-root .agent-process-list {
+  max-height: min(240px, 26dvh);
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 0.3rem 0.5rem;
+  margin: 0;
+  list-style: none;
+  border: 1px solid #294757;
+  border-radius: 0.35rem;
+}
+.agent-root .agent-process-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #233442;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  font-size: var(--font-note);
+}
+.agent-root .agent-process-list li:last-child {
+  border: 0;
+}
+.agent-root .agent-process-step {
+  color: #a8bdc9;
+}
+.agent-root .agent-process-error {
+  color: #ffb0b8;
+}
+.agent-root .agent-process-list :is(code, small, p, span) {
+  font-size: var(--font-note);
+}
+.agent-root .agent-process-list p {
+  margin: 0.15rem 0 0 1.4rem;
+}
+.agent-tool-spinner,
+.agent-tool-check {
+  display: inline-block;
+  width: 1.3rem;
+  color: #72e0b6;
+}
+.agent-tool-spinner {
+  animation: agent-spin 1s linear infinite;
+}
+@keyframes agent-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.agent-root .agent-answer-text {
+  white-space: pre-wrap;
+}
+@container dashboard-content (1180px <= width < 1700px) {
+  .agent-root .agent-auto-card > .agent-heading > div:first-child {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+  .agent-root .agent-auto-card .agent-heading small {
+    min-block-size: 0;
+  }
+  .agent-root .agent-auto-card .agent-steps {
+    gap: 0.2rem;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .agent-root .agent-page {
+    --pg-rows: minmax(0, 1fr) 152px;
+  }
+  .agent-root .agent-record-card .agent-heading > div {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+  .agent-root .agent-auto-card .agent-steps > li {
+    min-height: 16px;
+    line-height: 16px;
+  }
+  .agent-root .agent-auto-card .agent-steps > li::before {
+    width: 15px;
+    height: 15px;
+  }
+  .agent-root .agent-auto-card .agent-steps > li {
+    grid-column: 1 / -1;
+  }
+  .agent-root
+    .agent-auto-card
+    .agent-steps
+    > li:not(:nth-child(3))
+    > :is(code, span) {
+    display: inline;
+  }
+  .agent-root .agent-auto-card .agent-steps > li:not(:nth-child(3)) > code {
+    margin-right: 0.4rem;
+  }
+  .agent-root .agent-auto-card .agent-steps :is(code, span) {
+    font-size: var(--font-note);
+    line-height: 1.35;
+  }
+  .agent-root .agent-auto-card .agent-steps :is(th, td) {
+    padding: 2px 5px;
+    line-height: 1.25;
+    font-size: var(--font-note);
+  }
+  .agent-root .agent-auto-card .agent-steps .smooth-value {
+    min-width: 0;
+    line-height: inherit;
+  }
+  .agent-root .agent-auto-card .agent-steps .smooth-value > span {
+    display: inline;
+    line-height: inherit;
+    margin: 0;
+  }
+}
+@container dashboard-content (min-width: 1700px) {
+  .agent-root .agent-auto-card {
+    grid-template-rows: auto auto minmax(0, 1.2fr) minmax(0, 0.8fr) auto auto;
+  }
+  .agent-root .agent-auto-card .agent-steps {
+    gap: 0.8rem 1rem;
+  }
+  .agent-root .agent-auto-card .agent-steps :is(code, span) {
+    font-size: var(--font-note);
+    line-height: 1.6;
+  }
+  .agent-root .agent-auto-card .agent-steps :is(th, td) {
+    padding: 0.5rem 0.5rem;
+    line-height: 1.5;
+  }
+  .agent-root .agent-auto-card .agent-plan ul {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+  .agent-root .agent-auto-card .agent-plan-number {
+    display: inline-flex;
+    font-size: var(--font-value-md);
+  }
+  .agent-root .agent-auto-card .agent-plan p {
+    font-size: var(--font-note);
+    line-height: 1.6;
+    margin-top: 0.6rem;
+  }
+  .agent-root .agent-record-card :is(th, td) {
+    padding: 0.3rem 0.5rem;
+    font-size: var(--font-note);
+    line-height: 1.4;
+  }
+  .agent-root .agent-record-card .smooth-value {
+    line-height: 1.4;
+  }
+}
+/* Plan values and full reasons are independent of the candidate plot row. */
+.agent-root .agent-plan-label {
+  display: block;
+  color: #a8bdc9;
+  font-size: var(--font-subtitle);
+  line-height: 1.4;
+}
+.agent-root .agent-plan-number {
+  font-family: "Barlow Semi Condensed", "Microsoft YaHei", sans-serif;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 0;
+  white-space: nowrap;
+}
+.agent-root .agent-page .agent-plan-number .smooth-value {
+  min-width: 0;
+  font-size: inherit;
+}
+.agent-root .agent-page .agent-plan-number .smooth-value > span {
+  font-size: inherit;
+}
+.agent-root .agent-plan-number small {
+  white-space: pre;
+  font-size: var(--font-unit);
+  line-height: 1;
+}
+.agent-root .agent-plan-reason {
+  margin-top: 0.5rem;
+  min-height: 0;
+}
+.agent-root .agent-reason-preview {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  min-block-size: 0;
+  margin: 0 0 0.3rem;
+  line-height: 1.5;
+  font-size: var(--font-note);
+}
+.agent-root .agent-plan-reason > button {
+  min-height: 36px;
+  font-size: var(--font-note);
+}
+.agent-root .agent-reason-dialog {
+  width: min(600px, calc(100vw - 32px));
+  max-height: min(70dvh, 600px);
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #397183;
+  border-radius: 0.6rem;
+  background: #10202a;
+  color: #e4ecf1;
+  overflow: hidden;
+}
+.agent-reason-dialog::backdrop {
+  background: #0009;
+}
+.agent-root .agent-reason-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.agent-root .agent-reason-dialog header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+.agent-root .agent-reason-dialog h3 {
+  display: block;
+  margin: 0;
+  font-size: var(--font-title);
+}
+.agent-root .agent-reason-full {
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.agent-root .agent-reason-full p {
+  display: block;
+  margin: 0;
+  min-block-size: 0;
+  font-size: var(--font-note);
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+@container dashboard-content (min-width: 1180px) {
+  .agent-root .agent-auto-card .agent-plan-column {
+    overflow: auto;
+  }
+  .agent-root .agent-auto-card .agent-plan ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+  .agent-root .agent-auto-card .agent-plan-label {
+    font-size: var(--font-subtitle);
+  }
+  .agent-root .agent-auto-card .agent-plan-number {
+    font-size: var(--font-value-md);
+  }
+}
+@container dashboard-content (1180px <= width < 1700px) {
+  .agent-root .agent-auto-card {
+    grid-template-rows: auto auto minmax(0, 1fr) 96px auto auto;
+  }
+  .agent-root .agent-auto-card .agent-plan-label {
+    line-height: 1.2;
+  }
+  .agent-root .agent-auto-card .agent-plan-number {
+    line-height: 1.1;
+  }
+  .agent-root .agent-auto-card .agent-plan-reason {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .agent-root .agent-auto-card .agent-plan .agent-reason-preview {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .agent-root .agent-auto-card .agent-plan-reason > button {
+    flex-shrink: 0;
+  }
+  .agent-root .agent-auto-card > .agent-chart-block {
+    padding-top: 2px;
+  }
+  .agent-root .agent-auto-card > .agent-chart-block h3 {
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+  .agent-root .agent-auto-card > .agent-chart-block h3 small {
+    line-height: inherit;
+  }
+  .agent-root .agent-auto-card .agent-decision-plot {
+    min-height: 76px;
+  }
+  .agent-root .agent-auto-card .agent-steps {
+    gap: 1px;
+    padding-bottom: 2px;
+  }
+}
+@container dashboard-content (max-width: 639px) {
+  .agent-root .agent-chat-card :is(p, small, code, li, summary, span) {
+    font-size: var(--font-note);
+    line-height: 1.5;
+  }
+  .agent-root .agent-chat-card .agent-answer-text {
+    font-size: var(--font-note);
+    line-height: 1.65;
+  }
+  .agent-root .agent-plan .agent-reason-preview {
+    min-block-size: 4.5em;
+  }
+  .agent-root .agent-chat-card .agent-process-list {
+    max-height: 180px;
+    overflow-y: auto;
+  }
+  /* Keep the same six semantic rows, presented as two-line record cards. */
+  .agent-root .agent-record-card .agent-table-scroll {
+    overflow: visible;
+  }
+  .agent-root .agent-record-card table,
+  .agent-root .agent-record-card tbody {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+  .agent-root .agent-record-card thead {
+    display: none;
+  }
+  .agent-root .agent-record-card tbody {
+    display: grid;
+    gap: 6px;
+  }
+  .agent-root .agent-record-card tbody tr {
+    display: grid;
+    grid-template-columns: max-content max-content max-content minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: baseline;
+    gap: 5px 8px;
+    height: auto;
+    padding: 8px;
+    border: 1px solid #29404e;
+    border-radius: 5px;
+    background: #101e28;
+  }
+  .agent-root .agent-record-card tbody :is(th, td) {
+    width: auto;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+  .agent-root .agent-record-card tbody th {
+    grid-area: 1 / 1;
+  }
+  .agent-root .agent-record-card tbody td:nth-child(2) {
+    grid-area: 1 / 2;
+  }
+  .agent-root .agent-record-card tbody td:nth-child(4) {
+    grid-area: 1 / 3;
+  }
+  .agent-root .agent-record-card tbody td:last-child {
+    grid-area: 1 / 4;
+    text-align: right;
+  }
+  .agent-root .agent-record-card tbody td:nth-child(3) {
+    grid-area: 2 / 1 / 3 / -1;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    color: #b8cbd4;
+  }
+  .agent-root .agent-record-card .smooth-value {
+    min-width: 0;
+  }
+  /* Natural initial height; only an accumulated conversation has a scroll cap. */
+  .agent-root .agent-page > .agent-chat-slot {
+    min-height: 0;
+  }
+  .agent-root .agent-page .agent-chat-card {
+    position: static;
+    inset: auto;
+    height: auto;
+  }
+  .agent-root .agent-chat-messages {
+    flex: 0 1 auto;
+    max-height: min(360px, 43dvh);
+  }
+}
+/* Intrinsic workflow floors: only the whole page scrolls when space runs out. */
+@container dashboard-content (min-width: 1180px) {
+  .agent-root {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-gutter: auto;
+  }
+  .agent-root > .page-grid-host,
+  .agent-root .agent-page {
+    height: 100%;
+    min-height: 100%;
+  }
+  .agent-root .agent-page {
+    --pg-rows: minmax(min-content, 1fr) minmax(min-content, 0.48fr);
+  }
+  .agent-root .agent-decision-card,
+  .agent-root .agent-record-card,
+  .agent-root .agent-workflow-body,
+  .agent-root .agent-auto-card .agent-plan-column,
+  .agent-root .agent-auto-card .agent-auto-grid > .agent-steps {
+    overflow: visible;
+  }
+  .agent-root .agent-auto-card {
+    grid-template-rows:
+      auto auto minmax(min-content, 1fr) minmax(min-content, 96px)
+      auto auto;
+  }
+  .agent-root .agent-auto-card .agent-plan-column {
+    height: auto;
+  }
+  .agent-root .agent-auto-card .agent-auto-grid > .agent-steps {
+    scrollbar-gutter: auto;
+  }
+  .agent-root .agent-record-card table {
+    height: 100%;
+  }
+  .agent-root .agent-record-card .agent-table-scroll {
+    flex: 1 0 auto;
+    overflow-y: visible;
+  }
+  .agent-root .agent-handoff-top {
+    --pg-columns: repeat(2, minmax(0, 1fr));
+    --pg-rows: auto;
+    --pg-gap: 6px;
+  }
+  .agent-root .agent-handoff-card .agent-ticket-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+    --pg-columns: repeat(3, minmax(0, 1fr));
+    --pg-rows: auto;
+    --pg-gap: 6px;
+  }
+  .agent-root .agent-handoff-card .agent-workflow-body {
+    flex: 0 0 auto;
+  }
+  .agent-root .agent-handoff-card .agent-steps {
+    gap: 2px;
+  }
+  .agent-root .agent-handoff-card .agent-steps :is(code, span) {
+    line-height: 1.2;
+  }
+  .agent-root .agent-handoff-card .agent-ticket {
+    padding: 4px;
+    margin-top: 3px;
+  }
+  .agent-root .agent-handoff-card .agent-ticket h3 {
+    margin-bottom: 2px;
+  }
+  .agent-root .agent-handoff-card .agent-ticket :is(p, ul) {
+    line-height: 1.2;
+    margin-block: 2px;
+  }
+  .agent-root .agent-handoff-card .agent-handoff-top p {
+    line-height: 1.2;
+    margin-block: 2px;
+  }
+  .agent-root .agent-handoff-card .agent-chart-block {
+    margin-top: 2px;
+  }
+  .agent-root .agent-handoff-card .agent-decision-plot {
+    height: 66px;
+  }
+  .agent-root .agent-handoff-card {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: 2px 6px;
+  }
+  .agent-root .agent-handoff-card > .agent-heading {
+    grid-area: 1 / 1 / 2 / -1;
+  }
+  .agent-root .agent-handoff-card > .agent-status-bar {
+    grid-area: 2 / 1 / 3 / -1;
+  }
+  .agent-root .agent-handoff-card .agent-workflow-body,
+  .agent-root .agent-handoff-card .agent-workflow-panel[aria-hidden="false"] {
+    display: contents;
+  }
+  .agent-root .agent-handoff-card .agent-workflow-panel > .page-grid-host {
+    grid-area: 3 / 1 / 4 / -1;
+  }
+  .agent-root .agent-handoff-card .agent-ticket {
+    grid-area: 4 / 1;
+  }
+  .agent-root .agent-handoff-card > .agent-chart-block {
+    grid-area: 4 / 2;
+    align-self: center;
+  }
+  .agent-root .agent-handoff-card > .agent-actions {
+    grid-area: 5 / 1 / 6 / -1;
+  }
+  .agent-root .agent-handoff-card > .agent-note {
+    grid-area: 6 / 1 / 7 / -1;
+  }
+}
+@container dashboard-content (1180px <= width < 1700px) {
+  .agent-root .agent-page .agent-handoff-card {
+    padding-block: 4px;
+  }
+  .agent-root .agent-handoff-card > .agent-heading > div:first-child {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .agent-root .agent-handoff-card .agent-heading small {
+    min-block-size: 0;
+  }
+  .agent-root .agent-handoff-card .agent-plan-reason {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+  }
+  .agent-root .agent-handoff-card .agent-reason-preview {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+  }
+  .agent-root .agent-handoff-card .agent-plan-reason > button {
+    flex-shrink: 0;
+  }
+  .agent-root .agent-handoff-card .agent-status-bar {
+    margin-bottom: 2px;
+  }
+  .agent-root .agent-handoff-card > .agent-actions {
+    margin-top: 1px;
+  }
+  .agent-root .agent-handoff-card > .agent-note {
+    margin-block: 1px;
+  }
+  .agent-root .agent-handoff-card .agent-ticket-grid {
+    --pg-gap: 3px;
+  }
+  .agent-root .agent-handoff-card .agent-ticket h4 {
+    line-height: 1.2;
+  }
+  .agent-root .agent-handoff-card .agent-ticket ul {
+    padding-left: 1em;
+  }
+}
+
+/* Desktop columns own their scroll: the right card never grows with conversation. */
+.agent-left-slot {
+  grid-area: left;
+  display: grid;
+  gap: var(--space);
+  min-width: 0;
+  grid-template-rows: auto auto;
+  align-items: start;
+}
+.agent-left-slot > .card {
+  grid-area: auto;
+}
+@container dashboard-content (1180px <= width < 1700px) {
+  .agent-root .agent-auto-card .agent-plan ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .agent-root .agent-auto-card .agent-plan li:first-child {
+    grid-column: 1 / -1;
+  }
+}
+@container dashboard-content (min-width: 1180px) {
+  .agent-root,
+  .agent-root > .page-grid-host,
+  .agent-root .agent-page {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .agent-root .agent-page {
+    --pg-columns: repeat(2, minmax(0, 1fr));
+    --pg-rows: minmax(0, 1fr);
+    --pg-areas: "left chat";
+    align-items: stretch;
+  }
+  .agent-root .agent-left-slot {
+    height: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    grid-template-rows: minmax(min-content, 1fr) minmax(min-content, 0.48fr);
+    align-content: start;
+    gap: var(--space);
+  }
+  .agent-root .agent-left-slot > .card {
+    grid-area: auto;
+  }
+  .agent-root .agent-record-card tbody tr {
+    height: 18px;
+  }
+  .agent-root .agent-page > .agent-chat-slot {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .agent-root .agent-page .agent-chat-card {
+    position: static;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .agent-root .agent-chat-messages {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agent-tool-spinner {
+    animation: none;
+  }
+  .agent-page * {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,33 @@
+.host {
+  container: pagegrid / inline-size;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+}
+.grid {
+  display: grid;
+  grid-template-columns: var(--pg-columns);
+  grid-template-rows: var(--pg-rows);
+  grid-template-areas: var(--pg-areas);
+  gap: var(--pg-gap, clamp(0.65rem, 0.7vw, 1.1rem));
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+}
+.grid > * {
+  min-width: 0;
+  min-height: 0;
+}
+@container pagegrid (width < 640px) {
+  .grid.autoMobile {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: none;
+    height: auto;
+  }
+  .grid.autoMobile > * {
+    grid-area: auto !important;
+    height: auto;
+  }
+}

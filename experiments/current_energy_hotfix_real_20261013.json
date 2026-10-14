@@ -1,0 +1,99 @@
+{
+  "api_transport": "in-process HTTP ASGI",
+  "llm_mode": "real",
+  "completed": true,
+  "resident_changed": false,
+  "results": [
+    {
+      "question": "当前能源怎么样",
+      "answer": "当前光伏功率 114.3 kW，电网功率 820.1 kW，储能功率 323.7 kW。储能正值为放电，负值为充电。",
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [
+          {
+            "phase": "answer_stream",
+            "first_token_ms": null,
+            "first_token_timeout_seconds": 8.0,
+            "validation_failures": {},
+            "accepted_llm_sentences": 0,
+            "host_supplemented": true,
+            "elapsed_ms": 8000.0,
+            "reason": "chat_first_token_timeout",
+            "transport_attempts": []
+          }
+        ],
+        "llm_reason": "chat_first_token_timeout",
+        "reason": "answered",
+        "session_id": "energy-hotfix-0",
+        "terminated": false,
+        "category": "none"
+      },
+      "tools": [
+        "current_energy"
+      ],
+      "elapsed_ms": 8203.0,
+      "passed": true
+    },
+    {
+      "question": "现在用电情况如何",
+      "answer": "今天截至 14:00，用电 13,640 kWh，电费 10,249.4 元。",
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [],
+        "llm_reason": null,
+        "reason": "answered",
+        "session_id": "energy-hotfix-1",
+        "terminated": false,
+        "category": "none"
+      },
+      "tools": [
+        "energy_totals"
+      ],
+      "elapsed_ms": 1860.0,
+      "passed": true
+    },
+    {
+      "question": "光伏现在发多少电",
+      "answer": "当前光伏功率 114.3 kW。",
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [
+          {
+            "phase": "answer_stream",
+            "first_token_ms": null,
+            "first_token_timeout_seconds": 8.0,
+            "validation_failures": {},
+            "accepted_llm_sentences": 0,
+            "host_supplemented": true,
+            "elapsed_ms": 8016.0,
+            "reason": "chat_first_token_timeout",
+            "transport_attempts": []
+          }
+        ],
+        "llm_reason": "chat_first_token_timeout",
+        "reason": "answered",
+        "session_id": "energy-hotfix-2",
+        "terminated": false,
+        "category": "none"
+      },
+      "tools": [
+        "current_energy"
+      ],
+      "elapsed_ms": 8093.0,
+      "passed": true
+    }
+  ],
+  "passed": 3
+}

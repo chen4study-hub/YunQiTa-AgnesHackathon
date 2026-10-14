@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "rewritten_text_fields": {
+    "normal": 923,
+    "peak": 879,
+    "abstain": 721,
+    "sample": 0
+  },
+  "export_sha256": {
+    "normal.json": "5f8dea0dd6ce263b3cf4d44d684879ef1974f2f45588c394de9bb81738630397",
+    "peak.json": "174de26262c37e108045f127f99ada600eb42aa4a26ecd0f3f60163ec89b3d87",
+    "abstain.json": "0cdc5160afeebc6bafc696cb1710bfe28bde8b3bd6adb6c87cfea63788726a95",
+    "sample.json": "56d06985b254b0e59de5a082df959a52b22dc9ff296f113f48ee1e2470471a72"
+  },
+  "new_llm_calls": 0,
+  "new_dispatches": 0,
+  "controls_preserved": true
+}

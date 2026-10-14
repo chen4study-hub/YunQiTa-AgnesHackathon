@@ -1,0 +1,35 @@
+{
+  "version": "building_auxiliary_thermal_v2",
+  "boundary": "Assume district cooling/heating production is outside Byron electricity meter; only building air distribution fans and secondary pumps. District boundary is a scenario assumption, not established by BDG2 metadata.",
+  "development_year": 2016,
+  "final_year": 2017,
+  "no_2017_parameter_selection": true,
+  "candidate_count": 1,
+  "engineering_parameters": {
+    "fan_pressure_pa": 500.0,
+    "fan_total_efficiency": 0.6,
+    "air_density_kg_m3": 1.2,
+    "air_cp_j_kg_k": 1006.0,
+    "air_handled_thermal_fraction": 0.6,
+    "cooling_air_delta_k": 12.0,
+    "heating_air_delta_k": 25.0,
+    "pump_head_pa": 179352.0,
+    "pump_shaft_w_per_flow_head": 1.282051,
+    "pump_motor_efficiency": 0.9,
+    "water_density_kg_m3": 1000.0,
+    "water_cp_j_kg_k": 4180.0,
+    "cooling_water_delta_k": 6.0,
+    "heating_water_delta_k": 15.0
+  },
+  "formula": "auxiliary electric/thermal coefficient = air_handled_fraction*fan_pressure/(air_density*air_cp*air_delta*fan_efficiency) + pump_head*pump_shaft_factor/(pump_motor_efficiency*water_density*water_cp*water_delta)",
+  "parameter_provenance": "EnergyPlus equations and pump defaults; fan pressure/efficiency, coil deltaT and air-handled fraction are fixed explicit scenario assumptions, not measured Byron equipment and not values prescribed by source.",
+  "sources": [
+    "https://bigladdersoftware.com/epx/docs/9-6/engineering-reference/air-system-fans.html",
+    "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-pumps.html",
+    "https://www.eia.gov/consumption/commercial/data/2018/ce/xls/e5.xlsx"
+  ],
+  "dev_gate": {"max_uncapped_fraction_ge_one": 0.01, "pooled_share_min": 0.05, "pooled_share_max": 0.60},
+  "dev_gate_provenance": "Loose engineering plausibility screen for proxy, not a published office percentile interval and not evidence of true end-use measurement.",
+  "failure_policy": "Do not select alternate parameter on2017; stop/report if2016screen fails",
+  "missing_policy": "unchanged past-only max24h; future persistence at origin; caps remain safety guard but never tune to caps"
+}

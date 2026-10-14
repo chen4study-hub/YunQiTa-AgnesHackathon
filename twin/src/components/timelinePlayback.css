@@ -1,0 +1,63 @@
+/* UI frame subscription owns both transforms; no eased lag between cursor and box. */
+.responsive-dashboard .timeline .timeline-slider,
+.responsive-dashboard .timeline[data-playing="true"] .timeline-slider {
+  transition: none !important;
+  pointer-events: none;
+}
+.responsive-dashboard .timeline .timeline-slider .timeline-cursor {
+  transform: translateX(calc(var(--cursor-fraction, 0) * 100%)) !important;
+  transition: none;
+}
+/* Playback uses its head; wall-clock mode uses real now. Only future cell starts are striped. */
+.responsive-dashboard .timeline .timeline-cell[data-evidence="forecast"] {
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 4px,
+    #b8cfeb44 4px 6px
+  );
+}
+.responsive-dashboard .timeline .timeline-cell[data-evidence="measured"] {
+  background-image: none;
+}
+.responsive-dashboard .timeline small.timeline-date-label {
+  position: absolute;
+  top: auto;
+  bottom: 2px;
+  left: 2px;
+  text-align: center;
+  font-size: var(--font-label);
+  color: #cedded;
+  line-height: 1.05;
+  white-space: nowrap;
+  z-index: 5;
+  pointer-events: none;
+}
+.time-legend i.measured {
+  background: #4fd1d9;
+}
+.time-legend i.forecast {
+  background: repeating-linear-gradient(135deg, #273a4e 0 3px, #9eb6d0 3px 5px);
+}
+
+/* A dedicated lower line lets dates and next-day labels keep their 12px floor. */
+.responsive-dashboard .bottombar .timeline {
+  height: auto;
+  grid-template-rows: auto;
+  padding-bottom: 20px;
+}
+.responsive-dashboard .timeline .timeline-cell {
+  min-height: 36px;
+}
+.responsive-dashboard .timeline .timeline-slider {
+  /* Bounds come from the selected cell, not the padded timeline's line box. */
+  bottom: auto;
+  transform: none !important;
+}
+.responsive-dashboard .timeline small {
+  font-size: var(--font-label) !important;
+}
+.responsive-dashboard .timeline small.timeline-date-label {
+  line-height: 1.4;
+  left: 0;
+  bottom: 0;
+}

@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.3",
+  "building_id": "Hog_office_Byron",
+  "sources": {
+    "chilledwater_cleaned.csv": {
+      "sha256": "8211aaf210379af50cbf7af87579d12414c3500d3e3f4dea725761c93a172bcd",
+      "bytes": 77005463,
+      "pointer_url": "https://raw.githubusercontent.com/buds-lab/building-data-genome-project-2/master/data/meters/cleaned/chilledwater_cleaned.csv"
+    },
+    "steam_cleaned.csv": {
+      "sha256": "ea5956c49ed1d6cc1b611a752b5a9dc3bcd4d45ddcd674e53b3c41661a6d3b9b",
+      "bytes": 45422530,
+      "pointer_url": "https://raw.githubusercontent.com/buds-lab/building-data-genome-project-2/master/data/meters/cleaned/steam_cleaned.csv"
+    }
+  },
+  "quality": {
+    "chilledwater": {
+      "rows": 17544,
+      "valid": 17194,
+      "missing": 350,
+      "minimum": 94.0381,
+      "maximum": 12195.9515
+    },
+    "steam": {
+      "rows": 17544,
+      "valid": 17544,
+      "missing": 0,
+      "minimum": 0.0,
+      "maximum": 24626.3672
+    }
+  },
+  "assumptions": {
+    "method_version": "building_auxiliary_thermal_v2",
+    "cooling_cop": null,
+    "cooling_auxiliary_electric_fraction": 0.04470201832676245,
+    "steam_auxiliary_electric_fraction": 0.020642017845394618,
+    "engineering_parameters": {
+      "fan_pressure_pa": 500.0,
+      "fan_total_efficiency": 0.6,
+      "air_density_kg_m3": 1.2,
+      "air_cp_j_kg_k": 1006.0,
+      "air_handled_thermal_fraction": 0.6,
+      "cooling_air_delta_k": 12.0,
+      "heating_air_delta_k": 25.0,
+      "pump_head_pa": 179352.0,
+      "pump_shaft_w_per_flow_head": 1.282051,
+      "pump_motor_efficiency": 0.9,
+      "water_density_kg_m3": 1000.0,
+      "water_cp_j_kg_k": 4180.0,
+      "cooling_water_delta_k": 6.0,
+      "heating_water_delta_k": 15.0
+    },
+    "interval_hours": 1.0,
+    "max_past_gap_hours": 24,
+    "cooling_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "heating_months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "shoulder_months": [
+      4,
+      5,
+      10
+    ],
+    "policy": "district production excluded; cooling:cold*derivedfanpumpfactor; heating:steam*derivedfanpumpfactor; shoulder:sum; no compressor or boiler electricity; not measured electrical submeter",
+    "cap": "current:min(actual_kw,point_kw); future:point_kw only, no future measured electricity",
+    "future": "thermal readings held from origin; mode switches by known target month; no target-time meters",
+    "missing": "past-only last valid reading within24h, else null; missing not zero; seasonal inactive meter not needed",
+    "share_denominator": "current:actual_kw; future:point_kw; null for absent estimate or zero denominator",
+    "units": "raw meters:kWh thermal per1h; thermal_kw:kW thermal; electric estimates:kW electrical; share:fraction0-1",
+    "floor_partition": "HVAC estimate is a subset of existing predicted electric floors; exact0.1kW bounded largest remainder, no double counting",
+    "unit_source": "https://github.com/buds-lab/building-data-genome-project-2/wiki/Meters-data-features"
+  },
+  "scenarios": {
+    "normal": {
+      "hvac_electric_estimate_kwh": 3438.3,
+      "matched_building_electric_kwh": 23977.9,
+      "hvac_electric_estimated_share": 0.143395,
+      "valid_hours": 24,
+      "total_hours": 24,
+      "cap_applied_hours": 0,
+      "past_fill_hours": 0,
+      "denominator": "sum of actual_kw across matched valid hours,1h intervals; not mean hourly share",
+      "label": "空调电耗占比（估算）"
+    },
+    "peak": {
+      "hvac_electric_estimate_kwh": 10441.1,
+      "matched_building_electric_kwh": 25460.2,
+      "hvac_electric_estimated_share": 0.410095,
+      "valid_hours": 24,
+      "total_hours": 24,
+      "cap_applied_hours": 0,
+      "past_fill_hours": 9,
+      "denominator": "sum of actual_kw across matched valid hours,1h intervals; not mean hourly share",
+      "label": "空调电耗占比（估算）"
+    },
+    "abstain": {
+      "hvac_electric_estimate_kwh": 9765.8,
+      "matched_building_electric_kwh": 21852.0,
+      "hvac_electric_estimated_share": 0.446906,
+      "valid_hours": 24,
+      "total_hours": 24,
+      "cap_applied_hours": 0,
+      "past_fill_hours": 3,
+      "denominator": "sum of actual_kw across matched valid hours,1h intervals; not mean hourly share",
+      "label": "空调电耗占比（估算）"
+    }
+  },
+  "new_model_fit": false,
+  "new_2017_forecast_evaluation": false,
+  "thermal_export_llm_calls": 0,
+  "task_scheduler_used": false,
+  "environment_or_config_changed": false,
+  "development_artifact": "experiments/hvac_auxiliary_v2_development.json",
+  "limits": [
+    "building auxiliaries only, district production excluded by assumption not verified meter boundary",
+    "fixed EnergyPlus-based equations; coil/fan values scenario assumptions not measured Byron HVAC",
+    "2016plausibility screen not true end-use validation or published office percentile interval",
+    "futurethermal originpersistence, no calibratedforecast",
+    "floorpartition measured HVAC unavailable; model allocation only"
+  ]
+}

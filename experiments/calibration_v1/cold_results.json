@@ -1,0 +1,501 @@
+{
+  "status": "completed",
+  "input_sha256": "27950cfaebb667e81b7d0f3e1bb028dba9bfded79b33eb7ed30c9d663e173154",
+  "by_building": [
+    {
+      "building": "Hog_education_Beth",
+      "n": 4248,
+      "base_mae": 5.970444049497849,
+      "candidate_mae": 4.796264230864841,
+      "mae_gain": 0.19666540861927406,
+      "base_rmse": 8.595469724343705,
+      "candidate_rmse": 6.86473973716498,
+      "enabled_fraction": 0.9491525423728814,
+      "enabled_weeks": 24,
+      "total_weeks": 26,
+      "by_enabled": [
+        {
+          "enabled": false,
+          "n": 216,
+          "base_mae": 4.75708966337546,
+          "candidate_mae": 4.75708966337546
+        },
+        {
+          "enabled": true,
+          "n": 4032,
+          "base_mae": 6.035445177325833,
+          "candidate_mae": 4.798362868408915
+        }
+      ],
+      "coverage_available": 0.8877450980392156,
+      "interval_available_n": 4080,
+      "source_buildings": 11,
+      "source_train_end": "2017-05-31 23:00:00+00:00",
+      "source_cal_end": "2017-06-30 23:00:00+00:00",
+      "target_first_observed": "2017-07-01 00:00:00+00:00",
+      "evaluation_start": "2017-07-08 00:00:00+00:00",
+      "evaluation_end": "2017-12-31 23:00:00+00:00",
+      "seconds": 0.9379999999946449
+    },
+    {
+      "building": "Hog_assembly_Colette",
+      "n": 4248,
+      "base_mae": 43.98228880393732,
+      "candidate_mae": 41.97124450157227,
+      "mae_gain": 0.045723957462282416,
+      "base_rmse": 59.75903263140691,
+      "candidate_rmse": 56.85672559236986,
+      "enabled_fraction": 0.8022598870056498,
+      "enabled_weeks": 21,
+      "total_weeks": 26,
+      "by_enabled": [
+        {
+          "enabled": false,
+          "n": 840,
+          "base_mae": 38.89443803074825,
+          "candidate_mae": 38.89443803074825
+        },
+        {
+          "enabled": true,
+          "n": 3408,
+          "base_mae": 45.23633652972336,
+          "candidate_mae": 42.729612293676794
+        }
+      ],
+      "coverage_available": 0.8931372549019608,
+      "interval_available_n": 4080,
+      "source_buildings": 11,
+      "source_train_end": "2017-05-31 23:00:00+00:00",
+      "source_cal_end": "2017-06-30 23:00:00+00:00",
+      "target_first_observed": "2017-07-01 00:00:00+00:00",
+      "evaluation_start": "2017-07-08 00:00:00+00:00",
+      "evaluation_end": "2017-12-31 23:00:00+00:00",
+      "seconds": 1.0780000000086147
+    },
+    {
+      "building": "Hog_food_Morgan",
+      "n": 4248,
+      "base_mae": 7.291905269395286,
+      "candidate_mae": 5.166724733464851,
+      "mae_gain": 0.2914437938257357,
+      "base_rmse": 11.202447073020803,
+      "candidate_rmse": 8.003994780146732,
+      "enabled_fraction": 0.9096045197740112,
+      "enabled_weeks": 23,
+      "total_weeks": 26,
+      "by_enabled": [
+        {
+          "enabled": false,
+          "n": 384,
+          "base_mae": 3.796302838557714,
+          "candidate_mae": 3.796302838557714
+        },
+        {
+          "enabled": true,
+          "n": 3864,
+          "base_mae": 7.639294330844985,
+          "candidate_mae": 5.30291572923202
+        }
+      ],
+      "coverage_available": 0.8762254901960784,
+      "interval_available_n": 4080,
+      "source_buildings": 11,
+      "source_train_end": "2017-05-31 23:00:00+00:00",
+      "source_cal_end": "2017-06-30 23:00:00+00:00",
+      "target_first_observed": "2017-07-01 00:00:00+00:00",
+      "evaluation_start": "2017-07-08 00:00:00+00:00",
+      "evaluation_end": "2017-12-31 23:00:00+00:00",
+      "seconds": 1.0939999999973224
+    },
+    {
+      "building": "Hog_lodging_Brian",
+      "n": 4248,
+      "base_mae": 5.9157056584480285,
+      "candidate_mae": 5.042868148618689,
+      "mae_gain": 0.14754579761467146,
+      "base_rmse": 8.35695119631291,
+      "candidate_rmse": 7.369208808447013,
+      "enabled_fraction": 0.9209039548022598,
+      "enabled_weeks": 24,
+      "total_weeks": 26,
+      "by_enabled": [
+        {
+          "enabled": false,
+          "n": 336,
+          "base_mae": 5.108166584665729,
+          "candidate_mae": 5.108166584665729
+        },
+        {
+          "enabled": true,
+          "n": 3912,
+          "base_mae": 5.985064842699269,
+          "candidate_mae": 5.037259693988882
+        }
+      ],
+      "coverage_available": 0.8833333333333333,
+      "interval_available_n": 4080,
+      "source_buildings": 11,
+      "source_train_end": "2017-05-31 23:00:00+00:00",
+      "source_cal_end": "2017-06-30 23:00:00+00:00",
+      "target_first_observed": "2017-07-01 00:00:00+00:00",
+      "evaluation_start": "2017-07-08 00:00:00+00:00",
+      "evaluation_end": "2017-12-31 23:00:00+00:00",
+      "seconds": 1.062000000005355
+    },
+    {
+      "building": "Hog_industrial_Jeremy",
+      "n": 4248,
+      "base_mae": 7.182032529481966,
+      "candidate_mae": 4.472949631212262,
+      "mae_gain": 0.37720281649366305,
+      "base_rmse": 13.643558724303299,
+      "candidate_rmse": 7.38494187436637,
+      "enabled_fraction": 0.96045197740113,
+      "enabled_weeks": 25,
+      "total_weeks": 26,
+      "by_enabled": [
+        {
+          "enabled": false,
+          "n": 168,
+          "base_mae": 5.9040292387125435,
+          "candidate_mae": 5.9040292387125435
+        },
+        {
+          "enabled": true,
+          "n": 4080,
+          "base_mae": 7.234656194396002,
+          "candidate_mae": 4.414022823844603
+        }
+      ],
+      "coverage_available": 0.8850490196078431,
+      "interval_available_n": 4080,
+      "source_buildings": 11,
+      "source_train_end": "2017-05-31 23:00:00+00:00",
+      "source_cal_end": "2017-06-30 23:00:00+00:00",
+      "target_first_observed": "2017-07-01 00:00:00+00:00",
+      "evaluation_start": "2017-07-08 00:00:00+00:00",
+      "evaluation_end": "2017-12-31 23:00:00+00:00",
+      "seconds": 1.1410000000032596
+    },
+    {
+      "building": "Hog_office_Alexis",
+      "n": 4248,
+      "base_mae": 2.8653964022053238,
+      "candidate_mae": 2.231004266661306,
+      "mae_gain": 0.2213976869154175,
+      "base_rmse": 4.349489749706521,
+      "candidate_rmse": 3.6446540702058052,
+      "enabled_fraction": 0.96045197740113,
+      "enabled_weeks": 25,
+      "total_weeks": 26,
+      "by_enabled": [
+        {
+          "enabled": false,
+          "n": 168,
+          "base_mae": 4.571751677801103,
+          "candidate_mae": 4.571751677801103
+        },
+        {
+          "enabled": true,
+          "n": 4080,
+          "base_mae": 2.795134714386674,
+          "candidate_mae": 2.1346205497320203
+        }
+      ],
+      "coverage_available": 0.9073529411764706,
+      "interval_available_n": 4080,
+      "source_buildings": 11,
+      "source_train_end": "2017-05-31 23:00:00+00:00",
+      "source_cal_end": "2017-06-30 23:00:00+00:00",
+      "target_first_observed": "2017-07-01 00:00:00+00:00",
+      "evaluation_start": "2017-07-08 00:00:00+00:00",
+      "evaluation_end": "2017-12-31 23:00:00+00:00",
+      "seconds": 1.110000000000582
+    },
+    {
+      "building": "Hog_other_Noma",
+      "n": 4248,
+      "base_mae": 2.1837932078588653,
+      "candidate_mae": 0.8812696823891017,
+      "mae_gain": 0.596450030516783,
+      "base_rmse": 2.8270362424594504,
+      "candidate_rmse": 1.2889098664665317,
+      "enabled_fraction": 0.96045197740113,
+      "enabled_weeks": 25,
+      "total_weeks": 26,
+      "by_enabled": [
+        {
+          "enabled": false,
+          "n": 168,
+          "base_mae": 1.991303689638168,
+          "candidate_mae": 1.991303689638168
+        },
+        {
+          "enabled": true,
+          "n": 4080,
+          "base_mae": 2.1917192468444235,
+          "candidate_mae": 0.8355623997376695
+        }
+      ],
+      "coverage_available": 0.8924019607843138,
+      "interval_available_n": 4080,
+      "source_buildings": 11,
+      "source_train_end": "2017-05-31 23:00:00+00:00",
+      "source_cal_end": "2017-06-30 23:00:00+00:00",
+      "target_first_observed": "2017-07-01 00:00:00+00:00",
+      "evaluation_start": "2017-07-08 00:00:00+00:00",
+      "evaluation_end": "2017-12-31 23:00:00+00:00",
+      "seconds": 1.1719999999913853
+    },
+    {
+      "building": "Hog_public_Crystal",
+      "n": 4248,
+      "base_mae": 16.455172677796803,
+      "candidate_mae": 16.238806121063025,
+      "mae_gain": 0.01314884753690393,
+      "base_rmse": 25.778411801954245,
+      "candidate_rmse": 26.268265654884733,
+      "enabled_fraction": 0.8022598870056498,
+      "enabled_weeks": 21,
+      "total_weeks": 26,
+      "by_enabled": [
+        {
+          "enabled": false,
+          "n": 840,
+          "base_mae": 16.61161168821263,
+          "candidate_mae": 16.61161168821263
+        },
+        {
+          "enabled": true,
+          "n": 3408,
+          "base_mae": 16.416613766778813,
+          "candidate_mae": 16.146917424934603
+        }
+      ],
+      "coverage_available": 0.8737745098039216,
+      "interval_available_n": 4080,
+      "source_buildings": 11,
+      "source_train_end": "2017-05-31 23:00:00+00:00",
+      "source_cal_end": "2017-06-30 23:00:00+00:00",
+      "target_first_observed": "2017-07-01 00:00:00+00:00",
+      "evaluation_start": "2017-07-08 00:00:00+00:00",
+      "evaluation_end": "2017-12-31 23:00:00+00:00",
+      "seconds": 1.2339999999967404
+    },
+    {
+      "building": "Hog_services_Adrianna",
+      "n": 4248,
+      "base_mae": 17.216515485629273,
+      "candidate_mae": 8.7602496927918,
+      "mae_gain": 0.49117173564511163,
+      "base_rmse": 23.796328185482476,
+      "candidate_rmse": 17.079989799740222,
+      "enabled_fraction": 0.8813559322033898,
+      "enabled_weeks": 23,
+      "total_weeks": 26,
+      "by_enabled": [
+        {
+          "enabled": false,
+          "n": 504,
+          "base_mae": 16.188576539573756,
+          "candidate_mae": 16.188576539573756
+        },
+        {
+          "enabled": true,
+          "n": 3744,
+          "base_mae": 17.354891882213668,
+          "candidate_mae": 7.760282617263461
+        }
+      ],
+      "coverage_available": 0.8607843137254902,
+      "interval_available_n": 4080,
+      "source_buildings": 11,
+      "source_train_end": "2017-05-31 23:00:00+00:00",
+      "source_cal_end": "2017-06-30 23:00:00+00:00",
+      "target_first_observed": "2017-07-01 00:00:00+00:00",
+      "evaluation_start": "2017-07-08 00:00:00+00:00",
+      "evaluation_end": "2017-12-31 23:00:00+00:00",
+      "seconds": 1.5310000000026776
+    },
+    {
+      "building": "Hog_science_Max",
+      "n": 4248,
+      "base_mae": 3.3189851966352757,
+      "candidate_mae": 2.4654712632054903,
+      "mae_gain": 0.2571611148778433,
+      "base_rmse": 5.2346859465684705,
+      "candidate_rmse": 4.381185484431691,
+      "enabled_fraction": 0.96045197740113,
+      "enabled_weeks": 25,
+      "total_weeks": 26,
+      "by_enabled": [
+        {
+          "enabled": false,
+          "n": 168,
+          "base_mae": 3.6884382132385136,
+          "candidate_mae": 3.6884382132385136
+        },
+        {
+          "enabled": true,
+          "n": 4080,
+          "base_mae": 3.3037724253633773,
+          "candidate_mae": 2.415113800557072
+        }
+      ],
+      "coverage_available": 0.9083333333333333,
+      "interval_available_n": 4080,
+      "source_buildings": 11,
+      "source_train_end": "2017-05-31 23:00:00+00:00",
+      "source_cal_end": "2017-06-30 23:00:00+00:00",
+      "target_first_observed": "2017-07-01 00:00:00+00:00",
+      "evaluation_start": "2017-07-08 00:00:00+00:00",
+      "evaluation_end": "2017-12-31 23:00:00+00:00",
+      "seconds": 1.4530000000086147
+    },
+    {
+      "building": "Hog_warehouse_Louise",
+      "n": 4248,
+      "base_mae": 2.2292289377775965,
+      "candidate_mae": 1.7849078433678611,
+      "mae_gain": 0.19931604461078634,
+      "base_rmse": 3.3939893050188092,
+      "candidate_rmse": 2.645392250018778,
+      "enabled_fraction": 0.96045197740113,
+      "enabled_weeks": 25,
+      "total_weeks": 26,
+      "by_enabled": [
+        {
+          "enabled": false,
+          "n": 168,
+          "base_mae": 2.2280133869158254,
+          "candidate_mae": 2.2280133869158254
+        },
+        {
+          "enabled": true,
+          "n": 4080,
+          "base_mae": 2.2292789898719048,
+          "candidate_mae": 1.766662320986474
+        }
+      ],
+      "coverage_available": 0.8958333333333334,
+      "interval_available_n": 4080,
+      "source_buildings": 11,
+      "source_train_end": "2017-05-31 23:00:00+00:00",
+      "source_cal_end": "2017-06-30 23:00:00+00:00",
+      "target_first_observed": "2017-07-01 00:00:00+00:00",
+      "evaluation_start": "2017-07-08 00:00:00+00:00",
+      "evaluation_end": "2017-12-31 23:00:00+00:00",
+      "seconds": 1.4530000000086147
+    },
+    {
+      "building": "Hog_office_Byron",
+      "n": 4248,
+      "base_mae": 29.957375268226293,
+      "candidate_mae": 13.118129671382468,
+      "mae_gain": 0.5621068416732772,
+      "base_rmse": 44.997632420249815,
+      "candidate_rmse": 25.282698604057778,
+      "enabled_fraction": 0.96045197740113,
+      "enabled_weeks": 25,
+      "total_weeks": 26,
+      "by_enabled": [
+        {
+          "enabled": false,
+          "n": 168,
+          "base_mae": 33.722082160484604,
+          "candidate_mae": 33.722082160484604
+        },
+        {
+          "enabled": true,
+          "n": 4080,
+          "base_mae": 29.802357925603896,
+          "candidate_mae": 12.269731627713554
+        }
+      ],
+      "coverage_available": 0.8965686274509804,
+      "interval_available_n": 4080,
+      "source_buildings": 11,
+      "source_train_end": "2017-05-31 23:00:00+00:00",
+      "source_cal_end": "2017-06-30 23:00:00+00:00",
+      "target_first_observed": "2017-07-01 00:00:00+00:00",
+      "evaluation_start": "2017-07-08 00:00:00+00:00",
+      "evaluation_end": "2017-12-31 23:00:00+00:00",
+      "seconds": 1.4839999999967404
+    }
+  ],
+  "predictions": [
+    {
+      "path": "data\\calibration_v1\\cold_Hog_education_Beth.csv",
+      "sha256": "a7f5ca5eec41295be05ce9d1acb91c7a9df639e59af1fc31bb42ec96185d1d62",
+      "rows": 4248
+    },
+    {
+      "path": "data\\calibration_v1\\cold_Hog_assembly_Colette.csv",
+      "sha256": "8efada84d5cf3f727efec483032684998bab74911239270bb0a72a2015f6abf5",
+      "rows": 4248
+    },
+    {
+      "path": "data\\calibration_v1\\cold_Hog_food_Morgan.csv",
+      "sha256": "f40b45fd2223c3ff046130dcdb2648e273f53d7e2b303b100edfc1bbd86bd87f",
+      "rows": 4248
+    },
+    {
+      "path": "data\\calibration_v1\\cold_Hog_lodging_Brian.csv",
+      "sha256": "6418d0e27f748ca8f54c2639e4b4fd95d21c9f7a190ce4cc27f215d141074adb",
+      "rows": 4248
+    },
+    {
+      "path": "data\\calibration_v1\\cold_Hog_industrial_Jeremy.csv",
+      "sha256": "31a4834b03cde8ae1ba6213a632a21f50394af2b402a95ab6d00a955adaf93f8",
+      "rows": 4248
+    },
+    {
+      "path": "data\\calibration_v1\\cold_Hog_office_Alexis.csv",
+      "sha256": "e2b7fc99679016ea1394a0311b0b412d5f917898c83abf89de694a0f7dfacf6f",
+      "rows": 4248
+    },
+    {
+      "path": "data\\calibration_v1\\cold_Hog_other_Noma.csv",
+      "sha256": "48cd3b1874f1ee351eb10831c22fc1998e18e6c2191a7ca8c3d779373230a7d9",
+      "rows": 4248
+    },
+    {
+      "path": "data\\calibration_v1\\cold_Hog_public_Crystal.csv",
+      "sha256": "19cb8c392713aa7be5d55f5a1c540a3d6d8776a2cec6b3fc696805628847c605",
+      "rows": 4248
+    },
+    {
+      "path": "data\\calibration_v1\\cold_Hog_services_Adrianna.csv",
+      "sha256": "81e1d13ea62ab8ecf2afe3fdd2b8f1da9ccc53852b5a5c60a49a63632a0cd342",
+      "rows": 4248
+    },
+    {
+      "path": "data\\calibration_v1\\cold_Hog_science_Max.csv",
+      "sha256": "13ae1fab127849e71af675c882b58f9d1d7f478e7ff264f52f2201e14e86d2a8",
+      "rows": 4248
+    },
+    {
+      "path": "data\\calibration_v1\\cold_Hog_warehouse_Louise.csv",
+      "sha256": "1b1d3c4cc4a3e8abb5d353d7ea73f083a3e283501da83fdd84ee045ca932accc",
+      "rows": 4248
+    },
+    {
+      "path": "data\\calibration_v1\\cold_Hog_office_Byron.csv",
+      "sha256": "fbbf7d5b6e98a4a915a825717947b066f344d31c05f2969647eb53d76dabcead",
+      "rows": 4248
+    }
+  ],
+  "macro_mae_gain": 0.28327783964931247,
+  "buildings_improved": 12,
+  "buildings": 12,
+  "fit_selection": "source target disjoint; weekly target fit followed by later calibration slice, enables only if slice MAE improves",
+  "cold_start_limit": "first 168 target hours warm-up; first scored week no correction; no future warm-up or source refit",
+  "plan_sha256": "35871e2122d9c4ed7ad9bb34ae7622bc0c9c764c0c1438d155f1e589b187e642",
+  "software": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "foreground": true,
+  "single_thread": true,
+  "live_updated": false
+}

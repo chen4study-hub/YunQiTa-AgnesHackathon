@@ -1,0 +1,911 @@
+{
+  "status": "exploratory_complete",
+  "plan_sha256": "783732e1967fa2cd122682f94a5a40827defb5aeb69cfcc7fc9710266c3879cc",
+  "clean_data": "data\\byron2016_2017_holiday_development.csv",
+  "clean_data_sha256": "76f89e5f97f60c96eefe3405f65e5a491ec2ed920937bb987186ef3985d76233",
+  "calendar_dates": [
+    "2016-01-01",
+    "2016-01-18",
+    "2016-02-15",
+    "2016-05-30",
+    "2016-07-04",
+    "2016-09-05",
+    "2016-10-10",
+    "2016-11-11",
+    "2016-11-24",
+    "2016-12-26",
+    "2017-01-02",
+    "2017-01-16",
+    "2017-02-20",
+    "2017-05-29",
+    "2017-07-04",
+    "2017-09-04",
+    "2017-10-09",
+    "2017-11-10",
+    "2017-11-23",
+    "2017-12-25"
+  ],
+  "rows": [
+    {
+      "fold": 1,
+      "variant": "2017_only_no_calendar",
+      "training_rows": 3066,
+      "usable_training_rows": 2898,
+      "training_holiday_dates": [
+        "2017-01-16",
+        "2017-02-20"
+      ],
+      "training_holiday_days": 2,
+      "overall": {
+        "n": 876,
+        "retained_n": 754,
+        "rejection_rate": 0.13926940639269406,
+        "retained_picp": 0.9336870026525199,
+        "retained_mae": 24.900371041361275,
+        "mae": 28.155674707113324,
+        "rmse": 38.54077088808507,
+        "width": 104.5240455116627,
+        "interval_score": 137.98734059698893,
+        "unique_days": 37
+      },
+      "holiday": {
+        "n": 24,
+        "retained_n": 24,
+        "rejection_rate": 0.0,
+        "retained_picp": 1.0,
+        "retained_mae": 48.3558511495134,
+        "mae": 48.3558511495134,
+        "rmse": 65.49492383485418,
+        "width": 173.40359652184665,
+        "interval_score": 173.40359652184665,
+        "unique_days": 1
+      },
+      "ordinary": {
+        "n": 852,
+        "retained_n": 730,
+        "rejection_rate": 0.1431924882629108,
+        "retained_picp": 0.9315068493150684,
+        "retained_mae": 24.12923196931244,
+        "mae": 27.586655652397827,
+        "rmse": 37.50199514148463,
+        "width": 102.25951232776626,
+        "interval_score": 136.9896995850211,
+        "unique_days": 36
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "holiday_mae_gain": 0.0
+    },
+    {
+      "fold": 1,
+      "variant": "2017_only_holiday_flag",
+      "training_rows": 3066,
+      "usable_training_rows": 2898,
+      "training_holiday_dates": [
+        "2017-01-16",
+        "2017-02-20"
+      ],
+      "training_holiday_days": 2,
+      "overall": {
+        "n": 876,
+        "retained_n": 754,
+        "rejection_rate": 0.13926940639269406,
+        "retained_picp": 0.9363395225464191,
+        "retained_mae": 23.609995221590278,
+        "mae": 26.94263336716751,
+        "rmse": 37.36282483916938,
+        "width": 104.63015397842031,
+        "interval_score": 137.9481619176201,
+        "unique_days": 37
+      },
+      "holiday": {
+        "n": 24,
+        "retained_n": 24,
+        "rejection_rate": 0.0,
+        "retained_picp": 1.0,
+        "retained_mae": 47.6853392519487,
+        "mae": 47.6853392519487,
+        "rmse": 65.0371359175876,
+        "width": 173.40359652184665,
+        "interval_score": 173.40359652184665,
+        "unique_days": 1
+      },
+      "ordinary": {
+        "n": 852,
+        "retained_n": 730,
+        "rejection_rate": 0.1431924882629108,
+        "retained_picp": 0.9342465753424658,
+        "retained_mae": 22.818477061688085,
+        "mae": 26.358331792948324,
+        "rmse": 36.278836328631414,
+        "width": 102.36910929206108,
+        "interval_score": 136.94941728088133,
+        "unique_days": 36
+      },
+      "composite_gain": {
+        "balanced": 0.010841824781769094,
+        "error_priority": 0.021598470707566264,
+        "coverage_priority": 0.008687656301410551
+      },
+      "holiday_mae_gain": 0.013866199883267871
+    },
+    {
+      "fold": 1,
+      "variant": "expanded_no_calendar",
+      "training_rows": 11394,
+      "usable_training_rows": 11226,
+      "training_holiday_dates": [
+        "2016-02-15",
+        "2016-05-30",
+        "2016-07-04",
+        "2016-09-05",
+        "2016-10-10",
+        "2016-11-11",
+        "2016-11-24",
+        "2016-12-26",
+        "2017-01-02",
+        "2017-01-16",
+        "2017-02-20"
+      ],
+      "training_holiday_days": 11,
+      "overall": {
+        "n": 876,
+        "retained_n": 755,
+        "rejection_rate": 0.13812785388127855,
+        "retained_picp": 0.9059602649006623,
+        "retained_mae": 8.997520461245244,
+        "mae": 11.303139426253818,
+        "rmse": 21.199622209378383,
+        "width": 44.151029071014506,
+        "interval_score": 73.66970734250285,
+        "unique_days": 37
+      },
+      "holiday": {
+        "n": 24,
+        "retained_n": 24,
+        "rejection_rate": 0.0,
+        "retained_picp": 0.8333333333333334,
+        "retained_mae": 17.25941899876599,
+        "mae": 17.25941899876599,
+        "rmse": 25.04274248017511,
+        "width": 59.09298322900214,
+        "interval_score": 99.90543980660628,
+        "unique_days": 1
+      },
+      "ordinary": {
+        "n": 852,
+        "retained_n": 731,
+        "rejection_rate": 0.142018779342723,
+        "retained_picp": 0.908344733242134,
+        "retained_mae": 8.726267978481225,
+        "mae": 11.135356903084462,
+        "rmse": 21.081222126635314,
+        "width": 43.660458756661974,
+        "interval_score": 72.93067262520415,
+        "unique_days": 36
+      },
+      "composite_gain": {
+        "balanced": 0.2664157531931388,
+        "error_priority": 0.39264703550239777,
+        "coverage_priority": 0.23638813060095587
+      },
+      "holiday_mae_gain": 0.643074858812827
+    },
+    {
+      "fold": 1,
+      "variant": "expanded_holiday_flag",
+      "training_rows": 11394,
+      "usable_training_rows": 11226,
+      "training_holiday_dates": [
+        "2016-02-15",
+        "2016-05-30",
+        "2016-07-04",
+        "2016-09-05",
+        "2016-10-10",
+        "2016-11-11",
+        "2016-11-24",
+        "2016-12-26",
+        "2017-01-02",
+        "2017-01-16",
+        "2017-02-20"
+      ],
+      "training_holiday_days": 11,
+      "overall": {
+        "n": 876,
+        "retained_n": 746,
+        "rejection_rate": 0.14840182648401826,
+        "retained_picp": 0.9128686327077749,
+        "retained_mae": 8.716269915278472,
+        "mae": 11.222412094547948,
+        "rmse": 20.654427688104015,
+        "width": 42.2390673411302,
+        "interval_score": 72.03096939840714,
+        "unique_days": 37
+      },
+      "holiday": {
+        "n": 24,
+        "retained_n": 24,
+        "rejection_rate": 0.0,
+        "retained_picp": 0.875,
+        "retained_mae": 13.018747466129085,
+        "mae": 13.018747466129085,
+        "rmse": 18.531364756826243,
+        "width": 60.72221797306213,
+        "interval_score": 72.12331078839753,
+        "unique_days": 1
+      },
+      "ordinary": {
+        "n": 852,
+        "retained_n": 722,
+        "rejection_rate": 0.15258215962441316,
+        "retained_picp": 0.9141274238227147,
+        "retained_mae": 8.573251270928868,
+        "mae": 11.17181109816538,
+        "rmse": 20.711080931688837,
+        "width": 41.62466898217402,
+        "interval_score": 72.02836823249191,
+        "unique_days": 36
+      },
+      "composite_gain": {
+        "balanced": 0.267847039200799,
+        "error_priority": 0.39510311951863786,
+        "coverage_priority": 0.23857786131474645
+      },
+      "holiday_mae_gain": 0.7307720336495391
+    },
+    {
+      "fold": 2,
+      "variant": "2017_only_no_calendar",
+      "training_rows": 4818,
+      "usable_training_rows": 4650,
+      "training_holiday_dates": [
+        "2017-01-16",
+        "2017-02-20",
+        "2017-05-29",
+        "2017-07-04"
+      ],
+      "training_holiday_days": 4,
+      "overall": {
+        "n": 876,
+        "retained_n": 741,
+        "rejection_rate": 0.1541095890410959,
+        "retained_picp": 0.9338731443994602,
+        "retained_mae": 8.060069690130627,
+        "mae": 8.867413135530299,
+        "rmse": 13.232751506901984,
+        "width": 40.808949424268526,
+        "interval_score": 56.95498536816781,
+        "unique_days": 37
+      },
+      "holiday": {
+        "n": 24,
+        "retained_n": 19,
+        "rejection_rate": 0.20833333333333334,
+        "retained_picp": 1.0,
+        "retained_mae": 19.098260861694694,
+        "mae": 19.52662052993738,
+        "rmse": 29.621818039592288,
+        "width": 50.76427100908514,
+        "interval_score": 59.127631499448874,
+        "unique_days": 1
+      },
+      "ordinary": {
+        "n": 852,
+        "retained_n": 722,
+        "rejection_rate": 0.15258215962441316,
+        "retained_picp": 0.9321329639889196,
+        "retained_mae": 7.769590975089467,
+        "mae": 8.567153772307565,
+        "rmse": 12.462796919162312,
+        "width": 40.54696727729967,
+        "interval_score": 56.89378406869511,
+        "unique_days": 36
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "holiday_mae_gain": 0.0
+    },
+    {
+      "fold": 2,
+      "variant": "2017_only_holiday_flag",
+      "training_rows": 4818,
+      "usable_training_rows": 4650,
+      "training_holiday_dates": [
+        "2017-01-16",
+        "2017-02-20",
+        "2017-05-29",
+        "2017-07-04"
+      ],
+      "training_holiday_days": 4,
+      "overall": {
+        "n": 876,
+        "retained_n": 744,
+        "rejection_rate": 0.1506849315068493,
+        "retained_picp": 0.9354838709677419,
+        "retained_mae": 8.008075024083722,
+        "mae": 8.53287972519075,
+        "rmse": 12.489921484368471,
+        "width": 40.72474770794666,
+        "interval_score": 57.008825047069465,
+        "unique_days": 37
+      },
+      "holiday": {
+        "n": 24,
+        "retained_n": 20,
+        "rejection_rate": 0.16666666666666666,
+        "retained_picp": 1.0,
+        "retained_mae": 18.761045100815988,
+        "mae": 16.791364387077532,
+        "rmse": 25.174303444736427,
+        "width": 54.608628546915995,
+        "interval_score": 58.0996511336694,
+        "unique_days": 1
+      },
+      "ordinary": {
+        "n": 852,
+        "retained_n": 724,
+        "rejection_rate": 0.15023474178403756,
+        "retained_picp": 0.9337016574585635,
+        "retained_mae": 7.7110316517983,
+        "mae": 8.300246354433373,
+        "rmse": 11.93903115905562,
+        "width": 40.34121508808563,
+        "interval_score": 56.97809755167227,
+        "unique_days": 36
+      },
+      "composite_gain": {
+        "balanced": 0.009937053160411713,
+        "error_priority": 0.01911912134441407,
+        "coverage_priority": 0.007754009460599232
+      },
+      "holiday_mae_gain": 0.140078317119251
+    },
+    {
+      "fold": 2,
+      "variant": "expanded_no_calendar",
+      "training_rows": 13146,
+      "usable_training_rows": 12978,
+      "training_holiday_dates": [
+        "2016-02-15",
+        "2016-05-30",
+        "2016-07-04",
+        "2016-09-05",
+        "2016-10-10",
+        "2016-11-11",
+        "2016-11-24",
+        "2016-12-26",
+        "2017-01-02",
+        "2017-01-16",
+        "2017-02-20",
+        "2017-05-29",
+        "2017-07-04"
+      ],
+      "training_holiday_days": 13,
+      "overall": {
+        "n": 876,
+        "retained_n": 805,
+        "rejection_rate": 0.08105022831050228,
+        "retained_picp": 0.8795031055900621,
+        "retained_mae": 7.836710113904185,
+        "mae": 7.915191872788767,
+        "rmse": 11.815386491958881,
+        "width": 34.828287774652566,
+        "interval_score": 53.9598256402485,
+        "unique_days": 37
+      },
+      "holiday": {
+        "n": 24,
+        "retained_n": 24,
+        "rejection_rate": 0.0,
+        "retained_picp": 0.7916666666666666,
+        "retained_mae": 14.247462908752203,
+        "mae": 14.247462908752203,
+        "rmse": 22.05332758439853,
+        "width": 47.98552756156545,
+        "interval_score": 70.77086282237893,
+        "unique_days": 1
+      },
+      "ordinary": {
+        "n": 852,
+        "retained_n": 781,
+        "rejection_rate": 0.08333333333333333,
+        "retained_picp": 0.882202304737516,
+        "retained_mae": 7.63970874760924,
+        "mae": 7.736818040789796,
+        "rmse": 11.394554305678502,
+        "width": 34.42396798606626,
+        "interval_score": 53.48627529708991,
+        "unique_days": 36
+      },
+      "composite_gain": {
+        "balanced": -0.01127804376975372,
+        "error_priority": 0.03344710060796685,
+        "coverage_priority": -0.06323588082558729
+      },
+      "holiday_mae_gain": 0.27035695260689874
+    },
+    {
+      "fold": 2,
+      "variant": "expanded_holiday_flag",
+      "training_rows": 13146,
+      "usable_training_rows": 12978,
+      "training_holiday_dates": [
+        "2016-02-15",
+        "2016-05-30",
+        "2016-07-04",
+        "2016-09-05",
+        "2016-10-10",
+        "2016-11-11",
+        "2016-11-24",
+        "2016-12-26",
+        "2017-01-02",
+        "2017-01-16",
+        "2017-02-20",
+        "2017-05-29",
+        "2017-07-04"
+      ],
+      "training_holiday_days": 13,
+      "overall": {
+        "n": 876,
+        "retained_n": 807,
+        "rejection_rate": 0.07876712328767123,
+        "retained_picp": 0.885997521685254,
+        "retained_mae": 7.6572933913669,
+        "mae": 7.71500404829736,
+        "rmse": 11.318894043748779,
+        "width": 33.72697090538508,
+        "interval_score": 52.83226008978685,
+        "unique_days": 37
+      },
+      "holiday": {
+        "n": 24,
+        "retained_n": 24,
+        "rejection_rate": 0.0,
+        "retained_picp": 0.875,
+        "retained_mae": 9.31719687977745,
+        "mae": 9.31719687977745,
+        "rmse": 13.085618003930161,
+        "width": 46.316322845576906,
+        "interval_score": 56.387617820125506,
+        "unique_days": 1
+      },
+      "ordinary": {
+        "n": 852,
+        "retained_n": 783,
+        "rejection_rate": 0.08098591549295775,
+        "retained_picp": 0.8863346104725415,
+        "retained_mae": 7.606415123522899,
+        "mae": 7.669871855861302,
+        "rmse": 11.26511545184681,
+        "width": 33.341090386145474,
+        "interval_score": 52.732109167805476,
+        "unique_days": 36
+      },
+      "composite_gain": {
+        "balanced": 0.01690037474956263,
+        "error_priority": 0.05924551179627158,
+        "coverage_priority": -0.02612972871928454
+      },
+      "holiday_mae_gain": 0.5228464205829819
+    },
+    {
+      "fold": 3,
+      "variant": "2017_only_no_calendar",
+      "training_rows": 5694,
+      "usable_training_rows": 5526,
+      "training_holiday_dates": [
+        "2017-01-16",
+        "2017-02-20",
+        "2017-05-29",
+        "2017-07-04"
+      ],
+      "training_holiday_days": 4,
+      "overall": {
+        "n": 876,
+        "retained_n": 789,
+        "rejection_rate": 0.09931506849315068,
+        "retained_picp": 0.9480354879594424,
+        "retained_mae": 8.384356680845654,
+        "mae": 8.663545549578332,
+        "rmse": 33.2253752983192,
+        "width": 43.66456613286722,
+        "interval_score": 70.68554827943308,
+        "unique_days": 38
+      },
+      "holiday": {
+        "n": 24,
+        "retained_n": 13,
+        "rejection_rate": 0.4583333333333333,
+        "retained_picp": 1.0,
+        "retained_mae": 7.3790933517742765,
+        "mae": 8.468430003831761,
+        "rmse": 10.305222155227488,
+        "width": 36.597098347830496,
+        "interval_score": 52.332607729188744,
+        "unique_days": 1
+      },
+      "ordinary": {
+        "n": 852,
+        "retained_n": 776,
+        "rejection_rate": 0.0892018779342723,
+        "retained_picp": 0.9471649484536082,
+        "retained_mae": 8.401197432492468,
+        "mae": 8.669041762134574,
+        "rmse": 33.64566207809247,
+        "width": 43.78296443338976,
+        "interval_score": 71.20253252028503,
+        "unique_days": 37
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "holiday_mae_gain": 0.0
+    },
+    {
+      "fold": 3,
+      "variant": "2017_only_holiday_flag",
+      "training_rows": 5694,
+      "usable_training_rows": 5526,
+      "training_holiday_dates": [
+        "2017-01-16",
+        "2017-02-20",
+        "2017-05-29",
+        "2017-07-04"
+      ],
+      "training_holiday_days": 4,
+      "overall": {
+        "n": 876,
+        "retained_n": 788,
+        "rejection_rate": 0.1004566210045662,
+        "retained_picp": 0.9428934010152284,
+        "retained_mae": 8.497594212304962,
+        "mae": 8.722672119738482,
+        "rmse": 33.15883199490944,
+        "width": 42.48323736666773,
+        "interval_score": 68.9926558919818,
+        "unique_days": 38
+      },
+      "holiday": {
+        "n": 24,
+        "retained_n": 10,
+        "rejection_rate": 0.5833333333333334,
+        "retained_picp": 1.0,
+        "retained_mae": 8.214553554789314,
+        "mae": 10.44853774348556,
+        "rmse": 13.535905656078585,
+        "width": 30.22653490427233,
+        "interval_score": 50.980461004443136,
+        "unique_days": 1
+      },
+      "ordinary": {
+        "n": 852,
+        "retained_n": 778,
+        "rejection_rate": 0.08685446009389672,
+        "retained_picp": 0.9421593830334191,
+        "retained_mae": 8.501232267028813,
+        "mae": 8.674056186675186,
+        "rmse": 33.54577546976154,
+        "width": 42.64077852942344,
+        "interval_score": 69.50004166346174,
+        "unique_days": 37
+      },
+      "composite_gain": {
+        "balanced": 0.004021612309987654,
+        "error_priority": 0.0012217846234943153,
+        "coverage_priority": 0.004466692187313659
+      },
+      "holiday_mae_gain": -0.2338222951311928
+    },
+    {
+      "fold": 3,
+      "variant": "expanded_no_calendar",
+      "training_rows": 14022,
+      "usable_training_rows": 13854,
+      "training_holiday_dates": [
+        "2016-02-15",
+        "2016-05-30",
+        "2016-07-04",
+        "2016-09-05",
+        "2016-10-10",
+        "2016-11-11",
+        "2016-11-24",
+        "2016-12-26",
+        "2017-01-02",
+        "2017-01-16",
+        "2017-02-20",
+        "2017-05-29",
+        "2017-07-04"
+      ],
+      "training_holiday_days": 13,
+      "overall": {
+        "n": 876,
+        "retained_n": 774,
+        "rejection_rate": 0.11643835616438356,
+        "retained_picp": 0.9444444444444444,
+        "retained_mae": 7.987408611636102,
+        "mae": 8.191174731732072,
+        "rmse": 29.440813839687713,
+        "width": 36.866158388252074,
+        "interval_score": 63.05448763742228,
+        "unique_days": 38
+      },
+      "holiday": {
+        "n": 24,
+        "retained_n": 15,
+        "rejection_rate": 0.375,
+        "retained_picp": 0.8666666666666667,
+        "retained_mae": 8.199039012158748,
+        "mae": 8.169904253956659,
+        "rmse": 10.192006650306496,
+        "width": 36.91007812511176,
+        "interval_score": 47.60327314723376,
+        "unique_days": 1
+      },
+      "ordinary": {
+        "n": 852,
+        "retained_n": 759,
+        "rejection_rate": 0.10915492957746478,
+        "retained_picp": 0.9459815546772069,
+        "retained_mae": 7.983226192653441,
+        "mae": 8.191773900120111,
+        "rmse": 29.803543821690198,
+        "width": 36.86529040926276,
+        "interval_score": 63.48973311601913,
+        "unique_days": 37
+      },
+      "composite_gain": {
+        "balanced": 0.03672637461380335,
+        "error_priority": 0.04651710412737364,
+        "coverage_priority": 0.03555780897306482
+      },
+      "holiday_mae_gain": 0.035251605048400525
+    },
+    {
+      "fold": 3,
+      "variant": "expanded_holiday_flag",
+      "training_rows": 14022,
+      "usable_training_rows": 13854,
+      "training_holiday_dates": [
+        "2016-02-15",
+        "2016-05-30",
+        "2016-07-04",
+        "2016-09-05",
+        "2016-10-10",
+        "2016-11-11",
+        "2016-11-24",
+        "2016-12-26",
+        "2017-01-02",
+        "2017-01-16",
+        "2017-02-20",
+        "2017-05-29",
+        "2017-07-04"
+      ],
+      "training_holiday_days": 13,
+      "overall": {
+        "n": 876,
+        "retained_n": 734,
+        "rejection_rate": 0.16210045662100456,
+        "retained_picp": 0.9305177111716622,
+        "retained_mae": 7.564690507950644,
+        "mae": 8.13802764501398,
+        "rmse": 29.507410218180077,
+        "width": 33.872517887771814,
+        "interval_score": 62.211535081497196,
+        "unique_days": 38
+      },
+      "holiday": {
+        "n": 24,
+        "retained_n": 13,
+        "rejection_rate": 0.4583333333333333,
+        "retained_picp": 0.8461538461538461,
+        "retained_mae": 8.781192923251584,
+        "mae": 9.86608842871317,
+        "rmse": 13.896018249772325,
+        "width": 32.66830869355254,
+        "interval_score": 47.04060566274736,
+        "unique_days": 1
+      },
+      "ordinary": {
+        "n": 852,
+        "retained_n": 721,
+        "rejection_rate": 0.15375586854460094,
+        "retained_picp": 0.9320388349514563,
+        "retained_mae": 7.54275634512275,
+        "mae": 8.089349876459071,
+        "rmse": 29.829083825300465,
+        "width": 33.894230397515024,
+        "interval_score": 62.638885205969025,
+        "unique_days": 37
+      },
+      "composite_gain": {
+        "balanced": 0.030857146852844797,
+        "error_priority": 0.045738934735156,
+        "coverage_priority": 0.0335355393390816
+      },
+      "holiday_mae_gain": -0.1650433934329032
+    }
+  ],
+  "aggregate": {
+    "2017_only_no_calendar": {
+      "holiday_mae": 25.450300561094178,
+      "overall_mae": 15.228877797407316,
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      }
+    },
+    "2017_only_holiday_flag": {
+      "holiday_mae": 24.975080460837262,
+      "overall_mae": 14.732728404032246,
+      "composite_gain": {
+        "balanced": 0.008266830084056154,
+        "error_priority": 0.013979792225158216,
+        "coverage_priority": 0.006969452649774481
+      }
+    },
+    "expanded_no_calendar": {
+      "holiday_mae": 13.225595387158284,
+      "overall_mae": 9.13650201025822,
+      "composite_gain": {
+        "balanced": 0.09728802801239615,
+        "error_priority": 0.15753708007924608,
+        "coverage_priority": 0.06957001958281113
+      }
+    },
+    "expanded_holiday_flag": {
+      "holiday_mae": 10.734010924873234,
+      "overall_mae": 9.025147929286428,
+      "composite_gain": {
+        "balanced": 0.10520152026773548,
+        "error_priority": 0.16669585535002182,
+        "coverage_priority": 0.0819945573115145
+      }
+    }
+  },
+  "intermediates": [
+    {
+      "fold": 1,
+      "variant": "2017_only_holiday_flag",
+      "artifact": "models\\holiday_expansion_f1_2017_only_holiday_flag.joblib",
+      "artifact_sha256": "fa297edab836fd12d4623525cbb8263ac2788f5600fc9309ba0f554d61704cef",
+      "predictions": "data\\holiday_expansion_f1_2017_only_holiday_flag.csv",
+      "predictions_sha256": "a9d84b88b813d77f7e81251e403033ffa193b18b18e0c28c110fedcdde9fe61e",
+      "composite_gain": {
+        "balanced": 0.010841824781769094,
+        "error_priority": 0.021598470707566264,
+        "coverage_priority": 0.008687656301410551
+      },
+      "holiday_mae_gain": 0.013866199883267871
+    },
+    {
+      "fold": 1,
+      "variant": "expanded_no_calendar",
+      "artifact": "models\\holiday_expansion_f1_expanded_no_calendar.joblib",
+      "artifact_sha256": "983d357c8cb278cadd8a8b6bae2dc0c59eff0d5621eae63ffe637569835e2462",
+      "predictions": "data\\holiday_expansion_f1_expanded_no_calendar.csv",
+      "predictions_sha256": "77c9dda84c9a63b0cdbe88c83cec046999cdde06ee0c94abfe4fc8c8dfcf947a",
+      "composite_gain": {
+        "balanced": 0.2664157531931388,
+        "error_priority": 0.39264703550239777,
+        "coverage_priority": 0.23638813060095587
+      },
+      "holiday_mae_gain": 0.643074858812827
+    },
+    {
+      "fold": 1,
+      "variant": "expanded_holiday_flag",
+      "artifact": "models\\holiday_expansion_f1_expanded_holiday_flag.joblib",
+      "artifact_sha256": "8511b398306458b4b5842fb12a5de64783509b60437faf0feb04ae0f9062427a",
+      "predictions": "data\\holiday_expansion_f1_expanded_holiday_flag.csv",
+      "predictions_sha256": "92abd9556cdb5231717834bd2b7b844387a0b28fdbfed738ececd76c3058870f",
+      "composite_gain": {
+        "balanced": 0.267847039200799,
+        "error_priority": 0.39510311951863786,
+        "coverage_priority": 0.23857786131474645
+      },
+      "holiday_mae_gain": 0.7307720336495391
+    },
+    {
+      "fold": 2,
+      "variant": "2017_only_holiday_flag",
+      "artifact": "models\\holiday_expansion_f2_2017_only_holiday_flag.joblib",
+      "artifact_sha256": "d2c4ee434326c39c881c05bb84c899a0c17f10bab14ba3834437f2438374c944",
+      "predictions": "data\\holiday_expansion_f2_2017_only_holiday_flag.csv",
+      "predictions_sha256": "5193611e0af9499e8fdd6faa6ae6420fadb4d6c3f397beb60b7e03d68c2f2093",
+      "composite_gain": {
+        "balanced": 0.009937053160411713,
+        "error_priority": 0.01911912134441407,
+        "coverage_priority": 0.007754009460599232
+      },
+      "holiday_mae_gain": 0.140078317119251
+    },
+    {
+      "fold": 2,
+      "variant": "expanded_no_calendar",
+      "artifact": "models\\holiday_expansion_f2_expanded_no_calendar.joblib",
+      "artifact_sha256": "dca9514b498aa9cdac9282188c8275bc281804fbda788a05299346efebc361b6",
+      "predictions": "data\\holiday_expansion_f2_expanded_no_calendar.csv",
+      "predictions_sha256": "4bd5c99cfc8510253e6ffd01e60f63125b210d364b15d76d57d94952cddf40e7",
+      "composite_gain": {
+        "balanced": -0.01127804376975372,
+        "error_priority": 0.03344710060796685,
+        "coverage_priority": -0.06323588082558729
+      },
+      "holiday_mae_gain": 0.27035695260689874
+    },
+    {
+      "fold": 2,
+      "variant": "expanded_holiday_flag",
+      "artifact": "models\\holiday_expansion_f2_expanded_holiday_flag.joblib",
+      "artifact_sha256": "ce7ba7ba8545303562f6784e24216b4761a8629bae9eec37d8012a3885fa9d3b",
+      "predictions": "data\\holiday_expansion_f2_expanded_holiday_flag.csv",
+      "predictions_sha256": "a800464a5797a96989db243e52b5c45237897ca5d790bc9b62fb342bfa775f05",
+      "composite_gain": {
+        "balanced": 0.01690037474956263,
+        "error_priority": 0.05924551179627158,
+        "coverage_priority": -0.02612972871928454
+      },
+      "holiday_mae_gain": 0.5228464205829819
+    },
+    {
+      "fold": 3,
+      "variant": "2017_only_holiday_flag",
+      "artifact": "models\\holiday_expansion_f3_2017_only_holiday_flag.joblib",
+      "artifact_sha256": "3e32ac15e3471c8f5bcb7506f3747e964e77471e824c45e1026600ab18fc57ca",
+      "predictions": "data\\holiday_expansion_f3_2017_only_holiday_flag.csv",
+      "predictions_sha256": "387def8fc31d0057b1770ea1a5b72d072d135a66b9453ec03fef7262890876ae",
+      "composite_gain": {
+        "balanced": 0.004021612309987654,
+        "error_priority": 0.0012217846234943153,
+        "coverage_priority": 0.004466692187313659
+      },
+      "holiday_mae_gain": -0.2338222951311928
+    },
+    {
+      "fold": 3,
+      "variant": "expanded_no_calendar",
+      "artifact": "models\\holiday_expansion_f3_expanded_no_calendar.joblib",
+      "artifact_sha256": "80cba041474eea67dcb65cd0055b8f91e24135bdbc1c1647789a3c8bdc45e097",
+      "predictions": "data\\holiday_expansion_f3_expanded_no_calendar.csv",
+      "predictions_sha256": "a21239409a84146144cd2d3aaeb0ec66b12e4713f464b6a9130a9792b9c0d65d",
+      "composite_gain": {
+        "balanced": 0.03672637461380335,
+        "error_priority": 0.04651710412737364,
+        "coverage_priority": 0.03555780897306482
+      },
+      "holiday_mae_gain": 0.035251605048400525
+    },
+    {
+      "fold": 3,
+      "variant": "expanded_holiday_flag",
+      "artifact": "models\\holiday_expansion_f3_expanded_holiday_flag.joblib",
+      "artifact_sha256": "7bb3bded49ca9e9af9af7c2272502960460d7fd448ff323d76d5e5a2e57be0f0",
+      "predictions": "data\\holiday_expansion_f3_expanded_holiday_flag.csv",
+      "predictions_sha256": "16236103d2e611ee36063dfba55ba4a616e7ca27ba2d0df8433d07551fbae19e",
+      "composite_gain": {
+        "balanced": 0.030857146852844797,
+        "error_priority": 0.045738934735156,
+        "coverage_priority": 0.0335355393390816
+      },
+      "holiday_mae_gain": -0.1650433934329032
+    }
+  ],
+  "final_test_evaluated": false,
+  "champion_updated": false,
+  "replay_updated": false,
+  "limitations": [
+    "do not oversample duplicate dates as new holiday days",
+    "few unique evaluation holidays: exploratory only",
+    "evaluations before final15percent; no new blind-test claim",
+    "no champion/replay mutation"
+  ]
+}

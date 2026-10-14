@@ -1,0 +1,16 @@
+{
+  "status": "bounded_round_complete_no_worker_running",
+  "user_direction": "深入研究 一直研究 不断研究",
+  "latest_candidate": "Byron expanded2016 history plus federal-holiday proxy LightGBM CQR",
+  "frozen_rule": {"factor":0.5,"weather":"air_temperature_past","bounds":"training min/max only"},
+  "latest_evidence": "experiments/holiday_expansion.md",
+  "target": "at least2pct composite improvement; retain all intermediate improvements",
+  "retained_bundles": 37,
+  "main_building_2pct_all_scenarios": true,
+  "multibuilding_macro_2pct_all_scenarios": false,
+  "next_action": "confirm building-relevant holiday calendar and acquire more uninspected holiday dates; audit holiday coverage without retuning the evaluated three dates; retain all improving intermediate bundles",
+  "constraints": ["shadow only","no automatic controls","abstain handoff","do not claim independent validation from explored folds","local commits only"],
+  "open": ["independent uninspected evaluation data", "missing-weather behavior audit", "multi-building benefit heterogeneity"],
+  "champion_updated": false,
+  "replay_updated": false
+}

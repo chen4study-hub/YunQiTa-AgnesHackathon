@@ -1,0 +1,6 @@
+.responsive-dashboard .overview-status-word {
+  display: inline-block;
+  white-space: nowrap;
+  font: inherit;
+  color: inherit;
+}

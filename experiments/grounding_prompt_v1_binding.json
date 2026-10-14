@@ -1,0 +1,12 @@
+{
+  "plan_sha256": "16c4456cab04f164714e6d3f82da37013daa02eb0f89c646acc5eb0cce242660",
+  "baseline_orchestrator_sha256": "c1b254faf0cf6331953ad039d74c88ed539f6abec6db5c8cfa4cfce2586e6d13",
+  "current_code_sha256": {
+    "src/agent/orchestrator.py": "85bbf45dde8579e83a6f199b32e5daff67d99d859d2f5b36d2dab197fe7fd4cb",
+    "src/agent/provider.py": "0c4e541a4f0ca993ba5db196ec31623fbb28d6046504e1ca7c8b09e126bee53d",
+    "src/agent/numeric_prompt.py": "b1de4855a6a7d26363966fca6af408b0544ce6836e490bfcd3575c0f60975b7a",
+    "src/agent/selection.py": "d1351903f18cc341a9741fca3b9feb72986b9e7c0a7ec876e8dad654c053864a",
+    "src/agent/tools.py": "d7dd9527d4a8db4fed3ec915d204dc390578471fcc815a5c529c26e9055fa030",
+    "scripts/regress_grounding_prompt.py": "b915665d6ae5df81bfb865016032a5ebf02fb7a9e36947fa8b762a643b438f25"
+  }
+}

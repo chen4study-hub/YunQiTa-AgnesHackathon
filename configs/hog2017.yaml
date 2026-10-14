@@ -1,0 +1,30 @@
+seed: 42
+model:
+  kind: residual_lightgbm
+  version: hog2017-v1
+  n_estimators: 150
+  learning_rate: 0.05
+  num_leaves: 31
+features:
+  horizon_hours: 1
+  lags: [1, 24, 168]
+  rolling_windows: [24, 168]
+  weather: [air_temperature]
+  holidays: []
+conformal:
+  alpha: 0.095
+  scale_fraction: 0.65
+  min_scale: 0.001
+  rejection_fraction: 0.30
+  max_relative_width: 1.0
+  risk_weights: [0.70, 0.15, 0.10, 0.05]
+data:
+  frequency: 1h
+  timezone: UTC # relabel of naive wall-clock for demo; not a true UTC conversion
+  units: kWh
+  columns:
+    timestamp: timestamp
+    building_id: building_id
+    target: meter_reading
+    usage: primary_use
+    air_temperature: air_temperature

@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "changed_text_fields": {
+    "exports/buildings.json": 0,
+    "exports/model_card.json": 0,
+    "exports/replay/abstain.json": 1260,
+    "exports/replay/index.json": 0,
+    "exports/replay/normal.json": 1584,
+    "exports/replay/peak.json": 1534,
+    "exports/replay/sample.json": 0
+  },
+  "visible_strings_scanned": 5152,
+  "new_llm_calls": 0,
+  "new_dispatches": 0,
+  "nonprose_unchanged": true,
+  "before_sha256": {
+    "exports/buildings.json": "bb99ed8a4f97e1dcba79f1214a1a3f0461daca953f0e218da602c208262152af",
+    "exports/model_card.json": "c426e6a807be8e33e6cb97afe8df9101aa9e3ee20c03099e775405b0d1dab89b",
+    "exports/replay/abstain.json": "792fd3c275dc0aba93b90b5b8e3d2834ba151931c110f7cb271ef6c8482da554",
+    "exports/replay/index.json": "264457c6eee854807c4e1779137e596628f6253b3e3456fe6330de7acb014b06",
+    "exports/replay/normal.json": "98ac37c3bf2123c2ca9850d47d908d95618748162912ef5247170a548a2da3bb",
+    "exports/replay/peak.json": "e25fc277a81c3ca2ca4c2e141bdb67ef4b5d36c9d8398029afc8d5efa5b9f740",
+    "exports/replay/sample.json": "e1cfaea2f40a6445db71c19c9263a80cb3bb4998ba3b69f4a715462ea6478536"
+  },
+  "after_sha256": {
+    "normal.json": "c5663066dfb360af283bd006f842e63da2396f124bb35fe63f663af462cdd100",
+    "peak.json": "458f594fa44c56a0836edab0b22579c8f074f57d086b935db58475a58a8fd3d1",
+    "abstain.json": "a074105c36f0603c7599f256f35bcaf13a57c8c8b1668e8da01d028ceca64df1"
+  },
+  "source_counts": {
+    "exports/replay/normal.json": {
+      "before": {
+        "llm": 16,
+        "template": 8
+      },
+      "after": {
+        "llm": 16,
+        "template": 8
+      }
+    },
+    "exports/replay/peak.json": {
+      "before": {
+        "llm": 15,
+        "template": 7,
+        "rule": 2
+      },
+      "after": {
+        "llm": 15,
+        "template": 7,
+        "rule": 2
+      }
+    },
+    "exports/replay/abstain.json": {
+      "before": {
+        "llm": 11,
+        "template": 1,
+        "rule": 12
+      },
+      "after": {
+        "llm": 11,
+        "template": 1,
+        "rule": 12
+      }
+    }
+  },
+  "schema_valid": true,
+  "idempotent": true
+}

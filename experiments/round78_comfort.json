@@ -1,0 +1,224 @@
+{
+  "status": "passed",
+  "source_revision": "a5c8ae0",
+  "comparison": "identical daily10 point/upper forecasts and current-hour PV/tariff, same intersection of old/new accepted hours; totals not actual meter savings",
+  "scope": "24 current-hour commands, no repeated rolling-window sums",
+  "scenarios": {
+    "normal": {
+      "common_accepted_hours": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "before": {
+        "energy_cost_cny": 15666.638206747592,
+        "point_grid_peak_kw": 1083.4740000000002,
+        "upper_grid_peak_kw": 1102.5480000000002
+      },
+      "after": {
+        "energy_cost_cny": 16395.880296584146,
+        "point_grid_peak_kw": 1105.1510347339993,
+        "upper_grid_peak_kw": 1112.8136347339994
+      },
+      "delta": {
+        "energy_cost_cny": 729.2420898365544,
+        "point_grid_peak_kw": 21.677034733999108,
+        "upper_grid_peak_kw": 10.26563473399915
+      },
+      "percent_change": {
+        "energy_cost_cny": 4.654745199403854,
+        "point_grid_peak_kw": 2.000697269523699,
+        "upper_grid_peak_kw": 0.9310827949440048
+      },
+      "occupied_hourly_max_zone_c": [
+        25.7,
+        26.5,
+        27.0,
+        26.8,
+        27.0,
+        27.0,
+        27.0,
+        26.8,
+        27.0,
+        27.0,
+        26.8,
+        26.1,
+        25.9,
+        25.3
+      ],
+      "zone_histogram": {
+        "24.9": 2,
+        "25.0": 7,
+        "25.1": 1,
+        "25.3": 1,
+        "25.7": 1,
+        "25.9": 1,
+        "26.1": 1,
+        "26.5": 1,
+        "26.8": 3,
+        "27.0": 6
+      },
+      "temperature_alert_episodes": 0,
+      "temperature_candidates": []
+    },
+    "peak": {
+      "common_accepted_hours": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "before": {
+        "energy_cost_cny": 15935.892808811634,
+        "point_grid_peak_kw": 1085.1377,
+        "upper_grid_peak_kw": 1108.6641000000002
+      },
+      "after": {
+        "energy_cost_cny": 17471.017157462353,
+        "point_grid_peak_kw": 1193.777,
+        "upper_grid_peak_kw": 1215.8246
+      },
+      "delta": {
+        "energy_cost_cny": 1535.1243486507192,
+        "point_grid_peak_kw": 108.63930000000005,
+        "upper_grid_peak_kw": 107.16049999999973
+      },
+      "percent_change": {
+        "energy_cost_cny": 9.633124212544164,
+        "point_grid_peak_kw": 10.011568117115456,
+        "upper_grid_peak_kw": 9.665731938104582
+      },
+      "occupied_hourly_max_zone_c": [
+        26.2,
+        26.6,
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        26.6,
+        26.1,
+        27.0,
+        26.2
+      ],
+      "zone_histogram": {
+        "25.4": 7,
+        "25.8": 2,
+        "25.9": 1,
+        "26.1": 1,
+        "26.2": 2,
+        "26.6": 2,
+        "27.0": 9
+      },
+      "temperature_alert_episodes": 0,
+      "temperature_candidates": []
+    },
+    "abstain": {
+      "common_accepted_hours": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        20,
+        21,
+        22,
+        23
+      ],
+      "before": {
+        "energy_cost_cny": 5250.3886474472365,
+        "point_grid_peak_kw": 1022.1249497500002,
+        "upper_grid_peak_kw": 1038.2069497500004
+      },
+      "after": {
+        "energy_cost_cny": 5250.388685563001,
+        "point_grid_peak_kw": 1115.4039409477068,
+        "upper_grid_peak_kw": 1127.2289409477069
+      },
+      "delta": {
+        "energy_cost_cny": 3.8115764255053364e-05,
+        "point_grid_peak_kw": 93.27899119770666,
+        "upper_grid_peak_kw": 89.02199119770648
+      },
+      "percent_change": {
+        "energy_cost_cny": 7.259608247878191e-07,
+        "point_grid_peak_kw": 9.125987113466083,
+        "upper_grid_peak_kw": 8.574590183502707
+      },
+      "occupied_hourly_max_zone_c": [
+        26.0,
+        26.5,
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        26.9,
+        26.5,
+        25.5,
+        25.5,
+        25.9
+      ],
+      "zone_histogram": {
+        "25.3": 2,
+        "25.4": 5,
+        "25.5": 2,
+        "25.8": 2,
+        "25.9": 2,
+        "26.0": 1,
+        "26.5": 2,
+        "26.9": 1,
+        "27.0": 7
+      },
+      "temperature_alert_episodes": 0,
+      "temperature_candidates": []
+    }
+  },
+  "ops_read_only": true
+}

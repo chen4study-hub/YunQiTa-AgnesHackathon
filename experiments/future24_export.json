@@ -1,0 +1,65 @@
+{
+  "status": "completed",
+  "schema_version": "1.4",
+  "multi_horizon_model_version": "byron-blend24-monthly-v3",
+  "index_sha256": "a158661b0f781cfdb6aa96eeda17cddac0bec0f2227c3e07f26facceb062247d",
+  "export_sha256": {
+    "normal.json": "c213d568650047d948f8ef4d31ec8187501f2e373d969bf9ec5c8b4c82a4eeb6",
+    "peak.json": "44b79b8b890b44cd76f309d085b5ed81bcec4821137af9e645026bb2411b8204",
+    "abstain.json": "f877fa1dee70b28e5291ddc91d5dedc93546cb0a31a2cb793d9476ea71f76413"
+  },
+  "agent_records_preserved": true,
+  "thermal_sources": {
+    "chilledwater_cleaned.csv": {
+      "sha256": "8211aaf210379af50cbf7af87579d12414c3500d3e3f4dea725761c93a172bcd",
+      "bytes": 77005463,
+      "pointer_url": "https://raw.githubusercontent.com/buds-lab/building-data-genome-project-2/master/data/meters/cleaned/chilledwater_cleaned.csv"
+    },
+    "steam_cleaned.csv": {
+      "sha256": "ea5956c49ed1d6cc1b611a752b5a9dc3bcd4d45ddcd674e53b3c41661a6d3b9b",
+      "bytes": 45422530,
+      "pointer_url": "https://raw.githubusercontent.com/buds-lab/building-data-genome-project-2/master/data/meters/cleaned/steam_cleaned.csv"
+    }
+  },
+  "new_llm_calls": 0,
+  "agent_source_counts": {
+    "normal": {
+      "llm": 24
+    },
+    "peak": {
+      "llm": 22,
+      "rule": 2
+    },
+    "abstain": {
+      "llm": 12,
+      "rule": 12
+    }
+  },
+  "device_connected": false,
+  "note": "Current hour fields/Agent remain legacy historical1step; forecast_24h uses origin-causal direct24 cache. Floor estimates updated in both.",
+  "payload_schema_version": "1.5",
+  "agent_detail_sha256": {
+    "normal.agent-detail.json": "b16395d3189dc7b903dc54d57e2b263bbf469b9f3f8115eeab7a0e646ab5b248",
+    "peak.agent-detail.json": "08106a8f7101c1a419ef7beea861d59833ead5354f034f30a03e75b66e591652",
+    "abstain.agent-detail.json": "9016f87a4c179b87b5895452f9c53a5d77646a5f853db7e6ff049381164bfb5e"
+  },
+  "round77_offline_refresh": {
+    "receipt": "experiments/round77_export.json",
+    "new_llm_calls": 0,
+    "new_dispatches": 0,
+    "historical_attribution_preserved": true
+  },
+  "round78_daily_comfort_refresh": {
+    "receipt": "experiments/round78_export.json",
+    "new_llm_calls": 0,
+    "new_dispatches": 0,
+    "calibration": "byron-daily10-v1",
+    "zone_comfort_source": "src.ops.metrics.floor_rows"
+  },
+  "round79_operator_text": {
+    "receipt": "experiments/round79_wording_export.json",
+    "new_llm_calls": 0,
+    "new_dispatches": 0,
+    "nonprose_unchanged": true
+  }
+}

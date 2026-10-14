@@ -1,0 +1,12 @@
+[
+  {"id":"time","question":"现在几点","tools":["get_time"],"contains":["14:00"]},
+  {"id":"weather","question":"天气怎么样","tools":["get_weather"],"contains":["°C","%"]},
+  {"id":"energy","question":"当前能源怎么样","tools":["current_energy"],"contains":["kW"]},
+  {"id":"soc","question":"储能还剩多少电","tools":["current_state"],"contains":["%"]},
+  {"id":"peak","question":"未来24小时峰值什么时候","tools":["forecast_peak"],"contains":["kW",":"]},
+  {"id":"hvac","question":"空调调到24度能省多少钱","tools":["hvac_compare"],"contains":["°C","元","时段"],"args":{"hvac_compare":{"setpoint_c":24}}},
+  {"id":"energy_soc","question":"先查当前能源，再看储能还剩多少电","tools":["current_energy","current_state"],"contains":["kW","%"]},
+  {"id":"weather_time","question":"天气和现在时间分别是什么","tools":["get_weather","get_time"],"contains":["°C","%","14:00"]},
+  {"id":"knowledge","question":"请用两句话解释复利","tools":[],"contains":["利息"],"sentences":2},
+  {"id":"smalltalk","question":"你好，今天辛苦啦","tools":[],"contains":[],"excludes":["无法回答","范围","智能大楼"]}
+]

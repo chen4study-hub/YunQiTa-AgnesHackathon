@@ -1,0 +1,49 @@
+{
+  "test_start": "2017-01-01 00:00:00+00:00",
+  "scenarios": {
+    "normal": {
+      "date": "2017-10-23",
+      "month": 10,
+      "weekday": true,
+      "holiday": false,
+      "rejected": 0,
+      "mean_load": 999.0775,
+      "max_load": 1265.732,
+      "max_temp": 15.6,
+      "afternoon_dispatch": true,
+      "distance": 0.2852708333333567
+    },
+    "peak": {
+      "date": "2017-07-20",
+      "month": 7,
+      "weekday": true,
+      "holiday": false,
+      "rejected": 2,
+      "mean_load": 1060.8448333333333,
+      "max_load": 1337.874,
+      "max_temp": 31.1,
+      "afternoon_dispatch": true
+    },
+    "abstain": {
+      "date": "2017-07-04",
+      "month": 7,
+      "weekday": true,
+      "holiday": true,
+      "rejected": 12,
+      "mean_load": 910.498125,
+      "max_load": 1012.273,
+      "max_temp": 30.0,
+      "afternoon_dispatch": false,
+      "ten_refused": true,
+      "named_priority": 1
+    }
+  },
+  "campus_buildings": 84,
+  "peak_threshold_from_train": 1183.1648,
+  "main_profile": "CQR validation-selected, rho=0.15",
+  "campus_model": "Hog global monthly past-only recalibration",
+  "demo_model": "byron-expanded-holiday-monthly-v1",
+  "champion_updated": false,
+  "selection_rules": "peak Jul/Aug nonholiday weekday Tmax>=30C and upper-quartile maximum load, accepted afternoon load above past-trainP80; fewest rejected hours then load/temp/date; normal spring/autumn weekday near seasonal median load with fewest rejects; abstain actual federal observed date with1-23refusals, prefer10h refusal, then Independence/Thanksgiving, then most refused hours, earliest date",
+  "confidence": "99% past-only empirical isotonic coverage +1% inverse risk tie-break; full-gate rejection penalty; display score not coverage probability"
+}

@@ -1,0 +1,825 @@
+{
+  "selected": "latest_segmented",
+  "development_gate_passed": true,
+  "summary": {
+    "v1": {
+      "short": {
+        "n": 13242,
+        "issued_n": 13248,
+        "retained_n": 10189,
+        "retained_coverage": 0.9006772009029346,
+        "all_coverage": 0.880229572572119,
+        "rejection_rate": 0.2305542969339979,
+        "mae": 33.773195983633705,
+        "retained_mae": 27.875566312194803,
+        "persistence_mae": 58.39412769974323,
+        "retained_width": 124.4910937788532
+      },
+      "long": {
+        "n": 92442,
+        "issued_n": 92736,
+        "retained_n": 71557,
+        "retained_coverage": 0.902371535978311,
+        "all_coverage": 0.8894117392527207,
+        "rejection_rate": 0.22592544514398216,
+        "mae": 32.930953844210244,
+        "retained_mae": 27.558256976182044,
+        "persistence_mae": 178.01094850825382,
+        "retained_width": 138.98860223799855
+      },
+      "all": {
+        "n": 105684,
+        "issued_n": 105984,
+        "retained_n": 81746,
+        "retained_coverage": 0.9021603503535341,
+        "all_coverage": 0.8882612315960788,
+        "rejection_rate": 0.2265054312857197,
+        "mae": 33.03648514895122,
+        "retained_mae": 27.597807104930048,
+        "persistence_mae": 163.0231931134325,
+        "retained_width": 137.1816011163506
+      }
+    },
+    "latest_pooled": {
+      "short": {
+        "n": 13242,
+        "issued_n": 13248,
+        "retained_n": 11031,
+        "retained_coverage": 0.9134258000181307,
+        "all_coverage": 0.9083975230327745,
+        "rejection_rate": 0.16696873584050748,
+        "mae": 22.141892300439196,
+        "retained_mae": 19.41323339393338,
+        "persistence_mae": 58.39412769974323,
+        "retained_width": 133.78353035277573
+      },
+      "long": {
+        "n": 92442,
+        "issued_n": 92736,
+        "retained_n": 74408,
+        "retained_coverage": 0.8931700892377163,
+        "all_coverage": 0.8868155167564526,
+        "rejection_rate": 0.19508448540706605,
+        "mae": 31.71926722575046,
+        "retained_mae": 26.08928131157716,
+        "persistence_mae": 178.01094850825382,
+        "retained_width": 141.14117390854264
+      },
+      "all": {
+        "n": 105684,
+        "issued_n": 105984,
+        "retained_n": 85439,
+        "retained_coverage": 0.8957852971125598,
+        "all_coverage": 0.8895197002384467,
+        "rejection_rate": 0.1915616365769653,
+        "mae": 30.519240743397678,
+        "retained_mae": 25.22733905359745,
+        "persistence_mae": 163.0231931134325,
+        "retained_width": 140.1912310713879
+      }
+    },
+    "latest_segmented": {
+      "short": {
+        "n": 13242,
+        "issued_n": 13248,
+        "retained_n": 11100,
+        "retained_coverage": 0.8981981981981982,
+        "all_coverage": 0.8922368222322912,
+        "rejection_rate": 0.1617580425917535,
+        "mae": 14.567378676278356,
+        "retained_mae": 12.49899492047926,
+        "persistence_mae": 58.39412769974323,
+        "retained_width": 73.43166970439432
+      },
+      "long": {
+        "n": 92442,
+        "issued_n": 92736,
+        "retained_n": 73854,
+        "retained_coverage": 0.8876702683673193,
+        "all_coverage": 0.8808982929837087,
+        "rejection_rate": 0.20107743233595118,
+        "mae": 31.151298125572424,
+        "retained_mae": 25.912037938807895,
+        "persistence_mae": 178.01094850825382,
+        "retained_width": 138.6482258237517
+      },
+      "all": {
+        "n": 105684,
+        "issued_n": 105984,
+        "retained_n": 84954,
+        "retained_coverage": 0.8890458365703793,
+        "all_coverage": 0.8823189886832444,
+        "rejection_rate": 0.19615078914499828,
+        "mae": 29.07336521853302,
+        "retained_mae": 24.159503890929656,
+        "persistence_mae": 163.0231931134325,
+        "retained_width": 130.1270994150497
+      }
+    }
+  },
+  "monthly_rows": [
+    {
+      "month": "2016-07-01",
+      "v1": {
+        "short": {
+          "n": 2232,
+          "issued_n": 2232,
+          "retained_n": 1162,
+          "retained_coverage": 0.8752151462994836,
+          "all_coverage": 0.8817204301075269,
+          "rejection_rate": 0.47939068100358423,
+          "mae": 55.384168381153536,
+          "retained_mae": 44.15989108987989,
+          "persistence_mae": 53.662477598566305,
+          "retained_width": 149.469155022094
+        },
+        "long": {
+          "n": 15624,
+          "issued_n": 15624,
+          "retained_n": 8492,
+          "retained_coverage": 0.875765426283561,
+          "all_coverage": 0.8790962621607783,
+          "rejection_rate": 0.4564772145417307,
+          "mae": 53.14388811059783,
+          "retained_mae": 41.83322123254249,
+          "persistence_mae": 166.22577777777778,
+          "retained_width": 153.95551229523085
+        },
+        "all": {
+          "n": 17856,
+          "issued_n": 17856,
+          "retained_n": 9654,
+          "retained_coverage": 0.8756991920447483,
+          "all_coverage": 0.8794242831541219,
+          "rejection_rate": 0.4593413978494624,
+          "mae": 53.423923144417294,
+          "retained_mae": 42.11326995578945,
+          "persistence_mae": 152.15536525537635,
+          "retained_width": 153.4155136261419
+        }
+      },
+      "latest_pooled": {
+        "short": {
+          "n": 2232,
+          "issued_n": 2232,
+          "retained_n": 1967,
+          "retained_coverage": 0.9079816980172852,
+          "all_coverage": 0.8951612903225806,
+          "rejection_rate": 0.11872759856630824,
+          "mae": 33.900556320493344,
+          "retained_mae": 28.80767904640156,
+          "persistence_mae": 53.662477598566305,
+          "retained_width": 164.49685689272303
+        },
+        "long": {
+          "n": 15624,
+          "issued_n": 15624,
+          "retained_n": 13432,
+          "retained_coverage": 0.9059708159618821,
+          "all_coverage": 0.8649513568868408,
+          "rejection_rate": 0.1402969790066564,
+          "mae": 57.17377453399866,
+          "retained_mae": 39.54711144256992,
+          "persistence_mae": 166.22577777777778,
+          "retained_width": 156.83812274335892
+        },
+        "all": {
+          "n": 17856,
+          "issued_n": 17856,
+          "retained_n": 15399,
+          "retained_coverage": 0.906227677121891,
+          "all_coverage": 0.8687275985663082,
+          "rejection_rate": 0.1376008064516129,
+          "mae": 54.264622257310485,
+          "retained_mae": 38.17530395356005,
+          "persistence_mae": 152.15536525537635,
+          "retained_width": 157.81641549430375
+        }
+      },
+      "latest_segmented": {
+        "short": {
+          "n": 2232,
+          "issued_n": 2232,
+          "retained_n": 1728,
+          "retained_coverage": 0.8518518518518519,
+          "all_coverage": 0.8440860215053764,
+          "rejection_rate": 0.22580645161290322,
+          "mae": 24.150045620162405,
+          "retained_mae": 17.145104857468805,
+          "persistence_mae": 53.662477598566305,
+          "retained_width": 90.3517153427017
+        },
+        "long": {
+          "n": 15624,
+          "issued_n": 15624,
+          "retained_n": 12612,
+          "retained_coverage": 0.8596574690770694,
+          "all_coverage": 0.8378136200716846,
+          "rejection_rate": 0.19278033794162827,
+          "mae": 52.43404005534251,
+          "retained_mae": 39.512768356531545,
+          "persistence_mae": 166.22577777777778,
+          "retained_width": 152.0842104886765
+        },
+        "all": {
+          "n": 17856,
+          "issued_n": 17856,
+          "retained_n": 14340,
+          "retained_coverage": 0.8587168758716875,
+          "all_coverage": 0.838597670250896,
+          "rejection_rate": 0.19690860215053763,
+          "mae": 48.898540750945,
+          "retained_mae": 36.81741811061939,
+          "persistence_mae": 152.15536525537635,
+          "retained_width": 144.64531567610715
+        }
+      }
+    },
+    {
+      "month": "2016-08-01",
+      "v1": {
+        "short": {
+          "n": 2232,
+          "issued_n": 2232,
+          "retained_n": 1774,
+          "retained_coverage": 0.8742953776775648,
+          "all_coverage": 0.850358422939068,
+          "rejection_rate": 0.20519713261648745,
+          "mae": 34.16796822269486,
+          "retained_mae": 30.58532119903494,
+          "persistence_mae": 59.86669310035844,
+          "retained_width": 124.27983270614315
+        },
+        "long": {
+          "n": 15624,
+          "issued_n": 15624,
+          "retained_n": 11428,
+          "retained_coverage": 0.8651557577878894,
+          "all_coverage": 0.8582309267793139,
+          "rejection_rate": 0.2685611879160266,
+          "mae": 33.58981586806275,
+          "retained_mae": 29.788353033027246,
+          "persistence_mae": 182.779171530978,
+          "retained_width": 128.50424839007133
+        },
+        "all": {
+          "n": 17856,
+          "issued_n": 17856,
+          "retained_n": 13202,
+          "retained_coverage": 0.8663838812301167,
+          "all_coverage": 0.8572468637992832,
+          "rejection_rate": 0.26064068100358423,
+          "mae": 33.66208491239176,
+          "retained_mae": 29.895444498448978,
+          "persistence_mae": 167.41511172715056,
+          "retained_width": 127.93659853222493
+        }
+      },
+      "latest_pooled": {
+        "short": {
+          "n": 2232,
+          "issued_n": 2232,
+          "retained_n": 1819,
+          "retained_coverage": 0.9158878504672897,
+          "all_coverage": 0.9121863799283154,
+          "rejection_rate": 0.18503584229390682,
+          "mae": 24.712835381441494,
+          "retained_mae": 19.226856078090076,
+          "persistence_mae": 59.86669310035844,
+          "retained_width": 146.7162210855544
+        },
+        "long": {
+          "n": 15624,
+          "issued_n": 15624,
+          "retained_n": 10450,
+          "retained_coverage": 0.8403827751196172,
+          "all_coverage": 0.8578469022017409,
+          "rejection_rate": 0.3311571940604199,
+          "mae": 32.86438002183638,
+          "retained_mae": 27.05238335640702,
+          "persistence_mae": 182.779171530978,
+          "retained_width": 126.57030405717795
+        },
+        "all": {
+          "n": 17856,
+          "issued_n": 17856,
+          "retained_n": 12269,
+          "retained_coverage": 0.8515771456516423,
+          "all_coverage": 0.8646393369175627,
+          "rejection_rate": 0.31289202508960573,
+          "mae": 31.845436941787018,
+          "retained_mae": 25.892171919512524,
+          "persistence_mae": 167.41511172715056,
+          "retained_width": 129.5571345302904
+        }
+      },
+      "latest_segmented": {
+        "short": {
+          "n": 2232,
+          "issued_n": 2232,
+          "retained_n": 1844,
+          "retained_coverage": 0.9240780911062907,
+          "all_coverage": 0.9238351254480287,
+          "rejection_rate": 0.17383512544802868,
+          "mae": 13.081084147049346,
+          "retained_mae": 11.295509744866255,
+          "persistence_mae": 59.86669310035844,
+          "retained_width": 81.13553959070707
+        },
+        "long": {
+          "n": 15624,
+          "issued_n": 15624,
+          "retained_n": 10735,
+          "retained_coverage": 0.8514205868653936,
+          "all_coverage": 0.8607270865335381,
+          "rejection_rate": 0.31291602662570406,
+          "mae": 31.77719738609803,
+          "retained_mae": 28.917206010233805,
+          "persistence_mae": 182.779171530978,
+          "retained_width": 131.50369095352877
+        },
+        "all": {
+          "n": 17856,
+          "issued_n": 17856,
+          "retained_n": 12579,
+          "retained_coverage": 0.8620717068129422,
+          "all_coverage": 0.8686155913978495,
+          "rejection_rate": 0.2955309139784946,
+          "mae": 29.440183231216942,
+          "retained_mae": 26.333979369535996,
+          "persistence_mae": 167.41511172715056,
+          "retained_width": 124.1200459012159
+        }
+      }
+    },
+    {
+      "month": "2016-09-01",
+      "v1": {
+        "short": {
+          "n": 2160,
+          "issued_n": 2160,
+          "retained_n": 1805,
+          "retained_coverage": 0.9080332409972299,
+          "all_coverage": 0.8782407407407408,
+          "rejection_rate": 0.16435185185185186,
+          "mae": 33.29027886651074,
+          "retained_mae": 29.228481853155202,
+          "persistence_mae": 63.545040740740724,
+          "retained_width": 140.68328635918473
+        },
+        "long": {
+          "n": 15120,
+          "issued_n": 15120,
+          "retained_n": 12624,
+          "retained_coverage": 0.9207858048162231,
+          "all_coverage": 0.9097883597883598,
+          "rejection_rate": 0.16507936507936508,
+          "mae": 31.631404929852494,
+          "retained_mae": 29.56657083182984,
+          "persistence_mae": 187.51734636243384,
+          "retained_width": 168.9365199987666
+        },
+        "all": {
+          "n": 17280,
+          "issued_n": 17280,
+          "retained_n": 14429,
+          "retained_coverage": 0.9191905190934923,
+          "all_coverage": 0.9058449074074074,
+          "rejection_rate": 0.1649884259259259,
+          "mae": 31.838764171934773,
+          "retained_mae": 29.524277491577035,
+          "persistence_mae": 172.0208081597222,
+          "retained_width": 165.40217342454488
+        }
+      },
+      "latest_pooled": {
+        "short": {
+          "n": 2160,
+          "issued_n": 2160,
+          "retained_n": 1715,
+          "retained_coverage": 0.9177842565597668,
+          "all_coverage": 0.9171296296296296,
+          "rejection_rate": 0.20601851851851852,
+          "mae": 20.513726399572693,
+          "retained_mae": 19.082811526473666,
+          "persistence_mae": 63.545040740740724,
+          "retained_width": 139.58252616009003
+        },
+        "long": {
+          "n": 15120,
+          "issued_n": 15120,
+          "retained_n": 10226,
+          "retained_coverage": 0.9221592020340309,
+          "all_coverage": 0.9224867724867725,
+          "rejection_rate": 0.3236772486772487,
+          "mae": 25.13055505468626,
+          "retained_mae": 21.88248916826142,
+          "persistence_mae": 187.51734636243384,
+          "retained_width": 181.62128943999556
+        },
+        "all": {
+          "n": 17280,
+          "issued_n": 17280,
+          "retained_n": 11941,
+          "retained_coverage": 0.9215308600619714,
+          "all_coverage": 0.9218171296296296,
+          "rejection_rate": 0.30896990740740743,
+          "mae": 24.553451472797065,
+          "retained_mae": 21.480391592206985,
+          "persistence_mae": 172.0208081597222,
+          "retained_width": 175.58356403801602
+        }
+      },
+      "latest_segmented": {
+        "short": {
+          "n": 2160,
+          "issued_n": 2160,
+          "retained_n": 1889,
+          "retained_coverage": 0.9137109581789307,
+          "all_coverage": 0.9060185185185186,
+          "rejection_rate": 0.12546296296296297,
+          "mae": 15.333797511672048,
+          "retained_mae": 14.413654600295397,
+          "persistence_mae": 63.545040740740724,
+          "retained_width": 73.54632613039107
+        },
+        "long": {
+          "n": 15120,
+          "issued_n": 15120,
+          "retained_n": 11321,
+          "retained_coverage": 0.9288932073138415,
+          "all_coverage": 0.9230158730158731,
+          "rejection_rate": 0.25125661375661373,
+          "mae": 27.964011741974186,
+          "retained_mae": 24.270552535440427,
+          "persistence_mae": 187.51734636243384,
+          "retained_width": 169.6633310769745
+        },
+        "all": {
+          "n": 17280,
+          "issued_n": 17280,
+          "retained_n": 13210,
+          "retained_coverage": 0.9267221801665405,
+          "all_coverage": 0.9208912037037037,
+          "rejection_rate": 0.2355324074074074,
+          "mae": 26.385234963186416,
+          "retained_mae": 22.861038515797052,
+          "persistence_mae": 172.0208081597222,
+          "retained_width": 155.91881765198613
+        }
+      }
+    },
+    {
+      "month": "2016-10-01",
+      "v1": {
+        "short": {
+          "n": 2232,
+          "issued_n": 2232,
+          "retained_n": 1646,
+          "retained_coverage": 0.839003645200486,
+          "all_coverage": 0.7885304659498208,
+          "rejection_rate": 0.2625448028673835,
+          "mae": 24.580935076309142,
+          "retained_mae": 17.25902462204063,
+          "persistence_mae": 57.667426523297486,
+          "retained_width": 81.37867138459443
+        },
+        "long": {
+          "n": 15624,
+          "issued_n": 15624,
+          "retained_n": 11651,
+          "retained_coverage": 0.8202729379452407,
+          "all_coverage": 0.7885304659498208,
+          "rejection_rate": 0.25428827444956476,
+          "mae": 25.192433686745805,
+          "retained_mae": 17.99619708383308,
+          "persistence_mae": 180.084700140809,
+          "retained_width": 85.69055800932226
+        },
+        "all": {
+          "n": 17856,
+          "issued_n": 17856,
+          "retained_n": 13297,
+          "retained_coverage": 0.8225915620064677,
+          "all_coverage": 0.7885304659498208,
+          "rejection_rate": 0.25532034050179214,
+          "mae": 25.11599636044122,
+          "retained_mae": 17.904944480079575,
+          "persistence_mae": 164.78254093862006,
+          "retained_width": 85.15680111797066
+        }
+      },
+      "latest_pooled": {
+        "short": {
+          "n": 2232,
+          "issued_n": 2232,
+          "retained_n": 1838,
+          "retained_coverage": 0.9254624591947769,
+          "all_coverage": 0.928763440860215,
+          "rejection_rate": 0.17652329749103943,
+          "mae": 13.486331795984164,
+          "retained_mae": 13.483525818071536,
+          "persistence_mae": 57.667426523297486,
+          "retained_width": 130.77965432925583
+        },
+        "long": {
+          "n": 15624,
+          "issued_n": 15624,
+          "retained_n": 13801,
+          "retained_coverage": 0.805086587928411,
+          "all_coverage": 0.814900153609831,
+          "rejection_rate": 0.1166794674859191,
+          "mae": 21.76835665625926,
+          "retained_mae": 20.314139578782044,
+          "persistence_mae": 180.084700140809,
+          "retained_width": 115.85275224325773
+        },
+        "all": {
+          "n": 17856,
+          "issued_n": 17856,
+          "retained_n": 15639,
+          "retained_coverage": 0.819233966366136,
+          "all_coverage": 0.829133064516129,
+          "rejection_rate": 0.12415994623655914,
+          "mae": 20.733103548724873,
+          "retained_mae": 19.511360111285025,
+          "persistence_mae": 164.78254093862006,
+          "retained_width": 117.60706172813941
+        }
+      },
+      "latest_segmented": {
+        "short": {
+          "n": 2232,
+          "issued_n": 2232,
+          "retained_n": 1719,
+          "retained_coverage": 0.8987783595113438,
+          "all_coverage": 0.9023297491039427,
+          "rejection_rate": 0.22983870967741934,
+          "mae": 9.999373248661259,
+          "retained_mae": 9.415780670672698,
+          "persistence_mae": 57.667426523297486,
+          "retained_width": 64.08139411249536
+        },
+        "long": {
+          "n": 15624,
+          "issued_n": 15624,
+          "retained_n": 13564,
+          "retained_coverage": 0.8027867885579475,
+          "all_coverage": 0.8060035842293907,
+          "rejection_rate": 0.1318484383000512,
+          "mae": 22.16370291116634,
+          "retained_mae": 18.64279770653444,
+          "persistence_mae": 180.084700140809,
+          "retained_width": 111.36628150484303
+        },
+        "all": {
+          "n": 17856,
+          "issued_n": 17856,
+          "retained_n": 15283,
+          "retained_coverage": 0.813583720473729,
+          "all_coverage": 0.8180443548387096,
+          "rejection_rate": 0.1440972222222222,
+          "mae": 20.643161703353204,
+          "retained_mae": 17.60496205354443,
+          "persistence_mae": 164.78254093862006,
+          "retained_width": 106.04777588242298
+        }
+      }
+    },
+    {
+      "month": "2016-11-01",
+      "v1": {
+        "short": {
+          "n": 2160,
+          "issued_n": 2160,
+          "retained_n": 1931,
+          "retained_coverage": 0.9451061626100467,
+          "all_coverage": 0.9462962962962963,
+          "rejection_rate": 0.10601851851851851,
+          "mae": 25.794120672873518,
+          "retained_mae": 25.12399543246552,
+          "persistence_mae": 60.624893055555546,
+          "retained_width": 122.29132553434718
+        },
+        "long": {
+          "n": 15120,
+          "issued_n": 15120,
+          "retained_n": 13490,
+          "retained_coverage": 0.9439584877687176,
+          "all_coverage": 0.9446428571428571,
+          "rejection_rate": 0.1078042328042328,
+          "mae": 24.15555001460363,
+          "retained_mae": 22.16562368598791,
+          "persistence_mae": 182.9386615079365,
+          "retained_width": 130.88733943488128
+        },
+        "all": {
+          "n": 17280,
+          "issued_n": 17280,
+          "retained_n": 15421,
+          "retained_coverage": 0.944102198301018,
+          "all_coverage": 0.944849537037037,
+          "rejection_rate": 0.10758101851851852,
+          "mae": 24.360371346887366,
+          "retained_mae": 22.536067615852918,
+          "persistence_mae": 167.64944045138887,
+          "retained_width": 129.8109563960426
+        }
+      },
+      "latest_pooled": {
+        "short": {
+          "n": 2160,
+          "issued_n": 2160,
+          "retained_n": 1843,
+          "retained_coverage": 0.9272924579489962,
+          "all_coverage": 0.912962962962963,
+          "rejection_rate": 0.14675925925925926,
+          "mae": 19.04368139423003,
+          "retained_mae": 15.404632095623093,
+          "persistence_mae": 60.624893055555546,
+          "retained_width": 110.92328108447207
+        },
+        "long": {
+          "n": 15120,
+          "issued_n": 15120,
+          "retained_n": 13430,
+          "retained_coverage": 0.9692479523454952,
+          "all_coverage": 0.9527116402116402,
+          "rejection_rate": 0.11177248677248677,
+          "mae": 22.737435779668182,
+          "retained_mae": 19.32272422554641,
+          "persistence_mae": 182.9386615079365,
+          "retained_width": 131.8125085515989
+        },
+        "all": {
+          "n": 17280,
+          "issued_n": 17280,
+          "retained_n": 15273,
+          "retained_coverage": 0.9641851633601781,
+          "all_coverage": 0.9477430555555556,
+          "rejection_rate": 0.11614583333333334,
+          "mae": 22.27571648148841,
+          "retained_mae": 18.849926229380063,
+          "persistence_mae": 167.64944045138887,
+          "retained_width": 129.2917957759874
+        }
+      },
+      "latest_segmented": {
+        "short": {
+          "n": 2160,
+          "issued_n": 2160,
+          "retained_n": 1981,
+          "retained_coverage": 0.933871781928319,
+          "all_coverage": 0.9199074074074074,
+          "rejection_rate": 0.08287037037037037,
+          "mae": 12.007260976042346,
+          "retained_mae": 10.869947042632303,
+          "persistence_mae": 60.624893055555546,
+          "retained_width": 70.11076435597961
+        },
+        "long": {
+          "n": 15120,
+          "issued_n": 15120,
+          "retained_n": 13352,
+          "retained_coverage": 0.9591821449970042,
+          "all_coverage": 0.9395502645502646,
+          "rejection_rate": 0.11693121693121693,
+          "mae": 22.593638002097467,
+          "retained_mae": 18.294119266145493,
+          "persistence_mae": 182.9386615079365,
+          "retained_width": 128.53504906350352
+        },
+        "all": {
+          "n": 17280,
+          "issued_n": 17280,
+          "retained_n": 15333,
+          "retained_coverage": 0.9559120850453271,
+          "all_coverage": 0.9370949074074074,
+          "rejection_rate": 0.11267361111111111,
+          "mae": 21.270340873840574,
+          "retained_mae": 17.334927641885425,
+          "persistence_mae": 167.64944045138887,
+          "retained_width": 120.98672140384105
+        }
+      }
+    },
+    {
+      "month": "2016-12-01",
+      "v1": {
+        "short": {
+          "n": 2226,
+          "issued_n": 2232,
+          "retained_n": 1871,
+          "retained_coverage": 0.9428113308391235,
+          "all_coverage": 0.9384546271338724,
+          "rejection_rate": 0.15947888589398024,
+          "mae": 29.13627233607186,
+          "retained_mae": 26.06723273570792,
+          "persistence_mae": 55.227842318059295,
+          "retained_width": 133.75574482745532
+        },
+        "long": {
+          "n": 15330,
+          "issued_n": 15624,
+          "retained_n": 13872,
+          "retained_coverage": 0.9610726643598616,
+          "all_coverage": 0.9599478147423353,
+          "rejection_rate": 0.09510763209393347,
+          "mae": 29.482746354990034,
+          "retained_mae": 28.42999101411017,
+          "persistence_mae": 168.81256229615136,
+          "retained_width": 163.85273360179028
+        },
+        "all": {
+          "n": 17556,
+          "issued_n": 17856,
+          "retained_n": 15743,
+          "retained_coverage": 0.9589023693069936,
+          "all_coverage": 0.9572226019594441,
+          "rejection_rate": 0.1032695374800638,
+          "mae": 29.438815438715718,
+          "retained_mae": 28.149185529838388,
+          "persistence_mae": 154.41067196400093,
+          "retained_width": 160.2758126847617
+        }
+      },
+      "latest_pooled": {
+        "short": {
+          "n": 2226,
+          "issued_n": 2232,
+          "retained_n": 1849,
+          "retained_coverage": 0.8869659275283938,
+          "all_coverage": 0.8845462713387242,
+          "rejection_rate": 0.1693620844564241,
+          "mae": 21.038793423381282,
+          "retained_mae": 19.799103571882206,
+          "persistence_mae": 55.227842318059295,
+          "retained_width": 108.78061416898377
+        },
+        "long": {
+          "n": 15330,
+          "issued_n": 15624,
+          "retained_n": 13069,
+          "retained_coverage": 0.9143775346239192,
+          "all_coverage": 0.9117416829745597,
+          "rejection_rate": 0.14748858447488583,
+          "mae": 30.10851587016461,
+          "retained_mae": 27.831285940032163,
+          "persistence_mae": 168.81256229615136,
+          "retained_width": 141.2761494169382
+        },
+        "all": {
+          "n": 17556,
+          "issued_n": 17856,
+          "retained_n": 14918,
+          "retained_coverage": 0.9109800241319211,
+          "all_coverage": 0.9082934609250398,
+          "rejection_rate": 0.15026201868307132,
+          "mae": 28.9585271388739,
+          "retained_mae": 26.83574329365133,
+          "persistence_mae": 154.41067196400093,
+          "retained_width": 137.24851537259795
+        }
+      },
+      "latest_segmented": {
+        "short": {
+          "n": 2226,
+          "issued_n": 2232,
+          "retained_n": 1939,
+          "retained_coverage": 0.8628158844765343,
+          "all_coverage": 0.8584905660377359,
+          "rejection_rate": 0.1289308176100629,
+          "mae": 12.770017684809677,
+          "retained_mae": 12.035429009686112,
+          "persistence_mae": 55.227842318059295,
+          "retained_width": 62.5969488769679
+        },
+        "long": {
+          "n": 15330,
+          "issued_n": 15624,
+          "retained_n": 12270,
+          "retained_coverage": 0.9261613691931541,
+          "all_coverage": 0.9223091976516634,
+          "rejection_rate": 0.19960861056751467,
+          "mae": 29.566508096847517,
+          "retained_mae": 27.143072136393936,
+          "persistence_mae": 168.81256229615136,
+          "retained_width": 143.63627517261776
+        },
+        "all": {
+          "n": 17556,
+          "issued_n": 17856,
+          "retained_n": 14209,
+          "retained_coverage": 0.9175170666478992,
+          "all_coverage": 0.9142173615857826,
+          "rejection_rate": 0.1906470722260196,
+          "mae": 27.43680955178052,
+          "retained_mae": 25.081440774391936,
+          "persistence_mae": 154.41067196400093,
+          "retained_width": 132.57742136958692
+        }
+      }
+    }
+  ],
+  "plan_sha256": "da3f24f428477f7aa9133bd669f827bec0ff1b42b8162628f51ccab8f645b066"
+}

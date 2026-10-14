@@ -1,0 +1,338 @@
+/* About owns its reading rhythm; short desktops scroll main, never individual cards. */
+.responsive-dashboard .about-page.about-dense {
+  --about-padding: 12px;
+  height: max-content;
+  min-height: 0;
+  align-content: start;
+  align-items: start;
+  overflow: visible;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 1fr);
+  grid-template-rows: max-content max-content max-content;
+  gap: 12px;
+  line-height: 1.55;
+}
+.responsive-dashboard .about-dense > .card {
+  height: auto;
+  min-height: 0;
+  padding: var(--about-padding);
+  overflow: visible;
+  line-height: 1.55;
+}
+.responsive-dashboard .about-dense .about-card-body {
+  min-width: 0;
+}
+.responsive-dashboard .about-dense .about-card-body > * {
+  margin-block: 12px 0;
+  margin-inline: 0;
+}
+.responsive-dashboard .about-dense .about-card-body > :first-child {
+  margin-top: 0;
+}
+.responsive-dashboard .about-dense .about-card-body > :is(h1, h2) + * {
+  margin-top: 8px;
+}
+.responsive-dashboard .about-dense :is(h1, h2) {
+  font-size: var(--font-title);
+  line-height: 1.5;
+}
+.responsive-dashboard .about-dense :is(p, dt, dd, li, a, span, small) {
+  font-size: var(--font-body);
+  line-height: 1.55;
+}
+.responsive-dashboard .about-dense p {
+  margin-block: 4px;
+}
+.responsive-dashboard .about-dense h3 {
+  font-size: var(--font-body);
+  line-height: 1.55;
+  margin-block: 0 8px;
+  color: #dceaf1;
+}
+.responsive-dashboard .about-dense .about-logo {
+  width: 210px;
+  height: auto;
+}
+.responsive-dashboard .about-dense .agh-logo {
+  width: 30px;
+  height: 30px;
+}
+.responsive-dashboard .about-dense .agh-credit {
+  gap: 8px;
+}
+.responsive-dashboard .about-dense .about-selling {
+  padding-left: 18px;
+  display: grid;
+  gap: 4px;
+}
+.responsive-dashboard .about-dense :is(.about-build, .about-data-scale) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+.responsive-dashboard .about-dense :is(.about-build, .about-data-scale) > div {
+  padding: 6px 8px;
+  background: #10232f;
+  min-width: 0;
+}
+.responsive-dashboard .about-dense dt {
+  color: #8597a3;
+}
+.responsive-dashboard .about-dense dd {
+  margin-inline-start: 0;
+  overflow-wrap: anywhere;
+  color: #dceaf1;
+}
+.responsive-dashboard .about-dense .about-build > .about-source {
+  grid-column: 1 / -1;
+}
+.responsive-dashboard .about-dense .about-source a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--font-body);
+  overflow-wrap: anywhere;
+  color: var(--cyan, #4fd1d9);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.responsive-dashboard .about-dense .architecture-flow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  padding: 0;
+  list-style: none;
+  gap: 6px;
+}
+.responsive-dashboard .about-dense .architecture-flow li {
+  flex: 1;
+  border: 1px solid #397789;
+  background: #102430;
+  padding: 6px 2px;
+  text-align: center;
+  color: #4fd1d9;
+}
+.responsive-dashboard .about-dense .architecture-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px 12px;
+}
+.responsive-dashboard .about-dense .architecture-details > div {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  align-items: start;
+  gap: 8px;
+  border-bottom: 1px solid #24384a;
+  padding-bottom: 4px;
+}
+.responsive-dashboard .about-dense .architecture-details dt {
+  color: #dceaf1;
+  white-space: nowrap;
+}
+.responsive-dashboard .about-dense .architecture-details em {
+  color: #4fd1d9;
+  font-style: normal;
+  margin-right: 7px;
+  font-variant-numeric: tabular-nums;
+}
+.responsive-dashboard .about-dense .about-boundary {
+  border-left: 2px solid #e5be6a;
+  padding-left: 8px;
+}
+.responsive-dashboard .about-dense .about-boundary b {
+  display: block;
+  line-height: 1.55;
+}
+.responsive-dashboard .about-dense .about-access-notes {
+  display: grid;
+  gap: 6px;
+}
+.responsive-dashboard .about-dense .about-access-notes p {
+  margin-block: 0 4px;
+}
+.responsive-dashboard .about-dense .about-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+.responsive-dashboard .about-dense .about-metrics div {
+  padding: 6px;
+  min-width: 0;
+}
+.responsive-dashboard .about-dense .about-metrics b {
+  font-size: var(--font-title);
+  line-height: 1.55;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+.responsive-dashboard .about-page.about-dense .model-version {
+  font-size: var(--font-note) !important;
+}
+.responsive-dashboard .about-dense .about-work {
+  display: grid;
+  gap: 6px 12px;
+}
+.responsive-dashboard .about-dense .about-work dt {
+  color: #4fd1d9;
+}
+.responsive-dashboard .about-dense .about-work dd {
+  margin-top: 4px;
+}
+.responsive-dashboard .about-dense .about-license a {
+  min-width: 36px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  overflow-wrap: anywhere;
+}
+.responsive-dashboard .about-dense .license-link {
+  padding: 6px 8px;
+  width: fit-content;
+}
+.responsive-dashboard .about-dense .about-rate-chart {
+  padding: 10px;
+  background: #10232f;
+  border: 1px solid #24384a;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.responsive-dashboard .about-dense figcaption {
+  font-size: var(--font-note);
+  line-height: 1.55;
+  color: #dceaf1;
+}
+.responsive-dashboard .about-dense .about-rate-row > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.responsive-dashboard .about-dense .about-rate-row b {
+  font: var(--font-note)/1.55 "JetBrains Mono";
+  color: #4fd1d9;
+}
+.responsive-dashboard .about-dense .about-rate-track {
+  height: 7px;
+  background: #24384a;
+  overflow: hidden;
+}
+.responsive-dashboard .about-dense .about-rate-track i {
+  display: block;
+  height: 100%;
+  background: #4fd1d9;
+}
+.responsive-dashboard .about-dense .about-rate-row:nth-of-type(2) i {
+  background: #e5be6a;
+}
+@media (min-width: 1181px) {
+  .responsive-dashboard .about-dense .architecture-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .responsive-dashboard .about-dense .architecture-details > div {
+    grid-template-columns: 80px minmax(0, 1fr);
+  }
+  .responsive-dashboard .about-dense .about-access-notes {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 12px;
+  }
+  .responsive-dashboard .about-dense .about-work {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .responsive-dashboard .about-dense .about-build {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .responsive-dashboard .about-dense .about-rate-chart {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .responsive-dashboard .about-dense .about-rate-chart :is(figcaption, small) {
+    grid-column: 1 / -1;
+  }
+  .responsive-dashboard .about-dense .about-rate-row > div:first-child {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+@media (min-width: 1600px) {
+  .responsive-dashboard .about-page.about-dense {
+    --about-padding: 16px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .responsive-dashboard .about-page.about-dense {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .responsive-dashboard .about-dense > .card {
+    grid-row: auto;
+    grid-column: auto !important;
+  }
+}
+@media (max-width: 600px) {
+  .responsive-dashboard .about-dense .about-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .responsive-dashboard .about-dense .about-logo {
+    width: 180px;
+  }
+}
+
+/* Paragraphs can stack before narrow columns create orphaned final characters. */
+@media (max-width: 1650px) {
+  .responsive-dashboard .about-dense .about-access-notes {
+    grid-template-columns: 1fr;
+  }
+}
+.responsive-dashboard .about-dense .about-access-notes p {
+  text-wrap: pretty;
+}
+.responsive-dashboard .about-dense .about-card-body {
+  display: flow-root;
+}
+/* The model spans the two lower rows; correspondence fills the right-hand gap. */
+@media (min-width: 1181px) {
+  .responsive-dashboard .about-dense > .about-model {
+    grid-row: 2 / 4;
+  }
+  .responsive-dashboard .about-dense > .about-correspondence {
+    grid-column: 2 / 4;
+    grid-row: 3;
+  }
+}
+.responsive-dashboard .about-dense .about-correspondence-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 20px;
+}
+.responsive-dashboard .about-dense .about-correspondence-list > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  align-items: start;
+  padding-block: 6px;
+  border-bottom: 1px solid #24384a;
+}
+.responsive-dashboard .about-dense .about-correspondence-list dt {
+  color: #4fd1d9;
+}
+@media (max-width: 1180px) {
+  .responsive-dashboard .about-dense .about-correspondence-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .responsive-dashboard .about-dense .about-correspondence-list > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+/* Wide desktops have room for one metric strip, not two stacked rows. */
+@media (min-width: 2200px) {
+  .responsive-dashboard .about-dense .about-metrics {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}

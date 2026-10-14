@@ -1,0 +1,4054 @@
+{
+  "kind": "full",
+  "switch": "on",
+  "source_hash": {
+    "src/api/app.py": "84e71bab041777869f246860204529e1da2e71e4b96e9152c91ad004b50bc18e",
+    "src/agent/agent_runner.py": "c000f332fcf7bd27b14c9b9ea98bbdba9f2bc7e917bef24e9a8d6b33b1748d7f",
+    "src/agent/agent_provider.py": "07f63023152da79d093d57088442fa2eb6fe39ddcf03d19f41534ea9cb90c5fa",
+    "src/agent/agent_tools.py": "9b640b0bc9b52450be9608e751133c760d212ca6698b22738262b7c77e261119",
+    "src/agent/agent_validation.py": "324fc55b94533e311e9727a9de7aee1a48a6780036333e252306c7de57a2c481",
+    "tests/building_chat_cases.json": "dccb868255eabb22041971894f4e08a66f737043c9fc91cd71c761cac233d127",
+    "probe.py": "ef19dd6508c7b1f6ffb8872a69ce40704489adfced650ec8adc03433fccd7f0e",
+    "multi_cases.json": "d045f887ac6c765d97dceddc51c97c01841c84de004a2802ddb7eeb4e3011644",
+    "src/agent/chat_progress.py": "c9d51777d96455296d4322f0ac885411c5397a61d004aa5c5a51397308f56ad6",
+    "src/agent/building_tools.py": "669183dbc365e9b1261223aed095340677790478e4f88230165323fa2bc1a605",
+    "src/agent/chat_router.py": "5b3a1a651bc176cb33b9bf924b90a0499e6a042ee0f75781345063a69160e4c6",
+    "src/agent/chat_sentence_stream.py": "9760615002f6cb0dff7bf24f633f806155f29edb7c0e3c6030cbbb62ec845e17",
+    "src/agent/chat_topic_hook.py": "0bbc5f2b552e9bf6bcfaa8dacfa09b57f2556ac745ea7fc5061eda274fdbe77c",
+    "src/agent/tariff_periods.py": "a650c492fa5871800a070c526d070fc88a44885de85422ab68df724007945edf",
+    "experiments/agent_v3_20261013/v3_fix_cases.json": "528ab4eebe1b3134db33e32c08540df9294949613cfbdd5c07a82d3b60c82e1b"
+  },
+  "results": [
+    {
+      "index": 0,
+      "question": "今天用了多少电",
+      "answer": "这次未能取得可用的查询结果，请稍后再试。",
+      "tools": [
+        "more_tools"
+      ],
+      "duration_ms": 24500.0,
+      "first_answer_ms": 24500.0,
+      "correct_with_evidence": false,
+      "success_within_15s": false,
+      "finished_within_15s": false,
+      "done": {
+        "type": "done",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "template",
+        "mode": "fallback",
+        "reason": "no_data",
+        "llm_reason": "first_token_timeout",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 10000.0,
+            "reason": "first_token_timeout",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 18094.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 6297.0,
+            "reason": "first_token_timeout",
+            "post_tool": true
+          }
+        ],
+        "session_id": "2c74b73af9964a7b93eff460aafa9d9c",
+        "context_id": null,
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 7297.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": null,
+          "total_ms": 10000.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 0
+        },
+        {
+          "first_response_ms": 8094.0,
+          "total_ms": 8094.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 353
+        },
+        {
+          "first_response_ms": null,
+          "total_ms": 6297.0,
+          "tool_count": 11,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "pv_generation",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 0
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1063.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4063.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6063.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8063.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10063.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11,
+          "received_ms": 11047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12,
+          "received_ms": 12063.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13,
+          "received_ms": 13047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14,
+          "received_ms": 14047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15,
+          "received_ms": 15063.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 16 秒",
+          "elapsed_seconds": 16,
+          "received_ms": 16047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 17 秒",
+          "elapsed_seconds": 17,
+          "received_ms": 17047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 18 秒",
+          "elapsed_seconds": 18,
+          "received_ms": 18047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 19 秒",
+          "elapsed_seconds": 19,
+          "received_ms": 19047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 20 秒",
+          "elapsed_seconds": 20,
+          "received_ms": 20063.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 21 秒",
+          "elapsed_seconds": 21,
+          "received_ms": 21047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 22 秒",
+          "elapsed_seconds": 22,
+          "received_ms": 22047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 23 秒",
+          "elapsed_seconds": 23,
+          "received_ms": 23063.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 24 秒",
+          "elapsed_seconds": 24,
+          "received_ms": 24047.0
+        }
+      ],
+      "started_utc": "2026-10-13T08:46:21.933050+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 16 秒",
+          "elapsed_seconds": 16
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 17 秒",
+          "elapsed_seconds": 17
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 18 秒",
+          "elapsed_seconds": 18
+        },
+        {
+          "type": "tool_start",
+          "id": "f84882c659054013bd7058c492563a66",
+          "tool": "more_tools",
+          "args": {
+            "category": "energy"
+          },
+          "name": "更多查询工具"
+        },
+        {
+          "type": "tool_end",
+          "id": "f84882c659054013bd7058c492563a66",
+          "tool": "more_tools",
+          "ms": 0.0,
+          "summary": "更多查询工具查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 19 秒",
+          "elapsed_seconds": 19
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 20 秒",
+          "elapsed_seconds": 20
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 21 秒",
+          "elapsed_seconds": 21
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 22 秒",
+          "elapsed_seconds": 22
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 23 秒",
+          "elapsed_seconds": 23
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 24 秒",
+          "elapsed_seconds": 24
+        },
+        {
+          "type": "answer_delta",
+          "text": "这次未能取得可用的查询结果，请稍后再试。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "done",
+          "known": false,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "template",
+          "mode": "fallback",
+          "reason": "no_data",
+          "llm_reason": "first_token_timeout",
+          "phase_timings": [
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 10000.0,
+              "reason": "first_token_timeout",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 18094.0,
+              "reason": "completed",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 2,
+              "elapsed_ms": 6297.0,
+              "reason": "first_token_timeout",
+              "post_tool": true
+            }
+          ],
+          "session_id": "2c74b73af9964a7b93eff460aafa9d9c",
+          "context_id": null,
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 7297.0
+          }
+        }
+      ],
+      "original_index": 0,
+      "model_correct": false,
+      "template_answer": true,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 1,
+      "question": "今日累计用电量",
+      "answer": "这次未能取得可用的查询结果，请稍后再试。",
+      "tools": [
+        "more_tools"
+      ],
+      "duration_ms": 12922.0,
+      "first_answer_ms": 12922.0,
+      "correct_with_evidence": false,
+      "success_within_15s": false,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "template",
+        "mode": "fallback",
+        "reason": "no_data",
+        "llm_reason": "first_token_timeout",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 2875.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 10000.0,
+            "reason": "first_token_timeout",
+            "post_tool": true
+          }
+        ],
+        "session_id": "4fef452bdc874f42a50c14e826eb3fb2",
+        "context_id": null,
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 6438.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 2828.0,
+          "total_ms": 2875.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 353
+        },
+        {
+          "first_response_ms": null,
+          "total_ms": 10000.0,
+          "tool_count": 11,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "pv_generation",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 2
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11,
+          "received_ms": 11000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12,
+          "received_ms": 12000.0
+        }
+      ],
+      "started_utc": "2026-10-13T08:46:46.429570+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "tool_start",
+          "id": "82d7b27ad67e4b569bf8a916d15f30b7",
+          "tool": "more_tools",
+          "args": {
+            "category": "energy"
+          },
+          "name": "更多查询工具"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "tool_end",
+          "id": "82d7b27ad67e4b569bf8a916d15f30b7",
+          "tool": "more_tools",
+          "ms": 0.0,
+          "summary": "更多查询工具查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12
+        },
+        {
+          "type": "answer_delta",
+          "text": "这次未能取得可用的查询结果，请稍后再试。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "done",
+          "known": false,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "template",
+          "mode": "fallback",
+          "reason": "no_data",
+          "llm_reason": "first_token_timeout",
+          "phase_timings": [
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 2875.0,
+              "reason": "completed",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 2,
+              "elapsed_ms": 10000.0,
+              "reason": "first_token_timeout",
+              "post_tool": true
+            }
+          ],
+          "session_id": "4fef452bdc874f42a50c14e826eb3fb2",
+          "context_id": null,
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 6438.0
+          }
+        }
+      ],
+      "original_index": 1,
+      "model_correct": false,
+      "template_answer": true,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 2,
+      "question": "近3天总用电和电费",
+      "answer": "最近 3 天（截至今天 14:00），用电 59,469.9 kWh，电费 49,907.2 元。",
+      "tools": [
+        "more_tools",
+        "energy_totals"
+      ],
+      "duration_ms": 18625.0,
+      "first_answer_ms": 18625.0,
+      "correct_with_evidence": true,
+      "success_within_15s": false,
+      "finished_within_15s": false,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "template",
+        "mode": "fallback",
+        "reason": "answered",
+        "llm_reason": "agent_deadline",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 6203.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 2343.0,
+            "reason": "completed",
+            "post_tool": true
+          },
+          {
+            "phase": "agent_decision",
+            "step": 3,
+            "elapsed_ms": 10000.0,
+            "reason": "agent_deadline",
+            "post_tool": true
+          }
+        ],
+        "session_id": "546e8c75d13249529629a8c9b7fbb234",
+        "context_id": "76cfd3bce1254d248a2f7bac1b551ab9",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 5828.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 6094.0,
+          "total_ms": 6203.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 353
+        },
+        {
+          "first_response_ms": 1250.0,
+          "total_ms": 2343.0,
+          "tool_count": 11,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "pv_generation",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 468
+        },
+        {
+          "first_response_ms": 6640.0,
+          "total_ms": 10000.0,
+          "tool_count": 11,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "pv_generation",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "agent_deadline",
+          "complete": false,
+          "output_chars": 467
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11,
+          "received_ms": 11015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12,
+          "received_ms": 12000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13,
+          "received_ms": 13015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14,
+          "received_ms": 14000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15,
+          "received_ms": 15015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 16 秒",
+          "elapsed_seconds": 16,
+          "received_ms": 16015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 17 秒",
+          "elapsed_seconds": 17,
+          "received_ms": 17000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 18 秒",
+          "elapsed_seconds": 18,
+          "received_ms": 18000.0
+        }
+      ],
+      "started_utc": "2026-10-13T08:46:59.364985+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "tool_start",
+          "id": "2d915a69739a48c89edfc22a167c6045",
+          "tool": "more_tools",
+          "args": {
+            "category": "energy"
+          },
+          "name": "更多查询工具"
+        },
+        {
+          "type": "tool_end",
+          "id": "2d915a69739a48c89edfc22a167c6045",
+          "tool": "more_tools",
+          "ms": 0.0,
+          "summary": "更多查询工具查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "tool_start",
+          "id": "46aa9a34047e4347acdb0bc26529c3fc",
+          "tool": "energy_totals",
+          "args": {
+            "days": 3,
+            "scope": "cumulative"
+          },
+          "name": "用电与电费"
+        },
+        {
+          "type": "tool_end",
+          "id": "46aa9a34047e4347acdb0bc26529c3fc",
+          "tool": "energy_totals",
+          "ms": 32.0,
+          "summary": "用电与电费查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 16 秒",
+          "elapsed_seconds": 16
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 17 秒",
+          "elapsed_seconds": 17
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 18 秒",
+          "elapsed_seconds": 18
+        },
+        {
+          "type": "answer_delta",
+          "text": "最近 3 天（截至今天 14:00），用电 59,469.9 kWh，电费 49,907.2 元。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "template",
+          "mode": "fallback",
+          "reason": "answered",
+          "llm_reason": "agent_deadline",
+          "phase_timings": [
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 6203.0,
+              "reason": "completed",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 2,
+              "elapsed_ms": 2343.0,
+              "reason": "completed",
+              "post_tool": true
+            },
+            {
+              "phase": "agent_decision",
+              "step": 3,
+              "elapsed_ms": 10000.0,
+              "reason": "agent_deadline",
+              "post_tool": true
+            }
+          ],
+          "session_id": "546e8c75d13249529629a8c9b7fbb234",
+          "context_id": "76cfd3bce1254d248a2f7bac1b551ab9",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 5828.0
+          }
+        }
+      ],
+      "original_index": 7,
+      "model_correct": false,
+      "template_answer": true,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 3,
+      "question": "2026-10-10电费是多少",
+      "answer": "10 月 10 日全天电费 21,092.5 元。",
+      "tools": [
+        "more_tools",
+        "energy_totals"
+      ],
+      "duration_ms": 10344.0,
+      "first_answer_ms": 10344.0,
+      "correct_with_evidence": false,
+      "success_within_15s": false,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 2203.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 4968.0,
+            "reason": "completed",
+            "post_tool": true
+          },
+          {
+            "phase": "agent_decision",
+            "step": 3,
+            "elapsed_ms": 1891.0,
+            "reason": "completed",
+            "post_tool": true
+          },
+          {
+            "phase": "agent_decision",
+            "step": 4,
+            "elapsed_ms": 1234.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "5ec9b09e9d9341d9b0c8c3df0a552c09",
+        "context_id": "2025291ff3ca4301840c809ed652afda",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 2032.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 2078.0,
+          "total_ms": 2203.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 353
+        },
+        {
+          "first_response_ms": 4703.0,
+          "total_ms": 4968.0,
+          "tool_count": 11,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "pv_generation",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 445
+        },
+        {
+          "first_response_ms": 1531.0,
+          "total_ms": 1891.0,
+          "tool_count": 11,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "pv_generation",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 72
+        },
+        {
+          "first_response_ms": 765.0,
+          "total_ms": 1234.0,
+          "tool_count": 11,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "pv_generation",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 63
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10016.0
+        }
+      ],
+      "started_utc": "2026-10-13T08:47:18.003253+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "tool_start",
+          "id": "f09d4200f6494a3bb471f9edac38f9f9",
+          "tool": "more_tools",
+          "args": {
+            "category": "energy"
+          },
+          "name": "更多查询工具"
+        },
+        {
+          "type": "tool_end",
+          "id": "f09d4200f6494a3bb471f9edac38f9f9",
+          "tool": "more_tools",
+          "ms": 0.0,
+          "summary": "更多查询工具查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "tool_start",
+          "id": "cd070f249dfb4d608df7a4723c42b88f",
+          "tool": "energy_totals",
+          "args": {
+            "date": "2026-10-10",
+            "scope": "current"
+          },
+          "name": "用电与电费"
+        },
+        {
+          "type": "tool_end",
+          "id": "cd070f249dfb4d608df7a4723c42b88f",
+          "tool": "energy_totals",
+          "ms": 16.0,
+          "summary": "用电与电费查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "answer_delta",
+          "text": "10 月 10 日全天电费 21,092.5 元。",
+          "sentence_source": "llm"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "llm",
+          "mode": "llm",
+          "reason": "answered",
+          "llm_reason": "agent_completed",
+          "phase_timings": [
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 2203.0,
+              "reason": "completed",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 2,
+              "elapsed_ms": 4968.0,
+              "reason": "completed",
+              "post_tool": true
+            },
+            {
+              "phase": "agent_decision",
+              "step": 3,
+              "elapsed_ms": 1891.0,
+              "reason": "completed",
+              "post_tool": true
+            },
+            {
+              "phase": "agent_decision",
+              "step": 4,
+              "elapsed_ms": 1234.0,
+              "reason": "completed",
+              "post_tool": true
+            }
+          ],
+          "session_id": "5ec9b09e9d9341d9b0c8c3df0a552c09",
+          "context_id": "2025291ff3ca4301840c809ed652afda",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 2032.0
+          }
+        }
+      ],
+      "original_index": 8,
+      "model_correct": false,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 4,
+      "question": "现在空调用电占多少",
+      "answer": "当前空调用电为 170.6 kW，占整栋瞬时负荷 13.6%。",
+      "tools": [
+        "current_energy",
+        "more_tools",
+        "more_tools",
+        "end_use"
+      ],
+      "duration_ms": 9578.0,
+      "first_answer_ms": 9578.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 4625.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 3156.0,
+            "reason": "completed",
+            "post_tool": true
+          },
+          {
+            "phase": "agent_decision",
+            "step": 3,
+            "elapsed_ms": 1750.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "9c7acefc6ffc4521b9ac6f328be4f44a",
+        "context_id": "f338b298c4834079bfa824ffeda083b1",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 6515.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 1360.0,
+          "total_ms": 4625.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 970
+        },
+        {
+          "first_response_ms": 3125.0,
+          "total_ms": 3156.0,
+          "tool_count": 13,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "floor_state",
+            "pv_generation",
+            "building_state",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 418
+        },
+        {
+          "first_response_ms": 922.0,
+          "total_ms": 1750.0,
+          "tool_count": 13,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "floor_state",
+            "pv_generation",
+            "building_state",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 77
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6031.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9016.0
+        }
+      ],
+      "started_utc": "2026-10-13T08:47:28.357934+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "tool_start",
+          "id": "fdde8ae9022344f585a46455bddfee23",
+          "tool": "current_energy",
+          "args": {},
+          "name": "当前能源"
+        },
+        {
+          "type": "tool_start",
+          "id": "86dae8a11d124fbfbd9d4dba20531425",
+          "tool": "more_tools",
+          "args": {
+            "category": "building"
+          },
+          "name": "更多查询工具"
+        },
+        {
+          "type": "tool_start",
+          "id": "ef3dd85038ca4a0482aa66b2330f01d9",
+          "tool": "more_tools",
+          "args": {
+            "category": "energy"
+          },
+          "name": "更多查询工具"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "tool_end",
+          "id": "fdde8ae9022344f585a46455bddfee23",
+          "tool": "current_energy",
+          "ms": 16.0,
+          "summary": "当前能源查询完成。"
+        },
+        {
+          "type": "tool_end",
+          "id": "86dae8a11d124fbfbd9d4dba20531425",
+          "tool": "more_tools",
+          "ms": 0.0,
+          "summary": "更多查询工具查询完成。"
+        },
+        {
+          "type": "tool_end",
+          "id": "ef3dd85038ca4a0482aa66b2330f01d9",
+          "tool": "more_tools",
+          "ms": 0.0,
+          "summary": "更多查询工具查询完成。"
+        },
+        {
+          "type": "tool_start",
+          "id": "8e8191c6c93e4b4ba7a51b07eaf05990",
+          "tool": "end_use",
+          "args": {
+            "scope": "current"
+          },
+          "name": "分项用电"
+        },
+        {
+          "type": "tool_end",
+          "id": "8e8191c6c93e4b4ba7a51b07eaf05990",
+          "tool": "end_use",
+          "ms": 0.0,
+          "summary": "分项用电查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "answer_delta",
+          "text": "当前空调用电为 170.6 kW，占整栋瞬时负荷 13.6%。",
+          "sentence_source": "llm"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "llm",
+          "mode": "llm",
+          "reason": "answered",
+          "llm_reason": "agent_completed",
+          "phase_timings": [
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 4625.0,
+              "reason": "completed",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 2,
+              "elapsed_ms": 3156.0,
+              "reason": "completed",
+              "post_tool": true
+            },
+            {
+              "phase": "agent_decision",
+              "step": 3,
+              "elapsed_ms": 1750.0,
+              "reason": "completed",
+              "post_tool": true
+            }
+          ],
+          "session_id": "9c7acefc6ffc4521b9ac6f328be4f44a",
+          "context_id": "f338b298c4834079bfa824ffeda083b1",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 6515.0
+          }
+        }
+      ],
+      "original_index": 9,
+      "model_correct": true,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 5,
+      "question": "插座用电占比",
+      "answer": "插座用电占 26.9%，对应 3,672.3 kWh。",
+      "tools": [
+        "more_tools",
+        "end_use"
+      ],
+      "duration_ms": 17765.0,
+      "first_answer_ms": 17765.0,
+      "correct_with_evidence": true,
+      "success_within_15s": false,
+      "finished_within_15s": false,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 10797.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 4578.0,
+            "reason": "completed",
+            "post_tool": true
+          },
+          {
+            "phase": "agent_decision",
+            "step": 3,
+            "elapsed_ms": 2296.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "b2faf2a9800a43b29f9a0071a8b6b07e",
+        "context_id": "ffe0a06d580b4a7ba866a7cea4d79bcd",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 7953.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 9078.0,
+          "total_ms": 10797.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 353
+        },
+        {
+          "first_response_ms": 4469.0,
+          "total_ms": 4578.0,
+          "tool_count": 11,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "pv_generation",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 351
+        },
+        {
+          "first_response_ms": 718.0,
+          "total_ms": 2296.0,
+          "tool_count": 11,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "pv_generation",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 73
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2062.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5062.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8062.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9062.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11,
+          "received_ms": 11062.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12,
+          "received_ms": 12047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13,
+          "received_ms": 13047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14,
+          "received_ms": 14062.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15,
+          "received_ms": 15047.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 16 秒",
+          "elapsed_seconds": 16,
+          "received_ms": 16062.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 17 秒",
+          "elapsed_seconds": 17,
+          "received_ms": 17047.0
+        }
+      ],
+      "started_utc": "2026-10-13T08:47:49.937903+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "tool_start",
+          "id": "1e80ce0f41cc406588d4757a9d1fbf85",
+          "tool": "more_tools",
+          "args": {
+            "category": "energy"
+          },
+          "name": "更多查询工具"
+        },
+        {
+          "type": "tool_end",
+          "id": "1e80ce0f41cc406588d4757a9d1fbf85",
+          "tool": "more_tools",
+          "ms": 0.0,
+          "summary": "更多查询工具查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15
+        },
+        {
+          "type": "tool_start",
+          "id": "62e57cab87ce4220a038640f6316f9eb",
+          "tool": "end_use",
+          "args": {
+            "scope": "cumulative"
+          },
+          "name": "分项用电"
+        },
+        {
+          "type": "tool_end",
+          "id": "62e57cab87ce4220a038640f6316f9eb",
+          "tool": "end_use",
+          "ms": 16.0,
+          "summary": "分项用电查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 16 秒",
+          "elapsed_seconds": 16
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 17 秒",
+          "elapsed_seconds": 17
+        },
+        {
+          "type": "answer_delta",
+          "text": "插座用电占 26.9%，对应 3,672.3 kWh。",
+          "sentence_source": "llm"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "llm",
+          "mode": "llm",
+          "reason": "answered",
+          "llm_reason": "agent_completed",
+          "phase_timings": [
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 10797.0,
+              "reason": "completed",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 2,
+              "elapsed_ms": 4578.0,
+              "reason": "completed",
+              "post_tool": true
+            },
+            {
+              "phase": "agent_decision",
+              "step": 3,
+              "elapsed_ms": 2296.0,
+              "reason": "completed",
+              "post_tool": true
+            }
+          ],
+          "session_id": "b2faf2a9800a43b29f9a0071a8b6b07e",
+          "context_id": "ffe0a06d580b4a7ba866a7cea4d79bcd",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 7953.0
+          }
+        }
+      ],
+      "original_index": 11,
+      "model_correct": true,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 6,
+      "question": "现在分项用电有哪些",
+      "answer": "这次未能取得可用的查询结果，请稍后再试。",
+      "tools": [],
+      "duration_ms": 20031.0,
+      "first_answer_ms": 20031.0,
+      "correct_with_evidence": false,
+      "success_within_15s": false,
+      "finished_within_15s": false,
+      "done": {
+        "type": "done",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "template",
+        "mode": "fallback",
+        "reason": "no_data",
+        "llm_reason": "first_token_timeout",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 10000.0,
+            "reason": "first_token_timeout",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 20000.0,
+            "reason": "first_token_timeout",
+            "post_tool": false
+          }
+        ],
+        "session_id": "d2c37edcf4b54b3da17625a2fc429ada",
+        "context_id": null,
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 8141.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": null,
+          "total_ms": 10000.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 0
+        },
+        {
+          "first_response_ms": null,
+          "total_ms": 10000.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 0
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11,
+          "received_ms": 11016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12,
+          "received_ms": 12000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13,
+          "received_ms": 13000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14,
+          "received_ms": 14000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15,
+          "received_ms": 15016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 16 秒",
+          "elapsed_seconds": 16,
+          "received_ms": 16000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 17 秒",
+          "elapsed_seconds": 17,
+          "received_ms": 17000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 18 秒",
+          "elapsed_seconds": 18,
+          "received_ms": 18000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 19 秒",
+          "elapsed_seconds": 19,
+          "received_ms": 19016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 20 秒",
+          "elapsed_seconds": 20,
+          "received_ms": 20000.0
+        }
+      ],
+      "started_utc": "2026-10-13T08:48:07.724562+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 16 秒",
+          "elapsed_seconds": 16
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 17 秒",
+          "elapsed_seconds": 17
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 18 秒",
+          "elapsed_seconds": 18
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 19 秒",
+          "elapsed_seconds": 19
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 20 秒",
+          "elapsed_seconds": 20
+        },
+        {
+          "type": "answer_delta",
+          "text": "这次未能取得可用的查询结果，请稍后再试。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "done",
+          "known": false,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "template",
+          "mode": "fallback",
+          "reason": "no_data",
+          "llm_reason": "first_token_timeout",
+          "phase_timings": [
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 10000.0,
+              "reason": "first_token_timeout",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 20000.0,
+              "reason": "first_token_timeout",
+              "post_tool": false
+            }
+          ],
+          "session_id": "d2c37edcf4b54b3da17625a2fc429ada",
+          "context_id": null,
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 8141.0
+          }
+        }
+      ],
+      "original_index": 13,
+      "model_correct": false,
+      "template_answer": true,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 7,
+      "question": "昨天分项用电量",
+      "answer": "昨天（10 月 12 日）全天分项用电合计 23,977.9 kWh：照明 7,375.3 kWh，占 30.8%；插座 7,241.3 kWh，占 30.2%；其他 5,167.8 kWh，占 21.6%；空调 3,438.3 kWh，占 14.3%；电梯 755.2 kWh，占 3.1%。",
+      "tools": [
+        "more_tools",
+        "end_use"
+      ],
+      "duration_ms": 10391.0,
+      "first_answer_ms": 10391.0,
+      "correct_with_evidence": true,
+      "success_within_15s": true,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 2797.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 1672.0,
+            "reason": "completed",
+            "post_tool": true
+          },
+          {
+            "phase": "agent_decision",
+            "step": 3,
+            "elapsed_ms": 3234.0,
+            "reason": "completed",
+            "post_tool": true
+          },
+          {
+            "phase": "agent_decision",
+            "step": 4,
+            "elapsed_ms": 2625.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "456009d85ab64da19a02e59014fb1171",
+        "context_id": "af1c00b3935c40dda40ec01898eba306",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 1563.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 2141.0,
+          "total_ms": 2797.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 434
+        },
+        {
+          "first_response_ms": 1047.0,
+          "total_ms": 1672.0,
+          "tool_count": 11,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "pv_generation",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 438
+        },
+        {
+          "first_response_ms": 2375.0,
+          "total_ms": 3234.0,
+          "tool_count": 11,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "pv_generation",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 329
+        },
+        {
+          "first_response_ms": 781.0,
+          "total_ms": 2625.0,
+          "tool_count": 11,
+          "tools": [
+            "tariff_periods",
+            "energy_totals",
+            "end_use",
+            "pv_generation",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 312
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9016.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10000.0
+        }
+      ],
+      "started_utc": "2026-10-13T08:48:27.763049+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "tool_start",
+          "id": "4929243b974b4af0bea480afd3a84143",
+          "tool": "more_tools",
+          "args": {
+            "category": "energy"
+          },
+          "name": "更多查询工具"
+        },
+        {
+          "type": "tool_end",
+          "id": "4929243b974b4af0bea480afd3a84143",
+          "tool": "more_tools",
+          "ms": 0.0,
+          "summary": "更多查询工具查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "tool_start",
+          "id": "3a3489fd5d1946c88c4672ace73bfec8",
+          "tool": "end_use",
+          "args": {
+            "scope": "cumulative",
+            "relative_day": -1
+          },
+          "name": "分项用电"
+        },
+        {
+          "type": "tool_end",
+          "id": "3a3489fd5d1946c88c4672ace73bfec8",
+          "tool": "end_use",
+          "ms": 16.0,
+          "summary": "分项用电查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "answer_delta",
+          "text": "昨天（10 月 12 日）全天分项用电合计 23,977.9 kWh：照明 7,375.3 kWh，占 30.8%；插座 7,241.3 kWh，占 30.2%；其他 5,167.8 kWh，占 21.6%；空调 3,438.3 kWh，占 14.3%；电梯 755.2 kWh，占 3.1%。",
+          "sentence_source": "llm"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "llm",
+          "mode": "llm",
+          "reason": "answered",
+          "llm_reason": "agent_completed",
+          "phase_timings": [
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 2797.0,
+              "reason": "completed",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 2,
+              "elapsed_ms": 1672.0,
+              "reason": "completed",
+              "post_tool": true
+            },
+            {
+              "phase": "agent_decision",
+              "step": 3,
+              "elapsed_ms": 3234.0,
+              "reason": "completed",
+              "post_tool": true
+            },
+            {
+              "phase": "agent_decision",
+              "step": 4,
+              "elapsed_ms": 2625.0,
+              "reason": "completed",
+              "post_tool": true
+            }
+          ],
+          "session_id": "456009d85ab64da19a02e59014fb1171",
+          "context_id": "af1c00b3935c40dda40ec01898eba306",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 1563.0
+          }
+        }
+      ],
+      "original_index": 15,
+      "model_correct": true,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 8,
+      "question": "今天有哪些告警",
+      "answer": "这次未能取得可用的查询结果，请稍后再试。",
+      "tools": [
+        "more_tools"
+      ],
+      "duration_ms": 14875.0,
+      "first_answer_ms": 14875.0,
+      "correct_with_evidence": false,
+      "success_within_15s": false,
+      "finished_within_15s": true,
+      "done": {
+        "type": "done",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "template",
+        "mode": "fallback",
+        "reason": "no_data",
+        "llm_reason": "first_token_timeout",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 4829.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 10000.0,
+            "reason": "first_token_timeout",
+            "post_tool": true
+          }
+        ],
+        "session_id": "04f17fd9aa7346c9acbfc30b09327ac9",
+        "context_id": null,
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 14125.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 4735.0,
+          "total_ms": 4829.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 353
+        },
+        {
+          "first_response_ms": null,
+          "total_ms": 10000.0,
+          "tool_count": 8,
+          "tools": [
+            "alerts_orders",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": "first_token_timeout",
+          "complete": false,
+          "output_chars": 0
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11,
+          "received_ms": 11015.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12,
+          "received_ms": 12000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13,
+          "received_ms": 13000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14,
+          "received_ms": 14015.0
+        }
+      ],
+      "started_utc": "2026-10-13T08:48:38.162106+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "tool_start",
+          "id": "126947b27c344242af8d243a6ffd78d5",
+          "tool": "more_tools",
+          "args": {
+            "category": "alerts"
+          },
+          "name": "更多查询工具"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14
+        },
+        {
+          "type": "tool_end",
+          "id": "126947b27c344242af8d243a6ffd78d5",
+          "tool": "more_tools",
+          "ms": 0.0,
+          "summary": "更多查询工具查询完成。"
+        },
+        {
+          "type": "answer_delta",
+          "text": "这次未能取得可用的查询结果，请稍后再试。",
+          "sentence_source": "template"
+        },
+        {
+          "type": "done",
+          "known": false,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "template",
+          "mode": "fallback",
+          "reason": "no_data",
+          "llm_reason": "first_token_timeout",
+          "phase_timings": [
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 4829.0,
+              "reason": "completed",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 2,
+              "elapsed_ms": 10000.0,
+              "reason": "first_token_timeout",
+              "post_tool": true
+            }
+          ],
+          "session_id": "04f17fd9aa7346c9acbfc30b09327ac9",
+          "context_id": null,
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 14125.0
+          }
+        }
+      ],
+      "original_index": 16,
+      "model_correct": false,
+      "template_answer": true,
+      "within_25s_with_answer": true,
+      "group": null
+    },
+    {
+      "index": 9,
+      "question": "现在有哪些报警",
+      "answer": "截至 14:00，当前没有告警。",
+      "tools": [
+        "more_tools",
+        "alerts_orders"
+      ],
+      "duration_ms": 19328.0,
+      "first_answer_ms": 19328.0,
+      "correct_with_evidence": false,
+      "success_within_15s": false,
+      "finished_within_15s": false,
+      "done": {
+        "type": "done",
+        "known": true,
+        "grounded": true,
+        "needs_human": false,
+        "explanation_source": "llm",
+        "mode": "llm",
+        "reason": "answered",
+        "llm_reason": "agent_completed",
+        "phase_timings": [
+          {
+            "phase": "agent_decision",
+            "step": 1,
+            "elapsed_ms": 11234.0,
+            "reason": "completed",
+            "post_tool": false
+          },
+          {
+            "phase": "agent_decision",
+            "step": 2,
+            "elapsed_ms": 3782.0,
+            "reason": "completed",
+            "post_tool": true
+          },
+          {
+            "phase": "agent_decision",
+            "step": 3,
+            "elapsed_ms": 4250.0,
+            "reason": "completed",
+            "post_tool": true
+          }
+        ],
+        "session_id": "9349c958569a47cf9690638d3f15eb0b",
+        "context_id": "496628afa8ac4afaa370656a084f441e",
+        "llm_called": true,
+        "llm_mode": "real",
+        "agent_loop": true,
+        "terminated": false,
+        "category": "none",
+        "classification_timing": {
+          "budget_seconds": 20.0,
+          "elapsed_ms": 9735.0
+        }
+      },
+      "error": null,
+      "upstream_calls": [
+        {
+          "first_response_ms": 1313.0,
+          "total_ms": 11234.0,
+          "tool_count": 7,
+          "tools": [
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 353
+        },
+        {
+          "first_response_ms": 1407.0,
+          "total_ms": 3782.0,
+          "tool_count": 8,
+          "tools": [
+            "alerts_orders",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 354
+        },
+        {
+          "first_response_ms": 4078.0,
+          "total_ms": 4250.0,
+          "tool_count": 8,
+          "tools": [
+            "alerts_orders",
+            "get_time",
+            "get_weather",
+            "forecast_peak",
+            "current_state",
+            "current_energy",
+            "hvac_compare",
+            "more_tools"
+          ],
+          "error": null,
+          "complete": true,
+          "output_chars": 48
+        }
+      ],
+      "origin_index": 14,
+      "scenario": "normal",
+      "progress_receipts": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1,
+          "received_ms": 1000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2,
+          "received_ms": 2000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3,
+          "received_ms": 3000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4,
+          "received_ms": 4000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5,
+          "received_ms": 5000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6,
+          "received_ms": 6000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7,
+          "received_ms": 7000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8,
+          "received_ms": 8000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9,
+          "received_ms": 9000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10,
+          "received_ms": 10000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11,
+          "received_ms": 11000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12,
+          "received_ms": 12000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13,
+          "received_ms": 13000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14,
+          "received_ms": 14000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15,
+          "received_ms": 15000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 16 秒",
+          "elapsed_seconds": 16,
+          "received_ms": 16000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 17 秒",
+          "elapsed_seconds": 17,
+          "received_ms": 17000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 18 秒",
+          "elapsed_seconds": 18,
+          "received_ms": 18000.0
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 19 秒",
+          "elapsed_seconds": 19,
+          "received_ms": 19000.0
+        }
+      ],
+      "started_utc": "2026-10-13T08:48:53.058783+00:00",
+      "events": [
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 1 秒",
+          "elapsed_seconds": 1
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 2 秒",
+          "elapsed_seconds": 2
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 3 秒",
+          "elapsed_seconds": 3
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 4 秒",
+          "elapsed_seconds": 4
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 5 秒",
+          "elapsed_seconds": 5
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 6 秒",
+          "elapsed_seconds": 6
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 7 秒",
+          "elapsed_seconds": 7
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 8 秒",
+          "elapsed_seconds": 8
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 9 秒",
+          "elapsed_seconds": 9
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 10 秒",
+          "elapsed_seconds": 10
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 11 秒",
+          "elapsed_seconds": 11
+        },
+        {
+          "type": "tool_start",
+          "id": "21c4a7756969483d93c8f876df12a4ce",
+          "tool": "more_tools",
+          "args": {
+            "category": "alerts"
+          },
+          "name": "更多查询工具"
+        },
+        {
+          "type": "tool_end",
+          "id": "21c4a7756969483d93c8f876df12a4ce",
+          "tool": "more_tools",
+          "ms": 0.0,
+          "summary": "更多查询工具查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 12 秒",
+          "elapsed_seconds": 12
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 13 秒",
+          "elapsed_seconds": 13
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 14 秒",
+          "elapsed_seconds": 14
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 15 秒",
+          "elapsed_seconds": 15
+        },
+        {
+          "type": "tool_start",
+          "id": "b46391a771f54a0aba3c652152e1c520",
+          "tool": "alerts_orders",
+          "args": {
+            "scope": "current"
+          },
+          "name": "告警与工单"
+        },
+        {
+          "type": "tool_end",
+          "id": "b46391a771f54a0aba3c652152e1c520",
+          "tool": "alerts_orders",
+          "ms": 0.0,
+          "summary": "告警与工单查询完成。"
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 16 秒",
+          "elapsed_seconds": 16
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 17 秒",
+          "elapsed_seconds": 17
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 18 秒",
+          "elapsed_seconds": 18
+        },
+        {
+          "type": "progress",
+          "id": "chat-answer-wait",
+          "text": "已等待 19 秒",
+          "elapsed_seconds": 19
+        },
+        {
+          "type": "answer_delta",
+          "text": "截至 14:00，当前没有告警。",
+          "sentence_source": "llm"
+        },
+        {
+          "type": "done",
+          "known": true,
+          "grounded": true,
+          "needs_human": false,
+          "explanation_source": "llm",
+          "mode": "llm",
+          "reason": "answered",
+          "llm_reason": "agent_completed",
+          "phase_timings": [
+            {
+              "phase": "agent_decision",
+              "step": 1,
+              "elapsed_ms": 11234.0,
+              "reason": "completed",
+              "post_tool": false
+            },
+            {
+              "phase": "agent_decision",
+              "step": 2,
+              "elapsed_ms": 3782.0,
+              "reason": "completed",
+              "post_tool": true
+            },
+            {
+              "phase": "agent_decision",
+              "step": 3,
+              "elapsed_ms": 4250.0,
+              "reason": "completed",
+              "post_tool": true
+            }
+          ],
+          "session_id": "9349c958569a47cf9690638d3f15eb0b",
+          "context_id": "496628afa8ac4afaa370656a084f441e",
+          "llm_called": true,
+          "llm_mode": "real",
+          "agent_loop": true,
+          "terminated": false,
+          "category": "none",
+          "classification_timing": {
+            "budget_seconds": 20.0,
+            "elapsed_ms": 9735.0
+          }
+        }
+      ],
+      "original_index": 17,
+      "model_correct": false,
+      "template_answer": false,
+      "within_25s_with_answer": true,
+      "group": null
+    }
+  ],
+  "model": "agnes-3.0-flash",
+  "sessions": {},
+  "complete": false,
+  "single_python_process": true,
+  "resident_changed": false,
+  "owned_pid": 31388,
+  "owned_backend_stopped": true,
+  "owned_ports": [
+    65030,
+    65113
+  ]
+}

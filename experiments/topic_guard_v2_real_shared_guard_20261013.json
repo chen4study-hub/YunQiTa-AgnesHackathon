@@ -1,0 +1,353 @@
+{
+  "results": [
+    {
+      "endpoint": "/chat/stream",
+      "question": "特朗普的政策立场是什么？",
+      "session_id": "53ff8b7d6db2415489285018040951cc-politics",
+      "expected": "politics",
+      "passed": true,
+      "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+      "done": {
+        "type": "done",
+        "mode": "llm",
+        "session_id": "53ff8b7d6db2415489285018040951cc-politics",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "reason": "out_of_scope",
+        "terminated": true,
+        "category": "politics",
+        "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+        "explanation_source": "policy",
+        "phase_timings": [],
+        "llm_reason": "topic_terminated",
+        "context_id": null
+      },
+      "elapsed_ms": 4312.0,
+      "event_types": [
+        "progress",
+        "progress",
+        "progress",
+        "answer_delta",
+        "done"
+      ]
+    },
+    {
+      "endpoint": "/chat",
+      "question": "现在几点",
+      "session_id": "53ff8b7d6db2415489285018040951cc-politics",
+      "expected": "terminated",
+      "passed": true,
+      "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+      "done": {
+        "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+        "session_id": "53ff8b7d6db2415489285018040951cc-politics",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "tool_trace": [],
+        "reason": "out_of_scope",
+        "terminated": true,
+        "category": "terminated",
+        "explanation_source": "policy",
+        "llm_mode": "llm",
+        "llm_called": false,
+        "origin": "2017-10-23T14:00:00-05:00"
+      },
+      "elapsed_ms": 16.0,
+      "event_types": []
+    },
+    {
+      "endpoint": "/chat",
+      "question": "今天有哪些社会新闻？",
+      "session_id": "53ff8b7d6db2415489285018040951cc-affairs",
+      "expected": "current_affairs",
+      "passed": true,
+      "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+      "done": {
+        "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+        "session_id": "53ff8b7d6db2415489285018040951cc-affairs",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "tool_trace": [],
+        "reason": "out_of_scope",
+        "terminated": true,
+        "category": "current_affairs",
+        "explanation_source": "policy",
+        "llm_mode": "llm",
+        "llm_called": false,
+        "origin": "2017-10-23T14:00:00-05:00"
+      },
+      "elapsed_ms": 2000.0,
+      "event_types": []
+    },
+    {
+      "endpoint": "/chat/stream",
+      "question": "天气怎么样",
+      "session_id": "53ff8b7d6db2415489285018040951cc-affairs",
+      "expected": "terminated",
+      "passed": true,
+      "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+      "done": {
+        "type": "done",
+        "mode": "llm",
+        "session_id": "53ff8b7d6db2415489285018040951cc-affairs",
+        "known": false,
+        "grounded": true,
+        "needs_human": false,
+        "reason": "out_of_scope",
+        "terminated": true,
+        "category": "terminated",
+        "answer": "这个话题不在楼宇运维助手的服务范围内，本会话已结束，请开启新会话。",
+        "explanation_source": "policy",
+        "phase_timings": [],
+        "llm_reason": "topic_terminated",
+        "context_id": null
+      },
+      "elapsed_ms": 0.0,
+      "event_types": [
+        "answer_delta",
+        "done"
+      ]
+    },
+    {
+      "endpoint": "/chat/stream",
+      "question": "今天的天气新闻有哪些？",
+      "session_id": "53ff8b7d6db2415489285018040951cc-weather-news",
+      "expected": "none",
+      "passed": true,
+      "answer": "最近两周查到的相关报道：2026-10-11，“这才是梦想中的秋天！”杭州这波好天气能持续多久？最新消息来 ...。\n来源：\n“这才是梦想中的秋天！”杭州这波好天气能持续多久？最新消息来 ...：https://news.qq.com/rain/a/20261011A053KG00",
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [
+          {
+            "phase": "public_answer",
+            "reason": "direct_recent_news"
+          }
+        ],
+        "llm_reason": "direct_recent_news",
+        "reason": "answered",
+        "session_id": "53ff8b7d6db2415489285018040951cc-weather-news",
+        "terminated": false,
+        "category": "none"
+      },
+      "elapsed_ms": 6922.0,
+      "event_types": [
+        "step",
+        "tool_start",
+        "tool_end",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "done"
+      ]
+    },
+    {
+      "endpoint": "/chat",
+      "question": "诺贝尔奖是什么？",
+      "session_id": "53ff8b7d6db2415489285018040951cc-nobel",
+      "expected": "none",
+      "passed": true,
+      "answer": "没有查到网上资料，下面是常识整理：诺贝尔奖是依据瑞典化学家阿尔弗雷德·诺贝尔的遗嘱而设立的国际性奖项。该奖项旨在表彰在物理学、化学、生理学或医学、文学及和平研究领域为人类做出最大贡献的人士或组织（其中和平奖由挪威诺贝尔委员会颁发）。此外，2019年增设了瑞典皇家银行纪念阿尔弗雷德·诺贝尔经济学奖。诺贝尔奖被视为全球最负盛名、最顶级的综合性荣誉之一。",
+      "done": {
+        "answer": "没有查到网上资料，下面是常识整理：诺贝尔奖是依据瑞典化学家阿尔弗雷德·诺贝尔的遗嘱而设立的国际性奖项。该奖项旨在表彰在物理学、化学、生理学或医学、文学及和平研究领域为人类做出最大贡献的人士或组织（其中和平奖由挪威诺贝尔委员会颁发）。此外，2019年增设了瑞典皇家银行纪念阿尔弗雷德·诺贝尔经济学奖。诺贝尔奖被视为全球最负盛名、最顶级的综合性荣誉之一。",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "reason": "answered",
+        "tool_trace": [
+          {
+            "tool": "web_search",
+            "result": {
+              "status": "empty",
+              "sources": []
+            }
+          }
+        ],
+        "llm_called": true,
+        "llm_mode": "real",
+        "answer_source": "llm_public",
+        "explanation_source": "llm",
+        "llm": {
+          "mode": "real",
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 5859.0
+            }
+          ]
+        },
+        "phase_timings": [
+          {
+            "phase": "public_answer",
+            "reason": "call_succeeded"
+          }
+        ],
+        "grounding_scope": "public_knowledge; not building readings",
+        "building_id": "Hog_office_Byron",
+        "origin": "2017-10-23T14:00:00-05:00",
+        "session_id": "53ff8b7d6db2415489285018040951cc-nobel",
+        "terminated": false,
+        "category": "none"
+      },
+      "elapsed_ms": 7360.0,
+      "event_types": []
+    },
+    {
+      "endpoint": "/chat/stream",
+      "question": "现在几点",
+      "session_id": "53ff8b7d6db2415489285018040951cc-time",
+      "expected": "none",
+      "passed": true,
+      "answer": "现在 14:00。",
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "template",
+        "phase_timings": [],
+        "llm_reason": "direct_tool_answer",
+        "reason": "answered",
+        "session_id": "53ff8b7d6db2415489285018040951cc-time",
+        "terminated": false,
+        "category": "none"
+      },
+      "elapsed_ms": 1125.0,
+      "event_types": [
+        "tool_start",
+        "tool_end",
+        "answer_delta",
+        "done"
+      ]
+    },
+    {
+      "endpoint": "/chat",
+      "question": "天气怎么样",
+      "session_id": "53ff8b7d6db2415489285018040951cc-weather",
+      "expected": "none",
+      "passed": true,
+      "answer": "当前室外 13.3 °C，湿度 57%。",
+      "done": {
+        "answer": "当前室外 13.3 °C，湿度 57%。",
+        "known": true,
+        "needs_human": false,
+        "tool_trace": [
+          {
+            "tool": "get_weather",
+            "result": {
+              "hours": [
+                {
+                  "timestamp": "2017-10-23T14:00:00-05:00",
+                  "outdoor_temp_c": 13.3,
+                  "relative_humidity_pct": 57.2,
+                  "dew_temp_c": 5.0,
+                  "source_timestamp": "2017-10-23T14:00:00-05:00",
+                  "basis": "origin_observed_temperature; humidity derived from temperature/dewpoint using Magnus, not measured RH",
+                  "humidity_percent": 57
+                }
+              ],
+              "scope": "current"
+            }
+          }
+        ],
+        "grounded": true,
+        "answer_source": "deterministic_tools",
+        "llm_called": false,
+        "selected_tool": "get_weather",
+        "llm_mode": "rule",
+        "llm": {
+          "mode": "rule",
+          "reason": "direct_tool_answer"
+        },
+        "phase_timings": [],
+        "explanation_source": "template",
+        "reason": "answered",
+        "building_id": "Hog_office_Byron",
+        "origin": "2017-10-23T14:00:00-05:00",
+        "session_id": "53ff8b7d6db2415489285018040951cc-weather",
+        "terminated": false,
+        "category": "none"
+      },
+      "elapsed_ms": 1078.0,
+      "event_types": []
+    },
+    {
+      "endpoint": "/chat/stream",
+      "question": "当前能源怎么样",
+      "session_id": "53ff8b7d6db2415489285018040951cc-energy",
+      "expected": "none",
+      "passed": true,
+      "answer": "光伏 114.3 kW、电网负荷 820.1 kW、储能放电 323.7 kW。今天截至 14:00，用电 13,640 kWh，电费 10,249.4 元。当前储能电量 36.4%。当前光伏功率 114.3 kW，截至 14:00 发电量 664 kWh。",
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true,
+        "explanation_source": "llm",
+        "phase_timings": [
+          {
+            "phase": "answer_stream",
+            "first_token_ms": 5859.0,
+            "first_token_timeout_seconds": 8.0,
+            "validation_failures": {},
+            "accepted_llm_sentences": 1,
+            "host_supplemented": false,
+            "elapsed_ms": 6547.0,
+            "reason": "call_succeeded",
+            "transport_attempts": [
+              {
+                "reason": "transport_succeeded",
+                "elapsed_ms": 6547.0
+              }
+            ]
+          }
+        ],
+        "llm_reason": null,
+        "reason": "answered",
+        "session_id": "53ff8b7d6db2415489285018040951cc-energy",
+        "terminated": false,
+        "category": "none"
+      },
+      "elapsed_ms": 11125.0,
+      "event_types": [
+        "progress",
+        "progress",
+        "progress",
+        "progress",
+        "step",
+        "tool_start",
+        "tool_end",
+        "progress",
+        "progress",
+        "progress",
+        "progress",
+        "progress",
+        "progress",
+        "progress",
+        "tool_start",
+        "tool_end",
+        "tool_start",
+        "tool_end",
+        "tool_start",
+        "tool_end",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "done"
+      ]
+    }
+  ],
+  "owned_port": 55734,
+  "completed": true,
+  "owned_server_stopped": true,
+  "resident_changed": false,
+  "questions": 9,
+  "passed": 9
+}

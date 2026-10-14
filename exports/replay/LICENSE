@@ -1,0 +1,26 @@
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+
+These replay data adaptations are distributed under CC BY-SA 4.0.
+License deed: https://creativecommons.org/licenses/by-sa/4.0/
+Full legal terms: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Attribution: Miller, C., Kathirgamanathan, A., Picchetti, B. et al.
+The Building Data Genome Project 2, energy meter data from the ASHRAE
+Great Energy Predictor III competition. Scientific Data 7, 368 (2020).
+https://doi.org/10.1038/s41597-020-00712-x
+Source: https://github.com/buds-lab/building-data-genome-project-2
+
+Changes: selected hourly BDG2 readings and metadata; derived model predictions,
+estimated floor allocations, synthetic PV/storage/grid data, and log-only dispatch.
+Contract1.3 adds selected chilledwater_cleaned.csv and steam_cleaned.csv readings,
+thermal kWh/1h interpretation, bounded past-only fill, origin persistence,
+building-only fan/secondary-pump auxiliary electricity derived from explicit
+EnergyPlus-based assumptions (district cooling/heating production excluded),
+electric-load caps, estimated floor HVAC/non-HVAC partitions and energy shares.
+Raw thermal data are SHA256 checked against official LFS pointers; see
+experiments/bdg2_thermal_sources.json and docs/hvac_meter_contract.md.
+No measured HVAC electrical submeter or calibrated savings are claimed.
+These additional data adaptations are also CC BY-SA 4.0; preserve attribution,
+license links and modifications on redistribution. See THIRD_PARTY_NOTICES.
+sample.json is authored mock data, not measured BDG2 readings.
+No endorsement by the original authors is implied. Provided without warranties.

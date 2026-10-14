@@ -1,0 +1,38 @@
+{
+  "status": "metadata_pass_with_bundled_license_caveats",
+  "conclusion": "\u672a\u4f7f\u7528 GPL/AGPL \u8bb8\u53ef\u7684\u4f9d\u8d56\uff1b\u90e8\u5206\u79d1\u5b66\u8ba1\u7b97\u8fd0\u884c\u5e93\u5e26 GCC \u8fd0\u884c\u5e93\u4f8b\u5916",
+  "isolation": {
+    "temporary_venv_deleted": true,
+    "global_packages_unchanged": true,
+    "target": "project interpreter via --python",
+    "tool_installed_globally": false
+  },
+  "tool": "piplicenses.py 5.5.5",
+  "python_packages": 54,
+  "frontend_lock_entries": 121,
+  "python_gpl_agpl_metadata": [],
+  "frontend_gpl_agpl_metadata": [],
+  "unknown_python": [],
+  "unknown_frontend": [],
+  "bundled_gnu_text_references": [
+    "et_xmlfile",
+    "matplotlib",
+    "numpy",
+    "pillow",
+    "scipy",
+    "typing_extensions"
+  ],
+  "blanket_no_gpl_confirmed": false,
+  "caveats": [
+    "NumPy/SciPy GCC-exception runtime",
+    "FreeType FTL OR GPL choice: FTL",
+    "Pillow source/build/XZ notices: artifact-level verification open"
+  ],
+  "frontend_lock_sha256": "7ea780a4a43de9c0ad6f9cf4962ee59f4d994b208e3e574eef69e07d4158ae95",
+  "requirements_sha256": "8c8041a2a0f9b9472937802aa64ca947d35f6444cda8293f539775c26dd8cb4d",
+  "inventory_sha256": {
+    "python_license_inventory_v2.json": "42a801b12cd22f321d163172f5c550d1138ee03f6c28c1cf7c25ab04dbded724",
+    "python_license_texts_v2.json": "7f4bf29ff642514f3e7cd99c7ce3d204b39ea371d470753d646450cc79571210",
+    "frontend_license_inventory_v2.json": "cb043041d19148daed9a8ef80f433650ef0dc5ba7c145d53d2799d41d0594e6d"
+  }
+}

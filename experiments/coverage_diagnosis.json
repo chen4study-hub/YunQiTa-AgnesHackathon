@@ -1,0 +1,273 @@
+{
+  "overall": {
+    "n": 5676,
+    "covered": 5078,
+    "coverage": 0.8946,
+    "ci95_exact": [
+      0.8864,
+      0.9025
+    ],
+    "mae": 7.211,
+    "nominal_inside_naive_ci": false
+  },
+  "by_building": {
+    "Hog_assembly_Colette": {
+      "n": 261,
+      "covered": 147,
+      "coverage": 0.5632,
+      "ci95_exact": [
+        0.5007,
+        0.6243
+      ],
+      "mae": 38.596
+    },
+    "Hog_assembly_Dona": {
+      "n": 195,
+      "covered": 145,
+      "coverage": 0.7436,
+      "ci95_exact": [
+        0.6763,
+        0.8033
+      ],
+      "mae": 29.146
+    },
+    "Hog_assembly_Jasmine": {
+      "n": 1318,
+      "covered": 1140,
+      "coverage": 0.8649,
+      "ci95_exact": [
+        0.8453,
+        0.8829
+      ],
+      "mae": 6.234
+    },
+    "Robin_assembly_Colleen": {
+      "n": 1318,
+      "covered": 1253,
+      "coverage": 0.9507,
+      "ci95_exact": [
+        0.9376,
+        0.9617
+      ],
+      "mae": 2.357
+    },
+    "Robin_education_Audrea": {
+      "n": 1300,
+      "covered": 1273,
+      "coverage": 0.9792,
+      "ci95_exact": [
+        0.9699,
+        0.9863
+      ],
+      "mae": 7.484
+    },
+    "Robin_education_Billi": {
+      "n": 1284,
+      "covered": 1120,
+      "coverage": 0.8723,
+      "ci95_exact": [
+        0.8528,
+        0.8901
+      ],
+      "mae": 3.208
+    }
+  },
+  "by_week": {
+    "2016-11-07": {
+      "n": 707,
+      "covered": 635,
+      "coverage": 0.8982,
+      "ci95_exact": [
+        0.8735,
+        0.9195
+      ],
+      "mae": 6.353
+    },
+    "2016-11-14": {
+      "n": 722,
+      "covered": 641,
+      "coverage": 0.8878,
+      "ci95_exact": [
+        0.8625,
+        0.9099
+      ],
+      "mae": 6.576
+    },
+    "2016-11-21": {
+      "n": 725,
+      "covered": 652,
+      "coverage": 0.8993,
+      "ci95_exact": [
+        0.8751,
+        0.9202
+      ],
+      "mae": 6.708
+    },
+    "2016-11-28": {
+      "n": 741,
+      "covered": 645,
+      "coverage": 0.8704,
+      "ci95_exact": [
+        0.8441,
+        0.8938
+      ],
+      "mae": 7.984
+    },
+    "2016-12-05": {
+      "n": 732,
+      "covered": 657,
+      "coverage": 0.8975,
+      "ci95_exact": [
+        0.8733,
+        0.9186
+      ],
+      "mae": 6.681
+    },
+    "2016-12-12": {
+      "n": 734,
+      "covered": 665,
+      "coverage": 0.906,
+      "ci95_exact": [
+        0.8825,
+        0.9261
+      ],
+      "mae": 7.269
+    },
+    "2016-12-19": {
+      "n": 722,
+      "covered": 650,
+      "coverage": 0.9003,
+      "ci95_exact": [
+        0.8761,
+        0.9212
+      ],
+      "mae": 8.485
+    },
+    "2016-12-26": {
+      "n": 593,
+      "covered": 533,
+      "coverage": 0.8988,
+      "ci95_exact": [
+        0.8717,
+        0.9219
+      ],
+      "mae": 7.683
+    }
+  },
+  "day_type": {
+    "weekday": {
+      "n": 4152,
+      "covered": 3668,
+      "coverage": 0.8834,
+      "ci95_exact": [
+        0.8733,
+        0.893
+      ],
+      "mae": 7.573
+    },
+    "weekend": {
+      "n": 1524,
+      "covered": 1410,
+      "coverage": 0.9252,
+      "ci95_exact": [
+        0.9108,
+        0.9379
+      ],
+      "mae": 6.224
+    }
+  },
+  "period": {
+    "night": {
+      "n": 1488,
+      "covered": 1342,
+      "coverage": 0.9019,
+      "ci95_exact": [
+        0.8856,
+        0.9165
+      ],
+      "mae": 6.807
+    },
+    "morning": {
+      "n": 1457,
+      "covered": 1279,
+      "coverage": 0.8778,
+      "ci95_exact": [
+        0.8599,
+        0.8942
+      ],
+      "mae": 8.543
+    },
+    "afternoon": {
+      "n": 1388,
+      "covered": 1308,
+      "coverage": 0.9424,
+      "ci95_exact": [
+        0.9288,
+        0.954
+      ],
+      "mae": 6.506
+    },
+    "evening": {
+      "n": 1343,
+      "covered": 1149,
+      "coverage": 0.8555,
+      "ci95_exact": [
+        0.8356,
+        0.8739
+      ],
+      "mae": 6.941
+    }
+  },
+  "season": {
+    "autumn": {
+      "n": 2480,
+      "covered": 2207,
+      "coverage": 0.8899,
+      "ci95_exact": [
+        0.8769,
+        0.902
+      ],
+      "mae": 6.863
+    },
+    "winter": {
+      "n": 3196,
+      "covered": 2871,
+      "coverage": 0.8983,
+      "ci95_exact": [
+        0.8873,
+        0.9086
+      ],
+      "mae": 7.48
+    }
+  },
+  "calibration": {
+    "train_end": "2016-08-25 20:00:00+00:00",
+    "calib_start": "2016-08-25 21:00:00+00:00",
+    "calib_end": "2016-11-07 01:00:00+00:00",
+    "test_start": "2016-11-07 02:00:00+00:00",
+    "calib_hours": 1757,
+    "cq_hours": 615,
+    "alpha": 0.095,
+    "q_multiplier": 2.0997681308343688,
+    "threshold": 0.720650406504065,
+    "finite_sample_quantile_unit_check": 4.0,
+    "cq_rows": 3690,
+    "risk_retained_cq_rows": 2584
+  },
+  "transfer_scale": {
+    "source": {
+      "n": 8785,
+      "abs_error_mean": 19.150811532238865,
+      "scale_mean": 17.947117935019218,
+      "normalized_mean": 0.9774365796020845,
+      "normalized_p905": 1.9463937449808735
+    },
+    "target": {
+      "n": 1757,
+      "abs_error_mean": 3.8751407008418437,
+      "scale_mean": 2.869586937207892,
+      "normalized_mean": 1.4216791259659558,
+      "normalized_p905": 3.2155405602084124
+    }
+  }
+}

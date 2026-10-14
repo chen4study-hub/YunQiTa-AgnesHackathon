@@ -1,0 +1,19 @@
+seed: 42
+validation_split: [0.45, 0.10, 0.10]
+final_split: [0.65, 0.20, 0.15]
+rejection_fractions: [0.10, 0.15, 0.20, 0.28, 0.30]
+rolling_weeks: [1, 2, 4]
+aci:
+  weeks: 2
+  gamma: 0.02
+  alpha_min: 0.005
+  alpha_max: 0.4
+mondrian:
+  group: six_hour_period
+  min_calibration_rows: 30
+cqr:
+  n_estimators: 150
+  learning_rate: 0.05
+  num_leaves: 31
+selection: validation_coverage_then_width_for_replay_only
+champion_rule: same_cohort_same_actual_rejection_lower_retained_mae

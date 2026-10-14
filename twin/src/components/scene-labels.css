@@ -1,0 +1,38 @@
+.responsive-dashboard .scene-labels > span[data-anchor] {
+  width: max-content;
+  /* Reserve a central tower lane even in narrow desktop scene columns. */
+  max-width: min(245px, calc(40% - 20px));
+  box-sizing: border-box;
+  padding: 5px 8px;
+  border: 1px solid #4f7c8a99;
+  border-radius: 5px;
+  background: #07131bd9;
+  box-shadow: 0 2px 7px #0004;
+  color: #dceaf1;
+  white-space: normal;
+  line-height: 1.4;
+  font-size: var(--font-label);
+  text-shadow: none;
+}
+.responsive-dashboard .scene-labels > span[data-anchor] > b {
+  font-size: var(--font-label);
+}
+.responsive-dashboard .scene-labels .scene-power-value {
+  display: inline-block;
+  white-space: nowrap;
+  font-style: normal;
+}
+@media (max-width: 600px) {
+  .responsive-dashboard .scene-labels > span[data-anchor] {
+    max-width: 108px;
+    padding: 4px 6px;
+    font-size: var(--font-label);
+  }
+  .responsive-dashboard .scene-labels > span[data-anchor="tower"] {
+    /* Match side-lane labels: the taller holiday text must fit beside the tower. */
+    max-width: 108px;
+  }
+  .responsive-dashboard .scene-labels > span[data-anchor] > b {
+    font-size: var(--font-label);
+  }
+}

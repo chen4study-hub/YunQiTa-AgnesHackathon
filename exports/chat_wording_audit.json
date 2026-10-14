@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "new_llm_calls": 0,
+  "new_dispatches": 0,
+  "nonprose_unchanged": true,
+  "source_counts": {
+    "normal": {
+      "before": {
+        "llm": 16,
+        "template": 8
+      },
+      "after": {
+        "llm": 16,
+        "template": 8
+      }
+    },
+    "peak": {
+      "before": {
+        "llm": 15,
+        "template": 7,
+        "rule": 2
+      },
+      "after": {
+        "llm": 15,
+        "template": 7,
+        "rule": 2
+      }
+    },
+    "abstain": {
+      "before": {
+        "llm": 11,
+        "template": 1,
+        "rule": 12
+      },
+      "after": {
+        "llm": 11,
+        "template": 1,
+        "rule": 12
+      }
+    }
+  },
+  "export_sha256": {
+    "normal.json": "2e31f921f2188b678b9c03a994f8d855a7996e2c753db51b5f63876d88919bef",
+    "peak.json": "5d0b07b4d916db322abd9d3175aef40659f1941187a74d15b81426fb4738fea6",
+    "abstain.json": "6d3d1ec9ca65dff33ebd443d491732201f3873171ea723fc2f43c226c97bba95"
+  }
+}

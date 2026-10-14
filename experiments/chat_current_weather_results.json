@@ -1,0 +1,115 @@
+{
+  "status": "completed",
+  "endpoint": "owned loopback instance of actual HTTP app, not production resident",
+  "resident_unchanged": true,
+  "questions_frozen": [
+    "现在几点、天气怎么样？",
+    "天气怎么样",
+    "未来几小时天气怎么样"
+  ],
+  "llm_answers": 1,
+  "llm_pct": 33.333333333333336,
+  "host_direct_answers": 0,
+  "failed_fallback_answers": 2,
+  "all_first_events_under1s": true,
+  "results": [
+    {
+      "correction_steps": [
+        "先核对当前起报记录，再读取对应工具；只输出有依据的回答。",
+        "先核对起报当前记录，再按工具依据回答；无法核验的数字不输出。",
+        "工具选择服务未及时返回，改用已有工具依据回答。"
+      ],
+      "host_direct": false,
+      "question": "现在几点、天气怎么样？",
+      "first_event_ms": 2.2,
+      "total_ms": 10037.1,
+      "explanation_source": "template",
+      "known": true,
+      "grounded": true,
+      "llm_reason": null,
+      "fallback_phase": "select",
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 10016.0,
+          "reason": "chat_deadline",
+          "transport_attempts": []
+        }
+      ],
+      "tool_names": [
+        "get_time",
+        "get_weather"
+      ],
+      "answer": "现在 13:44。当前室外 13.3 °C，湿度 57%。"
+    },
+    {
+      "correction_steps": [
+        "先核对当前起报记录，再读取对应工具；只输出有依据的回答。",
+        "工具选择服务未及时返回，改用已有工具依据回答。"
+      ],
+      "host_direct": false,
+      "question": "天气怎么样",
+      "first_event_ms": 1.6,
+      "total_ms": 10037.1,
+      "explanation_source": "template",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "chat_deadline",
+      "fallback_phase": "select",
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 10000.0,
+          "reason": "chat_deadline",
+          "transport_attempts": []
+        }
+      ],
+      "tool_names": [
+        "get_weather"
+      ],
+      "answer": "当前室外 13.3 °C，湿度 57%。"
+    },
+    {
+      "correction_steps": [
+        "先核对当前起报记录，再读取对应工具；只输出有依据的回答。"
+      ],
+      "host_direct": false,
+      "question": "未来几小时天气怎么样",
+      "first_event_ms": 1.7,
+      "total_ms": 8296.6,
+      "explanation_source": "llm",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "call_succeeded",
+      "fallback_phase": null,
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 5719.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 5547.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 2531.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2375.0
+            }
+          ]
+        }
+      ],
+      "tool_names": [
+        "get_weather"
+      ],
+      "answer": "15:00，室外 13.3 °C，湿度57%。16:00，室外 13.3 °C，湿度57%。17:00，室外 13.3 °C，湿度57%。"
+    }
+  ]
+}

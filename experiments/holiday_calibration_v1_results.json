@@ -1,0 +1,916 @@
+{
+  "selection": {
+    "selected": "holiday90",
+    "development_gate_passed": false,
+    "development": {
+      "pooled28": {
+        "holiday": {
+          "n": 144,
+          "days": 6,
+          "retained_n": 88,
+          "rejection": 0.3888888888888889,
+          "coverage": 0.875,
+          "width": 60.4924329576821
+        },
+        "ordinary": {
+          "n": 4272,
+          "days": 178,
+          "retained_n": 3621,
+          "rejection": 0.1523876404494382,
+          "coverage": 0.9061032863849765,
+          "width": 46.237324717329884
+        }
+      },
+      "pooled90": {
+        "holiday": {
+          "n": 144,
+          "days": 6,
+          "retained_n": 96,
+          "rejection": 0.3333333333333333,
+          "coverage": 0.8333333333333334,
+          "width": 60.5152290586855
+        },
+        "ordinary": {
+          "n": 4272,
+          "days": 178,
+          "retained_n": 3629,
+          "rejection": 0.15051498127340823,
+          "coverage": 0.9109947643979057,
+          "width": 51.86056363838339
+        }
+      },
+      "holiday90": {
+        "holiday": {
+          "n": 144,
+          "days": 6,
+          "retained_n": 116,
+          "rejection": 0.19444444444444445,
+          "coverage": 0.8448275862068966,
+          "width": 65.78700769117029
+        },
+        "ordinary": {
+          "n": 4272,
+          "days": 178,
+          "retained_n": 3604,
+          "rejection": 0.15636704119850187,
+          "coverage": 0.9112097669256382,
+          "width": 51.67908018065432
+        }
+      }
+    },
+    "plan_sha256": "3304a5fb1ac43d5811f668db5b9b4c2606a8cd7b5067226842b5d0120d25324a",
+    "development_rows": [
+      {
+        "month": "2016-07-01",
+        "variant": "pooled28",
+        "train_end": "2016-06-02 23:00:00+00:00",
+        "cq_start": "2016-06-21 04:00:00+00:00",
+        "cq_end": "2016-06-30 23:00:00+00:00",
+        "holiday_cq_hours": 0,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 24,
+            "days": 1,
+            "retained_n": 24,
+            "rejection": 0.0,
+            "coverage": 0.875,
+            "width": 69.82976255851933
+          },
+          "ordinary": {
+            "n": 720,
+            "days": 30,
+            "retained_n": 624,
+            "rejection": 0.13333333333333333,
+            "coverage": 0.8653846153846154,
+            "width": 55.71527970436973
+          }
+        }
+      },
+      {
+        "month": "2016-08-01",
+        "variant": "pooled28",
+        "train_end": "2016-07-03 23:00:00+00:00",
+        "cq_start": "2016-07-22 04:00:00+00:00",
+        "cq_end": "2016-07-31 23:00:00+00:00",
+        "holiday_cq_hours": 0,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 0,
+            "days": 0,
+            "retained_n": 0,
+            "rejection": null,
+            "coverage": null,
+            "width": null
+          },
+          "ordinary": {
+            "n": 744,
+            "days": 31,
+            "retained_n": 677,
+            "rejection": 0.09005376344086022,
+            "coverage": 0.9113737075332349,
+            "width": 51.79293382383302
+          }
+        }
+      },
+      {
+        "month": "2016-09-01",
+        "variant": "pooled28",
+        "train_end": "2016-08-03 23:00:00+00:00",
+        "cq_start": "2016-08-22 04:00:00+00:00",
+        "cq_end": "2016-08-31 23:00:00+00:00",
+        "holiday_cq_hours": 0,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 24,
+            "days": 1,
+            "retained_n": 17,
+            "rejection": 0.2916666666666667,
+            "coverage": 0.8235294117647058,
+            "width": 82.73637873790182
+          },
+          "ordinary": {
+            "n": 696,
+            "days": 29,
+            "retained_n": 616,
+            "rejection": 0.11494252873563218,
+            "coverage": 0.913961038961039,
+            "width": 45.7368724930736
+          }
+        }
+      },
+      {
+        "month": "2016-10-01",
+        "variant": "pooled28",
+        "train_end": "2016-09-02 23:00:00+00:00",
+        "cq_start": "2016-09-21 04:00:00+00:00",
+        "cq_end": "2016-09-30 23:00:00+00:00",
+        "holiday_cq_hours": 0,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 24,
+            "days": 1,
+            "retained_n": 4,
+            "rejection": 0.8333333333333334,
+            "coverage": 1.0,
+            "width": 34.94145765083536
+          },
+          "ordinary": {
+            "n": 720,
+            "days": 30,
+            "retained_n": 499,
+            "rejection": 0.30694444444444446,
+            "coverage": 0.9258517034068137,
+            "width": 42.18314369561392
+          }
+        }
+      },
+      {
+        "month": "2016-11-01",
+        "variant": "pooled28",
+        "train_end": "2016-10-03 23:00:00+00:00",
+        "cq_start": "2016-10-22 04:00:00+00:00",
+        "cq_end": "2016-10-31 23:00:00+00:00",
+        "holiday_cq_hours": 0,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 48,
+            "days": 2,
+            "retained_n": 33,
+            "rejection": 0.3125,
+            "coverage": 0.8484848484848485,
+            "width": 40.51241049299815
+          },
+          "ordinary": {
+            "n": 672,
+            "days": 28,
+            "retained_n": 601,
+            "rejection": 0.1056547619047619,
+            "coverage": 0.9367720465890182,
+            "width": 43.26655648019693
+          }
+        }
+      },
+      {
+        "month": "2016-12-01",
+        "variant": "pooled28",
+        "train_end": "2016-11-02 23:00:00+00:00",
+        "cq_start": "2016-11-21 04:00:00+00:00",
+        "cq_end": "2016-11-30 23:00:00+00:00",
+        "holiday_cq_hours": 24,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 24,
+            "days": 1,
+            "retained_n": 10,
+            "rejection": 0.5833333333333334,
+            "coverage": 1.0,
+            "width": 76.42259834549493
+          },
+          "ordinary": {
+            "n": 720,
+            "days": 30,
+            "retained_n": 604,
+            "rejection": 0.16111111111111112,
+            "coverage": 0.8874172185430463,
+            "width": 37.034270633686766
+          }
+        }
+      },
+      {
+        "month": "2016-07-01",
+        "variant": "pooled90",
+        "train_end": "2016-04-01 23:00:00+00:00",
+        "cq_start": "2016-05-30 12:00:00+00:00",
+        "cq_end": "2016-06-30 23:00:00+00:00",
+        "holiday_cq_hours": 12,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 24,
+            "days": 1,
+            "retained_n": 24,
+            "rejection": 0.0,
+            "coverage": 0.875,
+            "width": 93.34465462761018
+          },
+          "ordinary": {
+            "n": 720,
+            "days": 30,
+            "retained_n": 556,
+            "rejection": 0.22777777777777777,
+            "coverage": 0.8776978417266187,
+            "width": 74.22749688063367
+          }
+        }
+      },
+      {
+        "month": "2016-08-01",
+        "variant": "pooled90",
+        "train_end": "2016-05-02 23:00:00+00:00",
+        "cq_start": "2016-06-30 12:00:00+00:00",
+        "cq_end": "2016-07-31 23:00:00+00:00",
+        "holiday_cq_hours": 24,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 0,
+            "days": 0,
+            "retained_n": 0,
+            "rejection": null,
+            "coverage": null,
+            "width": null
+          },
+          "ordinary": {
+            "n": 744,
+            "days": 31,
+            "retained_n": 691,
+            "rejection": 0.07123655913978495,
+            "coverage": 0.9377713458755427,
+            "width": 66.49819476282966
+          }
+        }
+      },
+      {
+        "month": "2016-09-01",
+        "variant": "pooled90",
+        "train_end": "2016-06-02 23:00:00+00:00",
+        "cq_start": "2016-07-31 12:00:00+00:00",
+        "cq_end": "2016-08-31 23:00:00+00:00",
+        "holiday_cq_hours": 0,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 24,
+            "days": 1,
+            "retained_n": 9,
+            "rejection": 0.625,
+            "coverage": 0.7777777777777778,
+            "width": 38.71167868734793
+          },
+          "ordinary": {
+            "n": 696,
+            "days": 29,
+            "retained_n": 624,
+            "rejection": 0.10344827586206896,
+            "coverage": 0.9150641025641025,
+            "width": 44.703361053511266
+          }
+        }
+      },
+      {
+        "month": "2016-10-01",
+        "variant": "pooled90",
+        "train_end": "2016-07-02 23:00:00+00:00",
+        "cq_start": "2016-08-30 12:00:00+00:00",
+        "cq_end": "2016-09-30 23:00:00+00:00",
+        "holiday_cq_hours": 24,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 24,
+            "days": 1,
+            "retained_n": 13,
+            "rejection": 0.4583333333333333,
+            "coverage": 1.0,
+            "width": 44.54999118184691
+          },
+          "ordinary": {
+            "n": 720,
+            "days": 30,
+            "retained_n": 621,
+            "rejection": 0.1375,
+            "coverage": 0.9323671497584541,
+            "width": 43.7844043713379
+          }
+        }
+      },
+      {
+        "month": "2016-11-01",
+        "variant": "pooled90",
+        "train_end": "2016-08-02 23:00:00+00:00",
+        "cq_start": "2016-09-30 12:00:00+00:00",
+        "cq_end": "2016-10-31 23:00:00+00:00",
+        "holiday_cq_hours": 24,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 48,
+            "days": 2,
+            "retained_n": 42,
+            "rejection": 0.125,
+            "coverage": 0.7380952380952381,
+            "width": 53.923678774568955
+          },
+          "ordinary": {
+            "n": 672,
+            "days": 28,
+            "retained_n": 593,
+            "rejection": 0.11755952380952381,
+            "coverage": 0.9173693086003373,
+            "width": 42.80876319180768
+          }
+        }
+      },
+      {
+        "month": "2016-12-01",
+        "variant": "pooled90",
+        "train_end": "2016-09-01 23:00:00+00:00",
+        "cq_start": "2016-10-30 12:00:00+00:00",
+        "cq_end": "2016-11-30 23:00:00+00:00",
+        "holiday_cq_hours": 48,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 24,
+            "days": 1,
+            "retained_n": 8,
+            "rejection": 0.6666666666666666,
+            "coverage": 1.0,
+            "width": 47.10509706114078
+          },
+          "ordinary": {
+            "n": 720,
+            "days": 30,
+            "retained_n": 544,
+            "rejection": 0.24444444444444444,
+            "coverage": 0.875,
+            "width": 37.70337428715426
+          }
+        }
+      },
+      {
+        "month": "2016-07-01",
+        "variant": "holiday90",
+        "train_end": "2016-04-01 23:00:00+00:00",
+        "cq_start": "2016-05-30 12:00:00+00:00",
+        "cq_end": "2016-06-30 23:00:00+00:00",
+        "holiday_cq_hours": 12,
+        "group_fallback_hours": 24,
+        "metrics": {
+          "holiday": {
+            "n": 24,
+            "days": 1,
+            "retained_n": 24,
+            "rejection": 0.0,
+            "coverage": 0.875,
+            "width": 93.34465462761018
+          },
+          "ordinary": {
+            "n": 720,
+            "days": 30,
+            "retained_n": 556,
+            "rejection": 0.22777777777777777,
+            "coverage": 0.8776978417266187,
+            "width": 74.4705325880259
+          }
+        }
+      },
+      {
+        "month": "2016-08-01",
+        "variant": "holiday90",
+        "train_end": "2016-05-02 23:00:00+00:00",
+        "cq_start": "2016-06-30 12:00:00+00:00",
+        "cq_end": "2016-07-31 23:00:00+00:00",
+        "holiday_cq_hours": 24,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 0,
+            "days": 0,
+            "retained_n": 0,
+            "rejection": null,
+            "coverage": null,
+            "width": null
+          },
+          "ordinary": {
+            "n": 744,
+            "days": 31,
+            "retained_n": 690,
+            "rejection": 0.07258064516129033,
+            "coverage": 0.9376811594202898,
+            "width": 66.23912194875837
+          }
+        }
+      },
+      {
+        "month": "2016-09-01",
+        "variant": "holiday90",
+        "train_end": "2016-06-02 23:00:00+00:00",
+        "cq_start": "2016-07-31 12:00:00+00:00",
+        "cq_end": "2016-08-31 23:00:00+00:00",
+        "holiday_cq_hours": 0,
+        "group_fallback_hours": 24,
+        "metrics": {
+          "holiday": {
+            "n": 24,
+            "days": 1,
+            "retained_n": 9,
+            "rejection": 0.625,
+            "coverage": 0.7777777777777778,
+            "width": 38.71167868734793
+          },
+          "ordinary": {
+            "n": 696,
+            "days": 29,
+            "retained_n": 624,
+            "rejection": 0.10344827586206896,
+            "coverage": 0.9150641025641025,
+            "width": 44.703361053511266
+          }
+        }
+      },
+      {
+        "month": "2016-10-01",
+        "variant": "holiday90",
+        "train_end": "2016-07-02 23:00:00+00:00",
+        "cq_start": "2016-08-30 12:00:00+00:00",
+        "cq_end": "2016-09-30 23:00:00+00:00",
+        "holiday_cq_hours": 24,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 24,
+            "days": 1,
+            "retained_n": 23,
+            "rejection": 0.041666666666666664,
+            "coverage": 0.9565217391304348,
+            "width": 62.16153649903501
+          },
+          "ordinary": {
+            "n": 720,
+            "days": 30,
+            "retained_n": 612,
+            "rejection": 0.15,
+            "coverage": 0.9297385620915033,
+            "width": 42.95308979737662
+          }
+        }
+      },
+      {
+        "month": "2016-11-01",
+        "variant": "holiday90",
+        "train_end": "2016-08-02 23:00:00+00:00",
+        "cq_start": "2016-09-30 12:00:00+00:00",
+        "cq_end": "2016-10-31 23:00:00+00:00",
+        "holiday_cq_hours": 24,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 48,
+            "days": 2,
+            "retained_n": 46,
+            "rejection": 0.041666666666666664,
+            "coverage": 0.7391304347826086,
+            "width": 54.45339789245774
+          },
+          "ordinary": {
+            "n": 672,
+            "days": 28,
+            "retained_n": 591,
+            "rejection": 0.12053571428571429,
+            "coverage": 0.9187817258883249,
+            "width": 42.723996346021295
+          }
+        }
+      },
+      {
+        "month": "2016-12-01",
+        "variant": "holiday90",
+        "train_end": "2016-09-01 23:00:00+00:00",
+        "cq_start": "2016-10-30 12:00:00+00:00",
+        "cq_end": "2016-11-30 23:00:00+00:00",
+        "holiday_cq_hours": 48,
+        "group_fallback_hours": 0,
+        "metrics": {
+          "holiday": {
+            "n": 24,
+            "days": 1,
+            "retained_n": 14,
+            "rejection": 0.4166666666666667,
+            "coverage": 1.0,
+            "width": 79.1460307425798
+          },
+          "ordinary": {
+            "n": 720,
+            "days": 30,
+            "retained_n": 531,
+            "rejection": 0.2625,
+            "coverage": 0.8775894538606404,
+            "width": 37.11624221018529
+          }
+        }
+      }
+    ]
+  },
+  "final_selected": {
+    "holiday": {
+      "n": 240,
+      "days": 10,
+      "retained_n": 188,
+      "rejection": 0.21666666666666667,
+      "coverage": 0.8882978723404256,
+      "width": 47.68833222512442
+    },
+    "ordinary": {
+      "n": 8520,
+      "days": 355,
+      "retained_n": 6745,
+      "rejection": 0.20833333333333334,
+      "coverage": 0.9151964418087473,
+      "width": 45.53577099187701
+    }
+  },
+  "final_baseline": {
+    "holiday": {
+      "n": 240,
+      "days": 10,
+      "retained_n": 159,
+      "rejection": 0.3375,
+      "coverage": 0.8867924528301887,
+      "width": 50.70424570530309
+    },
+    "ordinary": {
+      "n": 8520,
+      "days": 355,
+      "retained_n": 7185,
+      "rejection": 0.15669014084507044,
+      "coverage": 0.9042449547668754,
+      "width": 48.66191054613797
+    }
+  },
+  "final_rows": [
+    {
+      "month": "2017-01-01",
+      "variant": "holiday90",
+      "train_end": "2016-10-02 23:00:00+00:00",
+      "cq_start": "2016-11-30 12:00:00+00:00",
+      "cq_end": "2016-12-31 23:00:00+00:00",
+      "holiday_cq_hours": 24,
+      "group_fallback_hours": 0,
+      "metrics": {
+        "holiday": {
+          "n": 48,
+          "days": 2,
+          "retained_n": 39,
+          "rejection": 0.1875,
+          "coverage": 0.9487179487179487,
+          "width": 43.608580400461435
+        },
+        "ordinary": {
+          "n": 696,
+          "days": 29,
+          "retained_n": 645,
+          "rejection": 0.07327586206896551,
+          "coverage": 0.9085271317829458,
+          "width": 37.99152525916006
+        }
+      }
+    },
+    {
+      "month": "2017-02-01",
+      "variant": "holiday90",
+      "train_end": "2016-11-02 23:00:00+00:00",
+      "cq_start": "2016-12-31 12:00:00+00:00",
+      "cq_end": "2017-01-31 23:00:00+00:00",
+      "holiday_cq_hours": 48,
+      "group_fallback_hours": 0,
+      "metrics": {
+        "holiday": {
+          "n": 24,
+          "days": 1,
+          "retained_n": 22,
+          "rejection": 0.08333333333333333,
+          "coverage": 0.9545454545454546,
+          "width": 39.804101419980135
+        },
+        "ordinary": {
+          "n": 648,
+          "days": 27,
+          "retained_n": 532,
+          "rejection": 0.17901234567901234,
+          "coverage": 0.9360902255639098,
+          "width": 36.97388635972893
+        }
+      }
+    },
+    {
+      "month": "2017-03-01",
+      "variant": "holiday90",
+      "train_end": "2016-11-30 23:00:00+00:00",
+      "cq_start": "2017-01-28 12:00:00+00:00",
+      "cq_end": "2017-02-28 23:00:00+00:00",
+      "holiday_cq_hours": 24,
+      "group_fallback_hours": 0,
+      "metrics": {
+        "holiday": {
+          "n": 0,
+          "days": 0,
+          "retained_n": 0,
+          "rejection": null,
+          "coverage": null,
+          "width": null
+        },
+        "ordinary": {
+          "n": 744,
+          "days": 31,
+          "retained_n": 576,
+          "rejection": 0.22580645161290322,
+          "coverage": 0.890625,
+          "width": 35.90602057734954
+        }
+      }
+    },
+    {
+      "month": "2017-04-01",
+      "variant": "holiday90",
+      "train_end": "2016-12-31 23:00:00+00:00",
+      "cq_start": "2017-02-28 12:00:00+00:00",
+      "cq_end": "2017-03-31 23:00:00+00:00",
+      "holiday_cq_hours": 0,
+      "group_fallback_hours": 0,
+      "metrics": {
+        "holiday": {
+          "n": 0,
+          "days": 0,
+          "retained_n": 0,
+          "rejection": null,
+          "coverage": null,
+          "width": null
+        },
+        "ordinary": {
+          "n": 720,
+          "days": 30,
+          "retained_n": 584,
+          "rejection": 0.18888888888888888,
+          "coverage": 0.9315068493150684,
+          "width": 38.541257908978196
+        }
+      }
+    },
+    {
+      "month": "2017-05-01",
+      "variant": "holiday90",
+      "train_end": "2017-01-30 23:00:00+00:00",
+      "cq_start": "2017-03-30 12:00:00+00:00",
+      "cq_end": "2017-04-30 23:00:00+00:00",
+      "holiday_cq_hours": 0,
+      "group_fallback_hours": 24,
+      "metrics": {
+        "holiday": {
+          "n": 24,
+          "days": 1,
+          "retained_n": 0,
+          "rejection": 1.0,
+          "coverage": null,
+          "width": null
+        },
+        "ordinary": {
+          "n": 720,
+          "days": 30,
+          "retained_n": 204,
+          "rejection": 0.7166666666666667,
+          "coverage": 0.7647058823529411,
+          "width": 47.21979925104845
+        }
+      }
+    },
+    {
+      "month": "2017-06-01",
+      "variant": "holiday90",
+      "train_end": "2017-03-02 23:00:00+00:00",
+      "cq_start": "2017-04-30 12:00:00+00:00",
+      "cq_end": "2017-05-31 23:00:00+00:00",
+      "holiday_cq_hours": 24,
+      "group_fallback_hours": 0,
+      "metrics": {
+        "holiday": {
+          "n": 0,
+          "days": 0,
+          "retained_n": 0,
+          "rejection": null,
+          "coverage": null,
+          "width": null
+        },
+        "ordinary": {
+          "n": 720,
+          "days": 30,
+          "retained_n": 720,
+          "rejection": 0.0,
+          "coverage": 0.9944444444444445,
+          "width": 108.0124444815255
+        }
+      }
+    },
+    {
+      "month": "2017-07-01",
+      "variant": "holiday90",
+      "train_end": "2017-04-01 23:00:00+00:00",
+      "cq_start": "2017-05-30 12:00:00+00:00",
+      "cq_end": "2017-06-30 23:00:00+00:00",
+      "holiday_cq_hours": 0,
+      "group_fallback_hours": 24,
+      "metrics": {
+        "holiday": {
+          "n": 24,
+          "days": 1,
+          "retained_n": 24,
+          "rejection": 0.0,
+          "coverage": 0.8333333333333334,
+          "width": 61.88586430956574
+        },
+        "ordinary": {
+          "n": 720,
+          "days": 30,
+          "retained_n": 553,
+          "rejection": 0.23194444444444445,
+          "coverage": 0.9023508137432188,
+          "width": 48.985428343174235
+        }
+      }
+    },
+    {
+      "month": "2017-08-01",
+      "variant": "holiday90",
+      "train_end": "2017-05-02 23:00:00+00:00",
+      "cq_start": "2017-06-30 12:00:00+00:00",
+      "cq_end": "2017-07-31 23:00:00+00:00",
+      "holiday_cq_hours": 24,
+      "group_fallback_hours": 0,
+      "metrics": {
+        "holiday": {
+          "n": 0,
+          "days": 0,
+          "retained_n": 0,
+          "rejection": null,
+          "coverage": null,
+          "width": null
+        },
+        "ordinary": {
+          "n": 744,
+          "days": 31,
+          "retained_n": 670,
+          "rejection": 0.09946236559139784,
+          "coverage": 0.935820895522388,
+          "width": 41.345752606603135
+        }
+      }
+    },
+    {
+      "month": "2017-09-01",
+      "variant": "holiday90",
+      "train_end": "2017-06-02 23:00:00+00:00",
+      "cq_start": "2017-07-31 12:00:00+00:00",
+      "cq_end": "2017-08-31 23:00:00+00:00",
+      "holiday_cq_hours": 0,
+      "group_fallback_hours": 24,
+      "metrics": {
+        "holiday": {
+          "n": 24,
+          "days": 1,
+          "retained_n": 21,
+          "rejection": 0.125,
+          "coverage": 0.9523809523809523,
+          "width": 47.10467089816406
+        },
+        "ordinary": {
+          "n": 696,
+          "days": 29,
+          "retained_n": 559,
+          "rejection": 0.1968390804597701,
+          "coverage": 0.9159212880143113,
+          "width": 34.70044934658807
+        }
+      }
+    },
+    {
+      "month": "2017-10-01",
+      "variant": "holiday90",
+      "train_end": "2017-07-02 23:00:00+00:00",
+      "cq_start": "2017-08-30 12:00:00+00:00",
+      "cq_end": "2017-09-30 23:00:00+00:00",
+      "holiday_cq_hours": 24,
+      "group_fallback_hours": 0,
+      "metrics": {
+        "holiday": {
+          "n": 24,
+          "days": 1,
+          "retained_n": 20,
+          "rejection": 0.16666666666666666,
+          "coverage": 0.95,
+          "width": 41.11160677032029
+        },
+        "ordinary": {
+          "n": 720,
+          "days": 30,
+          "retained_n": 523,
+          "rejection": 0.27361111111111114,
+          "coverage": 0.9273422562141491,
+          "width": 31.015744857741563
+        }
+      }
+    },
+    {
+      "month": "2017-11-01",
+      "variant": "holiday90",
+      "train_end": "2017-08-02 23:00:00+00:00",
+      "cq_start": "2017-09-30 12:00:00+00:00",
+      "cq_end": "2017-10-31 23:00:00+00:00",
+      "holiday_cq_hours": 24,
+      "group_fallback_hours": 0,
+      "metrics": {
+        "holiday": {
+          "n": 48,
+          "days": 2,
+          "retained_n": 48,
+          "rejection": 0.0,
+          "coverage": 0.7708333333333334,
+          "width": 48.14450048047211
+        },
+        "ordinary": {
+          "n": 672,
+          "days": 28,
+          "retained_n": 581,
+          "rejection": 0.13541666666666666,
+          "coverage": 0.8450946643717728,
+          "width": 33.76182601989508
+        }
+      }
+    },
+    {
+      "month": "2017-12-01",
+      "variant": "holiday90",
+      "train_end": "2017-09-01 23:00:00+00:00",
+      "cq_start": "2017-10-30 12:00:00+00:00",
+      "cq_end": "2017-11-30 23:00:00+00:00",
+      "holiday_cq_hours": 48,
+      "group_fallback_hours": 0,
+      "metrics": {
+        "holiday": {
+          "n": 24,
+          "days": 1,
+          "retained_n": 14,
+          "rejection": 0.4166666666666667,
+          "coverage": 0.9285714285714286,
+          "width": 55.811042907552874
+        },
+        "ordinary": {
+          "n": 720,
+          "days": 30,
+          "retained_n": 598,
+          "rejection": 0.16944444444444445,
+          "coverage": 0.9130434782608695,
+          "width": 37.37018340512949
+        }
+      }
+    }
+  ],
+  "promoted": false,
+  "replay_changed": false,
+  "final_evaluations": 1
+}

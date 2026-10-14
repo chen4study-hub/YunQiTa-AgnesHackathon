@@ -1,0 +1,407 @@
+{
+  "status": "completed",
+  "endpoint": "owned loopback instance of actual HTTP app, not production resident",
+  "resident_unchanged": true,
+  "questions_frozen": [
+    "现在几点",
+    "天气怎么样",
+    "今天日期是多少",
+    "现在储能电量多少",
+    "为什么这样调度",
+    "执行回执是什么",
+    "未来24小时峰值什么时候",
+    "明天最高负荷",
+    "空调改26度电费多少",
+    "为什么转人工"
+  ],
+  "llm_answers": 8,
+  "llm_pct": 80.0,
+  "host_direct_answers": 2,
+  "all_first_events_under1s": true,
+  "results": [
+    {
+      "host_direct": true,
+      "question": "现在几点",
+      "first_event_ms": 1.6,
+      "total_ms": 27.9,
+      "explanation_source": "template",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "configuration_complete",
+      "fallback_phase": null,
+      "phase_timings": [],
+      "tool_names": [
+        "get_time"
+      ],
+      "answer": "现在 13:44。"
+    },
+    {
+      "host_direct": false,
+      "question": "天气怎么样",
+      "first_event_ms": 1.5,
+      "total_ms": 10032.9,
+      "explanation_source": "llm",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "call_succeeded",
+      "fallback_phase": null,
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 8203.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 8016.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 1782.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 1594.0
+            }
+          ]
+        }
+      ],
+      "tool_names": [
+        "get_weather"
+      ],
+      "answer": "14:00–17:00，室外气温 13.3 °C，湿度 57.2%。"
+    },
+    {
+      "host_direct": true,
+      "question": "今天日期是多少",
+      "first_event_ms": 1.8,
+      "total_ms": 37.8,
+      "explanation_source": "template",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "configuration_complete",
+      "fallback_phase": null,
+      "phase_timings": [],
+      "tool_names": [
+        "get_time"
+      ],
+      "answer": "今天是 10 月 12 日。"
+    },
+    {
+      "host_direct": false,
+      "question": "现在储能电量多少",
+      "first_event_ms": 2.2,
+      "total_ms": 10360.5,
+      "explanation_source": "llm",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "call_succeeded",
+      "fallback_phase": null,
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 7125.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 6891.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 3188.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2938.0
+            }
+          ]
+        }
+      ],
+      "tool_names": [
+        "current_state"
+      ],
+      "answer": "14:00 储能电量为60.0%，空调设定为25.5 °C。"
+    },
+    {
+      "host_direct": false,
+      "question": "为什么这样调度",
+      "first_event_ms": 1.6,
+      "total_ms": 9079.6,
+      "explanation_source": "llm",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "call_succeeded",
+      "fallback_phase": null,
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 1734.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 1484.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 7281.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 7031.0
+            }
+          ]
+        }
+      ],
+      "tool_names": [
+        "selection_reason"
+      ],
+      "answer": "该方案优先在允许的电网峰值容差内控制电费，因此预计区间上界电网峰值为 1,179.9 kW，电费为 15,172.3 元；比较范围仅为 24 小时调度窗口中的接受小时。"
+    },
+    {
+      "host_direct": false,
+      "question": "执行回执是什么",
+      "first_event_ms": 1.8,
+      "total_ms": 24139.0,
+      "explanation_source": "llm",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "call_succeeded",
+      "fallback_phase": null,
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 3687.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 3484.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 9703.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 9531.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 10704.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 10516.0
+            }
+          ]
+        }
+      ],
+      "tool_names": [
+        "execution_receipt"
+      ],
+      "answer": "14:00 的 BA/EMS下发日志回执确认 2 条指令，耗时 1.4 毫秒。"
+    },
+    {
+      "host_direct": false,
+      "question": "未来24小时峰值什么时候",
+      "first_event_ms": 1.8,
+      "total_ms": 12532.9,
+      "explanation_source": "llm",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "call_succeeded",
+      "fallback_phase": null,
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 2969.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2797.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 9516.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 9328.0
+            }
+          ]
+        }
+      ],
+      "tool_names": [
+        "get_forecast",
+        "forecast_peak"
+      ],
+      "answer": "未来预测峰值在次日 13:00，约 1,279.7 kW。"
+    },
+    {
+      "host_direct": false,
+      "question": "明天最高负荷",
+      "first_event_ms": 1.9,
+      "total_ms": 12882.2,
+      "explanation_source": "llm",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "call_succeeded",
+      "fallback_phase": null,
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 1313.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 1141.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 7703.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 7532.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 3843.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 3687.0
+            }
+          ]
+        }
+      ],
+      "tool_names": [
+        "get_forecast",
+        "forecast_peak"
+      ],
+      "answer": "次日最高预测负荷为 1,279.7 kW，出现在次日 13:00。这是本次起报在 13 时开始提供的 15 小时预测范围，不代表次日完整全天。"
+    },
+    {
+      "host_direct": false,
+      "question": "空调改26度电费多少",
+      "first_event_ms": 1.6,
+      "total_ms": 19604.4,
+      "explanation_source": "llm",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "call_succeeded",
+      "fallback_phase": null,
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 7359.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 7187.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 12219.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 12031.0
+            }
+          ]
+        }
+      ],
+      "tool_names": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "answer": "空调从 25.5 °C 改为 26 °C，接受 21 小时改前电费 16,769.6 元，改后 16,506.2 元，预计可节省 263.4 元；排除 3 小时（17:00–19:00，均因风险评分超过门控阈值），属非全天口径。"
+    },
+    {
+      "host_direct": false,
+      "question": "为什么转人工",
+      "first_event_ms": 1.2,
+      "total_ms": 6736.1,
+      "explanation_source": "llm",
+      "known": true,
+      "grounded": true,
+      "llm_reason": "call_succeeded",
+      "fallback_phase": null,
+      "phase_timings": [
+        {
+          "phase": "select",
+          "elapsed_ms": 3000.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 2812.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 1813.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 1641.0
+            }
+          ]
+        },
+        {
+          "phase": "answer",
+          "elapsed_ms": 1890.0,
+          "reason": "call_succeeded",
+          "transport_attempts": [
+            {
+              "reason": "transport_succeeded",
+              "elapsed_ms": 1719.0
+            }
+          ]
+        }
+      ],
+      "tool_names": [
+        "handoff_reason"
+      ],
+      "answer": "14:00 没有转人工，当前门控已通过，指令已有执行记录。"
+    }
+  ],
+  "failed_fallback_answers": 0
+}

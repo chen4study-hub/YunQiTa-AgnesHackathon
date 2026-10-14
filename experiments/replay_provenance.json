@@ -1,0 +1,36 @@
+{
+  "model_version": "byron2017-v1-cqr",
+  "artifact": "models\\byron2017-v1-cqr.joblib",
+  "artifact_sha256": "e836087f8dc0fbda5edd8c62dcde401e7b9ba38ccb57aa49d8899fbc09aa52ec",
+  "point_artifact_sha256": "875a1f0eb8eb83546bee3e1d773e9df9924f46964fdb1dbd3572213efe2497ef",
+  "data_sha256": "691a7c14644d3fae764978307c6c7eeb1b58a93845bf4bac759cba16cf04c74c",
+  "profile_selection_sha256": "af80dfdb49d8129b2a290b10afa7f614c1f364573d67992635c8e7b5af18e38f",
+  "test_start": "2017-11-07 06:00:00+00:00",
+  "calibration_end": "2017-11-07 05:00:00+00:00",
+  "caches": {
+    "0.1": {
+      "path": "data\\byron_test_rejection_10.csv",
+      "sha256": "15798f53ba463e2e8158d93404e56c9e36d4be917564a9259152a3855d738c43"
+    },
+    "0.15": {
+      "path": "data\\byron_test_rejection_15.csv",
+      "sha256": "26fd8e26883e0b11e9dbce3357629f612298e42994ac406bce3f8060a305f80a"
+    },
+    "0.2": {
+      "path": "data\\byron_test_rejection_20.csv",
+      "sha256": "55ab12401cca9adea30e099804999dea13b7d5f8b817b320d9ff78fe225548be"
+    },
+    "0.28": {
+      "path": "data\\byron_test_rejection_28.csv",
+      "sha256": "5102db720859bf851e469ab91e32e8cc4eb107ea3c4ea3f7145ff5a380c3d9fc"
+    },
+    "0.3": {
+      "path": "data\\byron_test_rejection_30.csv",
+      "sha256": "c17e962fcbe5e0b8af05394312d72c52ea2fc21b8de5aef5e595d09cdb050556"
+    }
+  },
+  "campus_artifact": "models/hog2017-v1.joblib",
+  "campus_input": "data/hog2017_cohort.csv",
+  "campus_artifact_sha256": "137916170bb537df0447922417fa227850ceb664636f17a30d6adb3e4349edf8",
+  "campus_input_sha256": "27950cfaebb667e81b7d0f3e1bb028dba9bfded79b33eb7ed30c9d663e173154"
+}

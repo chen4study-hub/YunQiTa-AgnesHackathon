@@ -1,0 +1,767 @@
+[
+  {
+    "original_index": 0,
+    "question": "今天用了多少电",
+    "old": {
+      "contains": [
+        "kWh",
+        "元"
+      ]
+    },
+    "new": {
+      "contains": [
+        "kWh"
+      ],
+      "semantic_check": "energy_kwh"
+    },
+    "reason": "只问累计电量，不必顺带电费；仍要求energy_totals、实际total_kwh值和kWh。"
+  },
+  {
+    "original_index": 1,
+    "question": "今日累计用电量",
+    "old": {
+      "contains": [
+        "kWh",
+        "元"
+      ]
+    },
+    "new": {
+      "contains": [
+        "kWh"
+      ],
+      "semantic_check": "energy_kwh"
+    },
+    "reason": "只问累计电量，不必顺带电费；仍要求energy_totals、实际total_kwh值和kWh。"
+  },
+  {
+    "original_index": 8,
+    "question": "2026-10-10电费是多少",
+    "old": {
+      "contains": [
+        "kWh",
+        "元"
+      ]
+    },
+    "new": {
+      "contains": [
+        "元"
+      ],
+      "semantic_check": "energy_cost"
+    },
+    "reason": "只问指定日电费，不强制无关kWh；仍要求日期工具实查的total_cost_cny与元。"
+  },
+  {
+    "original_index": 16,
+    "question": "今天有哪些告警",
+    "old": {
+      "contains": [
+        "告警记录"
+      ],
+      "evidence_alert_count": true
+    },
+    "new": {
+      "contains": [],
+      "semantic_check": "alerts_count"
+    },
+    "reason": "零告警可写没有告警或0条告警，不强制记录二字；用实际count核对，非零不能说无。"
+  },
+  {
+    "original_index": 17,
+    "question": "现在有哪些报警",
+    "old": {
+      "contains": [
+        "记录"
+      ]
+    },
+    "new": {
+      "contains": [],
+      "semantic_check": "alerts_count"
+    },
+    "reason": "零告警可写没有告警或0条告警，不强制记录二字；用实际count核对，非零不能说无。"
+  },
+  {
+    "original_index": 20,
+    "question": "电梯运行正常吗",
+    "old": {
+      "contains": [
+        "层",
+        "载客"
+      ]
+    },
+    "new": {
+      "contains": [
+        "层"
+      ],
+      "semantic_check": "lift_health"
+    },
+    "reason": "不强制载客二字，但要求实际运行楼层及明确无设备健康诊断，不能将停靠/运行记录说成健康结论。"
+  },
+  {
+    "original_index": 22,
+    "question": "H1电梯载重是多少",
+    "old": {
+      "contains": [
+        "层",
+        "载客"
+      ]
+    },
+    "new": {
+      "contains": [
+        "%"
+      ],
+      "semantic_check": "lift_field",
+      "expected_field": "load_pct",
+      "expected_unit": "%"
+    },
+    "reason": "只问载重/人数/所在楼层，不必附所有字段；仍逐个核对所查电梯ID和所问字段实际值。"
+  },
+  {
+    "original_index": 23,
+    "question": "电梯载客人数多少",
+    "old": {
+      "contains": [
+        "层",
+        "载客"
+      ]
+    },
+    "new": {
+      "contains": [
+        "人"
+      ],
+      "semantic_check": "lift_field",
+      "expected_field": "passengers",
+      "expected_unit": "人"
+    },
+    "reason": "只问载重/人数/所在楼层，不必附所有字段；仍逐个核对所查电梯ID和所问字段实际值。"
+  },
+  {
+    "original_index": 24,
+    "question": "1层人数多少",
+    "old": {
+      "contains": [
+        "kW",
+        "°C",
+        "ppm"
+      ]
+    },
+    "new": {
+      "contains": [
+        "人"
+      ],
+      "semantic_check": "floor_field",
+      "expected_field": "occupancy_people",
+      "expected_unit": "人"
+    },
+    "reason": "单项楼层问不要求无关kW/温度/CO₂；仍核对具体楼层、所问字段的实际值及单位。"
+  },
+  {
+    "original_index": 25,
+    "question": "18层温度是多少",
+    "old": {
+      "contains": [
+        "kW",
+        "°C",
+        "ppm"
+      ]
+    },
+    "new": {
+      "contains": [
+        "°C"
+      ],
+      "semantic_check": "floor_field",
+      "expected_field": "mean_temp_c",
+      "expected_unit": "°C"
+    },
+    "reason": "单项楼层问不要求无关kW/温度/CO₂；仍核对具体楼层、所问字段的实际值及单位。"
+  },
+  {
+    "original_index": 26,
+    "question": "40层负荷是多少",
+    "old": {
+      "contains": [
+        "kW",
+        "°C",
+        "ppm"
+      ]
+    },
+    "new": {
+      "contains": [
+        "kW"
+      ],
+      "semantic_check": "floor_field",
+      "expected_field": "floor_actual_kw",
+      "expected_unit": "kW"
+    },
+    "reason": "单项楼层问不要求无关kW/温度/CO₂；仍核对具体楼层、所问字段的实际值及单位。"
+  },
+  {
+    "original_index": 27,
+    "question": "27层CO₂是多少",
+    "old": {
+      "contains": [
+        "kW",
+        "°C",
+        "ppm"
+      ]
+    },
+    "new": {
+      "contains": [
+        "ppm"
+      ],
+      "semantic_check": "floor_field",
+      "expected_field": "co2_ppm",
+      "expected_unit": "ppm"
+    },
+    "reason": "单项楼层问不要求无关kW/温度/CO₂；仍核对具体楼层、所问字段的实际值及单位。"
+  },
+  {
+    "original_index": 30,
+    "question": "14层照明多少",
+    "old": {
+      "contains": [
+        "kW",
+        "°C",
+        "ppm"
+      ]
+    },
+    "new": {
+      "contains": [
+        "%"
+      ],
+      "semantic_check": "floor_field",
+      "expected_field": "lighting_pct",
+      "expected_unit": "%"
+    },
+    "reason": "单项楼层问不要求无关kW/温度/CO₂；仍核对具体楼层、所问字段的实际值及单位。"
+  },
+  {
+    "original_index": 32,
+    "question": "今天储能充电量",
+    "old": {
+      "contains": [
+        "kWh",
+        "kW"
+      ]
+    },
+    "new": {
+      "contains": [
+        "kWh"
+      ],
+      "semantic_check": "storage_field",
+      "expected_field": "charge_kwh",
+      "expected_label": "充电"
+    },
+    "reason": "累计充/放电量不必带瞬时kW；不能用当前功率冒充累计，核对实查累计字段。"
+  },
+  {
+    "original_index": 33,
+    "question": "今天储能放电量",
+    "old": {
+      "contains": [
+        "kWh",
+        "kW"
+      ]
+    },
+    "new": {
+      "contains": [
+        "kWh"
+      ],
+      "semantic_check": "storage_field",
+      "expected_field": "discharge_kwh",
+      "expected_label": "放电"
+    },
+    "reason": "累计充/放电量不必带瞬时kW；不能用当前功率冒充累计，核对实查累计字段。"
+  },
+  {
+    "original_index": 38,
+    "question": "室内湿度多少",
+    "old": {
+      "contains": [
+        "kW",
+        "CO₂"
+      ]
+    },
+    "new": {
+      "contains": [
+        "%"
+      ],
+      "semantic_check": "building_field",
+      "expected_field": "relative_humidity_pct",
+      "expected_unit": "%"
+    },
+    "reason": "室内湿度/PM2.5不必附总负荷和CO₂；保留building_state与environment所问字段实际值检查。"
+  },
+  {
+    "original_index": 39,
+    "question": "室内PM2.5多少",
+    "old": {
+      "contains": [
+        "kW",
+        "CO₂"
+      ]
+    },
+    "new": {
+      "contains": [
+        "μg/m³"
+      ],
+      "semantic_check": "building_field",
+      "expected_field": "pm25_ug_m3",
+      "expected_unit": "μg/m³"
+    },
+    "reason": "室内湿度/PM2.5不必附总负荷和CO₂；保留building_state与environment所问字段实际值检查。"
+  },
+  {
+    "original_index": 64,
+    "question": "今天北京的天气新闻有哪些？给出来源链接",
+    "old": {
+      "contains": [],
+      "recent_news_14_days": true
+    },
+    "new": {
+      "contains": [],
+      "semantic_check": "news"
+    },
+    "reason": "放宽最近两周查到的相关报道固定开头；不放宽14天、真实已查URL、问题城市/天气相关性。无相关源必须直说没查到，不能用城市天气替代新闻。"
+  },
+  {
+    "original_index": 66,
+    "question": "查一下深圳最新的天气新闻和链接",
+    "old": {
+      "contains": [],
+      "recent_news_14_days": true
+    },
+    "new": {
+      "contains": [],
+      "semantic_check": "news"
+    },
+    "reason": "放宽最近两周查到的相关报道固定开头；不放宽14天、真实已查URL、问题城市/天气相关性。无相关源必须直说没查到，不能用城市天气替代新闻。"
+  },
+  {
+    "original_index": 69,
+    "question": "北京近期有哪些天气新闻？",
+    "old": {
+      "contains": [],
+      "recent_news_14_days": true
+    },
+    "new": {
+      "contains": [],
+      "semantic_check": "news"
+    },
+    "reason": "放宽最近两周查到的相关报道固定开头；不放宽14天、真实已查URL、问题城市/天气相关性。无相关源必须直说没查到，不能用城市天气替代新闻。"
+  },
+  {
+    "original_index": 73,
+    "question": "今天北京的天气新闻有哪些？来源链接请参考公开资料",
+    "old": {
+      "contains": [],
+      "recent_news_14_days": true
+    },
+    "new": {
+      "contains": [],
+      "semantic_check": "news"
+    },
+    "reason": "放宽最近两周查到的相关报道固定开头；不放宽14天、真实已查URL、问题城市/天气相关性。无相关源必须直说没查到，不能用城市天气替代新闻。"
+  },
+  {
+    "original_index": 79,
+    "question": "北京最近有什么天气新闻",
+    "old": {
+      "contains": [],
+      "recent_news_14_days": true
+    },
+    "new": {
+      "contains": [],
+      "semantic_check": "news"
+    },
+    "reason": "放宽最近两周查到的相关报道固定开头；不放宽14天、真实已查URL、问题城市/天气相关性。无相关源必须直说没查到，不能用城市天气替代新闻。"
+  },
+  {
+    "original_index": 3,
+    "question": "昨天电费多少",
+    "old": {
+      "contains": [
+        "kWh",
+        "元"
+      ]
+    },
+    "new": {
+      "contains": [
+        "元"
+      ],
+      "semantic_check": "energy_cost"
+    },
+    "reason": "只问指定日电费，不强制无关kWh；仍要求日期工具实查的total_cost_cny与元。"
+  },
+  {
+    "original_index": 21,
+    "question": "L1电梯在哪层",
+    "old": {
+      "contains": [
+        "层",
+        "载客"
+      ]
+    },
+    "new": {
+      "contains": [
+        "层"
+      ],
+      "semantic_check": "lift_field",
+      "expected_field": "floor",
+      "expected_unit": "层"
+    },
+    "reason": "只问载重/人数/所在楼层，不必附所有字段；仍逐个核对所查电梯ID和所问字段实际值。"
+  },
+  {
+    "original_index": 29,
+    "question": "12层风机状态",
+    "old": {
+      "contains": [
+        "kW",
+        "°C",
+        "ppm"
+      ]
+    },
+    "new": {
+      "contains": [
+        "%"
+      ],
+      "semantic_check": "floor_field",
+      "expected_field": "fan_pct",
+      "expected_unit": "%"
+    },
+    "reason": "单项楼层问不要求无关kW/温度/CO₂；仍核对具体楼层、所问字段的实际值及单位。"
+  },
+  {
+    "original_index": 4,
+    "question": "昨天用了多少电",
+    "old": {
+      "contains": [
+        "kWh",
+        "元"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "kWh"
+      ],
+      "semantic_check": "energy_kwh"
+    },
+    "reason": "只问累计电量，不要求无关电费；仍核对查得累计值/单位。"
+  },
+  {
+    "original_index": 5,
+    "question": "前天用电量多少",
+    "old": {
+      "contains": [
+        "kWh",
+        "元"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "kWh"
+      ],
+      "semantic_check": "energy_kwh"
+    },
+    "reason": "只问累计电量，不要求无关电费；仍核对查得累计值/单位。"
+  },
+  {
+    "original_index": 28,
+    "question": "10层新风量是多少",
+    "old": {
+      "contains": [
+        "kW",
+        "°C",
+        "ppm"
+      ],
+      "semantic_check": null,
+      "expected_field": null,
+      "expected_unit": null
+    },
+    "new": {
+      "contains": [
+        "m³/h"
+      ],
+      "semantic_check": "floor_field",
+      "expected_field": "fresh_air_m3_h",
+      "expected_unit": "m³/h"
+    },
+    "reason": "只问新风量，不强制温度/负荷；检查对应楼层实值和单位。"
+  },
+  {
+    "original_index": 35,
+    "question": "今天光伏发电量多少",
+    "old": {
+      "contains": [
+        "kWh",
+        "kW"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "kWh"
+      ],
+      "semantic_check": "pv_energy"
+    },
+    "reason": "只问发电量不必附瞬时功率；仍要求真实generation_kwh。"
+  },
+  {
+    "original_index": 36,
+    "question": "光伏累计发电量",
+    "old": {
+      "contains": [
+        "kWh",
+        "kW"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "kWh"
+      ],
+      "semantic_check": "pv_energy"
+    },
+    "reason": "只问发电量不必附瞬时功率；仍要求真实generation_kwh。"
+  },
+  {
+    "original_index": 50,
+    "question": "今天有哪些告警",
+    "old": {
+      "contains": [
+        "告警记录"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [],
+      "semantic_check": "alerts_count"
+    },
+    "reason": "零告警允许报警/告警同义表达，实际count不能改变。"
+  },
+  {
+    "original_index": 46,
+    "question": "执行回执是什么",
+    "old": {
+      "contains": [
+        "BA/EMS"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "BA/EMS"
+      ],
+      "semantic_check": "receipt"
+    },
+    "reason": "回执问题两种问法同用实际count/elapsed_ms及日志标签，接受ms或毫秒但必须空格。"
+  },
+  {
+    "original_index": 51,
+    "question": "执行回执",
+    "old": {
+      "contains": [
+        " 条",
+        " 毫秒"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "BA/EMS"
+      ],
+      "semantic_check": "receipt"
+    },
+    "reason": "回执按真实count和elapsed_ms检查；允许毫秒或ms，二者均必须数字空格单位及BA/EMS日志标签。"
+  },
+  {
+    "original_index": 52,
+    "question": "为什么转人工",
+    "old": {
+      "contains": [
+        "交值班人员处理"
+      ],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [
+        "值班"
+      ],
+      "semantic_check": "handoff"
+    },
+    "reason": "允许值班核对/交值班人员处理同义；仍要求实际接管状态与源原因，不允许声称本小时无需人工。"
+  },
+  {
+    "original_index": 70,
+    "question": "北京 天气 新闻 给出来源链接",
+    "old": {
+      "contains": [],
+      "semantic_check": null
+    },
+    "new": {
+      "contains": [],
+      "semantic_check": "news"
+    },
+    "reason": "新闻不强制固定开头；实际源必须14天内且标题/正文主题相关，无源只允许没查到相关报道。"
+  },
+  {
+    "original_index": 72,
+    "question": "今天适合出去散步吗",
+    "old": {
+      "contains": [
+        "13.3 °C",
+        "57%",
+        "散步"
+      ]
+    },
+    "new": {
+      "contains": [
+        "13.3 °C",
+        "57.0%",
+        "散步"
+      ]
+    },
+    "reason": "统一现有湿度显示一位小数，57%与57.0%数值相同。"
+  },
+  {
+    "multi_group": "hvac",
+    "old": [
+      {
+        "group": "hvac",
+        "question": "空调改到24度能省多少钱",
+        "tool": "hvac_compare",
+        "contains": [
+          "620.7",
+          "次日 13:00",
+          "次日 14:00",
+          "不按整天"
+        ]
+      },
+      {
+        "group": "hvac",
+        "question": "刚才的比较排除了哪些时段？请列出全部时间和原因。",
+        "tool": null,
+        "contains": [
+          "17:00",
+          "18:00",
+          "19:00",
+          "20:00",
+          "次日 13:00",
+          "次日 14:00",
+          "预测变化较大"
+        ]
+      }
+    ],
+    "new": [
+      {
+        "group": "hvac",
+        "question": "空调改到24度能省多少钱",
+        "tool": "hvac_compare",
+        "contains": [
+          "24.0 °C",
+          "预计多花",
+          "不按整天"
+        ],
+        "original_index": 4
+      },
+      {
+        "group": "hvac",
+        "question": "刚才的比较排除了哪些时段？请列出全部时间和原因。",
+        "tool": null,
+        "contains": [
+          "预测变化较大"
+        ],
+        "expected_exclusions": [
+          {
+            "timestamp": "2017-10-23T17:00:00-05:00",
+            "day_label": "今天",
+            "year": 2017,
+            "month": 10,
+            "day": 23,
+            "hour": 17,
+            "minute": 0,
+            "reason": "预测变化较大",
+            "abstain_reason": "routing_risk_above_threshold",
+            "confidence": 0.865264158522,
+            "risk_score": 0.8377083333333333,
+            "risk_threshold": 0.8208333333333332
+          },
+          {
+            "timestamp": "2017-10-23T18:00:00-05:00",
+            "day_label": "今天",
+            "year": 2017,
+            "month": 10,
+            "day": 23,
+            "hour": 18,
+            "minute": 0,
+            "reason": "预测变化较大",
+            "abstain_reason": "routing_risk_above_threshold",
+            "confidence": 0.838808957972,
+            "risk_score": 0.963125,
+            "risk_threshold": 0.8091666666666667
+          },
+          {
+            "timestamp": "2017-10-23T19:00:00-05:00",
+            "day_label": "今天",
+            "year": 2017,
+            "month": 10,
+            "day": 23,
+            "hour": 19,
+            "minute": 0,
+            "reason": "预测变化较大",
+            "abstain_reason": "routing_risk_above_threshold",
+            "confidence": 0.835726331501,
+            "risk_score": 0.928125,
+            "risk_threshold": 0.8152083333333333
+          },
+          {
+            "timestamp": "2017-10-23T20:00:00-05:00",
+            "day_label": "今天",
+            "year": 2017,
+            "month": 10,
+            "day": 23,
+            "hour": 20,
+            "minute": 0,
+            "reason": "预测变化较大",
+            "abstain_reason": "routing_risk_above_threshold",
+            "confidence": 0.82755957332,
+            "risk_score": 0.8493749999999999,
+            "risk_threshold": 0.8135416666666666
+          },
+          {
+            "timestamp": "2017-10-24T13:00:00-05:00",
+            "day_label": "次日",
+            "year": 2017,
+            "month": 10,
+            "day": 24,
+            "hour": 13,
+            "minute": 0,
+            "reason": "预测变化较大",
+            "abstain_reason": "routing_risk_above_threshold",
+            "confidence": 0.783822314854,
+            "risk_score": 0.8610416666666666,
+            "risk_threshold": 0.8227083333333334
+          },
+          {
+            "timestamp": "2017-10-24T14:00:00-05:00",
+            "day_label": "次日",
+            "year": 2017,
+            "month": 10,
+            "day": 24,
+            "hour": 14,
+            "minute": 0,
+            "reason": "预测变化较大",
+            "abstain_reason": "routing_risk_above_threshold",
+            "confidence": 0.782802194761,
+            "risk_score": 0.8785416666666666,
+            "risk_threshold": 0.8254166666666667
+          }
+        ],
+        "original_index": 5
+      }
+    ],
+    "reason": "旧620.7及排除时刻来自旧数据，不是当前冻结记录；以现有工具实际比较方向和全部排除时刻检查，不删范围要求。"
+  }
+]

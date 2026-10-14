@@ -1,0 +1,11 @@
+{
+  "scope": "exploratory follow-up on already-inspected development windows",
+  "evidence": "deep_drift_diagnostics.csv associates lagged-weather extrapolation with large prediction error",
+  "candidate": "half residual correction only outside training min/max of lagged air temperature",
+  "baseline": "LightGBM CQR",
+  "factor": 0.5,
+  "bounds": "training-only min/max; no evaluation labels or target-hour weather",
+  "calibration": "recompute scale and independent Cq after applying identical wrapper to point/quantile models",
+  "evaluation": "same three development folds and composite weights; no blind-generalization claim",
+  "promotion": "disabled"
+}

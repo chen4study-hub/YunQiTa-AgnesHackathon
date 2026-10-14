@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "changed_text_fields": {
+    "exports/buildings.json": 0,
+    "exports/model_card.json": 0,
+    "exports/replay/abstain.json": 100,
+    "exports/replay/index.json": 0,
+    "exports/replay/normal.json": 113,
+    "exports/replay/peak.json": 109,
+    "exports/replay/sample.json": 0
+  },
+  "visible_strings_scanned": 5152,
+  "new_llm_calls": 0,
+  "new_dispatches": 0,
+  "nonprose_unchanged": true,
+  "before_sha256": {
+    "exports/buildings.json": "bb99ed8a4f97e1dcba79f1214a1a3f0461daca953f0e218da602c208262152af",
+    "exports/model_card.json": "c426e6a807be8e33e6cb97afe8df9101aa9e3ee20c03099e775405b0d1dab89b",
+    "exports/replay/abstain.json": "f02e7989724c7d1246f12cf1db344e49d27565fd4453ec1407e270c65a2b971d",
+    "exports/replay/index.json": "264457c6eee854807c4e1779137e596628f6253b3e3456fe6330de7acb014b06",
+    "exports/replay/normal.json": "0c12399d62b83560c31b3e6161bec66136bcd15db2f66773ef77059b0104b78b",
+    "exports/replay/peak.json": "fa2812727ba6e311ea4b6f44188d1ae6239bdecefecc0a4c80d0ce04329a8f50",
+    "exports/replay/sample.json": "e1cfaea2f40a6445db71c19c9263a80cb3bb4998ba3b69f4a715462ea6478536"
+  },
+  "after_sha256": {
+    "normal.json": "98ac37c3bf2123c2ca9850d47d908d95618748162912ef5247170a548a2da3bb",
+    "peak.json": "e25fc277a81c3ca2ca4c2e141bdb67ef4b5d36c9d8398029afc8d5efa5b9f740",
+    "abstain.json": "792fd3c275dc0aba93b90b5b8e3d2834ba151931c110f7cb271ef6c8482da554"
+  }
+}

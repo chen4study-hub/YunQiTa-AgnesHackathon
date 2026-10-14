@@ -1,0 +1,531 @@
+/* Left-column redesign only. Chat geometry and interaction styles stay in agent.css. */
+.agent-root .agent-page .card :is(h2, h3) {
+  font-family: "Microsoft YaHei", system-ui, sans-serif;
+}
+.agent-root .agent-left-slot {
+  font-family: "Microsoft YaHei", system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.agent-root .agent-left-slot :is(th, td, button, small, strong) {
+  font-family: inherit;
+}
+.agent-root .agent-left-slot .agent-redesign {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  overflow: visible;
+}
+.agent-root
+  .agent-redesign
+  > :is(
+    .agent-heading,
+    .agent-status-bar,
+    .agent-plan,
+    .agent-reason-section,
+    .agent-actions
+  ) {
+  margin: 0;
+  grid-area: auto;
+}
+.agent-root .agent-redesign .agent-heading {
+  align-items: center;
+}
+.agent-root .agent-redesign .agent-heading > div:first-child {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.agent-root .agent-redesign .agent-heading small {
+  min-block-size: 0;
+}
+.agent-root .agent-redesign .agent-status-bar {
+  min-block-size: 0;
+  padding: 6px 8px;
+  font-size: var(--font-note);
+  line-height: 1.4;
+}
+.agent-root .agent-redesign .agent-plan {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.agent-root .agent-redesign .agent-plan ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.agent-root .agent-redesign .agent-plan ul li,
+.agent-root .agent-redesign .agent-plan ul li:first-child {
+  grid-column: auto;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid #29404e;
+  border-radius: 6px;
+  background: #10202a;
+}
+.agent-root .agent-redesign .agent-plan-label {
+  font-size: var(--font-note);
+  line-height: 1.4;
+  color: #a8bdc9;
+}
+.agent-root .agent-redesign .agent-plan-number {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 0;
+  font-family: inherit;
+  font-size: var(--font-value-md);
+  line-height: 1.15;
+  margin-top: 3px;
+}
+.agent-root .agent-redesign .agent-plan-number small {
+  font-size: var(--font-unit);
+  color: var(--muted);
+  line-height: 1;
+  white-space: nowrap;
+}
+.agent-root .agent-redesign .agent-plan-number .smooth-value {
+  min-width: 0;
+  font-size: inherit;
+}
+.agent-root .agent-redesign .agent-evidence-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 12px;
+  min-width: 0;
+}
+.agent-root .agent-redesign :is(.agent-chain, .agent-comparison) {
+  min-width: 0;
+  overflow: visible;
+}
+.agent-root .agent-redesign h3 {
+  font-size: var(--font-subtitle);
+  margin: 0 0 6px;
+  color: #c5d9e3;
+}
+.agent-root .agent-redesign .agent-comparison > header {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.agent-root .agent-redesign .agent-comparison > header small {
+  font-size: var(--font-note);
+}
+.agent-root .agent-redesign .agent-steps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+}
+.agent-root .agent-redesign .agent-steps > li {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2px 6px;
+  grid-column: auto;
+  padding: 4px 0 4px 22px;
+  border-bottom: 1px solid #1c2a36;
+  font-size: var(--font-note);
+  line-height: 1.4;
+}
+.agent-root .agent-redesign .agent-steps > li::before {
+  width: 16px;
+  height: 16px;
+  top: 5px;
+  font-size: var(--font-note);
+}
+.agent-root .agent-redesign .agent-steps b {
+  font-weight: 500;
+  color: #dce9ee;
+}
+.agent-root .agent-redesign .agent-steps span {
+  display: inline;
+  font-size: var(--font-note);
+  line-height: inherit;
+  margin: 0;
+}
+.agent-root .agent-redesign .agent-step-result::before {
+  content: " · ";
+  color: #5b6b76;
+}
+.agent-root .agent-redesign .agent-reason-sentence {
+  display: block;
+}
+.agent-root .agent-redesign .agent-step-time {
+  font-size: var(--font-note);
+  color: #8597a3;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.agent-root .agent-redesign .agent-comparison .agent-table-scroll {
+  overflow: visible;
+  padding: 0;
+}
+.agent-root .agent-redesign .agent-comparison table {
+  width: 100%;
+  table-layout: fixed;
+  font-size: var(--font-note);
+}
+.agent-root .agent-redesign .agent-comparison :is(th, td) {
+  padding: 5px 4px;
+  font-size: var(--font-note);
+  line-height: 1.45;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  vertical-align: middle;
+}
+.agent-root .agent-redesign .agent-comparison th:first-child {
+  width: 22%;
+}
+.agent-root .agent-redesign .agent-comparison th:nth-child(2) {
+  width: 21%;
+}
+.agent-root .agent-redesign .agent-comparison th:nth-child(3) {
+  width: 22%;
+}
+.agent-root .agent-redesign .agent-comparison th:nth-child(4) {
+  width: 22%;
+}
+.agent-root .agent-redesign .agent-comparison th:last-child {
+  width: 13%;
+}
+.agent-root .agent-redesign .agent-comparison tbody th {
+  padding-left: 8px;
+}
+.agent-root .agent-redesign .agent-comparison thead th {
+  padding-inline: 4px;
+}
+.agent-root .agent-redesign .agent-candidate-storage {
+  white-space: nowrap;
+}
+.agent-root .agent-redesign .agent-comparison .smooth-value {
+  min-width: 0;
+  white-space: nowrap;
+}
+.agent-root .agent-redesign .agent-selected {
+  background: #163d36;
+}
+.agent-root .agent-redesign .agent-selected th {
+  box-shadow: inset 3px 0 #72e0b6;
+  color: #93e4bf;
+}
+.agent-root .agent-redesign .agent-comparison table small {
+  display: block;
+  font-size: var(--font-note);
+  line-height: 1.2;
+  color: #a8bdc9;
+}
+.agent-root .agent-redesign .agent-reason-section {
+  border-top: 1px solid #29404e;
+  padding-top: 7px;
+}
+.agent-root .agent-redesign .agent-plan-reason {
+  display: block;
+  position: relative;
+  margin: 0;
+}
+.agent-root .agent-redesign .agent-reason-preview {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  margin: 0;
+  font-size: var(--font-note);
+  line-height: 1.5;
+  min-height: 3em;
+}
+.agent-root .agent-redesign .agent-plan-reason > button {
+  position: absolute;
+  right: 0;
+  top: -25px;
+  border: 0;
+  background: none;
+  padding: 0;
+  min-height: 24px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.agent-root .agent-redesign > .agent-actions {
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+.agent-root .agent-redesign > .agent-actions button {
+  width: 112px;
+  min-height: 36px;
+  padding: 5px 8px;
+  font-size: var(--font-note);
+}
+.agent-root .agent-record-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-note);
+}
+.agent-root .agent-record-state::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+.agent-root .agent-left-slot .agent-record-card td:last-child,
+.agent-root .agent-left-slot .agent-record-card thead th:last-child {
+  text-align: right;
+}
+@container dashboard-content (min-width: 1180px) {
+  .agent-root .agent-left-slot {
+    grid-template-rows: minmax(min-content, 1fr) 204px;
+    gap: 8px;
+    scrollbar-gutter: auto;
+  }
+  .agent-root .agent-left-slot > .agent-redesign {
+    height: 100%;
+    padding: 8px 10px;
+    gap: 7px;
+  }
+  .agent-root .agent-left-slot .agent-record-card {
+    height: 100%;
+    padding: 7px 10px;
+  }
+  .agent-root .agent-left-slot .agent-record-card .agent-heading {
+    margin-bottom: 4px;
+  }
+  .agent-root .agent-left-slot .agent-record-card .agent-heading > div {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .agent-root .agent-left-slot .agent-record-card table {
+    min-width: 0;
+    height: auto;
+    margin: 0;
+  }
+  .agent-root .agent-left-slot .agent-record-card tbody tr {
+    height: auto;
+  }
+  .agent-root .agent-left-slot .agent-record-card :is(th, td) {
+    padding: 2px 4px;
+    font-size: var(--font-note);
+    line-height: 1.2;
+  }
+  .agent-root .agent-left-slot .agent-record-card .agent-table-scroll {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow: visible;
+  }
+  .agent-root .agent-left-slot .agent-record-card .smooth-value {
+    line-height: 1.2;
+  }
+  .agent-root .agent-left-slot .agent-redesign .agent-steps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .agent-root .agent-left-slot .agent-redesign .agent-steps > li {
+    flex-wrap: nowrap;
+    min-height: 0;
+  }
+  .agent-root
+    .agent-left-slot
+    .agent-redesign
+    .agent-steps
+    > li
+    :is(b, span, small) {
+    font-size: var(--font-note);
+    line-height: 1.3;
+  }
+  .agent-root .agent-left-slot .agent-redesign .agent-steps > li b {
+    flex-shrink: 0;
+  }
+  .agent-root .agent-left-slot .agent-redesign .agent-steps > li small {
+    flex-shrink: 0;
+  }
+  .agent-root .agent-left-slot .agent-redesign .agent-steps > li::before {
+    top: 3px;
+  }
+  .agent-root .agent-left-slot .agent-redesign .agent-plan ul li {
+    padding: 5px 8px;
+  }
+  .agent-root .agent-redesign > .agent-evidence-row {
+    flex: 1;
+    align-content: stretch;
+  }
+  .agent-root .agent-redesign .agent-chain {
+    display: flex;
+    flex-direction: column;
+  }
+  .agent-root .agent-redesign .agent-chain .agent-steps {
+    flex: 1;
+    grid-auto-rows: minmax(min-content, 1fr);
+  }
+  .agent-root .agent-redesign .agent-chain .agent-steps > li {
+    align-items: center;
+  }
+  .agent-root .agent-redesign .agent-chain .agent-steps > li::before {
+    top: calc(50% - 8px);
+  }
+  .agent-root .agent-redesign .agent-comparison {
+    display: flex;
+    flex-direction: column;
+  }
+  .agent-root .agent-redesign .agent-comparison .agent-table-scroll {
+    flex: 1;
+    display: flex;
+  }
+  .agent-root .agent-redesign .agent-comparison table {
+    height: 100%;
+    margin: 0;
+  }
+  .agent-root .agent-redesign > .agent-reason-dialog {
+    grid-area: auto;
+  }
+  .agent-root .agent-redesign .agent-receipt {
+    max-height: none;
+    overflow: visible;
+  }
+}
+@container dashboard-content (1180px <= width < 1700px) {
+  .agent-root .agent-left-slot {
+    grid-template-rows: minmax(min-content, 1fr) 160px;
+    gap: 6px;
+  }
+  .agent-root .agent-left-slot > .agent-redesign {
+    gap: 1px;
+    padding: 3px 9px;
+  }
+  .agent-root .agent-redesign .agent-heading .agent-tag {
+    padding: 2px 5px;
+  }
+  .agent-root .agent-redesign .agent-status-bar {
+    padding: 4px 6px;
+    gap: 4px;
+  }
+  .agent-root .agent-redesign .agent-plan li {
+    padding: 5px 8px;
+  }
+  .agent-root .agent-redesign .agent-evidence-row {
+    gap: 8px;
+  }
+  .agent-root .agent-redesign .agent-evidence-row h3 {
+    margin-bottom: 3px;
+  }
+  .agent-root .agent-redesign .agent-reason-section h3 {
+    margin-bottom: 4px;
+  }
+  .agent-root .agent-redesign .agent-handoff-summary :is(p, b) {
+    line-height: 1.35;
+    font-size: var(--font-note);
+  }
+  .agent-root .agent-redesign .agent-handoff-summary p {
+    margin-block: 2px;
+  }
+  .agent-root .agent-left-slot .agent-redesign .agent-steps > li {
+    padding-block: 1px;
+    gap: 0 4px;
+  }
+  .agent-root .agent-left-slot .agent-redesign .agent-plan ul li {
+    padding-block: 2px;
+  }
+  .agent-root .agent-left-slot .agent-redesign .agent-steps > li::before {
+    top: 1px;
+  }
+  .agent-root .agent-redesign .agent-comparison :is(th, td) {
+    padding: 2px 1px;
+    line-height: 1.3;
+  }
+  .agent-root
+    .agent-redesign
+    .agent-comparison
+    table
+    :is(.smooth-value, .smooth-value > span) {
+    line-height: 1.2;
+  }
+  .agent-root .agent-redesign .agent-comparison tbody :is(th, td) {
+    padding-block: 1px;
+    line-height: 1.2;
+  }
+  .agent-root .agent-redesign .agent-comparison .agent-record-state {
+    line-height: 1.2;
+  }
+  .agent-root
+    .agent-redesign
+    .agent-comparison
+    :is(td:nth-child(3), td:nth-child(4))
+    .smooth-value {
+    white-space: normal;
+  }
+  .agent-root .agent-redesign .agent-reason-section {
+    padding-top: 3px;
+  }
+  .agent-root .agent-left-slot .agent-record-card {
+    padding-block: 4px;
+  }
+  .agent-root .agent-left-slot .agent-record-card :is(th, td) {
+    padding-block: 1px;
+    line-height: 1.2;
+  }
+  .agent-root .agent-left-slot .agent-record-card .agent-record-state {
+    line-height: 1.2;
+  }
+  .agent-root .agent-left-slot .agent-record-card .agent-heading {
+    margin-bottom: 2px;
+  }
+}
+@container dashboard-content (max-width: 1179px) {
+  .agent-root .agent-redesign .agent-plan-reason > button {
+    min-height: 36px;
+    top: -36px;
+    padding-inline: 6px;
+  }
+  .agent-root .agent-redesign .agent-reason-section {
+    padding-top: 14px;
+  }
+  .agent-root .agent-redesign .agent-reason-section h3 {
+    min-height: 26px;
+  }
+  .agent-root .agent-redesign .agent-evidence-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .agent-root .agent-redesign .agent-plan ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .agent-root .agent-redesign .agent-plan ul li:first-child {
+    grid-column: 1 / -1;
+  }
+  .agent-root .agent-redesign .agent-tags {
+    width: auto;
+  }
+  .agent-root .agent-redesign .agent-status-bar {
+    align-items: flex-start;
+  }
+  .agent-root .agent-redesign .agent-plan-number {
+    font-size: var(--font-value-md);
+  }
+  .agent-root
+    .agent-redesign
+    .agent-plan-number
+    :is(.smooth-value, .smooth-value > span) {
+    font-size: inherit;
+  }
+  .agent-root .agent-redesign .agent-plan-number small {
+    font-size: var(--font-unit);
+  }
+  .agent-root .agent-redesign .agent-actions {
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+  .agent-root .agent-redesign .agent-actions button {
+    width: 0;
+    flex: 1;
+    padding: 5px 4px;
+  }
+}

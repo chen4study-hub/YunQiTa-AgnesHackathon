@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "max_floor_to_office_median": 1.912280701754386,
+  "max_equipment_to_office_median": 1.912280701754386,
+  "conservation": true,
+  "unrelated_fields_preserved": true,
+  "new_llm_calls": 0,
+  "new_dispatches": 0,
+  "at22": [
+    {
+      "day": "normal",
+      "old_equipment_kw": [
+        252.3,
+        239.8
+      ],
+      "new_equipment_kw": [
+        38.8,
+        36.8
+      ],
+      "office_median_kw": 21.2
+    },
+    {
+      "day": "peak",
+      "old_equipment_kw": [
+        266.3,
+        270.0
+      ],
+      "new_equipment_kw": [
+        40.5,
+        41.0
+      ],
+      "office_median_kw": 22.8
+    },
+    {
+      "day": "abstain",
+      "old_equipment_kw": [
+        253.1,
+        240.1
+      ],
+      "new_equipment_kw": [
+        38.9,
+        36.9
+      ],
+      "office_median_kw": 20.8
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+/* Readability floors are CSS pixels, independent of the layout's rem scale. */
+:root {
+  --font-body: 15px;
+  --font-table: 14px;
+  --font-note: 14px;
+  --font-label: 12px;
+  --font-legend: 12px;
+  --font-title: clamp(18px, 1vw, 20px);
+  --font-subtitle: var(--font-note);
+  --font-value-lg: clamp(26px, 1.8vw, 36px);
+  --font-value-md: clamp(24px, 1.4vw, 28px);
+  --font-unit: max(12px, 0.45em);
+  --color-unit: var(--muted, #8597a3);
+}
+@media (max-width: 1366px) {
+  :root {
+    --font-body: 14px;
+  }
+}
+.type-title {
+  font-size: var(--font-title) !important;
+  line-height: 1.35;
+}
+.type-subtitle {
+  font-size: var(--font-subtitle) !important;
+  line-height: 1.4;
+}
+.type-note {
+  font-size: var(--font-note) !important;
+  line-height: 1.4;
+  color: var(--color-unit);
+}
+.type-number {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.type-number-lg {
+  font-size: var(--font-value-lg) !important;
+  line-height: 1.2;
+}
+.type-number-md {
+  font-size: var(--font-value-md) !important;
+  line-height: 1.2;
+}
+.type-number .type-unit {
+  font-size: var(--font-unit) !important;
+  color: var(--color-unit);
+  font-weight: 400;
+  font-style: normal;
+}
+.value-cell.metric-value > strong {
+  display: flex;
+  align-items: baseline;
+}
+.value-cell.metric-value .type-unit {
+  margin-left: 0;
+}
+
+.responsive-dashboard {
+  font-size: var(--font-body);
+}
+/* Only public shell, Overview and About are owned here; page teams consume tokens. */
+.responsive-dashboard :is(.topbar, .bottombar, .overview-grid, .about-page) {
+  font-size: var(--font-body);
+}
+.responsive-dashboard
+  :is(.topbar, .bottombar)
+  :is(button, .nav-item, .clock, time, .brand span) {
+  font-size: var(--font-body) !important;
+}
+.responsive-dashboard :is(.topbar, .bottombar) :is(.top-badge, .credit) {
+  font-size: var(--font-note) !important;
+}
+.responsive-dashboard :is(.topbar, .bottombar) :is(small, .time-legend) {
+  font-size: var(--font-label) !important;
+}
+.responsive-dashboard
+  .overview-grid
+  :is(h2, .scene-heading, .overview-metric > small) {
+  font-size: var(--font-title) !important;
+}
+.responsive-dashboard
+  .overview-grid
+  :is(p, li, .dispatch-banner b, .work-order) {
+  font-size: var(--font-body) !important;
+}
+.responsive-dashboard
+  .overview-grid
+  :is(small, .dispatch-note, .scene-heading small) {
+  font-size: var(--font-note) !important;
+}
+.responsive-dashboard .overview-grid :is(.summary-grid b, .scene-tools button) {
+  font-size: var(--font-body) !important;
+}
+.responsive-dashboard
+  .overview-grid
+  :is(.scene-legend, .scene-legend span, .scene-labels span, .scene-labels b) {
+  font-size: var(--font-legend) !important;
+}
+.responsive-dashboard .overview-grid .animated-number-text,
+.responsive-dashboard .overview-grid .animated-number-text > span {
+  font-size: inherit !important;
+}
+.responsive-dashboard .about-page :is(h1, h2) {
+  font-size: var(--font-title) !important;
+}
+.responsive-dashboard
+  .about-page
+  :is(p, li, dd, h3, .agh-credit b, .about-boundary b, a) {
+  font-size: var(--font-body) !important;
+}
+.responsive-dashboard .about-page :is(dt, small, figcaption, .model-version) {
+  font-size: var(--font-note) !important;
+}
+.responsive-dashboard
+  .about-page
+  :is(.about-metrics span, .about-rate-row span) {
+  font-size: var(--font-label) !important;
+}
+.responsive-dashboard .about-page .about-rate-row b {
+  font-size: var(--font-note) !important;
+}
+.responsive-dashboard .overview-grid .overview-metric > small {
+  font-size: var(--font-title) !important;
+}
+/* Native table cells share the public table tier; page-specific layout stays local. */
+.responsive-dashboard :is(table, th, td) {
+  font-size: var(--font-table) !important;
+}
+
+/* Explicit mobile floors also cover late-loaded scene styles and nested text. */
+@media (max-width: 600px) {
+  .responsive-dashboard .topbar .brand span {
+    font-size: var(--font-body) !important;
+  }
+  .responsive-dashboard .overview-grid .scene-labels :is(span, b),
+  .responsive-dashboard .overview-grid .scene-legend :is(span, b) {
+    font-size: var(--font-label) !important;
+  }
+  .responsive-dashboard .overview-grid .scene-tools button {
+    font-size: var(--font-body) !important;
+  }
+  .responsive-dashboard
+    .overview-grid
+    .agent-verdict
+    :is(
+      p,
+      li,
+      b,
+      small,
+      .dispatch-note,
+      .work-order,
+      .overview-decision-source
+    ) {
+    font-size: var(--font-body) !important;
+  }
+}

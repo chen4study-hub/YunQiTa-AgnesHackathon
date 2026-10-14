@@ -1,0 +1,1830 @@
+{
+  "status": "completed_exploratory",
+  "plan_sha256": "59854b956616e51fb5e64c38218e96872839b18c457c667e6c18b30fa9309469",
+  "policy_sha256": "3781163907f24cd8dfd7abd063e679d1a23c592018e30e06bf9d3203f0af44c5",
+  "source_sha256": "27950cfaebb667e81b7d0f3e1bb028dba9bfded79b33eb7ed30c9d663e173154",
+  "completed_comparisons": 36,
+  "expected_comparisons": 36,
+  "failures": [],
+  "macro_composite_gain": {
+    "balanced": -0.01922070000663105,
+    "error_priority": -0.004655809676705323,
+    "coverage_priority": -0.026708214036206452
+  },
+  "per_building_gain": {
+    "Hog_education_Beth": {
+      "balanced": -0.016242937482881564,
+      "error_priority": -0.006530032393283165,
+      "coverage_priority": -0.019119579253005965
+    },
+    "Hog_assembly_Colette": {
+      "balanced": -0.029873511126862873,
+      "error_priority": -0.019080702684757405,
+      "coverage_priority": -0.03420113003716733
+    },
+    "Hog_food_Morgan": {
+      "balanced": 0.010008550554498563,
+      "error_priority": 0.02067124257178195,
+      "coverage_priority": 0.007307092082744604
+    },
+    "Hog_lodging_Brian": {
+      "balanced": -0.035497554445616496,
+      "error_priority": -0.022314134279399545,
+      "coverage_priority": -0.050124586028799024
+    },
+    "Hog_industrial_Jeremy": {
+      "balanced": 0.01814547484138866,
+      "error_priority": 0.01928395098189913,
+      "coverage_priority": 0.026997180298094097
+    },
+    "Hog_office_Alexis": {
+      "balanced": -0.062019431699246175,
+      "error_priority": -0.043070782536335596,
+      "coverage_priority": -0.08134526142773184
+    },
+    "Hog_other_Noma": {
+      "balanced": -0.019120822558513623,
+      "error_priority": -0.002434914187731415,
+      "coverage_priority": -0.030347841687026127
+    },
+    "Hog_public_Crystal": {
+      "balanced": -0.03557098031939162,
+      "error_priority": -0.025336713574896974,
+      "coverage_priority": -0.046766126293709354
+    },
+    "Hog_services_Adrianna": {
+      "balanced": -0.017521889094629668,
+      "error_priority": 0.0027125962053403674,
+      "coverage_priority": -0.031684918316819854
+    },
+    "Hog_science_Max": {
+      "balanced": -0.03600931805955362,
+      "error_priority": -0.021700289011451934,
+      "coverage_priority": -0.03898209280904349
+    },
+    "Hog_warehouse_Louise": {
+      "balanced": -0.03826018306363688,
+      "error_priority": -0.017805096755563483,
+      "coverage_priority": -0.04881325497728765
+    },
+    "Hog_office_Byron": {
+      "balanced": 0.0313142023748727,
+      "error_priority": 0.05973515954393419,
+      "coverage_priority": 0.026581950015274487
+    }
+  },
+  "global_2pct_pass": false,
+  "intermediates": [
+    {
+      "building": "Hog_food_Morgan",
+      "fold": 1,
+      "artifact": "models\\multiood_Hog_food_Morgan_fold1.joblib",
+      "artifact_sha256": "8c054bdfba53548201715bb9e9ec889076e920fa156a87c7062431b95debfab8",
+      "predictions": "data\\multiood_Hog_food_Morgan_fold1.csv",
+      "predictions_sha256": "1243699d97dd63e04b845c2b9b974a905a59ca2ead194cb4ac1c549f1579daea",
+      "composite_gain": {
+        "balanced": 0.009386278185743668,
+        "error_priority": 0.03264392314683151,
+        "coverage_priority": 0.004283693572265657
+      },
+      "exceeds_2pct_any": true,
+      "exceeds_2pct_all": false
+    },
+    {
+      "building": "Hog_food_Morgan",
+      "fold": 2,
+      "artifact": "models\\multiood_Hog_food_Morgan_fold2.joblib",
+      "artifact_sha256": "7451daa41b896bf1d61879881a3d512281a2247cfa9c72bc811ce3e06ee9dcfd",
+      "predictions": "data\\multiood_Hog_food_Morgan_fold2.csv",
+      "predictions_sha256": "045f0b6ea4514764459f1e124cc360ce151d8995af06addde7a729f261f054d2",
+      "composite_gain": {
+        "balanced": 0.02063937347775202,
+        "error_priority": 0.029369804568514346,
+        "coverage_priority": 0.017637582675968155
+      },
+      "exceeds_2pct_any": true,
+      "exceeds_2pct_all": false
+    },
+    {
+      "building": "Hog_industrial_Jeremy",
+      "fold": 1,
+      "artifact": "models\\multiood_Hog_industrial_Jeremy_fold1.joblib",
+      "artifact_sha256": "b65ddae6c1a35d437ccae45d5b5ca0b68ecea1d8d8460deaba24ab49693d1b7b",
+      "predictions": "data\\multiood_Hog_industrial_Jeremy_fold1.csv",
+      "predictions_sha256": "b03654efa067d8d934fbc384c8eb10dc1711aa7fee5efe982d3e1bd968d5b9bb",
+      "composite_gain": {
+        "balanced": 0.059607934622175174,
+        "error_priority": 0.053910281411322036,
+        "coverage_priority": 0.08519281365009057
+      },
+      "exceeds_2pct_any": true,
+      "exceeds_2pct_all": true
+    },
+    {
+      "building": "Hog_industrial_Jeremy",
+      "fold": 2,
+      "artifact": "models\\multiood_Hog_industrial_Jeremy_fold2.joblib",
+      "artifact_sha256": "86b2c154c5c04c469d7af9c93f78fd0eebcab2ea37880d5c925134592dbe186c",
+      "predictions": "data\\multiood_Hog_industrial_Jeremy_fold2.csv",
+      "predictions_sha256": "07672fc59ef083f9168ccf99a8416e75d9ba266963a2ea0dee83f399a41c5b32",
+      "composite_gain": {
+        "balanced": -0.005171510098009202,
+        "error_priority": 0.003941571534375354,
+        "coverage_priority": -0.004201272755808283
+      },
+      "exceeds_2pct_any": false,
+      "exceeds_2pct_all": false
+    },
+    {
+      "building": "Hog_other_Noma",
+      "fold": 1,
+      "artifact": "models\\multiood_Hog_other_Noma_fold1.joblib",
+      "artifact_sha256": "04be0b4c764692d2a85a51942d8aca1d1318312852bf6aa480f60f8ce462a786",
+      "predictions": "data\\multiood_Hog_other_Noma_fold1.csv",
+      "predictions_sha256": "9c20b07bf5459b99fb41dda305748548793d213529bef2ba9df846d6b1fae7fd",
+      "composite_gain": {
+        "balanced": -0.013840850676445582,
+        "error_priority": 0.011792201358370447,
+        "coverage_priority": -0.02518232278788468
+      },
+      "exceeds_2pct_any": false,
+      "exceeds_2pct_all": false
+    },
+    {
+      "building": "Hog_services_Adrianna",
+      "fold": 1,
+      "artifact": "models\\multiood_Hog_services_Adrianna_fold1.joblib",
+      "artifact_sha256": "114c5b7471ccf8f340e71b652c922a8c1556089ec74745f8f9b1a43257d8982c",
+      "predictions": "data\\multiood_Hog_services_Adrianna_fold1.csv",
+      "predictions_sha256": "1a12e7e8645ccde9a78b043d13f0a19355a065948d3f300935be28a39f686dd3",
+      "composite_gain": {
+        "balanced": 0.0191505443043809,
+        "error_priority": 0.04599650706499314,
+        "coverage_priority": 0.013930498670736813
+      },
+      "exceeds_2pct_any": true,
+      "exceeds_2pct_all": false
+    },
+    {
+      "building": "Hog_office_Byron",
+      "fold": 1,
+      "artifact": "models\\multiood_Hog_office_Byron_fold1.joblib",
+      "artifact_sha256": "0d699a25dd82711e50f2ff8b314dc7b26e726c52225a65d3add56045682418e3",
+      "predictions": "data\\multiood_Hog_office_Byron_fold1.csv",
+      "predictions_sha256": "7e5423d2d1adfbd35ad11f114a9ff008c7185fd7038a1768c6c1cbd682db187f",
+      "composite_gain": {
+        "balanced": 0.04896109917045255,
+        "error_priority": 0.10876771147272546,
+        "coverage_priority": 0.03779549555119899
+      },
+      "exceeds_2pct_any": true,
+      "exceeds_2pct_all": true
+    },
+    {
+      "building": "Hog_office_Byron",
+      "fold": 2,
+      "artifact": "models\\multiood_Hog_office_Byron_fold2.joblib",
+      "artifact_sha256": "223ce54861ee1ef9cc56e3c64f84dc6fb8c5732ddf1abe349eca5b95cab51bcb",
+      "predictions": "data\\multiood_Hog_office_Byron_fold2.csv",
+      "predictions_sha256": "219d69a44b1ee41fba57a76611a5db04f7ce99ee934417a8f4509fa1bb3fe7b6",
+      "composite_gain": {
+        "balanced": 0.044981507954165556,
+        "error_priority": 0.07043776715907712,
+        "coverage_priority": 0.041950354494624476
+      },
+      "exceeds_2pct_any": true,
+      "exceeds_2pct_all": true
+    }
+  ],
+  "rows": [
+    {
+      "building": "Hog_education_Beth",
+      "fold": 1,
+      "baseline": {
+        "n": 876,
+        "retained_n": 763,
+        "rejection_rate": 0.12899543378995434,
+        "retained_picp": 0.9108781127129751,
+        "retained_mae": 3.5984169550097933,
+        "mae": 4.390495367152523,
+        "rmse": 6.352168759918347,
+        "width": 16.056799269700598,
+        "interval_score": 23.83355878569214,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 758,
+        "rejection_rate": 0.13470319634703196,
+        "retained_picp": 0.9195250659630607,
+        "retained_mae": 3.519084363108081,
+        "mae": 4.256442648423627,
+        "rmse": 6.214053589145225,
+        "width": 18.104858464625803,
+        "interval_score": 25.888396412349902,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.01518481949620476,
+        "error_priority": -0.00273533054988917,
+        "coverage_priority": -0.016205882400073257
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0151848194962048,
+        "error_priority": 1.0027353305498892,
+        "coverage_priority": 1.0162058824000733
+      }
+    },
+    {
+      "building": "Hog_education_Beth",
+      "fold": 2,
+      "baseline": {
+        "n": 876,
+        "retained_n": 708,
+        "rejection_rate": 0.1917808219178082,
+        "retained_picp": 0.8997175141242938,
+        "retained_mae": 2.882529360976997,
+        "mae": 3.8374583500658104,
+        "rmse": 5.601819419980445,
+        "width": 12.568113226706533,
+        "interval_score": 24.548489558972353,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 690,
+        "rejection_rate": 0.21232876712328766,
+        "retained_picp": 0.8942028985507247,
+        "retained_mae": 2.6878995143256725,
+        "mae": 3.754973572673106,
+        "rmse": 5.49914373153204,
+        "width": 11.432811236905634,
+        "interval_score": 26.567501265764886,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.03354399295243993,
+        "error_priority": -0.016854766629960327,
+        "coverage_priority": -0.04115285535894464
+      },
+      "baseline_loss": {
+        "balanced": 1.0139012786202795,
+        "error_priority": 1.0083407671721678,
+        "coverage_priority": 1.0222420457924473
+      },
+      "candidate_loss": {
+        "balanced": 1.047911575964788,
+        "error_priority": 1.0253361154863299,
+        "coverage_priority": 1.0643102248447756
+      }
+    },
+    {
+      "building": "Hog_education_Beth",
+      "fold": 3,
+      "baseline": {
+        "n": 876,
+        "retained_n": 806,
+        "rejection_rate": 0.07990867579908675,
+        "retained_picp": 0.9330024813895782,
+        "retained_mae": 2.9742730656050966,
+        "mae": 3.205085919578168,
+        "rmse": 4.5043289311432835,
+        "width": 15.15710087300488,
+        "interval_score": 18.881573858451908,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 806,
+        "rejection_rate": 0.07990867579908675,
+        "retained_picp": 0.9330024813895782,
+        "retained_mae": 2.9742730656050966,
+        "mae": 3.205085919578168,
+        "rmse": 4.5043289311432835,
+        "width": 15.15710087300488,
+        "interval_score": 18.881573858451908,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      }
+    },
+    {
+      "building": "Hog_assembly_Colette",
+      "fold": 1,
+      "baseline": {
+        "n": 876,
+        "retained_n": 804,
+        "rejection_rate": 0.0821917808219178,
+        "retained_picp": 0.9116915422885572,
+        "retained_mae": 53.950814194878056,
+        "mae": 54.84924323495137,
+        "rmse": 69.70722340909944,
+        "width": 193.29476982125726,
+        "interval_score": 272.1981193706175,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 732,
+        "rejection_rate": 0.1643835616438356,
+        "retained_picp": 0.9385245901639344,
+        "retained_mae": 50.7604610239608,
+        "mae": 53.76542225840734,
+        "rmse": 68.25821905211701,
+        "width": 247.57422086901093,
+        "interval_score": 310.6372726003142,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.04935173114933056,
+        "error_priority": -0.029755916946690775,
+        "coverage_priority": -0.042744794376860185
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0493517311493306,
+        "error_priority": 1.0297559169466908,
+        "coverage_priority": 1.0427447943768602
+      }
+    },
+    {
+      "building": "Hog_assembly_Colette",
+      "fold": 2,
+      "baseline": {
+        "n": 876,
+        "retained_n": 657,
+        "rejection_rate": 0.25,
+        "retained_picp": 0.8706240487062404,
+        "retained_mae": 43.18959528608284,
+        "mae": 45.219930760679276,
+        "rmse": 60.081701967915336,
+        "width": 164.64173542403236,
+        "interval_score": 284.3444217699249,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 673,
+        "rejection_rate": 0.2317351598173516,
+        "retained_picp": 0.8558692421991084,
+        "retained_mae": 43.39615348713655,
+        "mae": 45.353158254583,
+        "rmse": 60.08530213920833,
+        "width": 159.91165043396367,
+        "interval_score": 293.4430076423895,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.04026880223125806,
+        "error_priority": -0.027486191107581437,
+        "coverage_priority": -0.059858595734641806
+      },
+      "baseline_loss": {
+        "balanced": 1.09046302972042,
+        "error_priority": 1.054277817832252,
+        "coverage_priority": 1.144740847552672
+      },
+      "candidate_loss": {
+        "balanced": 1.1343746698047301,
+        "error_priority": 1.0832558994136732,
+        "coverage_priority": 1.2132634271672584
+      }
+    },
+    {
+      "building": "Hog_assembly_Colette",
+      "fold": 3,
+      "baseline": {
+        "n": 876,
+        "retained_n": 811,
+        "rejection_rate": 0.07420091324200913,
+        "retained_picp": 0.9605425400739828,
+        "retained_mae": 33.870513991739955,
+        "mae": 35.68992384467768,
+        "rmse": 49.04164933472718,
+        "width": 204.03408784007675,
+        "interval_score": 224.54282660889052,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 811,
+        "rejection_rate": 0.07420091324200913,
+        "retained_picp": 0.9605425400739828,
+        "retained_mae": 33.870513991739955,
+        "mae": 35.68992384467768,
+        "rmse": 49.04164933472718,
+        "width": 204.03408784007675,
+        "interval_score": 224.54282660889052,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      }
+    },
+    {
+      "building": "Hog_food_Morgan",
+      "fold": 1,
+      "baseline": {
+        "n": 876,
+        "retained_n": 566,
+        "rejection_rate": 0.3538812785388128,
+        "retained_picp": 0.9717314487632509,
+        "retained_mae": 1.588230923960817,
+        "mae": 2.2415014152367174,
+        "rmse": 3.608281277205761,
+        "width": 8.978533752521857,
+        "interval_score": 13.8295592790473,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 576,
+        "rejection_rate": 0.3424657534246575,
+        "retained_picp": 0.9704861111111112,
+        "retained_mae": 1.4252075112758855,
+        "mae": 2.0505517519166574,
+        "rmse": 3.5098053356125556,
+        "width": 7.875562689873328,
+        "interval_score": 14.60505010521506,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.009386278185743668,
+        "error_priority": 0.03264392314683151,
+        "coverage_priority": 0.004283693572265657
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 0.9906137218142563,
+        "error_priority": 0.9673560768531685,
+        "coverage_priority": 0.9957163064277343
+      }
+    },
+    {
+      "building": "Hog_food_Morgan",
+      "fold": 2,
+      "baseline": {
+        "n": 876,
+        "retained_n": 112,
+        "rejection_rate": 0.8721461187214612,
+        "retained_picp": 0.9375,
+        "retained_mae": 0.8868229556285725,
+        "mae": 2.1384087858563237,
+        "rmse": 3.589074728732472,
+        "width": 4.890315957367113,
+        "interval_score": 14.832933636910717,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 125,
+        "rejection_rate": 0.8573059360730594,
+        "retained_picp": 0.92,
+        "retained_mae": 0.914662636712721,
+        "mae": 2.0439292720821793,
+        "rmse": 3.5159625611698297,
+        "width": 4.747781732860102,
+        "interval_score": 14.381292951106337,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.02063937347775202,
+        "error_priority": 0.029369804568514346,
+        "coverage_priority": 0.017637582675968155
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 0.979360626522248,
+        "error_priority": 0.9706301954314857,
+        "coverage_priority": 0.9823624173240318
+      }
+    },
+    {
+      "building": "Hog_food_Morgan",
+      "fold": 3,
+      "baseline": {
+        "n": 876,
+        "retained_n": 786,
+        "rejection_rate": 0.10273972602739725,
+        "retained_picp": 0.9758269720101781,
+        "retained_mae": 1.8451762677398118,
+        "mae": 1.9142776857982995,
+        "rmse": 2.6061318678077323,
+        "width": 10.657756989734878,
+        "interval_score": 11.816884145990256,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 786,
+        "rejection_rate": 0.10273972602739725,
+        "retained_picp": 0.9758269720101781,
+        "retained_mae": 1.8451762677398118,
+        "mae": 1.9142776857982995,
+        "rmse": 2.6061318678077323,
+        "width": 10.657756989734878,
+        "interval_score": 11.816884145990256,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      }
+    },
+    {
+      "building": "Hog_lodging_Brian",
+      "fold": 1,
+      "baseline": {
+        "n": 876,
+        "retained_n": 683,
+        "rejection_rate": 0.22031963470319635,
+        "retained_picp": 0.8565153733528551,
+        "retained_mae": 2.2351084843281543,
+        "mae": 2.3536578805269506,
+        "rmse": 3.558913860708831,
+        "width": 10.636298950343793,
+        "interval_score": 19.599636093570645,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 622,
+        "rejection_rate": 0.2899543378995434,
+        "retained_picp": 0.8456591639871383,
+        "retained_mae": 2.1498211580998454,
+        "mae": 2.339889434825842,
+        "rmse": 3.5505497062502864,
+        "width": 9.532303128114856,
+        "interval_score": 19.544357601633997,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.036065460478649,
+        "error_priority": -0.020632304663128265,
+        "coverage_priority": -0.043511922956626314
+      },
+      "baseline_loss": {
+        "balanced": 1.1275911227556445,
+        "error_priority": 1.0765546736533866,
+        "coverage_priority": 1.2041457964090312
+      },
+      "candidate_loss": {
+        "balanced": 1.1682582158294637,
+        "error_priority": 1.0987664776667179,
+        "coverage_priority": 1.2565404955309265
+      }
+    },
+    {
+      "building": "Hog_lodging_Brian",
+      "fold": 2,
+      "baseline": {
+        "n": 876,
+        "retained_n": 697,
+        "rejection_rate": 0.204337899543379,
+        "retained_picp": 0.8780487804878049,
+        "retained_mae": 1.8407247056347988,
+        "mae": 2.161525570024785,
+        "rmse": 3.46657960812968,
+        "width": 7.160563202857914,
+        "interval_score": 17.210401644368602,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 733,
+        "rejection_rate": 0.1632420091324201,
+        "retained_picp": 0.8526603001364257,
+        "retained_mae": 1.8593345197635265,
+        "mae": 2.158638064721916,
+        "rmse": 3.4669146032906064,
+        "width": 6.7225750707811205,
+        "interval_score": 18.41342122465369,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.07042720285820048,
+        "error_priority": -0.04631009817507037,
+        "coverage_priority": -0.10686183512977077
+      },
+      "baseline_loss": {
+        "balanced": 1.0709242618741976,
+        "error_priority": 1.0425545571245187,
+        "coverage_priority": 1.1134788189987164
+      },
+      "candidate_loss": {
+        "balanced": 1.1463464621109805,
+        "error_priority": 1.090835361017822,
+        "coverage_priority": 1.232467208975049
+      }
+    },
+    {
+      "building": "Hog_lodging_Brian",
+      "fold": 3,
+      "baseline": {
+        "n": 876,
+        "retained_n": 785,
+        "rejection_rate": 0.10388127853881278,
+        "retained_picp": 0.9808917197452229,
+        "retained_mae": 1.53906635221985,
+        "mae": 1.6693757263524749,
+        "rmse": 2.653978204783664,
+        "width": 13.302787508666992,
+        "interval_score": 15.16852756647681,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 785,
+        "rejection_rate": 0.10388127853881278,
+        "retained_picp": 0.9808917197452229,
+        "retained_mae": 1.53906635221985,
+        "mae": 1.6693757263524749,
+        "rmse": 2.653978204783664,
+        "width": 13.302787508666992,
+        "interval_score": 15.16852756647681,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      }
+    },
+    {
+      "building": "Hog_industrial_Jeremy",
+      "fold": 1,
+      "baseline": {
+        "n": 876,
+        "retained_n": 596,
+        "rejection_rate": 0.319634703196347,
+        "retained_picp": 0.8859060402684564,
+        "retained_mae": 4.022623142935806,
+        "mae": 6.525033322066173,
+        "rmse": 9.259845675315162,
+        "width": 18.259178094897987,
+        "interval_score": 31.79200291821382,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 576,
+        "rejection_rate": 0.3424657534246575,
+        "retained_picp": 0.9114583333333334,
+        "retained_mae": 3.6572284411446594,
+        "mae": 6.2066653685249085,
+        "rmse": 8.993292139567231,
+        "width": 16.28697527868018,
+        "interval_score": 31.221892999914697,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.059607934622175174,
+        "error_priority": 0.053910281411322036,
+        "coverage_priority": 0.08519281365009057
+      },
+      "baseline_loss": {
+        "balanced": 1.0502472624514305,
+        "error_priority": 1.0301483574708583,
+        "coverage_priority": 1.0803956199222888
+      },
+      "candidate_loss": {
+        "balanced": 0.9876441922941072,
+        "error_priority": 0.9746127696241932,
+        "coverage_priority": 0.9883536772058752
+      }
+    },
+    {
+      "building": "Hog_industrial_Jeremy",
+      "fold": 2,
+      "baseline": {
+        "n": 876,
+        "retained_n": 770,
+        "rejection_rate": 0.12100456621004566,
+        "retained_picp": 0.9662337662337662,
+        "retained_mae": 3.7497352028273463,
+        "mae": 4.194684917024309,
+        "rmse": 5.994543550135786,
+        "width": 19.58926853164732,
+        "interval_score": 22.97145327962428,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 749,
+        "rejection_rate": 0.1449771689497717,
+        "retained_picp": 0.9572763684913218,
+        "retained_mae": 3.522305000151808,
+        "mae": 4.096675640048704,
+        "rmse": 5.977796092967611,
+        "width": 18.080381540515322,
+        "interval_score": 23.492129345408568,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.005171510098009202,
+        "error_priority": 0.003941571534375354,
+        "coverage_priority": -0.004201272755808283
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0051715100980092,
+        "error_priority": 0.9960584284656246,
+        "coverage_priority": 1.0042012727558083
+      }
+    },
+    {
+      "building": "Hog_industrial_Jeremy",
+      "fold": 3,
+      "baseline": {
+        "n": 876,
+        "retained_n": 692,
+        "rejection_rate": 0.2100456621004566,
+        "retained_picp": 0.888728323699422,
+        "retained_mae": 2.9663268562042404,
+        "mae": 3.7146608079985035,
+        "rmse": 5.6246343743888065,
+        "width": 13.140141513022948,
+        "interval_score": 22.63104424171171,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 692,
+        "rejection_rate": 0.2100456621004566,
+        "retained_picp": 0.888728323699422,
+        "retained_mae": 2.9663268562042404,
+        "mae": 3.7146608079985035,
+        "rmse": 5.6246343743888065,
+        "width": 13.140141513022948,
+        "interval_score": 22.63104424171171,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "baseline_loss": {
+        "balanced": 1.0428202007909948,
+        "error_priority": 1.0256921204745968,
+        "coverage_priority": 1.0685123212655916
+      },
+      "candidate_loss": {
+        "balanced": 1.0428202007909948,
+        "error_priority": 1.0256921204745968,
+        "coverage_priority": 1.0685123212655916
+      }
+    },
+    {
+      "building": "Hog_office_Alexis",
+      "fold": 1,
+      "baseline": {
+        "n": 876,
+        "retained_n": 493,
+        "rejection_rate": 0.4372146118721461,
+        "retained_picp": 0.8600405679513184,
+        "retained_mae": 3.3100938901897847,
+        "mae": 3.347469407534789,
+        "rmse": 5.415461099682035,
+        "width": 12.758468598088935,
+        "interval_score": 29.065166292763532,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 432,
+        "rejection_rate": 0.5068493150684932,
+        "retained_picp": 0.8148148148148148,
+        "retained_mae": 3.5548129983312142,
+        "mae": 3.3843979273243687,
+        "rmse": 5.47700918748611,
+        "width": 12.599336081218283,
+        "interval_score": 30.57992977995314,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.13137174378499883,
+        "error_priority": -0.08834442060875558,
+        "coverage_priority": -0.17903536953382537
+      },
+      "baseline_loss": {
+        "balanced": 1.1183142948649516,
+        "error_priority": 1.0709885769189709,
+        "coverage_priority": 1.1893028717839225
+      },
+      "candidate_loss": {
+        "balanced": 1.2652291938810516,
+        "error_priority": 1.165604442225473,
+        "coverage_priority": 1.4022301509213968
+      }
+    },
+    {
+      "building": "Hog_office_Alexis",
+      "fold": 2,
+      "baseline": {
+        "n": 876,
+        "retained_n": 632,
+        "rejection_rate": 0.2785388127853881,
+        "retained_picp": 0.8971518987341772,
+        "retained_mae": 2.5791544766492978,
+        "mae": 3.310807169659879,
+        "rmse": 5.384881722789266,
+        "width": 10.474897757359694,
+        "interval_score": 27.045485207736597,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 596,
+        "rejection_rate": 0.319634703196347,
+        "retained_picp": 0.8875838926174496,
+        "retained_mae": 2.4129900934055755,
+        "mae": 3.347937845168494,
+        "rmse": 5.423498072126413,
+        "width": 9.495585838881508,
+        "interval_score": 29.187223819712525,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.054686551312739695,
+        "error_priority": -0.040867927000251214,
+        "coverage_priority": -0.06500041474937013
+      },
+      "baseline_loss": {
+        "balanced": 1.0206528980679548,
+        "error_priority": 1.0123917388407728,
+        "coverage_priority": 1.0330446369087276
+      },
+      "candidate_loss": {
+        "balanced": 1.0764688851506445,
+        "error_priority": 1.0537660905193749,
+        "coverage_priority": 1.1001929667624073
+      }
+    },
+    {
+      "building": "Hog_office_Alexis",
+      "fold": 3,
+      "baseline": {
+        "n": 876,
+        "retained_n": 726,
+        "rejection_rate": 0.17123287671232876,
+        "retained_picp": 0.9104683195592287,
+        "retained_mae": 2.073174588843423,
+        "mae": 2.570806768557107,
+        "rmse": 3.9185850075778794,
+        "width": 9.196892345350301,
+        "interval_score": 16.013539814562336,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 726,
+        "rejection_rate": 0.17123287671232876,
+        "retained_picp": 0.9104683195592287,
+        "retained_mae": 2.073174588843423,
+        "mae": 2.570806768557107,
+        "rmse": 3.9185850075778794,
+        "width": 9.196892345350301,
+        "interval_score": 16.013539814562336,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      }
+    },
+    {
+      "building": "Hog_other_Noma",
+      "fold": 1,
+      "baseline": {
+        "n": 876,
+        "retained_n": 813,
+        "rejection_rate": 0.07191780821917808,
+        "retained_picp": 0.9212792127921279,
+        "retained_mae": 1.242766187114836,
+        "mae": 1.3397239909241465,
+        "rmse": 1.6756413521636475,
+        "width": 4.786380850169913,
+        "interval_score": 5.707888074650282,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 804,
+        "rejection_rate": 0.0821917808219178,
+        "retained_picp": 0.8992537313432836,
+        "retained_mae": 1.1630752961510373,
+        "mae": 1.2532613450946988,
+        "rmse": 1.5686192762468358,
+        "width": 4.664396865823959,
+        "interval_score": 5.992308458700767,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.013840850676445582,
+        "error_priority": 0.011792201358370447,
+        "coverage_priority": -0.02518232278788468
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0138408506764456,
+        "error_priority": 0.9882077986416296,
+        "coverage_priority": 1.0251823227878847
+      }
+    },
+    {
+      "building": "Hog_other_Noma",
+      "fold": 2,
+      "baseline": {
+        "n": 876,
+        "retained_n": 193,
+        "rejection_rate": 0.7796803652968036,
+        "retained_picp": 0.8756476683937824,
+        "retained_mae": 0.9237287903633656,
+        "mae": 1.1021296035003725,
+        "rmse": 1.3867559182721207,
+        "width": 4.134339517516814,
+        "interval_score": 5.43494727336364,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 192,
+        "rejection_rate": 0.7808219178082192,
+        "retained_picp": 0.859375,
+        "retained_mae": 0.9062705283963194,
+        "mae": 1.0693300645819983,
+        "rmse": 1.3525757250389991,
+        "width": 3.820510749961045,
+        "interval_score": 5.681481313588358,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.04352161699909529,
+        "error_priority": -0.01909694392156469,
+        "coverage_priority": -0.0658612022731937
+      },
+      "baseline_loss": {
+        "balanced": 1.077242977911099,
+        "error_priority": 1.0463457867466595,
+        "coverage_priority": 1.1235887646577585
+      },
+      "candidate_loss": {
+        "balanced": 1.1241263342107108,
+        "error_priority": 1.0663277935587259,
+        "coverage_priority": 1.197589671558771
+      }
+    },
+    {
+      "building": "Hog_other_Noma",
+      "fold": 3,
+      "baseline": {
+        "n": 876,
+        "retained_n": 792,
+        "rejection_rate": 0.0958904109589041,
+        "retained_picp": 0.9330808080808081,
+        "retained_mae": 0.8466624059420729,
+        "mae": 0.8492306635711193,
+        "rmse": 1.0349311417379146,
+        "width": 3.4716353300053675,
+        "interval_score": 4.089168656321866,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 792,
+        "rejection_rate": 0.0958904109589041,
+        "retained_picp": 0.9330808080808081,
+        "retained_mae": 0.8466624059420729,
+        "mae": 0.8492306635711193,
+        "rmse": 1.0349311417379146,
+        "width": 3.4716353300053675,
+        "interval_score": 4.089168656321866,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      }
+    },
+    {
+      "building": "Hog_public_Crystal",
+      "fold": 1,
+      "baseline": {
+        "n": 876,
+        "retained_n": 744,
+        "rejection_rate": 0.1506849315068493,
+        "retained_picp": 0.9489247311827957,
+        "retained_mae": 14.950799209428807,
+        "mae": 17.458109709883015,
+        "rmse": 27.27787290222824,
+        "width": 81.11411494676577,
+        "interval_score": 122.46730372888179,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 758,
+        "rejection_rate": 0.13470319634703196,
+        "retained_picp": 0.9577836411609498,
+        "retained_mae": 14.594317275213754,
+        "mae": 17.41082177139758,
+        "rmse": 28.055694924679024,
+        "width": 91.70318516346136,
+        "interval_score": 137.46860645983793,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.026473691940724464,
+        "error_priority": -0.021060802488038544,
+        "coverage_priority": -0.02799801341444441
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0264736919407245,
+        "error_priority": 1.0210608024880385,
+        "coverage_priority": 1.0279980134144444
+      }
+    },
+    {
+      "building": "Hog_public_Crystal",
+      "fold": 2,
+      "baseline": {
+        "n": 876,
+        "retained_n": 679,
+        "rejection_rate": 0.22488584474885845,
+        "retained_picp": 0.8880706921944035,
+        "retained_mae": 15.628512969012467,
+        "mae": 20.91244064996946,
+        "rmse": 34.318549719737945,
+        "width": 73.74536174529153,
+        "interval_score": 125.51067062333499,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 670,
+        "rejection_rate": 0.23515981735159816,
+        "retained_picp": 0.8641791044776119,
+        "retained_mae": 15.731843686627073,
+        "mae": 21.077013713052953,
+        "rmse": 34.63401740030629,
+        "width": 69.02983931349922,
+        "interval_score": 133.9836663490356,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.08023924901745039,
+        "error_priority": -0.05494933823665238,
+        "coverage_priority": -0.11230036546668365
+      },
+      "baseline_loss": {
+        "balanced": 1.0445508100147278,
+        "error_priority": 1.0267304860088367,
+        "coverage_priority": 1.0712812960235643
+      },
+      "candidate_loss": {
+        "balanced": 1.1283647825708791,
+        "error_priority": 1.0831486467624187,
+        "coverage_priority": 1.191586577084633
+      }
+    },
+    {
+      "building": "Hog_public_Crystal",
+      "fold": 3,
+      "baseline": {
+        "n": 876,
+        "retained_n": 687,
+        "rejection_rate": 0.21575342465753425,
+        "retained_picp": 0.8500727802037845,
+        "retained_mae": 27.696407851339565,
+        "mae": 29.251620014623455,
+        "rmse": 48.010051487048734,
+        "width": 102.49230403338915,
+        "interval_score": 143.25444667974622,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 687,
+        "rejection_rate": 0.21575342465753425,
+        "retained_picp": 0.8500727802037845,
+        "retained_mae": 27.696407851339565,
+        "mae": 29.251620014623455,
+        "rmse": 48.010051487048734,
+        "width": 102.49230403338915,
+        "interval_score": 143.25444667974622,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "baseline_loss": {
+        "balanced": 1.1445453152531986,
+        "error_priority": 1.0867271891519192,
+        "coverage_priority": 1.2312725044051178
+      },
+      "candidate_loss": {
+        "balanced": 1.1445453152531986,
+        "error_priority": 1.0867271891519192,
+        "coverage_priority": 1.2312725044051178
+      }
+    },
+    {
+      "building": "Hog_services_Adrianna",
+      "fold": 1,
+      "baseline": {
+        "n": 876,
+        "retained_n": 743,
+        "rejection_rate": 0.15182648401826485,
+        "retained_picp": 0.955585464333782,
+        "retained_mae": 2.505997942340489,
+        "mae": 2.944851354016595,
+        "rmse": 4.52079134947049,
+        "width": 10.814555990289803,
+        "interval_score": 15.043231162168874,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 744,
+        "rejection_rate": 0.1506849315068493,
+        "retained_picp": 0.956989247311828,
+        "retained_mae": 2.2925846734613446,
+        "mae": 2.6432433531655715,
+        "rmse": 4.0243460989541795,
+        "width": 11.168337780044748,
+        "interval_score": 15.44650491592509,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0191505443043809,
+        "error_priority": 0.04599650706499314,
+        "coverage_priority": 0.013930498670736813
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 0.9808494556956191,
+        "error_priority": 0.9540034929350069,
+        "coverage_priority": 0.9860695013292632
+      }
+    },
+    {
+      "building": "Hog_services_Adrianna",
+      "fold": 2,
+      "baseline": {
+        "n": 876,
+        "retained_n": 648,
+        "rejection_rate": 0.2602739726027397,
+        "retained_picp": 0.8888888888888888,
+        "retained_mae": 2.185560013212412,
+        "mae": 2.6925849403862188,
+        "rmse": 6.9794831210733905,
+        "width": 7.452826096059611,
+        "interval_score": 17.74308551651213,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 642,
+        "rejection_rate": 0.2671232876712329,
+        "retained_picp": 0.8629283489096573,
+        "retained_mae": 2.116685310122827,
+        "mae": 2.6293228670012208,
+        "rmse": 6.972365501719618,
+        "width": 6.928415085177076,
+        "interval_score": 18.5205616615328,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.07171621158826991,
+        "error_priority": -0.03785871844897204,
+        "coverage_priority": -0.10898525362119638
+      },
+      "baseline_loss": {
+        "balanced": 1.0423976608187138,
+        "error_priority": 1.0254385964912283,
+        "coverage_priority": 1.0678362573099418
+      },
+      "candidate_loss": {
+        "balanced": 1.1171544720211062,
+        "error_priority": 1.0642603876024987,
+        "coverage_priority": 1.1842146626387748
+      }
+    },
+    {
+      "building": "Hog_services_Adrianna",
+      "fold": 3,
+      "baseline": {
+        "n": 876,
+        "retained_n": 686,
+        "rejection_rate": 0.21689497716894976,
+        "retained_picp": 0.9635568513119533,
+        "retained_mae": 1.6769773515056727,
+        "mae": 2.0113142414118927,
+        "rmse": 6.542354878177751,
+        "width": 8.95812780906621,
+        "interval_score": 16.086442817965782,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 686,
+        "rejection_rate": 0.21689497716894976,
+        "retained_picp": 0.9635568513119533,
+        "retained_mae": 1.6769773515056727,
+        "mae": 2.0113142414118927,
+        "rmse": 6.542354878177751,
+        "width": 8.95812780906621,
+        "interval_score": 16.086442817965782,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      }
+    },
+    {
+      "building": "Hog_science_Max",
+      "fold": 1,
+      "baseline": {
+        "n": 876,
+        "retained_n": 774,
+        "rejection_rate": 0.11643835616438356,
+        "retained_picp": 0.8940568475452196,
+        "retained_mae": 2.499023204021279,
+        "mae": 2.7074199488162742,
+        "rmse": 3.816164883894719,
+        "width": 9.525171899656396,
+        "interval_score": 14.139259626579554,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 781,
+        "rejection_rate": 0.10844748858447488,
+        "retained_picp": 0.9193341869398207,
+        "retained_mae": 2.4636498986930233,
+        "mae": 2.604450829904953,
+        "rmse": 3.64157575032454,
+        "width": 12.281020512549851,
+        "interval_score": 17.439840197968397,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.01775203749705767,
+        "error_priority": -0.009160100130613635,
+        "coverage_priority": -0.003443296103408544
+      },
+      "baseline_loss": {
+        "balanced": 1.0287977696178432,
+        "error_priority": 1.017278661770706,
+        "coverage_priority": 1.046076431388549
+      },
+      "candidate_loss": {
+        "balanced": 1.0470610262009885,
+        "error_priority": 1.0265970361732621,
+        "coverage_priority": 1.0496783822886169
+      }
+    },
+    {
+      "building": "Hog_science_Max",
+      "fold": 2,
+      "baseline": {
+        "n": 876,
+        "retained_n": 703,
+        "rejection_rate": 0.19748858447488585,
+        "retained_picp": 0.8762446657183499,
+        "retained_mae": 2.310033361087185,
+        "mae": 2.8378409657229127,
+        "rmse": 3.9720747138297647,
+        "width": 8.502957036760206,
+        "interval_score": 14.692649824634042,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 685,
+        "rejection_rate": 0.2180365296803653,
+        "retained_picp": 0.8569343065693431,
+        "retained_mae": 2.4041361740763687,
+        "mae": 2.7604260410160273,
+        "rmse": 3.8269017261667924,
+        "width": 8.220149480987107,
+        "interval_score": 17.5618665695429,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.09027591668160317,
+        "error_priority": -0.05594076690374217,
+        "coverage_priority": -0.11350298232372191
+      },
+      "baseline_loss": {
+        "balanced": 1.0756719323201318,
+        "error_priority": 1.0454031593920792,
+        "coverage_priority": 1.121075091712211
+      },
+      "candidate_loss": {
+        "balanced": 1.172779202059003,
+        "error_priority": 1.103883813852067,
+        "coverage_priority": 1.248320458030387
+      }
+    },
+    {
+      "building": "Hog_science_Max",
+      "fold": 3,
+      "baseline": {
+        "n": 876,
+        "retained_n": 759,
+        "rejection_rate": 0.13356164383561644,
+        "retained_picp": 0.9314888010540184,
+        "retained_mae": 2.055569018712421,
+        "mae": 2.1587192516787113,
+        "rmse": 2.882196422069912,
+        "width": 9.805438764826352,
+        "interval_score": 12.082441994505265,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 759,
+        "rejection_rate": 0.13356164383561644,
+        "retained_picp": 0.9314888010540184,
+        "retained_mae": 2.055569018712421,
+        "mae": 2.1587192516787113,
+        "rmse": 2.882196422069912,
+        "width": 9.805438764826352,
+        "interval_score": 12.082441994505265,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      }
+    },
+    {
+      "building": "Hog_warehouse_Louise",
+      "fold": 1,
+      "baseline": {
+        "n": 876,
+        "retained_n": 374,
+        "rejection_rate": 0.5730593607305936,
+        "retained_picp": 0.9010695187165776,
+        "retained_mae": 1.6223762279393787,
+        "mae": 1.877047940589264,
+        "rmse": 2.720701172333726,
+        "width": 6.604361260262004,
+        "interval_score": 10.28914294536461,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 210,
+        "rejection_rate": 0.7602739726027398,
+        "retained_picp": 0.8952380952380953,
+        "retained_mae": 1.8769707392918609,
+        "mae": 1.7689166541087722,
+        "rmse": 2.6000897509278924,
+        "width": 7.983425144977514,
+        "interval_score": 11.454589646342384,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.058410570041399934,
+        "error_priority": -0.02078086622943287,
+        "coverage_priority": -0.05823749642227649
+      },
+      "baseline_loss": {
+        "balanced": 1.0103433717984802,
+        "error_priority": 1.0062060230790881,
+        "coverage_priority": 1.0165493948775681
+      },
+      "candidate_loss": {
+        "balanced": 1.0693581040827795,
+        "error_priority": 1.0271158558439444,
+        "coverage_priority": 1.0757506866248179
+      }
+    },
+    {
+      "building": "Hog_warehouse_Louise",
+      "fold": 2,
+      "baseline": {
+        "n": 876,
+        "retained_n": 600,
+        "rejection_rate": 0.3150684931506849,
+        "retained_picp": 0.8933333333333333,
+        "retained_mae": 1.5912498875005041,
+        "mae": 1.8739190964133214,
+        "rmse": 2.619731506349936,
+        "width": 6.267360842594357,
+        "interval_score": 10.07860122425051,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 658,
+        "rejection_rate": 0.24885844748858446,
+        "retained_picp": 0.8753799392097265,
+        "retained_mae": 1.6499181096642617,
+        "mae": 1.8344847742468415,
+        "rmse": 2.5732516259215554,
+        "width": 6.07903482551578,
+        "interval_score": 11.235729881941738,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": -0.056369979149510696,
+        "error_priority": -0.03263442403725758,
+        "coverage_priority": -0.08820226850958646
+      },
+      "baseline_loss": {
+        "balanced": 1.030701754385965,
+        "error_priority": 1.018421052631579,
+        "coverage_priority": 1.049122807017544
+      },
+      "candidate_loss": {
+        "balanced": 1.088802390790066,
+        "error_priority": 1.051656637111628,
+        "coverage_priority": 1.1416578185416364
+      }
+    },
+    {
+      "building": "Hog_warehouse_Louise",
+      "fold": 3,
+      "baseline": {
+        "n": 876,
+        "retained_n": 655,
+        "rejection_rate": 0.2522831050228311,
+        "retained_picp": 0.8641221374045801,
+        "retained_mae": 1.484080837472975,
+        "mae": 1.6964746347369606,
+        "rmse": 2.349404056276132,
+        "width": 5.568880318013222,
+        "interval_score": 10.037231988233113,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 655,
+        "rejection_rate": 0.2522831050228311,
+        "retained_picp": 0.8641221374045801,
+        "retained_mae": 1.484080837472975,
+        "mae": 1.6964746347369606,
+        "rmse": 2.349404056276132,
+        "width": 5.568880318013222,
+        "interval_score": 10.037231988233113,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "baseline_loss": {
+        "balanced": 1.1075733226195261,
+        "error_priority": 1.0645439935717156,
+        "coverage_priority": 1.1721173161912417
+      },
+      "candidate_loss": {
+        "balanced": 1.1075733226195261,
+        "error_priority": 1.0645439935717156,
+        "coverage_priority": 1.1721173161912417
+      }
+    },
+    {
+      "building": "Hog_office_Byron",
+      "fold": 1,
+      "baseline": {
+        "n": 876,
+        "retained_n": 754,
+        "rejection_rate": 0.13926940639269406,
+        "retained_picp": 0.9336870026525199,
+        "retained_mae": 24.900371041361275,
+        "mae": 28.155674707113324,
+        "rmse": 38.54077088808507,
+        "width": 104.5240455116627,
+        "interval_score": 137.98734059698893,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 750,
+        "rejection_rate": 0.14383561643835616,
+        "retained_picp": 0.9493333333333334,
+        "retained_mae": 19.6679889492786,
+        "mae": 21.6424758476285,
+        "rmse": 29.590389999302296,
+        "width": 100.54375151826282,
+        "interval_score": 142.33058759299718,
+        "weather_ood_fraction": 0.2614155251141553,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.04896109917045255,
+        "error_priority": 0.10876771147272546,
+        "coverage_priority": 0.03779549555119899
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 0.9510389008295475,
+        "error_priority": 0.8912322885272745,
+        "coverage_priority": 0.962204504448801
+      }
+    },
+    {
+      "building": "Hog_office_Byron",
+      "fold": 2,
+      "baseline": {
+        "n": 876,
+        "retained_n": 713,
+        "rejection_rate": 0.1860730593607306,
+        "retained_picp": 0.9453015427769986,
+        "retained_mae": 30.684080239098787,
+        "mae": 40.88905527609444,
+        "rmse": 57.061593745328295,
+        "width": 133.82321032839837,
+        "interval_score": 215.6790416298826,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 687,
+        "rejection_rate": 0.21575342465753425,
+        "retained_picp": 0.9286754002911208,
+        "retained_mae": 29.223142209766454,
+        "mae": 36.363814773143794,
+        "rmse": 47.96713540989596,
+        "width": 124.06541154853119,
+        "interval_score": 195.3450586102123,
+        "weather_ood_fraction": 0.12557077625570776,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.044981507954165556,
+        "error_priority": 0.07043776715907712,
+        "coverage_priority": 0.041950354494624476
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 0.9550184920458344,
+        "error_priority": 0.9295622328409229,
+        "coverage_priority": 0.9580496455053755
+      }
+    },
+    {
+      "building": "Hog_office_Byron",
+      "fold": 3,
+      "baseline": {
+        "n": 876,
+        "retained_n": 842,
+        "rejection_rate": 0.03881278538812785,
+        "retained_picp": 0.9168646080760094,
+        "retained_mae": 10.623393891615079,
+        "mae": 11.245466366088376,
+        "rmse": 16.260081581094465,
+        "width": 56.23569048269604,
+        "interval_score": 70.89817637295624,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "candidate": {
+        "n": 876,
+        "retained_n": 842,
+        "rejection_rate": 0.03881278538812785,
+        "retained_picp": 0.9168646080760094,
+        "retained_mae": 10.623393891615079,
+        "mae": 11.245466366088376,
+        "rmse": 16.260081581094465,
+        "width": 56.23569048269604,
+        "interval_score": 70.89817637295624,
+        "weather_ood_fraction": 0.0,
+        "weather_missing_fraction": 0.0
+      },
+      "composite_gain": {
+        "balanced": 0.0,
+        "error_priority": 0.0,
+        "coverage_priority": 0.0
+      },
+      "baseline_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      },
+      "candidate_loss": {
+        "balanced": 1.0,
+        "error_priority": 1.0,
+        "coverage_priority": 1.0
+      }
+    }
+  ],
+  "elapsed_seconds": 24.18269339999995,
+  "final_test_evaluated": false,
+  "champion_updated": false,
+  "replay_updated": false,
+  "caveats": [
+    "local models across buildings: portability test, not frozen-source zero-shot transfer",
+    "development data, overlapping folds, not blind final test",
+    "preserved intermediate selection is exploratory"
+  ]
+}

@@ -1,0 +1,319 @@
+[
+  {
+    "question": "今日累计用电量",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "narrative_required": false,
+    "original_index": 1
+  },
+  {
+    "question": "昨天分项用电量",
+    "tool": "end_use",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false,
+    "original_index": 15
+  },
+  {
+    "question": "27层CO₂是多少",
+    "tool": "floor_state",
+    "contains": [
+      "kW",
+      "°C",
+      "ppm"
+    ],
+    "narrative_required": false,
+    "original_index": 27
+  },
+  {
+    "question": "现在几点",
+    "tool": "get_time",
+    "contains": [
+      "14:00"
+    ],
+    "narrative_required": false,
+    "original_index": 40
+  },
+  {
+    "question": "空调设定多少",
+    "tool": "current_state",
+    "contains": [
+      "°C"
+    ],
+    "narrative_required": false,
+    "original_index": 42
+  },
+  {
+    "question": "储能SOC多少",
+    "tool": "current_state",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false,
+    "original_index": 43
+  },
+  {
+    "question": "当前电网功率多少",
+    "tool": "current_energy",
+    "contains": [
+      "kW"
+    ],
+    "narrative_required": false,
+    "original_index": 44
+  },
+  {
+    "question": "为什么这样调度",
+    "tool": "selection_reason",
+    "contains": [
+      "峰值",
+      "电费"
+    ],
+    "narrative_required": true,
+    "original_index": 45
+  },
+  {
+    "question": "执行回执是什么",
+    "tool": "execution_receipt",
+    "contains": [
+      "BA/EMS"
+    ],
+    "narrative_required": false,
+    "original_index": 46
+  },
+  {
+    "question": "明天负荷峰值",
+    "tool": "forecast_peak",
+    "contains": [
+      "kW"
+    ],
+    "narrative_required": false,
+    "original_index": 47
+  },
+  {
+    "question": "储能还剩多少电",
+    "tool": "current_state",
+    "contains": [
+      "36.4"
+    ],
+    "narrative_required": false,
+    "excludes": [
+      "气温",
+      "空调设定",
+      "现在没有这项数据"
+    ],
+    "expected_soc_percent": 36.4,
+    "original_index": 49
+  },
+  {
+    "question": "执行回执",
+    "tool": "execution_receipt",
+    "contains": [
+      " 条",
+      " 毫秒"
+    ],
+    "narrative_required": false,
+    "original_index": 51
+  },
+  {
+    "question": "解释一下复利，给一个简单例子",
+    "tool": null,
+    "contains": [
+      "利"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true,
+    "original_index": 56
+  },
+  {
+    "question": "水为什么会沸腾",
+    "tool": null,
+    "contains": [
+      "温"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true,
+    "original_index": 57
+  },
+  {
+    "question": "帮我写两句生日祝福",
+    "tool": null,
+    "contains": [
+      "生日"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true,
+    "exact_sentences": 2,
+    "original_index": 62
+  },
+  {
+    "question": "空调改24度电费多少",
+    "tool": "compare_costs",
+    "contains": [
+      "预计多花"
+    ],
+    "excludes": [
+      "末日",
+      "费用差额 -",
+      "风险评分",
+      "阈值"
+    ],
+    "narrative_required": false,
+    "original_index": 74
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "tool": "compare_costs",
+    "contains": [
+      "24.5 °C",
+      "预计多花",
+      "电网峰值",
+      "kW",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "单台",
+      "几毛钱",
+      "6%",
+      "10%",
+      "家用",
+      "费用差额 -"
+    ],
+    "narrative_required": false,
+    "original_index": 75
+  },
+  {
+    "question": "空调设定降低1度，电费和峰值有什么变化",
+    "tool": "compare_costs",
+    "contains": [
+      "24.5 °C",
+      "预计多花",
+      "电网峰值",
+      "kW",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "单台",
+      "几毛钱",
+      "6%",
+      "10%",
+      "家用",
+      "费用差额 -"
+    ],
+    "narrative_required": false,
+    "original_index": 76
+  },
+  {
+    "question": "空调设定调到24度会多花多少钱",
+    "tool": "compare_costs",
+    "scenario": "normal",
+    "origin_index": 2,
+    "display_time": "02:45",
+    "contains": [
+      "24.0 °C",
+      "预计多花",
+      "912.5 元",
+      "电网峰值",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "这个数现在查不到",
+      "下调空调设定不会自动增加费用",
+      "单台",
+      "几毛钱",
+      "节省"
+    ],
+    "query_step_count": 0,
+    "narrative_required": false,
+    "original_index": 81
+  },
+  {
+    "question": "光伏现在发多少电",
+    "tool": "current_energy",
+    "contains": [
+      "光伏",
+      "kW"
+    ],
+    "excludes": [
+      "公开资料",
+      "常识整理",
+      "kWh"
+    ],
+    "narrative_required": true,
+    "original_index": 88
+  },
+  {
+    "question": "现在的总负荷是多少",
+    "tool": "building_state",
+    "contains": [
+      "1,258.1 kW"
+    ],
+    "excludes": [
+      "820.1",
+      "kWh",
+      "电费"
+    ],
+    "narrative_required": false,
+    "original_index": 90
+  },
+  {
+    "question": "今天下午哪个时段电费最贵？为什么？",
+    "tool": "tariff_periods",
+    "contains": [
+      "单价最高",
+      "电费最高在",
+      "储能",
+      "不是"
+    ],
+    "original_index": null
+  },
+  {
+    "question": "什么时候电费最便宜？",
+    "tool": "tariff_periods",
+    "contains": [
+      "单价最高",
+      "电费最高在",
+      "储能",
+      "不是"
+    ],
+    "original_index": null
+  },
+  {
+    "question": "查看每小时电价、负荷和储能动作",
+    "tool": "tariff_periods",
+    "contains": [
+      "单价最高",
+      "电费最高在",
+      "储能",
+      "不是"
+    ],
+    "original_index": null
+  }
+]

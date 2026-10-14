@@ -1,0 +1,140 @@
+{
+  "version": "grounding_prompt_v1",
+  "baseline_commit": "7b1a308",
+  "source": "experiments\\agent_eval_v1_hours.jsonl",
+  "source_sha256": "584ecd1ca767a9fcdd05870246cf23280766b6a77c16cf4e6d09f3205a96d1f3",
+  "eligibility": "No refused step; same frozen two-hour evidence and initial SOC as agent_eval_v1. No model/candidate/control changes.",
+  "selection": "Sort eligible date,hour then every eighth from offset zero; independent of historical failures.",
+  "eligible_hours": 244,
+  "pairs": [
+    {
+      "date": "2017-01-04",
+      "hour": 0
+    },
+    {
+      "date": "2017-01-04",
+      "hour": 22
+    },
+    {
+      "date": "2017-01-07",
+      "hour": 6
+    },
+    {
+      "date": "2017-01-07",
+      "hour": 16
+    },
+    {
+      "date": "2017-02-01",
+      "hour": 0
+    },
+    {
+      "date": "2017-02-01",
+      "hour": 10
+    },
+    {
+      "date": "2017-02-01",
+      "hour": 18
+    },
+    {
+      "date": "2017-04-01",
+      "hour": 2
+    },
+    {
+      "date": "2017-04-01",
+      "hour": 10
+    },
+    {
+      "date": "2017-04-01",
+      "hour": 20
+    },
+    {
+      "date": "2017-04-05",
+      "hour": 4
+    },
+    {
+      "date": "2017-04-05",
+      "hour": 15
+    },
+    {
+      "date": "2017-04-05",
+      "hour": 23
+    },
+    {
+      "date": "2017-07-01",
+      "hour": 7
+    },
+    {
+      "date": "2017-07-01",
+      "hour": 15
+    },
+    {
+      "date": "2017-07-01",
+      "hour": 23
+    },
+    {
+      "date": "2017-07-04",
+      "hour": 20
+    },
+    {
+      "date": "2017-07-05",
+      "hour": 4
+    },
+    {
+      "date": "2017-07-20",
+      "hour": 2
+    },
+    {
+      "date": "2017-07-20",
+      "hour": 12
+    },
+    {
+      "date": "2017-07-20",
+      "hour": 22
+    },
+    {
+      "date": "2017-10-04",
+      "hour": 6
+    },
+    {
+      "date": "2017-10-04",
+      "hour": 16
+    },
+    {
+      "date": "2017-10-07",
+      "hour": 0
+    },
+    {
+      "date": "2017-10-07",
+      "hour": 8
+    },
+    {
+      "date": "2017-10-07",
+      "hour": 16
+    },
+    {
+      "date": "2017-10-23",
+      "hour": 0
+    },
+    {
+      "date": "2017-10-23",
+      "hour": 8
+    },
+    {
+      "date": "2017-10-23",
+      "hour": 16
+    },
+    {
+      "date": "2017-11-23",
+      "hour": 0
+    },
+    {
+      "date": "2017-11-23",
+      "hour": 20
+    }
+  ],
+  "protocol": "Paired real old/current prompts, identical inputs/candidates, max two original validation attempts. Alternate old/new order by sample index, two pairs concurrently. No dispatch, no key/request/response/explanation logs. Report final grounding fallback plus initial/retry unsupported numeric rates and all other failures. No re-runs, replacements or result-based tuning.",
+  "historic_context_only": {
+    "all_provider_attempted_hours": 244,
+    "grounding_fallback_hours": 87
+  }
+}

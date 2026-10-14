@@ -1,0 +1,18 @@
+{
+  "version":"byron-direct24-monthly-v1",
+  "seed":42,
+  "user_method":"direct multi-step LightGBM with horizon as feature and CQR separately calibrated per horizon",
+  "training_origin":"2016-01-20",
+  "evaluation":"2017 monthly rolling origins t, horizon1-24 target=t+h; final23origin hours lack some2018labels and are excluded only from metrics, not prediction generation",
+  "parameters":{"n_estimators":150,"learning_rate":0.05,"num_leaves":31,"n_jobs":2},
+  "split":"28day pre-month calibration. Fit point/quantile with all target times strictly before calibration start; scale on first65%calibration, all its target times before Cq start; per-horizon Cq targets strictly before target month. Train/calibrate once before monthly origin evaluation, never refit within evaluation month.",
+  "features":"horizon; target calendar hour/weekday/month/weekend/federal observed holiday (known at t); origin load t,t-1,t-24,t-168; rolling24/168 inclusive t; seasonal anchor y(t+h-24) known at t; origin lag disagreement; air_temperature(t) past-forward-filled persistence, never target observed weather",
+  "point":"nonnegative seasonal-anchor plus residual regressor; one pooled model across horizons",
+  "scale":"absolute point residual model trained only first calibration65% with horizon and holiday feature; clipped min0.001",
+  "risk":"same weights[0.7,0.15,0.1,0.05], per-horizon Cq rank refs on scale, origin lag disagreement and constant training building/usage residual prior; rho0.15 higher quantile risk threshold; CQR q on gate-retained Cq; max_relative_width1.0; alpha0.095 unchanged",
+  "confidence":"per-horizon past completed-month out-of-sample risk-bin isotonic coverage; December2016warm-up for January; exclude any previous-month origin with target not yet observed before current month; existing99%empirical+1%risk and width/gate penalty. Display score not conditional probability.",
+  "baseline":"load(t) persistence, metrics only; not a second model selection path",
+  "no_2017_parameter_selection":true,
+  "no_legacy_model_promotion":true,
+  "limitation":"2017previously studied for one-step; this is not never-seen blind test. Fixed single24step protocol with no candidate search or final retuning. UTC labels represent BDG2wall clock, not verified UTC timezone conversion."
+}

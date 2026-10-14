@@ -1,0 +1,13 @@
+{
+  "user_request": "训练集中节假日天数很少，增加训练集并优化节假日表现",
+  "data": "Byron2016-2017 real electricity and Hog weather; raw files read-only",
+  "quality": "2016 has121 missing load hours confined to Jan14-19; expanded history starts Jan20 without interpolation, preserving uninterrupted hourly training",
+  "calendar": "pandas USFederalHolidayCalendar observed federal holidays; proxy for US site, not confirmed building closures or state/school calendar",
+  "folds_2017": [[0.35,0.45,0.55],[0.55,0.65,0.75],[0.65,0.75,0.85]],
+  "boundaries": "2017 train-end/calibration-end/evaluation-end; expanded train prepends usable2016 only; same calibration/evaluation for all variants",
+  "variants": ["2017_only_no_calendar","2017_only_holiday_flag","expanded_no_calendar","expanded_holiday_flag"],
+  "method": "LightGBM CQR, same fixed parameters, rho0.15, alpha0.095",
+  "metrics": "holiday all-row MAE/interval score/retained coverage/rejection; nonholiday and overall metrics; distinct usable training holiday dates",
+  "retention": "retain source-bound models/predictions when overall composite or holiday MAE improves, with explicit regressions",
+  "limits": ["do not oversample duplicate dates as new holiday days", "few unique evaluation holidays: exploratory only", "evaluations before final15percent; no new blind-test claim", "no champion/replay mutation"]
+}

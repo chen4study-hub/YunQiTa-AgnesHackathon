@@ -1,0 +1,1331 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/agnes/replay/1.4",
+  "title": "Origin-causal24step building forecast contract v1.4 with optional explanation provenance",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "meta",
+    "hours",
+    "campus",
+    "energy_summary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.4"
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scenario",
+        "title",
+        "date",
+        "building_id",
+        "display_name",
+        "sqm",
+        "floors",
+        "floors_source",
+        "floor_uses",
+        "alpha",
+        "model_version",
+        "operating_point",
+        "mode",
+        "data_source",
+        "confidence_threshold",
+        "multi_horizon_model_version",
+        "forecast_weather",
+        "units",
+        "simulated_fields",
+        "estimated_fields",
+        "hvac_method",
+        "thermal_sources"
+      ],
+      "properties": {
+        "scenario": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "building_id": {
+          "type": "string"
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "sqm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "floors": {
+          "const": 40
+        },
+        "floors_source": {
+          "const": "estimated_from_area"
+        },
+        "floor_uses": {
+          "type": "array",
+          "minItems": 40,
+          "maxItems": 40,
+          "items": {
+            "enum": [
+              "lobby",
+              "office",
+              "garden",
+              "equipment"
+            ]
+          }
+        },
+        "alpha": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "exclusiveMaximum": 1
+        },
+        "model_version": {
+          "type": "string"
+        },
+        "operating_point": {
+          "type": "string"
+        },
+        "mode": {
+          "const": "auto"
+        },
+        "multi_horizon_model_version": {
+          "type": "string"
+        },
+        "forecast_weather": {
+          "const": "persistence_at_origin"
+        },
+        "confidence_threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "data_source": {
+          "type": "object",
+          "required": [
+            "name",
+            "attribution",
+            "url",
+            "license",
+            "modifications"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "attribution": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "license": {
+              "const": "CC BY-SA 4.0"
+            },
+            "modifications": {
+              "type": "string"
+            }
+          }
+        },
+        "units": {
+          "type": "object",
+          "required": [
+            "power",
+            "temperature"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "power": {
+              "const": "kW"
+            },
+            "temperature": {
+              "const": "°C"
+            }
+          }
+        },
+        "simulated_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "contains": {
+            "const": "storage"
+          }
+        },
+        "estimated_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "contains": {
+            "const": "floors_kw"
+          }
+        },
+        "hvac_method": {
+          "type": "object",
+          "required": [
+            "method_version",
+            "cooling_cop",
+            "cooling_auxiliary_electric_fraction",
+            "steam_auxiliary_electric_fraction",
+            "engineering_parameters",
+            "interval_hours",
+            "max_past_gap_hours",
+            "cooling_months",
+            "heating_months",
+            "shoulder_months",
+            "policy",
+            "cap",
+            "future",
+            "missing",
+            "share_denominator",
+            "units",
+            "floor_partition",
+            "unit_source"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "method_version": {
+              "const": "building_auxiliary_thermal_v2"
+            },
+            "cooling_cop": {
+              "const": null
+            },
+            "cooling_auxiliary_electric_fraction": {
+              "const": 0.04470201832676245
+            },
+            "steam_auxiliary_electric_fraction": {
+              "const": 0.020642017845394618
+            },
+            "engineering_parameters": {
+              "const": {
+                "fan_pressure_pa": 500.0,
+                "fan_total_efficiency": 0.6,
+                "air_density_kg_m3": 1.2,
+                "air_cp_j_kg_k": 1006.0,
+                "air_handled_thermal_fraction": 0.6,
+                "cooling_air_delta_k": 12.0,
+                "heating_air_delta_k": 25.0,
+                "pump_head_pa": 179352.0,
+                "pump_shaft_w_per_flow_head": 1.282051,
+                "pump_motor_efficiency": 0.9,
+                "water_density_kg_m3": 1000.0,
+                "water_cp_j_kg_k": 4180.0,
+                "cooling_water_delta_k": 6.0,
+                "heating_water_delta_k": 15.0
+              }
+            },
+            "interval_hours": {
+              "const": 1.0
+            },
+            "max_past_gap_hours": {
+              "const": 24
+            },
+            "cooling_months": {
+              "const": [
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            "heating_months": {
+              "const": [
+                11,
+                12,
+                1,
+                2,
+                3
+              ]
+            },
+            "shoulder_months": {
+              "const": [
+                4,
+                5,
+                10
+              ]
+            },
+            "policy": {
+              "const": "district production excluded; cooling:cold*derivedfanpumpfactor; heating:steam*derivedfanpumpfactor; shoulder:sum; no compressor or boiler electricity; not measured electrical submeter"
+            },
+            "cap": {
+              "const": "current:min(actual_kw,point_kw); future:point_kw only, no future measured electricity"
+            },
+            "future": {
+              "const": "thermal readings held from origin; mode switches by known target month; no target-time meters"
+            },
+            "missing": {
+              "const": "past-only last valid reading within24h, else null; missing not zero; seasonal inactive meter not needed"
+            },
+            "share_denominator": {
+              "const": "current:actual_kw; future:point_kw; null for absent estimate or zero denominator"
+            },
+            "units": {
+              "const": "raw meters:kWh thermal per1h; thermal_kw:kW thermal; electric estimates:kW electrical; share:fraction0-1"
+            },
+            "floor_partition": {
+              "const": "HVAC estimate is a subset of existing predicted electric floors; exact0.1kW bounded largest remainder, no double counting"
+            },
+            "unit_source": {
+              "const": "https://github.com/buds-lab/building-data-genome-project-2/wiki/Meters-data-features"
+            }
+          }
+        },
+        "thermal_sources": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "chilledwater_cleaned.csv": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "sha256",
+                "bytes",
+                "pointer_url"
+              ],
+              "properties": {
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "pointer_url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            },
+            "steam_cleaned.csv": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "sha256",
+                "bytes",
+                "pointer_url"
+              ],
+              "properties": {
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "pointer_url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "hours": {
+      "type": "array",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": {
+        "$ref": "#/$defs/hour"
+      }
+    },
+    "campus": {
+      "type": "array",
+      "maxItems": 150,
+      "items": {
+        "$ref": "#/$defs/building"
+      }
+    },
+    "energy_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hvac_electric_estimate_kwh",
+        "matched_building_electric_kwh",
+        "hvac_electric_estimated_share",
+        "valid_hours",
+        "total_hours",
+        "cap_applied_hours",
+        "past_fill_hours",
+        "denominator",
+        "label"
+      ],
+      "properties": {
+        "hvac_electric_estimate_kwh": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "matched_building_electric_kwh": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "hvac_electric_estimated_share": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "valid_hours": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 24
+        },
+        "total_hours": {
+          "const": 24
+        },
+        "cap_applied_hours": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 24
+        },
+        "past_fill_hours": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 24
+        },
+        "denominator": {
+          "type": "string"
+        },
+        "label": {
+          "const": "空调电耗占比（预计）"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "number": {
+      "type": "number"
+    },
+    "hour": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "t",
+        "actual_kw",
+        "point_kw",
+        "lower_kw",
+        "upper_kw",
+        "confidence",
+        "risk_score",
+        "risk_threshold",
+        "abstain",
+        "abstain_reason",
+        "outdoor_temp_c",
+        "floors_kw",
+        "storage",
+        "pv",
+        "grid_kw",
+        "agent",
+        "forecast_24h",
+        "recent_actual",
+        "hvac",
+        "hvac_electric_estimate_kw",
+        "hvac_electric_estimated_share",
+        "floors_hvac_electric_estimate_kw",
+        "floors_non_hvac_estimate_kw"
+      ],
+      "properties": {
+        "t": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "actual_kw": {
+          "$ref": "#/$defs/number"
+        },
+        "point_kw": {
+          "$ref": "#/$defs/number"
+        },
+        "lower_kw": {
+          "$ref": "#/$defs/number"
+        },
+        "upper_kw": {
+          "$ref": "#/$defs/number"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "risk_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "risk_threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "abstain": {
+          "type": "boolean"
+        },
+        "abstain_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "outdoor_temp_c": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "floors_kw": {
+          "type": "array",
+          "minItems": 40,
+          "maxItems": 40,
+          "items": {
+            "$ref": "#/$defs/number"
+          }
+        },
+        "storage": {
+          "type": "object",
+          "required": [
+            "power_kw",
+            "soc"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "power_kw": {
+              "$ref": "#/$defs/number"
+            },
+            "soc": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 0.95
+            }
+          }
+        },
+        "pv": {
+          "type": "object",
+          "required": [
+            "power_kw"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "power_kw": {
+              "$ref": "#/$defs/number"
+            }
+          }
+        },
+        "grid_kw": {
+          "$ref": "#/$defs/number"
+        },
+        "forecast_24h": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "$ref": "#/$defs/forecast"
+          }
+        },
+        "recent_actual": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "t",
+              "actual_kw"
+            ],
+            "properties": {
+              "t": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "actual_kw": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "agent": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "source",
+            "hvac_setpoint_c",
+            "actions",
+            "explanation"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "executed",
+                "handoff"
+              ]
+            },
+            "source": {
+              "enum": [
+                "llm",
+                "rule",
+                "mock"
+              ]
+            },
+            "hvac_setpoint_c": {
+              "type": "number"
+            },
+            "actions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "explanation": {
+              "type": "string"
+            },
+            "explanation_source": {
+              "enum": [
+                "llm",
+                "template"
+              ],
+              "description": "Wording provenance, not candidate selection source. llm retains validated LLM prose with host bounds; template has only host wording. Optional for legacy readers."
+            },
+            "work_orders": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            },
+            "receipt": {
+              "type": "object"
+            },
+            "selection_reason": {
+              "$ref": "#/$defs/selection_reason"
+            },
+            "selected": {
+              "type": "string",
+              "enum": [
+                "rule_full",
+                "rule_conservative",
+                "rule_hold"
+              ]
+            },
+            "candidates": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 3,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "temperature_optimization": {
+                    "$ref": "#/$defs/temperature_optimization"
+                  }
+                }
+              }
+            },
+            "llm_mode": {
+              "type": "string"
+            },
+            "llm": {
+              "type": "object"
+            },
+            "manual_reference": {
+              "type": "array",
+              "maxItems": 24,
+              "items": {
+                "$ref": "#/$defs/manual_reference_row"
+              },
+              "description": "Operator reference only; independent of execution refusal. Optional for existing payloads."
+            }
+          }
+        },
+        "hvac": {
+          "$ref": "#/$defs/hvac"
+        },
+        "hvac_electric_estimate_kw": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "hvac_electric_estimated_share": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "floors_hvac_electric_estimate_kw": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "minItems": 40,
+          "maxItems": 40,
+          "items": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "floors_non_hvac_estimate_kw": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "minItems": 40,
+          "maxItems": 40,
+          "items": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "weather": {
+          "$ref": "#/$defs/weather"
+        }
+      }
+    },
+    "forecast": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "t",
+        "horizon",
+        "point_kw",
+        "lower_kw",
+        "upper_kw",
+        "confidence",
+        "abstain",
+        "risk_score",
+        "risk_threshold",
+        "confidence_threshold",
+        "floors_kw",
+        "hvac",
+        "hvac_electric_estimate_kw",
+        "hvac_electric_estimated_share",
+        "floors_hvac_electric_estimate_kw",
+        "floors_non_hvac_estimate_kw"
+      ],
+      "properties": {
+        "t": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "horizon": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 24
+        },
+        "point_kw": {
+          "type": "number",
+          "minimum": 0
+        },
+        "lower_kw": {
+          "type": "number",
+          "minimum": 0
+        },
+        "upper_kw": {
+          "type": "number",
+          "minimum": 0
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "abstain": {
+          "type": "boolean"
+        },
+        "risk_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "risk_threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "confidence_threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "floors_kw": {
+          "type": "array",
+          "minItems": 40,
+          "maxItems": 40,
+          "items": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "hvac": {
+          "$ref": "#/$defs/hvac"
+        },
+        "hvac_electric_estimate_kw": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "hvac_electric_estimated_share": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "floors_hvac_electric_estimate_kw": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "minItems": 40,
+          "maxItems": 40,
+          "items": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "floors_non_hvac_estimate_kw": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "minItems": 40,
+          "maxItems": 40,
+          "items": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "weather": {
+          "$ref": "#/$defs/weather"
+        }
+      }
+    },
+    "building": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "building_id",
+        "primary_use",
+        "sqm",
+        "hourly"
+      ],
+      "properties": {
+        "building_id": {
+          "type": "string"
+        },
+        "primary_use": {
+          "type": "string"
+        },
+        "sqm": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "hourly": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "type": "object",
+            "required": [
+              "point_kw",
+              "abstain"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "point_kw": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "abstain": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    "hvac": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "season",
+        "thermal_kw",
+        "uncapped_electric_estimate_kw",
+        "cap_applied",
+        "effective_readings",
+        "quality",
+        "basis",
+        "origin"
+      ],
+      "properties": {
+        "season": {
+          "enum": [
+            "cooling",
+            "heating",
+            "shoulder"
+          ]
+        },
+        "thermal_kw": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "uncapped_electric_estimate_kw": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "cap_applied": {
+          "type": "boolean"
+        },
+        "effective_readings": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "chilledwater",
+            "steam"
+          ],
+          "properties": {
+            "chilledwater": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "raw_kwh",
+                "effective_kwh",
+                "source_wall_time",
+                "age_hours"
+              ],
+              "properties": {
+                "raw_kwh": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "effective_kwh": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "source_wall_time": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "age_hours": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                }
+              }
+            },
+            "steam": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "raw_kwh",
+                "effective_kwh",
+                "source_wall_time",
+                "age_hours"
+              ],
+              "properties": {
+                "raw_kwh": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "effective_kwh": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "source_wall_time": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "age_hours": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                }
+              }
+            }
+          }
+        },
+        "quality": {
+          "enum": [
+            "observed",
+            "past_fill",
+            "missing"
+          ]
+        },
+        "basis": {
+          "enum": [
+            "current_or_past_meter",
+            "persistence_at_origin"
+          ]
+        },
+        "origin": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "selection_reason": {
+      "type": "object",
+      "required": [
+        "policy",
+        "selected_candidate_id",
+        "preferred_candidate_id",
+        "objective_optimal",
+        "summary"
+      ],
+      "properties": {
+        "policy": {
+          "type": "object",
+          "required": [
+            "id"
+          ]
+        },
+        "selected_candidate_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "preferred_candidate_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "objective_optimal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "metrics": {
+          "type": "object"
+        }
+      }
+    },
+    "weather": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "outdoor_temp_c",
+        "relative_humidity_pct",
+        "dew_temp_c",
+        "source_timestamp",
+        "basis"
+      ],
+      "properties": {
+        "outdoor_temp_c": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "relative_humidity_pct": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "dew_temp_c": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "source_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "basis": {
+          "type": "string"
+        }
+      }
+    },
+    "manual_reference_row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "timestamp",
+        "hvac_setpoint_c",
+        "storage_mode",
+        "battery_kw",
+        "suggested_duration_hours",
+        "remaining_duration_hours",
+        "segment_start",
+        "segment_end",
+        "prepared_upper_kw",
+        "requires_confirmation",
+        "reason",
+        "reference_soc_before",
+        "reference_soc_after"
+      ],
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "hvac_setpoint_c": {
+          "type": "number",
+          "minimum": 24,
+          "maximum": 27
+        },
+        "storage_mode": {
+          "enum": [
+            "charge",
+            "discharge",
+            "idle"
+          ]
+        },
+        "battery_kw": {
+          "type": "number",
+          "minimum": -500,
+          "maximum": 500
+        },
+        "suggested_duration_hours": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 24
+        },
+        "remaining_duration_hours": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 24
+        },
+        "segment_start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "segment_end": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "prepared_upper_kw": {
+          "type": "number",
+          "minimum": 0
+        },
+        "requires_confirmation": {
+          "const": true
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "reference_soc_before": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 0.95
+        },
+        "reference_soc_after": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 0.95
+        }
+      }
+    },
+    "temperature_optimization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "before",
+        "after",
+        "applied",
+        "comfort_penalty",
+        "comfort_penalty_cny_per_kw_degree2",
+        "precool_warming_budget_ratio",
+        "scope",
+        "comfort_excess_penalty_cny_per_kw_degree2",
+        "precool_budget_basis",
+        "setpoint_step_c"
+      ],
+      "properties": {
+        "before": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "energy_cost_cny",
+            "point_grid_peak_kw",
+            "upper_grid_peak_kw"
+          ],
+          "properties": {
+            "energy_cost_cny": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "point_grid_peak_kw": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "upper_grid_peak_kw": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "after": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "energy_cost_cny",
+            "point_grid_peak_kw",
+            "upper_grid_peak_kw"
+          ],
+          "properties": {
+            "energy_cost_cny": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "point_grid_peak_kw": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "upper_grid_peak_kw": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "applied": {
+          "type": "boolean"
+        },
+        "comfort_penalty": {
+          "const": "quadratic_deviation_from_25.5"
+        },
+        "comfort_penalty_cny_per_kw_degree2": {
+          "const": 0.015
+        },
+        "precool_warming_budget_ratio": {
+          "const": 4.0
+        },
+        "scope": {
+          "const": "accepted_hours"
+        },
+        "comfort_excess_penalty_cny_per_kw_degree2": {
+          "const": 0.1
+        },
+        "selection_guard_passed": {
+          "type": "boolean"
+        },
+        "selection_guard_caps": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "energy_cost_cny",
+            "point_grid_peak_kw",
+            "upper_grid_peak_kw"
+          ],
+          "properties": {
+            "energy_cost_cny": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "point_grid_peak_kw": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "upper_grid_peak_kw": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "precool_budget_basis": {
+          "const": "mean_peak_warming_over_two_prepeak_hours"
+        },
+        "setpoint_step_c": {
+          "const": 0.1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "fixture": "round4_full_off",
+      "index": 21,
+      "semantic": true,
+      "evaluate": true
+    },
+    {
+      "fixture": "round4_full_off",
+      "index": 84,
+      "semantic": true,
+      "evaluate": true
+    },
+    {
+      "fixture": "round4_full_off",
+      "index": 85,
+      "semantic": true,
+      "evaluate": true
+    },
+    {
+      "fixture": "round4_full_off",
+      "index": 90,
+      "semantic": true,
+      "evaluate": true
+    },
+    {
+      "fixture": "round4_multi_on",
+      "index": 6,
+      "semantic": true,
+      "evaluate": true
+    },
+    {
+      "fixture": "round4_multi_on",
+      "index": 7,
+      "semantic": true,
+      "evaluate": true
+    },
+    {
+      "raw_shape_equivalence": "elevator_state",
+      "positive": true,
+      "negative": true
+    },
+    {
+      "raw_shape_equivalence": "building_state",
+      "positive": true,
+      "negative": true
+    }
+  ],
+  "network_calls": 0,
+  "exceptions": [],
+  "note": "not new online scores; original round4 untouched"
+}

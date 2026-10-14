@@ -1,0 +1,1112 @@
+.floors-page {
+  --floors-car-height: 26px;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(11rem, 0.48fr) minmax(0, 1.55fr) minmax(
+      0,
+      1.05fr
+    );
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 12px;
+  min-width: 0;
+}
+.floors-number {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  display: inline-block;
+  min-width: 4ch;
+  font-variant-numeric: tabular-nums;
+}
+.floors-metrics b,
+.floors-zone-setting,
+.floors-lift-table,
+.floors-lift-floor,
+.floors-gauge-value {
+  font-variant-numeric: tabular-nums;
+  transition:
+    color 360ms ease,
+    fill 360ms ease;
+}
+.floors-lift-car {
+  transition:
+    color 360ms ease,
+    border-color 360ms ease,
+    background-color 360ms ease;
+}
+.floors-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.floors-heading h2 {
+  font-size: var(--font-note);
+}
+.floors-heading small,
+.floors-chart-heading small {
+  color: #8597a3;
+  font-size: var(--font-note);
+}
+.floors-tag {
+  color: #4fd1d9;
+  border: 1px solid #4fd1d940;
+  background: #4fd1d90a;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: var(--font-note);
+  white-space: nowrap;
+}
+.floors-list-card {
+  min-height: 0;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+}
+.floors-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #8597a3;
+  font-size: var(--font-note);
+  margin-bottom: 12px;
+}
+.floors-selector select {
+  min-width: 0;
+  flex: 1;
+  background: #111e28;
+  color: #d4e4ed;
+  border: 1px solid #243a48;
+  border-radius: 0.3rem;
+  padding: 0.4rem;
+}
+.floors-load-chart {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+.floors-detail-card {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+}
+.floors-zones {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+.floors-zone {
+  padding: 0.5rem 0.25rem;
+  border: 1px solid #243a48;
+  background: #111e28;
+  border-radius: 0.5rem;
+  min-width: 0;
+}
+.floors-page h3 {
+  font-size: var(--font-note);
+  font-weight: 500;
+  margin: 0.2rem 0;
+}
+.floors-zone h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.floors-zone h3 i {
+  width: 0.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.floors-temperature-display {
+  width: 100%;
+  margin-block: 2px;
+}
+.floors-temperature-value {
+  font-size: var(--font-value-lg);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.floors-temperature-value b {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: inherit;
+}
+.floors-temperature-value small {
+  margin-left: 0;
+  color: #a8bac7;
+  font-size: var(--font-unit);
+}
+.floors-temperature-band {
+  position: relative;
+  height: 4px;
+  margin: 0 6px;
+  border-radius: 2px;
+  background: linear-gradient(to right, #2fbf8f, #e5be6a 75%, #f29252);
+}
+.floors-temperature-limit {
+  position: absolute;
+  left: 83.333333%;
+  top: -3px;
+  height: 10px;
+  border-left: 1px solid #ff4d5e;
+}
+.floors-temperature-position {
+  position: absolute;
+  top: -2px;
+  width: 8px;
+  height: 8px;
+  transform: translateX(-50%);
+  background: #e4ecf1;
+  border: 1px solid #111e28;
+  border-radius: 50%;
+}
+.floors-temperature-scale {
+  position: relative;
+  height: 32px;
+  margin: 3px 6px 0;
+  font-size: var(--font-label);
+  line-height: 16px;
+  color: #8597a3;
+}
+.floors-temperature-scale span {
+  position: absolute;
+  white-space: nowrap;
+}
+.floors-temperature-scale span:first-child {
+  left: 0;
+}
+.floors-temperature-scale span:last-child {
+  right: 0;
+}
+.floors-temperature-scale span:nth-child(2) {
+  left: 83.333333%;
+  top: 16px;
+  transform: translateX(-50%);
+  color: #ff8591;
+}
+.floors-zone-setting {
+  text-align: center;
+  white-space: nowrap;
+  color: #a8bac7;
+  font-size: var(--font-note);
+  margin: 12px 0 0;
+}
+.floors-chart-heading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-block: 12px;
+}
+.floors-page .floors-temperature-chart {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 3;
+  flex: 1;
+}
+.floors-note {
+  display: block;
+  color: #8597a3;
+  font-size: var(--font-note);
+  line-height: 1.6;
+  margin: 0.7rem 0 0;
+}
+.floors-metrics-card {
+  grid-column: 2;
+  grid-row: 2;
+}
+.floors-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.floors-metrics > div {
+  padding: clamp(6px, 0.65vw, 12px);
+  border: 1px solid #243a48;
+  border-radius: 0.5rem;
+  background: #111e28;
+}
+.floors-metrics > div > span {
+  display: block;
+  color: #8597a3;
+  font-size: var(--font-note);
+  margin-bottom: 0.2rem;
+}
+.floors-metrics b {
+  display: inline-flex;
+  align-items: baseline;
+  line-height: 1.1;
+  font:
+    var(--font-value-md) "Barlow Semi Condensed",
+    sans-serif;
+  color: #d7eaf4;
+  white-space: nowrap;
+}
+.floors-metrics b small {
+  font:
+    var(--font-unit) "Microsoft YaHei",
+    sans-serif;
+  margin-left: 0.35rem;
+  color: #8597a3;
+}
+.floors-elevators-card {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  gap: 12px;
+}
+.floors-elevators-card .floors-heading {
+  margin-bottom: 0;
+}
+.floors-lift-legend {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: var(--font-note);
+}
+.floors-lift-scroll {
+  min-width: 0;
+  min-height: 0;
+  overflow-x: auto;
+  scrollbar-color: #385363 #101c26;
+}
+.floors-lift-shafts {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+  padding: 0;
+}
+.floors-lift-column {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: #101c26;
+  border: 1px solid #243a48;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.2rem;
+}
+.floors-lift-column h3 {
+  font:
+    var(--font-note) "JetBrains Mono",
+    monospace;
+}
+.floors-lift-column h3 small {
+  display: block;
+  color: #8597a3;
+  font:
+    var(--font-note) "Microsoft YaHei",
+    sans-serif;
+  margin-top: 0.4rem;
+}
+.floors-lift-shaft {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  /* Independent gutter for all 1F–40F labels; cars stay centered in shaft. */
+  margin: 0.4rem 0 0.4rem calc(3ch + 8px);
+  font:
+    var(--font-note) "JetBrains Mono",
+    monospace;
+  border-inline: 1px solid #2c4251;
+  background: repeating-linear-gradient(
+    to top,
+    transparent 0%,
+    transparent 2.45%,
+    #28404c55 2.45%,
+    #28404c55 2.56%
+  );
+}
+.floors-lift-shaft.floors-low {
+  background-color: #102b2933;
+}
+.floors-unserved {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    135deg,
+    #5b6b7670 0 5px,
+    #5b6b7690 5px 6px
+  );
+  border-block: 1px solid #8597a3;
+}
+.floors-note .floors-over-limit {
+  color: #ff4d5e;
+}
+.floors-lift-shaft.floors-high {
+  background-color: #14274333;
+}
+.floors-shaft-tick {
+  position: absolute;
+  left: auto;
+  right: calc(100% + 4px);
+  white-space: nowrap;
+  font:
+    var(--font-note) "JetBrains Mono",
+    monospace;
+  color: #6f8696;
+  transform: none;
+}
+.floors-lift-car {
+  z-index: 2;
+  position: absolute;
+  left: 0.1rem;
+  right: 0.1rem;
+  height: var(--floors-car-height);
+  transform: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.05rem;
+  border: 1px solid;
+  border-radius: 0.2rem;
+  background: #152a37;
+  box-shadow: 0 0 0.8rem #4fd1d914;
+  font:
+    var(--font-note) "JetBrains Mono",
+    monospace;
+}
+.floors-lift-car[data-status="doors"] {
+  background: #344653;
+}
+.floors-lift-floor {
+  font:
+    var(--font-note) "JetBrains Mono",
+    monospace;
+  white-space: nowrap;
+}
+.floors-lift-table {
+  width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  font-size: var(--font-note);
+  text-align: left;
+}
+.floors-lift-table caption {
+  text-align: left;
+  padding: 0.6rem 0;
+  color: #a8bac7;
+  font-size: var(--font-note);
+}
+.floors-lift-table td,
+.floors-lift-table th {
+  padding: clamp(3px, 0.35vw, 6px) 3px;
+  white-space: nowrap;
+  border-bottom: 1px solid #243a48;
+}
+.floors-lift-table thead {
+  background: #15232e;
+  color: #8597a3;
+}
+.floors-lift-table th {
+  font-weight: 500;
+}
+.floors-lift-table tbody th {
+  color: #d4e4ed;
+  font-family: "JetBrains Mono", monospace;
+}
+.floors-list-card,
+.floors-detail-card,
+.floors-metrics-card,
+.floors-elevators-card {
+  padding: clamp(8px, 0.7vw, 14px);
+  min-height: 0;
+  min-width: 0;
+}
+.floors-detail-card {
+  overflow: hidden;
+}
+.floors-zone-setting {
+  margin-top: 4px;
+  font-size: var(--font-note);
+}
+.floors-zone {
+  padding: 3px;
+}
+.floors-lift-car {
+  justify-content: center;
+  line-height: 1;
+}
+.floors-shaft-tick {
+  z-index: 1;
+  font-size: var(--font-note);
+  pointer-events: none;
+}
+.floors-shaft-tick::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #385363;
+}
+.floors-lift-shaft {
+  min-height: 120px;
+}
+.floors-lift-scroll {
+  overflow: auto;
+}
+.floors-lift-column {
+  min-height: 180px;
+}
+.floors-elevators-card {
+  grid-template-rows: auto auto minmax(0, 1fr) minmax(0, auto);
+}
+.floors-lift-table caption {
+  padding: 4px 0;
+}
+.floors-lift-column h3 small {
+  margin-top: 2px;
+}
+.floors-page .floors-list-card,
+.floors-page .floors-detail-card,
+.floors-page .floors-metrics-card,
+.floors-page .floors-elevators-card {
+  padding: clamp(8px, 0.5vw, 10px);
+}
+.floors-page .floors-metrics > div {
+  padding: 6px;
+}
+.floors-page .floors-metrics-card .floors-heading {
+  margin-bottom: 6px;
+}
+.floors-page .floors-metrics > div > span {
+  font-size: var(--font-note);
+}
+.floors-page .floors-temperature-chart {
+  /* Reserve 34px legend/top + 24px axis/bottom, leaving >= 140px of plot. */
+  min-height: 200px;
+  aspect-ratio: auto;
+}
+.floors-page .floors-note {
+  margin-top: 3px;
+  font-size: var(--font-note);
+}
+.floors-page .floors-chart-heading {
+  margin-block: 4px;
+}
+.floors-page .floors-zone-setting {
+  margin-top: 0;
+}
+.floors-page .floors-lift-table {
+  font-size: var(--font-note);
+  line-height: 1.3;
+}
+.floors-page .floors-lift-table th,
+.floors-page .floors-lift-table td {
+  padding: 4px 3px;
+  font-size: var(--font-note);
+}
+.floors-page .floors-lift-column {
+  min-height: 0;
+}
+.floors-page .floors-lift-shaft {
+  min-height: 0;
+}
+.floors-page .floors-detail-card.floors-detail-card,
+.floors-page .floors-metrics-card.floors-metrics-card,
+.floors-page .floors-list-card.floors-list-card,
+.floors-page .floors-elevators-card.floors-elevators-card {
+  padding: 8px;
+}
+.floors-page .floors-metrics.floors-metrics > div {
+  padding: 4px;
+}
+.floors-page .floors-metrics > div > span {
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.floors-page .floors-metrics-card .floors-heading.floors-heading {
+  margin-bottom: 4px;
+}
+.floors-page .floors-metrics-card .floors-heading h2 {
+  margin: 0;
+}
+.floors-page .floors-tag {
+  padding: 2px 4px;
+}
+.floors-page .floors-metrics b {
+  font-size: var(--font-note);
+}
+.floors-page .floors-metrics .floors-number {
+  min-width: 0;
+  width: 4.8ch;
+}
+.floors-page .floors-metrics > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  column-gap: 12px;
+}
+.floors-page .floors-metrics > div > span {
+  margin: 0;
+  white-space: nowrap;
+}
+.floors-load-legend {
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+  font-size: var(--font-note);
+  color: #a8bac7;
+  font-variant-numeric: tabular-nums;
+}
+.floors-load-legend > span {
+  min-width: 0;
+  line-height: 1.2;
+}
+.floors-load-legend i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  margin-right: 4px;
+  border-radius: 2px;
+}
+@media (max-width: 1600px) {
+  .floors-load-legend .floors-legend-percentile {
+    display: none;
+  }
+}
+/* Fit all bars; the chart samples labels from its actual plot height. */
+.floors-load-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+.floors-page .floors-load-chart {
+  height: 100%;
+  min-height: 0;
+}
+.floors-page .floors-metrics-card {
+  padding-block: 4px;
+}
+.floors-page .floors-metrics-card .floors-heading {
+  margin-bottom: 2px;
+}
+.floors-page .floors-metrics.floors-metrics > div {
+  padding-block: 0;
+}
+.floors-page .floors-detail-card .floors-heading {
+  margin-bottom: 2px;
+}
+.floors-page .floors-zones {
+  flex-shrink: 0;
+}
+.floors-page .floors-zone h3 {
+  margin: 0;
+  font-size: var(--font-note);
+}
+.floors-page .floors-note {
+  line-height: 1.2;
+}
+.floors-page .floors-lift-scroll {
+  overflow: hidden;
+}
+.floors-page .floors-lift-table-scroll {
+  overflow: auto;
+}
+/* Reallocate compact-desktop height to the temperature plot, not scrolling. */
+@media (min-width: 1201px) and (max-width: 1600px) {
+  /* One external scale serves all six equal-width shafts. */
+  .floors-page .floors-lift-shafts {
+    padding-left: calc(3ch + 8px);
+  }
+  .floors-page .floors-lift-shaft {
+    margin-inline: 0;
+  }
+  .floors-page .floors-lift-column:not(:first-child) .floors-shaft-tick {
+    display: none;
+  }
+  .floors-page .floors-zones {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .floors-page .floors-detail-card .floors-heading > div {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    column-gap: 12px;
+  }
+  .floors-page .floors-chart-heading {
+    margin-block: 0;
+  }
+  .floors-page .floors-metrics-card {
+    padding-block: 2px;
+  }
+  .floors-page .floors-metrics-card .floors-heading.floors-heading {
+    margin-bottom: 0;
+  }
+  .floors-page .floors-metrics-card .floors-heading h2 {
+    line-height: 1.1;
+  }
+  .floors-page .floors-chart-heading h3 {
+    margin: 0;
+  }
+  .floors-page .floors-zone {
+    padding: 1px 2px;
+  }
+  .floors-page .floors-zone-setting {
+    font-size: max(var(--font-label), var(--font-table));
+    letter-spacing: normal;
+  }
+}
+@media (max-width: 1200px) {
+  .floors-page {
+    grid-template-columns: minmax(10rem, 0.45fr) minmax(0, 1.55fr);
+  }
+  .floors-elevators-card {
+    grid-column: 1 / 3;
+    grid-row: 3;
+  }
+  .floors-elevators-card {
+    grid-template-rows: auto auto auto auto;
+  }
+  .floors-lift-shafts {
+    height: auto;
+  }
+  .floors-lift-shaft {
+    flex: none;
+    aspect-ratio: 1 / 2.5;
+  }
+  .floors-zones {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .floors-page {
+    height: auto;
+    min-height: 100%;
+    overflow: visible;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: max-content;
+    grid-auto-rows: max-content;
+    align-content: start;
+    --floors-shaft-text: #d4e4ed;
+    --floors-car-text: #e4ecf1;
+    --floors-shaft-label-bg: #101c26;
+  }
+  .floors-page .floors-shaft-tick {
+    color: var(--floors-shaft-text);
+    background: var(--floors-shaft-label-bg);
+    padding-inline: 2px;
+    border-radius: 2px;
+  }
+  /* Child foreground preserves the status-colored inline border on the car. */
+  .floors-page
+    .floors-lift-car:is([data-status="doors"], [data-status="idle"])
+    > :is(span, b) {
+    color: var(--floors-car-text);
+  }
+  .floors-list-card,
+  .floors-detail-card,
+  .floors-metrics-card,
+  .floors-elevators-card {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .floors-load-chart {
+    flex: none;
+    aspect-ratio: 1 / 2;
+  }
+  .floors-row {
+    padding: 0.65rem 0.5rem;
+  }
+  .floors-zones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .floors-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .floors-page .floors-temperature-chart {
+    aspect-ratio: 1;
+    flex: initial;
+  }
+  .floors-lift-shaft {
+    aspect-ratio: 1 / 6;
+  }
+  .floors-page .floors-load-scroll {
+    height: 500px;
+    flex: none;
+  }
+  .floors-page .floors-load-chart {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+  .floors-page .floors-temperature-chart {
+    height: 240px;
+    aspect-ratio: auto;
+  }
+  .floors-page .floors-lift-shafts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .floors-page .floors-lift-shaft {
+    height: 240px;
+    aspect-ratio: auto;
+  }
+  .floors-page .floors-lift-table {
+    min-width: 470px;
+  }
+  .floors-page .floors-lift-table-scroll {
+    overflow-x: auto;
+  }
+  .floors-page .floors-heading small,
+  .floors-page .floors-tag,
+  .floors-page .floors-selector,
+  .floors-page .floors-zone h3,
+  .floors-page .floors-zone-setting,
+  .floors-page .floors-note,
+  .floors-page .floors-metrics > div > span,
+  .floors-page .floors-lift-legend,
+  .floors-page .floors-lift-column h3 small,
+  .floors-page .floors-shaft-tick,
+  .floors-page .floors-lift-car,
+  .floors-page .floors-lift-floor,
+  .floors-page .floors-lift-table caption {
+    font-size: var(--font-note);
+  }
+  .floors-page .floors-metrics b small {
+    font-size: var(--font-note);
+  }
+}
+
+.floors-page .floors-heading h2 {
+  font-size: var(--font-title);
+}
+.floors-page .floors-heading small,
+.floors-page h3 {
+  font-size: var(--font-subtitle);
+}
+.floors-page .floors-metrics b {
+  font-size: var(--font-value-md);
+}
+.floors-page .floors-metrics b small {
+  font-size: var(--font-unit);
+  color: var(--color-unit);
+}
+.floors-page .floors-load-chart,
+.floors-page .floors-temperature-chart {
+  font-size: var(--font-note);
+}
+@media (max-width: 640px) {
+  .floors-page .floors-metrics b small {
+    font-size: var(--font-unit);
+  }
+  .floors-page .floors-zone-setting {
+    font-size: max(var(--font-label), var(--font-table));
+  }
+}
+/* Two-line metric cells, matching the public value/unit hierarchy. */
+.floors-page .floors-metrics.floors-metrics > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4px 6px;
+  gap: 4px;
+}
+.floors-page .floors-metrics > div > span {
+  margin: 0;
+  line-height: 1.2;
+  color: var(--color-unit);
+}
+.floors-page .floors-metrics b {
+  display: flex;
+  font-variant-numeric: tabular-nums;
+  align-items: baseline;
+  white-space: nowrap;
+  margin: 0;
+  line-height: 1.1;
+}
+.floors-page .floors-metrics .floors-number {
+  min-width: 0;
+  width: auto;
+}
+.floors-page .floors-metrics b small {
+  margin-left: 0;
+}
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .floors-page .floors-metrics {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .floors-page .floors-metrics.floors-metrics > div {
+    padding-inline: 4px;
+  }
+}
+/* Readability wins over fitting one screen; the page owns desktop vertical flow. */
+.floors-page {
+  --font-note: max(var(--font-label), var(--font-table));
+  --font-subtitle: max(var(--font-label), var(--font-table));
+  --floors-car-height: 40px;
+  font-size: var(--font-body);
+  line-height: 1.5;
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-content: start;
+  grid-template-rows: max-content max-content;
+}
+.floors-page .floors-list-card {
+  min-height: 620px;
+}
+.floors-page .floors-load-scroll {
+  flex: 1;
+  min-height: 480px;
+}
+.floors-page .floors-load-chart {
+  min-height: 480px;
+}
+.floors-page .floors-zones {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.floors-page .floors-zone {
+  padding: 8px 4px;
+}
+.floors-page .floors-zone-setting {
+  font-size: max(var(--font-label), var(--font-table));
+  line-height: 1.5;
+}
+.floors-page .floors-detail-card .floors-heading {
+  margin-bottom: 12px;
+}
+.floors-page .floors-chart-heading {
+  margin-block: 12px;
+}
+.floors-page .floors-temperature-chart {
+  flex: none;
+  height: 220px;
+  min-height: 220px;
+  aspect-ratio: auto;
+}
+.floors-page .floors-note {
+  line-height: 1.5;
+}
+.floors-page .floors-load-legend,
+.floors-page .floors-lift-legend {
+  font-size: max(var(--font-legend), var(--font-table));
+}
+.floors-page .floors-lift-shafts {
+  height: 340px;
+}
+.floors-page .floors-lift-car {
+  line-height: 1.25;
+}
+.floors-page .floors-lift-table {
+  font-size: var(--font-table);
+  line-height: 1.5;
+}
+.floors-page .floors-lift-table-scroll {
+  max-height: 260px;
+  overflow: auto;
+}
+.floors-page .floors-metrics {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 1600px) and (min-width: 1201px) {
+  .floors-page {
+    grid-template-columns: minmax(180px, 0.55fr) minmax(0, 1.45fr) minmax(
+        0,
+        1.2fr
+      );
+  }
+  .floors-page .floors-lift-shafts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    height: 650px;
+    padding-left: 0;
+  }
+  .floors-page .floors-lift-shaft {
+    margin-left: calc(3ch + 8px);
+  }
+  .floors-page .floors-lift-column .floors-shaft-tick {
+    display: block;
+  }
+}
+@media (max-width: 1200px) {
+  .floors-page {
+    grid-template-rows: max-content max-content max-content;
+  }
+}
+@media (max-width: 640px) {
+  .floors-page {
+    height: auto;
+    overflow: visible;
+    grid-template-rows: max-content;
+  }
+  .floors-page .floors-list-card {
+    min-height: 0;
+  }
+  .floors-page .floors-zones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .floors-page .floors-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .floors-page .floors-lift-shafts {
+    height: auto;
+  }
+}
+
+/* Body copy consumes the public body tier; secondary text and tables stay 14px. */
+.floors-page .floors-selector,
+.floors-page .floors-zone h3 {
+  font-size: var(--font-body);
+}
+@media (min-width: 1201px) {
+  .floors-page {
+    grid-template-rows: minmax(0, 1fr) auto;
+    align-content: stretch;
+  }
+  .floors-page .floors-list-card,
+  .floors-page .floors-load-scroll,
+  .floors-page .floors-load-chart {
+    min-height: 0;
+  }
+  .floors-page .floors-zones {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .floors-page .floors-temperature-chart {
+    flex: 1;
+    height: auto;
+    min-height: 220px;
+  }
+  .floors-page .floors-lift-shafts {
+    height: 100%;
+  }
+  .floors-page .floors-lift-table-scroll {
+    max-height: none;
+  }
+}
+
+.floors-page .floors-temperature-value {
+  font-size: max(28px, var(--font-value-lg));
+}
+
+/* Put the label above the control so native selected text gets the full width. */
+.floors-page .floors-selector {
+  flex-direction: column;
+  align-items: stretch;
+  row-gap: 4px;
+}
+.floors-page .floors-selector select {
+  font: inherit;
+  flex: none;
+  width: 100%;
+}
+.floors-page .floors-zone-setting > span {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Desktop height belongs to the viewport, not 40 fixed-height rows. */
+@media (min-width: 1201px) and (max-width: 1799px) {
+  .floors-page {
+    grid-template-columns: minmax(210px, 0.55fr) minmax(0, 1.6fr) minmax(
+        0,
+        1.05fr
+      );
+    grid-template-rows: minmax(426px, 1fr) minmax(96px, max-content);
+    gap: 8px;
+  }
+  .floors-page .floors-metrics-card {
+    grid-column: 2 / 4;
+  }
+  .floors-page .floors-metrics {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .floors-page .floors-elevators-card {
+    grid-row: 1;
+    gap: 8px;
+  }
+  .floors-page .floors-heading {
+    gap: 8px;
+  }
+  .floors-page .floors-detail-card .floors-heading {
+    margin-bottom: 4px;
+  }
+  .floors-page .floors-zones {
+    gap: 6px;
+  }
+  .floors-page .floors-zone {
+    padding: 0 2px;
+  }
+  .floors-page .floors-temperature-scale {
+    height: 32px;
+  }
+  .floors-page .floors-zone-setting {
+    white-space: normal;
+    line-height: 1.2;
+  }
+  .floors-page .floors-zone h3 {
+    line-height: 1.2;
+  }
+  .floors-page .floors-note {
+    line-height: 1.3;
+    margin-top: 0;
+  }
+  .floors-page .floors-chart-heading {
+    margin-block: 0;
+  }
+  .floors-page .floors-chart-heading h3 {
+    line-height: 1;
+  }
+  .floors-page .floors-detail-card .floors-heading {
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+  .floors-page .floors-temperature-chart {
+    /* Cartesian grid reserves 76px for legend/axes; keep >= 140px drawable. */
+    min-height: 217px;
+  }
+  .floors-page .floors-detail-card > :not(.floors-temperature-chart) {
+    flex-shrink: 0;
+  }
+  .floors-page .floors-lift-shafts {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 1fr);
+    height: 100%;
+    gap: 6px;
+    padding-left: calc(3ch + 8px);
+  }
+  .floors-page .floors-lift-shaft {
+    margin-inline: 0;
+  }
+  .floors-page .floors-lift-column:not(:first-child) .floors-shaft-tick {
+    display: none;
+  }
+  .floors-page .floors-lift-table-scroll {
+    max-height: 114px;
+  }
+  .floors-page .floors-load-legend {
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .floors-page .floors-metrics {
+    min-height: 54px;
+  }
+}
+/* Wide but short desktops keep the detail content and metric row intact. */
+@media (min-width: 1800px) {
+  .floors-page {
+    grid-template-rows: minmax(548px, 1fr) minmax(112px, max-content);
+    overflow-y: auto;
+  }
+  .floors-page .floors-metrics {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}

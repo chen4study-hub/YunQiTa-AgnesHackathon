@@ -1,0 +1,56 @@
+{
+  "version": "agent_13day_eval_v3_current_gate_distinct_metrics",
+  "building_id": "Hog_office_Byron",
+  "year": 2017,
+  "day_selection": {
+    "typical": {
+      "normal": "2017-10-23",
+      "peak": "2017-07-20",
+      "abstain": "2017-07-04"
+    },
+    "additional_rule": "For January/April/July/October select first Wednesday and first Saturday of month, then first Wednesday of February and US Thanksgiving fourth Thursday of November. Calendar only, no load/risk/coverage/cost/revenue ranking. No replacements for poor outcomes; incomplete input stops and reports.",
+    "additional_dates": [
+      "2017-01-04",
+      "2017-01-07",
+      "2017-04-05",
+      "2017-04-01",
+      "2017-07-05",
+      "2017-07-01",
+      "2017-10-04",
+      "2017-10-07",
+      "2017-02-01",
+      "2017-11-23"
+    ],
+    "season_convention": "meteorological: DJF winter, MAM spring, JJA summer, SON autumn",
+    "holiday": "Thanksgiving2017-11-23; typical IndependenceDay2017-07-04",
+    "prior_visibility": "Three typical days already investigated/selected, not a blind unbiased sample. Ten added dates frozen by calendar before this Agent evaluation.2017forecast model evaluation already existed, no forecasting retune."
+  },
+  "llm_requested_mode": "real",
+  "execution": "24-step horizon: current historical one-step forecast plus origin-issued forecast_24h h1..h23; current context and future origin-weather persistence, future zero PV. Execute only first step; hourly replan, independent day initialSOC0.5. No retry of completed hours; maximum4 independent days concurrent.",
+  "selection_policy": "upper_grid_peak_then_cost_v1",
+  "baseline": "No new dispatch:24C, battery0, same PV and tariff. Primary cost/upperpeak compare only current hours accepted by model. Rejected hours excluded from economic sums/maxima, never invent their cost or savings. Extra25.5C/battery0 baseline reported to isolate benefit from changed holding temperature.",
+  "metrics": {
+    "cost": "Sum point-load linear scenario grid*tariff for current executed accepted hour once, baseline-minus-Agent absolute/percentage. CNY configured demonstration prices not real billing.",
+    "upper_peak": "Daily maximum accepted-hour upper*temperature/precoolfactor-PV-battery floored0, compare no-dispatch24C upper-PV. Not joint interval guarantee or measured peak reduction.",
+    "constraints": "Independently check full returned24hplan at initialSOC and current command + day propagatedSOC; count violating hourly runs and violations by code, count invalid candidateplans too. Comfortdegreehours reported separately (not hard selected-temp rule).",
+    "handoff": "Current-hour refusal numerator: human_review action,0battery,current matching workorder and no current dispatchreceipt. Denominator current model-refused hours, null if none. Also inspect every refused step in returned24hplan.",
+    "grounding": "Count numeric tokens in final reason absent from rounded forecast/candidate tool values, plus provider failed-output numeric-token count before grounding retry recorded as separate diagnostic (no raw rejected response saved).",
+    "degradation": "source rule: refused_current if no provider attempt, otherwise normal provider validation/call fallbacks. Report every day actual llm success/degradation/current-gate-bypass separately. No real reruns for failures."
+  },
+  "limitations": [
+    "Historical current-hour one-step forecast predates origin (legacy export), not live BMS validation. Forecast future horizons origin-causal frozen v3; no future observed weather.",
+    "Unvalidated configured linear model, unit battery efficiency, zero future PV; daily finalSOC reported, not forced to equal day initialSOC.",
+    "Economics only accepted first steps, not whole-day bill or joint interval guarantee.",
+    "13days previously evaluated; no blind validation claim, no date replacement or parameter/prompt tuning using outcomes."
+  ],
+  "security": "Runtime key file only; no credentials/request/response bodies in artifacts/logs. No environment/config/Task Scheduler changes. Separate log-only dispatch, no real BMS equipment.",
+  "artifacts": [
+    "experiments/agent_eval_v3_hours.jsonl",
+    "experiments/agent_eval_v3_summary.json",
+    "experiments/agent_eval_v3_days.csv",
+    "experiments/agent_eval_v3_report.md"
+  ],
+  "storage_policy": "Fixed lexicographic LP: upper-grid-peak then energy cost then minimum throughput; valley-only charging, peak-only discharge, refused hours zero. Full/conservative/hold use power fractions1/0.5/0; identical trajectories merged. TerminalSOC>=initialSOC each rolling window; no temperature precool benefit assumed. Controls25.5C, no parameter fitting on2017.",
+  "current_gate_policy": "Only current refusal bypasses LLM/hands current execution to human; accepted current always calls normal bounded provider choice even with future refusal; future refused steps fixed zero charge/discharge and listed in final reason. No numerical grounding relaxation.",
+  "candidate_merge": "Same displayed (energy_cost_cny,upper_grid_peak_kw), rounded1decimal, means equivalent result for UI. Keep original raw lexicographic objective best per group, including candidate_id tie breaker, so original global winner is retained. Controls unchanged; no new alternatives fitted."
+}

@@ -1,0 +1,187 @@
+{
+  "rows": [
+    {
+      "case": 1,
+      "first_event_ms": 15.0,
+      "stream_total_ms": 5687.0,
+      "json_total_ms": 3985.0,
+      "event_types": [
+        "step",
+        "tool_start",
+        "tool_end",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "done"
+      ],
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true
+      },
+      "json_llm_mode": "real",
+      "json_answer_source": "llm_tools",
+      "json_llm": {
+        "mode": "real",
+        "reason": "call_succeeded"
+      },
+      "tool": "selection_reason"
+    },
+    {
+      "case": 2,
+      "first_event_ms": 15.0,
+      "stream_total_ms": 7922.0,
+      "json_total_ms": 2656.0,
+      "event_types": [
+        "step",
+        "tool_start",
+        "tool_end",
+        "step",
+        "answer_delta",
+        "done"
+      ],
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true
+      },
+      "json_llm_mode": "real",
+      "json_answer_source": "llm_tools",
+      "json_llm": {
+        "mode": "real",
+        "reason": "call_succeeded"
+      },
+      "tool": "handoff_reason"
+    },
+    {
+      "case": 3,
+      "first_event_ms": 15.0,
+      "stream_total_ms": 4703.0,
+      "json_total_ms": 7219.0,
+      "event_types": [
+        "step",
+        "tool_start",
+        "tool_end",
+        "answer_delta",
+        "answer_delta",
+        "done"
+      ],
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true
+      },
+      "json_llm_mode": "rule",
+      "json_answer_source": "deterministic_tools",
+      "json_llm": {
+        "mode": "rule",
+        "reason": "chat_deadline"
+      },
+      "tool": "execution_receipt"
+    },
+    {
+      "case": 4,
+      "first_event_ms": 15.0,
+      "stream_total_ms": 4453.0,
+      "json_total_ms": 5203.0,
+      "event_types": [
+        "step",
+        "tool_start",
+        "tool_end",
+        "answer_delta",
+        "done"
+      ],
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true
+      },
+      "json_llm_mode": "rule",
+      "json_answer_source": "deterministic_tools",
+      "json_llm": {
+        "mode": "rule",
+        "reason": "chat_missing_answer_values"
+      },
+      "tool": "current_state"
+    },
+    {
+      "case": 5,
+      "first_event_ms": 31.0,
+      "stream_total_ms": 6125.0,
+      "json_total_ms": 3375.0,
+      "event_types": [
+        "step",
+        "tool_start",
+        "tool_end",
+        "tool_start",
+        "tool_end",
+        "answer_delta",
+        "answer_delta",
+        "done"
+      ],
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": false,
+        "grounded": true
+      },
+      "json_llm_mode": "real",
+      "json_answer_source": "llm_tools",
+      "json_llm": {
+        "mode": "real",
+        "reason": "call_succeeded"
+      },
+      "tool": "forecast_peak"
+    },
+    {
+      "case": 6,
+      "first_event_ms": 16.0,
+      "stream_total_ms": 7359.0,
+      "json_total_ms": 12422.0,
+      "event_types": [
+        "step",
+        "tool_start",
+        "tool_end",
+        "tool_start",
+        "tool_end",
+        "tool_start",
+        "tool_end",
+        "tool_start",
+        "tool_end",
+        "tool_start",
+        "tool_end",
+        "step",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "done"
+      ],
+      "done": {
+        "type": "done",
+        "known": true,
+        "needs_human": true,
+        "grounded": true
+      },
+      "json_llm_mode": "rule",
+      "json_answer_source": "deterministic_tools",
+      "json_llm": {
+        "mode": "rule",
+        "reason": "chat_deadline"
+      },
+      "tool": "hvac_compare"
+    }
+  ],
+  "port": 8001,
+  "health_llm_mode": "real",
+  "status": "passed",
+  "real_llm_answers": 3,
+  "managed_service_stopped": true
+}

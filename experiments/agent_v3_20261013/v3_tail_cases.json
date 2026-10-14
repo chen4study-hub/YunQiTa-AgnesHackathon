@@ -1,0 +1,299 @@
+[
+  {
+    "question": "楼宇运维有哪些基础知识",
+    "tool": null,
+    "contains": [
+      "运维"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true,
+    "original_index": 61
+  },
+  {
+    "question": "联网查询5个楼宇运维的基础知识点",
+    "tool": "web_search",
+    "contains": [
+      "运维"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true,
+    "original_index": 63
+  },
+  {
+    "question": "今天北京的天气新闻有哪些？给出来源链接",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000,
+    "original_index": 64
+  },
+  {
+    "question": "上海今天的天气怎么样？请附来源",
+    "tool": "city_weather",
+    "contains": [
+      "Open-Meteo",
+      "°C",
+      "来源：",
+      "https://api.open-meteo.com/v1/forecast"
+    ],
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "original_index": 65
+  },
+  {
+    "question": "查一下深圳最新的天气新闻和链接",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000,
+    "original_index": 66
+  },
+  {
+    "question": "伦敦现在气温多少？",
+    "tool": "city_weather",
+    "contains": [
+      "Open-Meteo",
+      "°C",
+      "来源：",
+      "https://api.open-meteo.com/v1/forecast",
+      "英国"
+    ],
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "加拿大",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "original_index": 67
+  },
+  {
+    "question": "上海明天天气如何",
+    "tool": "city_weather",
+    "contains": [
+      "Open-Meteo",
+      "°C",
+      "来源：",
+      "https://api.open-meteo.com/v1/forecast",
+      "次日"
+    ],
+    "excludes": [
+      "当前室外",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "original_index": 68
+  },
+  {
+    "question": "北京近期有哪些天气新闻？",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "当前室外",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000,
+    "original_index": 69
+  },
+  {
+    "question": "北京 天气 新闻 给出来源链接",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "当前室外",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000,
+    "original_index": 70
+  },
+  {
+    "question": "2024 年物理学奖得主是谁？给出来源链接",
+    "tool": "web_search",
+    "contains": [
+      "物理学奖",
+      "https://api.nobelprize.org/2/nobelPrize/phy/2024"
+    ],
+    "excludes": [
+      "2024 年化学奖",
+      "宿主"
+    ],
+    "narrative_required": true,
+    "general_answer": true,
+    "original_index": 71
+  },
+  {
+    "question": "今天北京的天气新闻有哪些？来源链接请参考公开资料",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "宿主",
+      "当前室外",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000,
+    "original_index": 73
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "tool": "compare_costs",
+    "contains": [
+      "24.5 °C",
+      "预计多花",
+      "电网峰值",
+      "kW",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "单台",
+      "几毛钱",
+      "6%",
+      "10%",
+      "家用",
+      "费用差额 -"
+    ],
+    "narrative_required": false,
+    "original_index": 75
+  },
+  {
+    "question": "把空调温度下调一度呢",
+    "tool": "compare_costs",
+    "contains": [
+      "24.5 °C",
+      "预计多花",
+      "电网峰值",
+      "kW",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "单台",
+      "几毛钱",
+      "6%",
+      "10%",
+      "家用",
+      "费用差额 -"
+    ],
+    "narrative_required": false,
+    "original_index": 78
+  },
+  {
+    "question": "北京最近有什么天气新闻",
+    "tool": "web_search",
+    "contains": [],
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000,
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "宿主"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "original_index": 79
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "tool": "compare_costs",
+    "scenario": "normal",
+    "origin_index": 10,
+    "display_time": "10:30",
+    "contains": [
+      "24.5 °C",
+      "预计多花",
+      "292.6 元",
+      "电网峰值",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "这个数现在查不到",
+      "下调空调设定不会自动增加费用",
+      "单台",
+      "几毛钱",
+      "节省"
+    ],
+    "query_step_count": 0,
+    "narrative_required": false,
+    "original_index": 82
+  },
+  {
+    "question": "现在用电情况如何",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "excludes": [
+      "公开资料",
+      "常识整理"
+    ],
+    "narrative_required": false,
+    "original_index": 87
+  },
+  {
+    "question": "现在的总负荷是多少",
+    "tool": "building_state",
+    "contains": [
+      "1,258.1 kW"
+    ],
+    "excludes": [
+      "820.1",
+      "kWh",
+      "电费"
+    ],
+    "narrative_required": false,
+    "original_index": 90
+  }
+]

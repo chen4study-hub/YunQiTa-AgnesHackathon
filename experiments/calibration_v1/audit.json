@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "claim_scope": "offline chronology/provenance audit, not deployment approval",
+  "checks": {
+    "prediction_hashes": true,
+    "daily_past_only": true,
+    "point_frozen_in_daily": true,
+    "cold_activation_rule": true,
+    "cold_fallback_unchanged": true,
+    "weekly_decisions": 312
+  },
+  "byron_week_block_ci": {
+    "daily_10d": {
+      "retained_coverage_ci95": [
+        0.9000539672221294,
+        0.9144613661588078
+      ],
+      "rejection_rate_ci95": [
+        0.13151111859838274,
+        0.18516357124395377
+      ],
+      "blocks": 53,
+      "replicates": 1000
+    },
+    "daily_14d": {
+      "retained_coverage_ci95": [
+        0.8968906807068152,
+        0.9125845213672181
+      ],
+      "rejection_rate_ci95": [
+        0.12708827794100813,
+        0.18516077942489037
+      ],
+      "blocks": 53,
+      "replicates": 1000
+    },
+    "daily_7d": {
+      "retained_coverage_ci95": [
+        0.9033413740422523,
+        0.9152396510510651
+      ],
+      "rejection_rate_ci95": [
+        0.13712865696808574,
+        0.18441593896540265
+      ],
+      "blocks": 53,
+      "replicates": 1000
+    },
+    "monthly": {
+      "retained_coverage_ci95": [
+        0.8914552450612182,
+        0.9158800061708887
+      ],
+      "rejection_rate_ci95": [
+        0.12191513538174904,
+        0.20879272191087467
+      ],
+      "blocks": 53,
+      "replicates": 1000
+    }
+  },
+  "cold_shared_week_bootstrap_macro_gain_ci95": [
+    0.24600186268605498,
+    0.31351901964575574
+  ],
+  "uncertainty_note": "post-run descriptive 1000 week-block resamples, seed42; cannot prove conditional coverage or independent-site transfer",
+  "cold_enabled_week_degradation": [
+    {
+      "building": "Hog_education_Beth",
+      "enabled_weeks_worse": 1,
+      "enabled_weeks": 24,
+      "worst_enabled_week_gain": -0.39736211157969814
+    },
+    {
+      "building": "Hog_assembly_Colette",
+      "enabled_weeks_worse": 3,
+      "enabled_weeks": 21,
+      "worst_enabled_week_gain": -0.6298742849987329
+    },
+    {
+      "building": "Hog_food_Morgan",
+      "enabled_weeks_worse": 1,
+      "enabled_weeks": 23,
+      "worst_enabled_week_gain": -0.8638372181758442
+    },
+    {
+      "building": "Hog_lodging_Brian",
+      "enabled_weeks_worse": 1,
+      "enabled_weeks": 24,
+      "worst_enabled_week_gain": -0.07394628412210458
+    },
+    {
+      "building": "Hog_industrial_Jeremy",
+      "enabled_weeks_worse": 0,
+      "enabled_weeks": 25,
+      "worst_enabled_week_gain": 0.14006923499987178
+    },
+    {
+      "building": "Hog_office_Alexis",
+      "enabled_weeks_worse": 2,
+      "enabled_weeks": 25,
+      "worst_enabled_week_gain": -0.056789788549647335
+    },
+    {
+      "building": "Hog_other_Noma",
+      "enabled_weeks_worse": 0,
+      "enabled_weeks": 25,
+      "worst_enabled_week_gain": 0.36558091981725505
+    },
+    {
+      "building": "Hog_public_Crystal",
+      "enabled_weeks_worse": 4,
+      "enabled_weeks": 21,
+      "worst_enabled_week_gain": -1.5631456231630794
+    },
+    {
+      "building": "Hog_services_Adrianna",
+      "enabled_weeks_worse": 1,
+      "enabled_weeks": 23,
+      "worst_enabled_week_gain": -1.0164664906460148
+    },
+    {
+      "building": "Hog_science_Max",
+      "enabled_weeks_worse": 0,
+      "enabled_weeks": 25,
+      "worst_enabled_week_gain": 0.11423164410338438
+    },
+    {
+      "building": "Hog_warehouse_Louise",
+      "enabled_weeks_worse": 1,
+      "enabled_weeks": 25,
+      "worst_enabled_week_gain": -0.014002194379801214
+    },
+    {
+      "building": "Hog_office_Byron",
+      "enabled_weeks_worse": 0,
+      "enabled_weeks": 25,
+      "worst_enabled_week_gain": 0.12646086648587873
+    }
+  ],
+  "cold_pooled_mae_gain": 0.2603531493541288,
+  "cold_macro_coverage_available": 0.8883782679738562,
+  "code_sha256": {
+    "scripts/evaluate_local_calibration.py": "7481679ca1859cccb94773ad1236dbee3f5ead6c3001da5a09c67b5582bb3f33",
+    "scripts/report_local_calibration.py": "b2d440ef5226087a144bd96efa7d4b74af5baff503909c31e5d522006f2ccb6e",
+    "src/conformal/daily_local.py": "e4786c962b90f54b01707900485f9375c87506e816337712f33f81193865a50e",
+    "src/models/residual.py": "676b00fc0e7ab0f11ae9472a33326734a8146b8244ffde41b21a7f9816921044",
+    "src/features/build.py": "8ccf4cafe1faf6a40b530af9df035b27bdb9fdebe9e25a8e2ef3a3857d45246c",
+    "src/data/adapter.py": "278fd8d8ba6e12506c42cddaac243b4d57f5320775776fecb5f5bfa9a9b83c25",
+    "src/conformal/selective.py": "c64af795954fde4b24052699c97d10d53a5f2236a5006bbe522476f6ddf31169"
+  },
+  "logs": {
+    "experiments\\calibration_v1\\byron_log.txt": "25ec1a2cfd9beb88bd6f65aa18a060191e28d6d4422165a635ae6af8151a07d7",
+    "experiments\\calibration_v1\\cold_log.txt": "02e5529c8fd5da4f4afe951276799b69d8534317ca21ae7a062329ce5bae6e31",
+    "experiments\\calibration_v1\\six_log.txt": "f8d55783bb360055a315ac3fbce8f468e742ef5db7520e72bff003faba6f6553"
+  },
+  "plan_sha256": "35871e2122d9c4ed7ad9bb34ae7622bc0c9c764c0c1438d155f1e589b187e642",
+  "execution_code_sha256": {
+    "scripts/evaluate_local_calibration.py": "4f5647cba9afc421bdedf5ffe586d5ca382abe15868d9cb84e403f547fbae0b9",
+    "scripts/report_local_calibration.py": "b2d440ef5226087a144bd96efa7d4b74af5baff503909c31e5d522006f2ccb6e",
+    "src/conformal/daily_local.py": "e4786c962b90f54b01707900485f9375c87506e816337712f33f81193865a50e",
+    "src/models/residual.py": "676b00fc0e7ab0f11ae9472a33326734a8146b8244ffde41b21a7f9816921044",
+    "src/features/build.py": "8ccf4cafe1faf6a40b530af9df035b27bdb9fdebe9e25a8e2ef3a3857d45246c",
+    "src/data/adapter.py": "278fd8d8ba6e12506c42cddaac243b4d57f5320775776fecb5f5bfa9a9b83c25",
+    "src/conformal/selective.py": "c64af795954fde4b24052699c97d10d53a5f2236a5006bbe522476f6ddf31169"
+  },
+  "post_execution_edit": "Removed one empty trailing line only; execution_code_sha256 preserves evaluated bytes."
+}

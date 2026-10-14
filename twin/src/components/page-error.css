@@ -1,0 +1,16 @@
+.page-error {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  color: var(--text, #dceaf1);
+  text-align: center;
+}
+.page-error h2 {
+  margin: 0;
+  font-size: 18px;
+}

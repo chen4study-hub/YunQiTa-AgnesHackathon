@@ -1,0 +1,25 @@
+{
+  "building_id": "B001",
+  "model_version": "mock-not-trained",
+  "alpha": 0.095,
+  "predictions": [
+    {
+      "timestamp": "2026-10-09T12:00:00Z",
+      "point": 123.4,
+      "lower": 110.2,
+      "upper": 136.8,
+      "confidence": 0.905,
+      "abstain": false,
+      "abstain_reason": null
+    },
+    {
+      "timestamp": "2026-10-09T13:00:00Z",
+      "point": 140.0,
+      "lower": 102.0,
+      "upper": 180.0,
+      "confidence": 0.905,
+      "abstain": true,
+      "abstain_reason": "routing_risk_above_threshold"
+    }
+  ]
+}

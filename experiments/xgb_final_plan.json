@@ -1,0 +1,13 @@
+{
+  "status": "frozen_before_final_evaluation",
+  "selection_basis": "pilot validation tree screen: XGBoost had lowest MAE at identical retained count 744/876 and PICP 0.9207",
+  "candidate": "byron2017-xgb-v1",
+  "baseline": "LightGBM refit with identical chronological split and calibration procedure",
+  "point_parameters": {"n_estimators":150,"learning_rate":0.05,"max_depth":5,"tree_method":"hist","seed":42},
+  "interval": "static normalized split conformal; no interval selection using final test",
+  "rejection_fraction": 0.15,
+  "split": [0.65,0.20,0.15],
+  "diagnostic": "same retained count via retrospective risk ranking is diagnostic only, not a deployable gate",
+  "promotion": "disabled: global champion belongs to different cohort; no automatic replay changes",
+  "required_outputs": ["full artifact","source and artifact hashes","fixed-gate metrics","budget-matched diagnostic metrics","test predictions","coverage shortfall disclosure"]
+}

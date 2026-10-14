@@ -1,0 +1,19 @@
+{
+  "fixture_only": true,
+  "network_used": false,
+  "exceptions": [],
+  "counts": {
+    "full_on": 91,
+    "full_off": 65,
+    "multi_on": 20,
+    "round4_cases.json_both_shapes": 182,
+    "round4_multi_cases.json_both_shapes": 40
+  },
+  "raw_contract_positive_checks": [
+    "storage_history",
+    "energy_totals",
+    "building_state",
+    "elevator_state"
+  ],
+  "passed": true
+}

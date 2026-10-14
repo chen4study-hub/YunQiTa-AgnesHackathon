@@ -1,0 +1,14 @@
+{
+  "tests": "python -m pytest -q",
+  "passed": 13,
+  "mode": "shadow",
+  "independent_review": "conceptual scope PASS; file-level re-review unavailable",
+  "export_sha256": {
+    "abstain.json": "62a77c92bcf34ed5ca39a28c05c3f58ef1e3c4c2b7986f4bacf478abca0a1323",
+    "index.json": "2324dce4e8ea58aec60ba135bfab639d650e23049539a9617f7c1c39b8267358",
+    "normal.json": "20307f25b89cf76193b4f43ff9b29b32babf95bf8b86b18403ca5dbbd8991391",
+    "peak.json": "bffb2b98c25dbf46ec5ae703675b8270db11eea0456c4ea53a98d7379c8e643f",
+    "sample.json": "19498c97c6c6714132337e0e780d6dcd95d0c114c4801b84606e1d1664ccc587"
+  },
+  "champion": "paper-inspired-v1"
+}

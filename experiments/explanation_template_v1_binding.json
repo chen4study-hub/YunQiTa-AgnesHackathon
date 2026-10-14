@@ -1,0 +1,14 @@
+{
+  "plan_sha256": "d00cadf8556365b1f4f83f103aaf5947e599d8b4c039ab941c1711da287d4b97",
+  "baseline_sha256": "38e831363b4e7efa774f6e68e9af1e3c36b54f0d161170ec41cb3f367c284c39",
+  "code_sha256": {
+    "scripts/regress_explanation_template.py": "0d412c09d2f713e89aa093465767a421131e994f25bd46e0e96f0c3c629b8977",
+    "scripts/regress_grounding_prompt.py": "b915665d6ae5df81bfb865016032a5ebf02fb7a9e36947fa8b762a643b438f25",
+    "src/agent/orchestrator.py": "5d138cb61af7f4724b9221a8b9a5964ac7d443ccf2724b207a4ff2e0c3d60289",
+    "src/agent/selection.py": "f09297dbe70271bfcf4409720c8bd783b7162cefc1381b855b9b460ea6b2b6b6",
+    "src/agent/storage_planner.py": "bec59576b7c8e1b2a28918cc8631e225136119c5708bf7e6240661a1d95b670e",
+    "src/agent/tools.py": "d7dd9527d4a8db4fed3ec915d204dc390578471fcc815a5c529c26e9055fa030",
+    "src/agent/provider.py": "0c4e541a4f0ca993ba5db196ec31623fbb28d6046504e1ca7c8b09e126bee53d",
+    "src/agent/numeric_prompt.py": "b1de4855a6a7d26363966fca6af408b0544ce6836e490bfcd3575c0f60975b7a"
+  }
+}

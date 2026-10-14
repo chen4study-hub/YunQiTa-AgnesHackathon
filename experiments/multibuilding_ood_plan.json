@@ -1,0 +1,15 @@
+{
+  "user_target": "综合改善至少2%，任何综合改善的中间产物都保留",
+  "selection": "alphabetically first building of each of 11 uses in existing complete Hog2017 cohort, plus Byron; no metric-based choice",
+  "buildings": ["Hog_education_Beth","Hog_assembly_Colette","Hog_food_Morgan","Hog_lodging_Brian","Hog_industrial_Jeremy","Hog_office_Alexis","Hog_other_Noma","Hog_public_Crystal","Hog_services_Adrianna","Hog_science_Max","Hog_warehouse_Louise","Hog_office_Byron"],
+  "folds": [[0.35,0.45,0.55],[0.40,0.50,0.60],[0.45,0.55,0.65]],
+  "baseline": "per-building LightGBM CQR",
+  "candidate": "same model with residual factor0.5 only when lagged temperature outside training min/max; independent recalibration",
+  "factor": 0.5,
+  "rho": 0.15,
+  "ranking": "previous composite weights; equal-weight building/fold macro average, all-row MAE and interval score, actual rejection and retained coverage shortfall",
+  "retention": "keep bundle and prediction cache for each fold with improvement in at least one composite scenario; keep all metrics including regressions",
+  "target_pass": "macro composite improvement>=0.02 in all three scenarios; explicitly report scenario-specific and per-building gains",
+  "caveats": ["local models across buildings: portability test, not frozen-source zero-shot transfer", "development data, overlapping folds, not blind final test", "preserved intermediate selection is exploratory"],
+  "deployment": "no champion/replay changes, shadow only"
+}

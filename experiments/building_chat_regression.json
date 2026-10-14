@@ -1,0 +1,622 @@
+{
+  "status": "passed",
+  "llm_mode": "demo",
+  "mode_note": "Real HTTP/SSE server; deterministic building data fast paths; live semantic LLM paraphrase performance not measured.",
+  "questions": 49,
+  "correct_with_evidence": 49,
+  "correct_rate": 1.0,
+  "first_answer_median_ms": 47.0,
+  "owned_port": 65031,
+  "owned_process_stopped": true,
+  "resident_changed": false,
+  "results": [
+    {
+      "question": "今天用了多少电",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "first_step_ms": 47.0,
+      "first_answer_ms": 188.0,
+      "reason": "answered",
+      "answer": "今天截至 14:00，用电 13,640 kWh，电费 10,249.4 元。"
+    },
+    {
+      "question": "今日累计用电量",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "今天截至 14:00，用电 13,640 kWh，电费 10,249.4 元。"
+    },
+    {
+      "question": "今天用电和电费是多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "今天截至 14:00，用电 13,640 kWh，电费 10,249.4 元。"
+    },
+    {
+      "question": "昨天电费多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "昨天全天，用电 21,852 kWh，电费 18,565.3 元。"
+    },
+    {
+      "question": "昨天用了多少电",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "昨天全天，用电 21,852 kWh，电费 18,565.3 元。"
+    },
+    {
+      "question": "前天用电量多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "first_step_ms": 16.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "10 月 10 日全天，用电 23,977.9 kWh，电费 21,092.5 元。"
+    },
+    {
+      "question": "这几天的总能耗如何",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 63.0,
+      "reason": "answered",
+      "answer": "最近 3 天（末日截至 14:00），用电 59,469.9 kWh，电费 49,907.2 元。"
+    },
+    {
+      "question": "近3天总用电和电费",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "最近 3 天（末日截至 14:00），用电 59,469.9 kWh，电费 49,907.2 元。"
+    },
+    {
+      "question": "2026-10-10电费是多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "energy_totals"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "10 月 10 日全天，用电 23,977.9 kWh，电费 21,092.5 元。"
+    },
+    {
+      "question": "现在空调用电占多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "当前空调 170.6 kW，占 13.6%。"
+    },
+    {
+      "question": "当前照明用电占比",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "当前照明 410.9 kW，占 32.7%。"
+    },
+    {
+      "question": "插座用电占比",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "当前插座 551.2 kW，占 43.8%。"
+    },
+    {
+      "question": "电梯用电占比",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 32.0,
+      "reason": "answered",
+      "answer": "当前电梯 6.7 kW，占 0.5%。"
+    },
+    {
+      "question": "现在分项用电有哪些",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "当前空调 170.6 kW，占 13.6%；照明 410.9 kW，占 32.7%；插座 551.2 kW，占 43.8%；电梯 6.7 kW，占 0.5%；其他 118.7 kW，占 9.4%。"
+    },
+    {
+      "question": "今天累计分项用电",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "first_step_ms": 15.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "10 月 12 日截至 14:00累计分项电量：空调 2,169.9 kWh，占 15.9%；照明 4,169.1 kWh，占 30.6%；插座 3,833.8 kWh，占 28.1%；电梯 121.2 kWh，占 0.9%；其他 3,346 kWh，占 24.5%。"
+    },
+    {
+      "question": "昨天分项用电量",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "end_use"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "10 月 11 日全天累计分项电量：空调 9,765.8 kWh，占 44.7%；照明 4,225.4 kWh，占 19.3%；插座 2,604.8 kWh，占 11.9%；电梯 105.7 kWh，占 0.5%；其他 5,150.3 kWh，占 23.6%。"
+    },
+    {
+      "question": "今天有哪些告警",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "alerts_orders"
+      ],
+      "first_step_ms": 16.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "截至 14:00，共有 2 条告警记录。空调：室温超过 27 °C，已恢复。空调：室温超过 27 °C，已恢复。"
+    },
+    {
+      "question": "现在有哪些报警",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "alerts_orders"
+      ],
+      "first_step_ms": 16.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "截至 14:00，共有 2 条告警记录。空调：室温超过 27 °C，已恢复。空调：室温超过 27 °C，已恢复。"
+    },
+    {
+      "question": "今日工单有哪些",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "alerts_orders"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "截至 14:00，共有 2 条工单记录。空调：室温超过 27 °C，已恢复。空调：室温超过 27 °C，已恢复。"
+    },
+    {
+      "question": "今天告警和工单情况",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "alerts_orders"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 32.0,
+      "reason": "answered",
+      "answer": "截至 14:00，共有 2 条告警记录。空调：室温超过 27 °C，已恢复。空调：室温超过 27 °C，已恢复。"
+    },
+    {
+      "question": "电梯运行正常吗",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "elevator_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 46.0,
+      "reason": "answered",
+      "answer": "L1 停靠 1 层，载客 0 人，载重 0%。L2 停靠 1 层，载客 0 人，载重 0%。L3 停靠 1 层，载客 0 人，载重 0%。H1 从 34 层驶向 27 层，载客 13 人，载重 65%。H2 停靠 1 层，载客 0 人，载重 0%。H3 停靠 1 层，载客 0 人，载重 0%。这些是运行记录，当前没有设备故障诊断数据。"
+    },
+    {
+      "question": "L1电梯在哪层",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "elevator_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "L1 停靠 1 层，载客 0 人，载重 0%。L2 停靠 1 层，载客 0 人，载重 0%。L3 停靠 1 层，载客 0 人，载重 0%。H1 从 34 层驶向 27 层，载客 13 人，载重 65%。H2 停靠 1 层，载客 0 人，载重 0%。H3 停靠 1 层，载客 0 人，载重 0%。"
+    },
+    {
+      "question": "H1电梯载重是多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "elevator_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "L1 停靠 1 层，载客 0 人，载重 0%。L2 停靠 1 层，载客 0 人，载重 0%。L3 停靠 1 层，载客 0 人，载重 0%。H1 从 34 层驶向 27 层，载客 13 人，载重 65%。H2 停靠 1 层，载客 0 人，载重 0%。H3 停靠 1 层，载客 0 人，载重 0%。"
+    },
+    {
+      "question": "电梯载客人数多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "elevator_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "L1 停靠 1 层，载客 0 人，载重 0%。L2 停靠 1 层，载客 0 人，载重 0%。L3 停靠 1 层，载客 0 人，载重 0%。H1 从 34 层驶向 27 层，载客 13 人，载重 65%。H2 停靠 1 层，载客 0 人，载重 0%。H3 停靠 1 层，载客 0 人，载重 0%。"
+    },
+    {
+      "question": "1层人数多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 63.0,
+      "reason": "answered",
+      "answer": "1 层当前负荷 40.7 kW，人数 61 人，温度 26.1 °C，CO₂ 640 ppm，新风量 1,830 m³/h，风机 79.9%，照明 91%。"
+    },
+    {
+      "question": "18层温度是多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 78.0,
+      "reason": "answered",
+      "answer": "18 层当前负荷 22.4 kW，人数 104 人，温度 25.9 °C，CO₂ 794 ppm，新风量 3,120 m³/h，风机 73.8%，照明 84%。"
+    },
+    {
+      "question": "40层负荷是多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "40 层当前负荷 33 kW，人数 98 人，温度 26 °C，CO₂ 773 ppm，新风量 2,940 m³/h，风机 71.8%，照明 79.4%。"
+    },
+    {
+      "question": "27层CO₂是多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "27 层当前负荷 26.3 kW，人数 36 人，温度 26 °C，CO₂ 550 ppm，新风量 1,080 m³/h，风机 76.4%，照明 87.8%。"
+    },
+    {
+      "question": "10层新风量是多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 63.0,
+      "reason": "answered",
+      "answer": "10 层当前负荷 29.9 kW，人数 108 人，温度 26 °C，CO₂ 809 ppm，新风量 3,240 m³/h，风机 76.3%，照明 87.1%。"
+    },
+    {
+      "question": "12层风机状态",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "12 层当前负荷 36.4 kW，人数 103 人，温度 26 °C，CO₂ 791 ppm，新风量 3,090 m³/h，风机 74.5%，照明 83.2%。"
+    },
+    {
+      "question": "14层照明多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "floor_state"
+      ],
+      "first_step_ms": 15.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "14 层当前负荷 26.1 kW，人数 37 人，温度 26 °C，CO₂ 553 ppm，新风量 1,110 m³/h，风机 77.8%，照明 90.1%。"
+    },
+    {
+      "question": "储能充放电记录",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "storage_history"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "当前储能电量 60%，功率 0 kW（正值放电，负值充电）。截至 14:00，充电 895.8 kWh，放电 695.9 kWh。08:00，功率 0 kW。09:00，功率 0 kW。10:00，功率 500 kW。11:00，功率 0 kW。12:00，功率 0 kW。13:00，功率 195.9 kW。"
+    },
+    {
+      "question": "今天储能充电量",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "storage_history"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "当前储能电量 60%，功率 0 kW（正值放电，负值充电）。截至 14:00，充电 895.8 kWh，放电 695.9 kWh。"
+    },
+    {
+      "question": "今天储能放电量",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "storage_history"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "当前储能电量 60%，功率 0 kW（正值放电，负值充电）。截至 14:00，充电 895.8 kWh，放电 695.9 kWh。"
+    },
+    {
+      "question": "储能功率和充放电记录",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "storage_history",
+        "current_energy"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 125.0,
+      "reason": "answered",
+      "answer": "当前储能电量 60%，功率 0 kW（正值放电，负值充电）。截至 14:00，充电 895.8 kWh，放电 695.9 kWh。08:00，功率 0 kW。09:00，功率 0 kW。10:00，功率 500 kW。11:00，功率 0 kW。12:00，功率 0 kW。13:00，功率 195.9 kW。当前储能功率 0.0 kW。储能正值为放电，负值为充电。"
+    },
+    {
+      "question": "今天光伏发电量多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "pv_generation"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "当前光伏功率 114.3 kW，截至 14:00 发电量 664 kWh。"
+    },
+    {
+      "question": "光伏累计发电量",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "pv_generation"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "当前光伏功率 114.3 kW，截至 14:00 发电量 664 kWh。"
+    },
+    {
+      "question": "楼宇运行概览",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "building_state"
+      ],
+      "first_step_ms": 16.0,
+      "first_answer_ms": 63.0,
+      "reason": "answered",
+      "answer": "当前负荷 1,258.1 kW，人数 3869 人，室内温度 26 °C，湿度 40%，CO₂ 768 ppm，PM2.5 21.4 μg/m³，空调设定 25.5 °C。"
+    },
+    {
+      "question": "室内湿度多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "building_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "当前负荷 1,258.1 kW，人数 3869 人，室内温度 26 °C，湿度 40%，CO₂ 768 ppm，PM2.5 21.4 μg/m³，空调设定 25.5 °C。"
+    },
+    {
+      "question": "室内PM2.5多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "building_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 63.0,
+      "reason": "answered",
+      "answer": "当前负荷 1,258.1 kW，人数 3869 人，室内温度 26 °C，湿度 40%，CO₂ 768 ppm，PM2.5 21.4 μg/m³，空调设定 25.5 °C。"
+    },
+    {
+      "question": "现在几点",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_time"
+      ],
+      "first_step_ms": 15.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "现在 14:00。"
+    },
+    {
+      "question": "天气怎么样",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_weather"
+      ],
+      "first_step_ms": 15.0,
+      "first_answer_ms": 46.0,
+      "reason": "answered",
+      "answer": "当前室外 13.3 °C，湿度 57%。"
+    },
+    {
+      "question": "空调设定多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "current_state"
+      ],
+      "first_step_ms": 16.0,
+      "first_answer_ms": 63.0,
+      "reason": "answered",
+      "answer": "当前空调设定 25.5 °C。"
+    },
+    {
+      "question": "储能SOC多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "current_state"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 62.0,
+      "reason": "answered",
+      "answer": "当前储能电量 60.0%。"
+    },
+    {
+      "question": "当前电网功率多少",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "current_energy"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "当前电网功率 1,143.8 kW。"
+    },
+    {
+      "question": "为什么这样调度",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "selection_reason"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "选用全额调度，负荷偏高时的电网峰值为 1,179.9 kW，电费为 15,172.3 元。相对保持原运行方式的基准，预计节省 2,234.5 元。仅比较可自动调度的时段，未计入的小时不计电费。"
+    },
+    {
+      "question": "执行回执是什么",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "execution_receipt"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "14:00 当前小时回执确认 2 条指令，耗时 1.4 毫秒。这是 BA/EMS 下发日志回执。"
+    },
+    {
+      "question": "明天负荷峰值",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "forecast_peak"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 31.0,
+      "reason": "answered",
+      "answer": "本次预测中最高负荷约 1,279.7 kW，出现在明天 13:00。"
+    },
+    {
+      "question": "空调改26度能省多少电费",
+      "scenario": "normal",
+      "correct_with_evidence": true,
+      "tools": [
+        "get_forecast",
+        "get_context_scenario",
+        "simulate_schedule_before",
+        "simulate_schedule_after",
+        "compare_costs"
+      ],
+      "first_step_ms": 0.0,
+      "first_answer_ms": 47.0,
+      "reason": "answered",
+      "answer": "从 25.5 °C改为 26.0 °C，计入时段电费从 16,769.6 元变为 16,506.2 元，预计可节省 263.4 元。本次只覆盖可自动调度的 21 个小时，另有 3 个小时未计入，不按整天计算。未计入时段：17:00–19:00（预测风险偏高）；请值班人员检查这些时段的表计和设备记录，费用差额不含这些小时。使用分时电价。"
+    }
+  ],
+  "public_queries": [
+    {
+      "question": "2020 年诺贝尔奖得主有哪些",
+      "known": false,
+      "reason": "out_of_scope",
+      "answer": "这个问题超出楼宇运维数据的范围。联网查询暂不可用。可以问负荷、电费、储能、空调、天气、楼层环境和告警。"
+    },
+    {
+      "question": "2099 年诺贝尔奖得主有哪些",
+      "known": false,
+      "reason": "out_of_scope",
+      "answer": "这个问题超出楼宇运维数据的范围。目前未查到可核验的信息，不能确认。可以问负荷、电费、储能、空调、天气、楼层环境和告警。"
+    }
+  ]
+}

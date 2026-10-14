@@ -1,0 +1,1 @@
+[{"question":"查看每小时电价、负荷和储能动作","tool":"tariff_periods","contains":["1,143.3 kW","35.0 分/kWh","储能充电"],"excludes":[".0.0",".3.0",".5.0"]}]

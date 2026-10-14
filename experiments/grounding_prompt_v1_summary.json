@@ -1,0 +1,52 @@
+{
+  "pairs": 31,
+  "arms": {
+    "before": {
+      "hours": 31,
+      "grounding_fallback_hours": 13,
+      "grounding_fallback_rate": 0.41935483870967744,
+      "final_reasons": {
+        "call_succeeded": 17,
+        "grounding_failed": 13,
+        "call_failed": 1
+      },
+      "validated_real_hours": 17,
+      "first_transport_successes": 31,
+      "first_unsourced_drafts": 10,
+      "first_unsourced_rate": 0.3225806451612903,
+      "successful_provider_drafts": 49,
+      "unsourced_provider_drafts": 23,
+      "unsupported_numeric_tokens": 44,
+      "final_unsourced_numeric_tokens": 0
+    },
+    "after": {
+      "hours": 31,
+      "grounding_fallback_hours": 3,
+      "grounding_fallback_rate": 0.0967741935483871,
+      "final_reasons": {
+        "call_succeeded": 27,
+        "grounding_failed": 3,
+        "call_failed": 1
+      },
+      "validated_real_hours": 27,
+      "first_transport_successes": 30,
+      "first_unsourced_drafts": 5,
+      "first_unsourced_rate": 0.16666666666666666,
+      "successful_provider_drafts": 47,
+      "unsourced_provider_drafts": 8,
+      "unsupported_numeric_tokens": 12,
+      "final_unsourced_numeric_tokens": 0
+    }
+  },
+  "paired_transitions": {
+    "other -> other": 15,
+    "grounding_failed -> other": 13,
+    "other -> grounding_failed": 3
+  },
+  "status": "completed",
+  "historical_sample_reasons": {
+    "call_succeeded": 19,
+    "grounding_failed": 10,
+    "call_failed": 2
+  }
+}

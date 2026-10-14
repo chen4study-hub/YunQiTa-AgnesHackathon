@@ -1,0 +1,1140 @@
+[
+  {
+    "question": "今天用了多少电",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "今日累计用电量",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "今天用电和电费是多少",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "昨天电费多少",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "昨天用了多少电",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "前天用电量多少",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "这几天的总能耗如何",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "近3天总用电和电费",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "2026-10-10电费是多少",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "现在空调用电占多少",
+    "tool": "end_use",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "当前照明用电占比",
+    "tool": "end_use",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "插座用电占比",
+    "tool": "end_use",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "电梯用电占比",
+    "tool": "end_use",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "现在分项用电有哪些",
+    "tool": "end_use",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "今天累计分项用电",
+    "tool": "end_use",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "昨天分项用电量",
+    "tool": "end_use",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "今天有哪些告警",
+    "tool": "alerts_orders",
+    "contains": [
+      "告警记录"
+    ],
+    "narrative_required": false,
+    "excludes": [],
+    "evidence_alert_count": true
+  },
+  {
+    "question": "现在有哪些报警",
+    "tool": "alerts_orders",
+    "contains": [
+      "记录"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "今日工单有哪些",
+    "tool": "alerts_orders",
+    "contains": [
+      "记录"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "今天告警和工单情况",
+    "tool": "alerts_orders",
+    "contains": [
+      "记录"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "电梯运行正常吗",
+    "tool": "elevator_state",
+    "contains": [
+      "层",
+      "载客"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "L1电梯在哪层",
+    "tool": "elevator_state",
+    "contains": [
+      "层",
+      "载客"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "H1电梯载重是多少",
+    "tool": "elevator_state",
+    "contains": [
+      "层",
+      "载客"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "电梯载客人数多少",
+    "tool": "elevator_state",
+    "contains": [
+      "层",
+      "载客"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "1层人数多少",
+    "tool": "floor_state",
+    "contains": [
+      "kW",
+      "°C",
+      "ppm"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "18层温度是多少",
+    "tool": "floor_state",
+    "contains": [
+      "kW",
+      "°C",
+      "ppm"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "40层负荷是多少",
+    "tool": "floor_state",
+    "contains": [
+      "kW",
+      "°C",
+      "ppm"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "27层CO₂是多少",
+    "tool": "floor_state",
+    "contains": [
+      "kW",
+      "°C",
+      "ppm"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "10层新风量是多少",
+    "tool": "floor_state",
+    "contains": [
+      "kW",
+      "°C",
+      "ppm"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "12层风机状态",
+    "tool": "floor_state",
+    "contains": [
+      "kW",
+      "°C",
+      "ppm"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "14层照明多少",
+    "tool": "floor_state",
+    "contains": [
+      "kW",
+      "°C",
+      "ppm"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "储能充放电记录",
+    "tool": "storage_history",
+    "contains": [
+      "kWh",
+      "kW"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "今天储能充电量",
+    "tool": "storage_history",
+    "contains": [
+      "kWh",
+      "kW"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "今天储能放电量",
+    "tool": "storage_history",
+    "contains": [
+      "kWh",
+      "kW"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "储能功率和充放电记录",
+    "tool": "storage_history",
+    "contains": [
+      "kWh",
+      "kW"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "今天光伏发电量多少",
+    "tool": "pv_generation",
+    "contains": [
+      "kWh",
+      "kW"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "光伏累计发电量",
+    "tool": "pv_generation",
+    "contains": [
+      "kWh",
+      "kW"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "楼宇运行概览",
+    "tool": "building_state",
+    "contains": [
+      "kW",
+      "CO₂"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "室内湿度多少",
+    "tool": "building_state",
+    "contains": [
+      "kW",
+      "CO₂"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "室内PM2.5多少",
+    "tool": "building_state",
+    "contains": [
+      "kW",
+      "CO₂"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "现在几点",
+    "tool": "get_time",
+    "contains": [
+      "14:00"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "天气怎么样",
+    "tool": "get_weather",
+    "contains": [
+      "°C"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "空调设定多少",
+    "tool": "current_state",
+    "contains": [
+      "°C"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "储能SOC多少",
+    "tool": "current_state",
+    "contains": [
+      "%"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "当前电网功率多少",
+    "tool": "current_energy",
+    "contains": [
+      "kW"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "为什么这样调度",
+    "tool": "selection_reason",
+    "contains": [
+      "峰值",
+      "电费"
+    ],
+    "narrative_required": true
+  },
+  {
+    "question": "执行回执是什么",
+    "tool": "execution_receipt",
+    "contains": [
+      "BA/EMS"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "明天负荷峰值",
+    "tool": "forecast_peak",
+    "contains": [
+      "kW"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "空调改26度能省多少电费",
+    "tool": "compare_costs",
+    "contains": [
+      "元"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "储能还剩多少电",
+    "tool": "current_state",
+    "contains": [
+      "36.4"
+    ],
+    "narrative_required": false,
+    "excludes": [
+      "气温",
+      "空调设定",
+      "现在没有这项数据"
+    ],
+    "expected_soc_percent": 36.4
+  },
+  {
+    "question": "今天有哪些告警",
+    "tool": "alerts_orders",
+    "contains": [
+      "告警记录"
+    ],
+    "narrative_required": false,
+    "excludes": [],
+    "evidence_alert_count": true
+  },
+  {
+    "question": "执行回执",
+    "tool": "execution_receipt",
+    "contains": [
+      " 条",
+      " 毫秒"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "为什么转人工",
+    "tool": "handoff_reason",
+    "scenario": "abstain",
+    "contains": [
+      "交值班人员处理"
+    ],
+    "excludes": [
+      "门控",
+      "风险评分",
+      "阈值",
+      "当前无转人工",
+      "没有转人工"
+    ],
+    "narrative_required": true
+  },
+  {
+    "question": "你好，今天有点累，陪我聊两句",
+    "tool": null,
+    "contains": [],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true
+  },
+  {
+    "question": "讲一个简短的笑话",
+    "tool": null,
+    "contains": [],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true
+  },
+  {
+    "question": "什么是光合作用",
+    "tool": null,
+    "contains": [
+      "植物"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true
+  },
+  {
+    "question": "解释一下复利，给一个简单例子",
+    "tool": null,
+    "contains": [
+      "利"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true
+  },
+  {
+    "question": "水为什么会沸腾",
+    "tool": null,
+    "contains": [
+      "温"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true
+  },
+  {
+    "question": "什么是碳中和",
+    "tool": null,
+    "contains": [
+      "碳"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true
+  },
+  {
+    "question": "介绍一下电梯的工作原理",
+    "tool": null,
+    "contains": [
+      "电梯"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true
+  },
+  {
+    "question": "储能电池的SOC是什么意思",
+    "tool": null,
+    "contains": [
+      "电量"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true
+  },
+  {
+    "question": "楼宇运维有哪些基础知识",
+    "tool": null,
+    "contains": [
+      "运维"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true
+  },
+  {
+    "question": "帮我写两句生日祝福",
+    "tool": null,
+    "contains": [
+      "生日"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true,
+    "exact_sentences": 2
+  },
+  {
+    "question": "联网查询5个楼宇运维的基础知识点",
+    "tool": "web_search",
+    "contains": [
+      "运维"
+    ],
+    "excludes": [
+      "现在没有这项数据",
+      "超出楼宇",
+      "不知道",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": true,
+    "general_answer": true
+  },
+  {
+    "question": "今天北京的天气新闻有哪些？给出来源链接",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000
+  },
+  {
+    "question": "上海今天的天气怎么样？请附来源",
+    "tool": "city_weather",
+    "contains": [
+      "Open-Meteo",
+      "°C",
+      "来源：",
+      "https://api.open-meteo.com/v1/forecast"
+    ],
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true
+  },
+  {
+    "question": "查一下深圳最新的天气新闻和链接",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000
+  },
+  {
+    "question": "伦敦现在气温多少？",
+    "tool": "city_weather",
+    "contains": [
+      "Open-Meteo",
+      "°C",
+      "来源：",
+      "https://api.open-meteo.com/v1/forecast",
+      "英国"
+    ],
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "加拿大",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true
+  },
+  {
+    "question": "上海明天天气如何",
+    "tool": "city_weather",
+    "contains": [
+      "Open-Meteo",
+      "°C",
+      "来源：",
+      "https://api.open-meteo.com/v1/forecast",
+      "次日"
+    ],
+    "excludes": [
+      "当前室外",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true
+  },
+  {
+    "question": "北京近期有哪些天气新闻？",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "当前室外",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000
+  },
+  {
+    "question": "北京 天气 新闻 给出来源链接",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "当前室外",
+      "宿主",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000
+  },
+  {
+    "question": "2024 年物理学奖得主是谁？给出来源链接",
+    "tool": "web_search",
+    "contains": [
+      "物理学奖",
+      "https://api.nobelprize.org/2/nobelPrize/phy/2024"
+    ],
+    "excludes": [
+      "2024 年化学奖",
+      "宿主"
+    ],
+    "narrative_required": true,
+    "general_answer": true
+  },
+  {
+    "question": "今天适合出去散步吗",
+    "tool": "get_weather",
+    "contains": [
+      "13.3 °C",
+      "57.0%",
+      "散步"
+    ],
+    "excludes": [
+      "宿主",
+      "正在查询相关数据",
+      "手机",
+      "应用"
+    ],
+    "no_data_steps": true,
+    "narrative_required": false,
+    "general_answer": false
+  },
+  {
+    "question": "今天北京的天气新闻有哪些？来源链接请参考公开资料",
+    "tool": "web_search",
+    "contains": [],
+    "excludes": [
+      "宿主",
+      "当前室外",
+      "来源链接请参考宿主附上的公开资料"
+    ],
+    "narrative_required": false,
+    "general_answer": true,
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000
+  },
+  {
+    "question": "空调改24度电费多少",
+    "tool": "compare_costs",
+    "contains": [
+      "预计多花"
+    ],
+    "excludes": [
+      "末日",
+      "费用差额 -",
+      "风险评分",
+      "阈值"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "tool": "compare_costs",
+    "contains": [
+      "24.5 °C",
+      "预计多花",
+      "电网峰值",
+      "kW",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "单台",
+      "几毛钱",
+      "6%",
+      "10%",
+      "家用",
+      "费用差额 -"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "空调设定降低1度，电费和峰值有什么变化",
+    "tool": "compare_costs",
+    "contains": [
+      "24.5 °C",
+      "预计多花",
+      "电网峰值",
+      "kW",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "单台",
+      "几毛钱",
+      "6%",
+      "10%",
+      "家用",
+      "费用差额 -"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "空调降温一度要多花多少钱",
+    "tool": "compare_costs",
+    "contains": [
+      "24.5 °C",
+      "预计多花",
+      "电网峰值",
+      "kW",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "单台",
+      "几毛钱",
+      "6%",
+      "10%",
+      "家用",
+      "费用差额 -"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "把空调温度下调一度呢",
+    "tool": "compare_costs",
+    "contains": [
+      "24.5 °C",
+      "预计多花",
+      "电网峰值",
+      "kW",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "单台",
+      "几毛钱",
+      "6%",
+      "10%",
+      "家用",
+      "费用差额 -"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "北京最近有什么天气新闻",
+    "tool": "web_search",
+    "contains": [],
+    "recent_news_14_days": true,
+    "max_duration_ms": 8000,
+    "excludes": [
+      "当前室外",
+      "13.3 °C",
+      "宿主"
+    ],
+    "narrative_required": false,
+    "general_answer": true
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "tool": "compare_costs",
+    "scenario": "normal",
+    "origin_index": 2,
+    "display_time": "02:45",
+    "contains": [
+      "24.8 °C",
+      "预计多花",
+      "506.9 元",
+      "电网峰值",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "这个数现在查不到",
+      "下调空调设定不会自动增加费用",
+      "单台",
+      "几毛钱",
+      "节省"
+    ],
+    "query_step_count": 0,
+    "narrative_required": false
+  },
+  {
+    "question": "空调设定调到24度会多花多少钱",
+    "tool": "compare_costs",
+    "scenario": "normal",
+    "origin_index": 2,
+    "display_time": "02:45",
+    "contains": [
+      "24.0 °C",
+      "预计多花",
+      "912.5 元",
+      "电网峰值",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "这个数现在查不到",
+      "下调空调设定不会自动增加费用",
+      "单台",
+      "几毛钱",
+      "节省"
+    ],
+    "query_step_count": 0,
+    "narrative_required": false
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "tool": "compare_costs",
+    "scenario": "normal",
+    "origin_index": 10,
+    "display_time": "10:30",
+    "contains": [
+      "24.5 °C",
+      "预计多花",
+      "292.6 元",
+      "电网峰值",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "这个数现在查不到",
+      "下调空调设定不会自动增加费用",
+      "单台",
+      "几毛钱",
+      "节省"
+    ],
+    "query_step_count": 0,
+    "narrative_required": false
+  },
+  {
+    "question": "空调设定调到24度会多花多少钱",
+    "tool": "compare_costs",
+    "scenario": "normal",
+    "origin_index": 10,
+    "display_time": "10:30",
+    "contains": [
+      "24.0 °C",
+      "预计多花",
+      "438.9 元",
+      "电网峰值",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "这个数现在查不到",
+      "下调空调设定不会自动增加费用",
+      "单台",
+      "几毛钱",
+      "节省"
+    ],
+    "query_step_count": 0,
+    "narrative_required": false
+  },
+  {
+    "question": "把空调调低一度会怎样",
+    "tool": "compare_costs",
+    "scenario": "normal",
+    "origin_index": 19,
+    "display_time": "19:30",
+    "contains": [
+      "25.4 °C",
+      "预计多花",
+      "292.9 元",
+      "电网峰值",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "这个数现在查不到",
+      "下调空调设定不会自动增加费用",
+      "单台",
+      "几毛钱",
+      "节省"
+    ],
+    "query_step_count": 0,
+    "narrative_required": false
+  },
+  {
+    "question": "空调设定调到24度会多花多少钱",
+    "tool": "compare_costs",
+    "scenario": "normal",
+    "origin_index": 19,
+    "display_time": "19:30",
+    "contains": [
+      "24.0 °C",
+      "预计多花",
+      "703.0 元",
+      "电网峰值",
+      "只覆盖",
+      "未计入"
+    ],
+    "excludes": [
+      "这个数现在查不到",
+      "下调空调设定不会自动增加费用",
+      "单台",
+      "几毛钱",
+      "节省"
+    ],
+    "query_step_count": 0,
+    "narrative_required": false
+  },
+  {
+    "question": "当前能源怎么样",
+    "tool": "current_energy",
+    "contains": [
+      "光伏",
+      "电网",
+      "储能",
+      "kW"
+    ],
+    "excludes": [
+      "公开资料",
+      "常识整理"
+    ],
+    "narrative_required": true
+  },
+  {
+    "question": "现在用电情况如何",
+    "tool": "energy_totals",
+    "contains": [
+      "kWh",
+      "元"
+    ],
+    "excludes": [
+      "公开资料",
+      "常识整理"
+    ],
+    "narrative_required": false
+  },
+  {
+    "question": "光伏现在发多少电",
+    "tool": "current_energy",
+    "contains": [
+      "光伏",
+      "kW"
+    ],
+    "excludes": [
+      "公开资料",
+      "常识整理",
+      "kWh"
+    ],
+    "narrative_required": true
+  },
+  {
+    "question": "今天台风对上海天气有什么影响",
+    "tool": "city_weather",
+    "contains": [
+      "台风",
+      "上海"
+    ],
+    "excludes": [
+      "常识整理",
+      "当前室外"
+    ],
+    "general_answer": true,
+    "narrative_required": false
+  },
+  {
+    "question": "现在的总负荷是多少",
+    "tool": "building_state",
+    "contains": [
+      "1,258.1 kW"
+    ],
+    "excludes": [
+      "820.1",
+      "kWh",
+      "电费"
+    ],
+    "narrative_required": false
+  }
+]

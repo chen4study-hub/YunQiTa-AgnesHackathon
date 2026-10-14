@@ -1,0 +1,106 @@
+{
+  "status": "completed",
+  "seed": 42,
+  "plan": {
+    "status": "frozen_before_final_evaluation",
+    "selection_basis": "pilot validation tree screen: XGBoost had lowest MAE at identical retained count 744/876 and PICP 0.9207",
+    "candidate": "byron2017-xgb-v1",
+    "baseline": "LightGBM refit with identical chronological split and calibration procedure",
+    "point_parameters": {
+      "n_estimators": 150,
+      "learning_rate": 0.05,
+      "max_depth": 5,
+      "tree_method": "hist",
+      "seed": 42
+    },
+    "interval": "static normalized split conformal; no interval selection using final test",
+    "rejection_fraction": 0.15,
+    "split": [
+      0.65,
+      0.2,
+      0.15
+    ],
+    "diagnostic": "same retained count via retrospective risk ranking is diagnostic only, not a deployable gate",
+    "promotion": "disabled: global champion belongs to different cohort; no automatic replay changes",
+    "required_outputs": [
+      "full artifact",
+      "source and artifact hashes",
+      "fixed-gate metrics",
+      "budget-matched diagnostic metrics",
+      "test predictions",
+      "coverage shortfall disclosure"
+    ]
+  },
+  "plan_sha256": "af3e4b221628b4126bb06bc004b798a9b21682f9e318ba7ff66adf50b9bf0c20",
+  "data_sha256": "691a7c14644d3fae764978307c6c7eeb1b58a93845bf4bac759cba16cf04c74c",
+  "config_sha256": "64b29de5b3f07df9cc17da73602a6ab6f03299f4bedcba10daee6f1a45d99842",
+  "artifact": "models\\byron2017-xgb-v1.joblib",
+  "artifact_sha256": "57c469389abc78590aab9719e1c45af25a8ca134fa4cf6d0d38ff7dfd84a62a5",
+  "prediction_sha256": {
+    "lightgbm": "fd7139630534ed65f2309d7ec6fc01082e2d1c751a9b48b590b884efab6ce1aa",
+    "xgboost": "3febd137a8f3b6fd8a84078723096b8fe4cda1db20855e684c23ed5ea1f7799b"
+  },
+  "rows": [
+    {
+      "model": "lightgbm",
+      "fixed_gate": {
+        "n": 1314,
+        "retained_n": 1055,
+        "rejection_rate": 0.19710806697108066,
+        "retained_picp": 0.8208530805687204,
+        "retained_mae": 9.197226578975224,
+        "mae": 10.829925688088126,
+        "rmse": 15.437353613914185,
+        "width": 32.75422171186743
+      },
+      "same_budget_diagnostic": {
+        "model": "lightgbm",
+        "split": "final_test_diagnostic",
+        "seed": 42,
+        "elapsed_seconds": 0,
+        "actual_gate_rejection": 0.19710806697108066,
+        "gate_retained_picp": 0.8208530805687204,
+        "gate_retained_mae": 9.197226578975224,
+        "budget_rank_retained_n": 1116,
+        "budget_rank_retained_picp": 0.8225806451612904,
+        "budget_rank_retained_mae": 9.567281660888566,
+        "budget_rank_ci_low": 0.7988780739307275,
+        "budget_rank_ci_high": 0.8445683618722931,
+        "eligible_for_champion": false
+      }
+    },
+    {
+      "model": "xgboost",
+      "fixed_gate": {
+        "n": 1314,
+        "retained_n": 1113,
+        "rejection_rate": 0.15296803652968036,
+        "retained_picp": 0.876010781671159,
+        "retained_mae": 8.105385577877295,
+        "mae": 9.243488775461081,
+        "rmse": 13.672608117929908,
+        "width": 33.01420734018524
+      },
+      "same_budget_diagnostic": {
+        "model": "xgboost",
+        "split": "final_test_diagnostic",
+        "seed": 42,
+        "elapsed_seconds": 0,
+        "actual_gate_rejection": 0.15296803652968036,
+        "gate_retained_picp": 0.876010781671159,
+        "gate_retained_mae": 8.105385577877295,
+        "budget_rank_retained_n": 1116,
+        "budget_rank_retained_picp": 0.8763440860215054,
+        "budget_rank_retained_mae": 8.117071337866777,
+        "budget_rank_ci_low": 0.8555856503679153,
+        "budget_rank_ci_high": 0.8950937837102769,
+        "eligible_for_champion": false
+      }
+    }
+  ],
+  "champion_updated": false,
+  "replay_updated": false,
+  "coverage_target": 0.905,
+  "coverage_pass": false,
+  "warning": "Budget ranking uses final risk ordering, not deployable thresholds. No test-driven retuning."
+}

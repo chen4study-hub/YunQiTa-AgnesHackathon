@@ -1,0 +1,227 @@
+.agent-root .agent-takeover-dialog {
+  box-sizing: border-box;
+  width: min(600px, calc(100vw - 28px));
+  max-height: 85dvh;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: #14222b;
+  color: #edf4f6;
+  border: 1px solid #4a7780;
+  border-radius: 12px;
+  padding: 20px;
+  font-family: inherit;
+  font-size: var(--font-body);
+}
+.agent-takeover-dialog::backdrop {
+  background: rgba(2, 12, 18, 0.6);
+}
+.agent-root .agent-takeover-dialog header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.agent-root .agent-takeover-dialog h3 {
+  font-size: var(--font-title);
+  margin: 0;
+}
+.agent-root .agent-takeover-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.agent-root .agent-takeover-form label,
+.agent-root .agent-takeover-cancel label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.agent-root .agent-takeover-form label:has(textarea),
+.agent-root .agent-takeover-form button {
+  grid-column: 1/-1;
+}
+.agent-root
+  :is(.agent-takeover-form, .agent-takeover-cancel)
+  :is(input, select, textarea) {
+  width: 100%;
+  box-sizing: border-box;
+  background: #0e1b24;
+  border: 1px solid #49636f;
+  color: #edf4f6;
+  border-radius: 6px;
+  padding: 9px 10px;
+  font: inherit;
+  min-height: 42px;
+}
+.agent-root .agent-takeover-form textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+.agent-root
+  :is(.agent-takeover-form, .agent-takeover-cancel)
+  :is(input, textarea)::placeholder {
+  color: #b0c4cf;
+  opacity: 1;
+}
+.agent-root
+  :is(.agent-takeover-dialog, .agent-takeover-banner, .agent-takeover-cancel)
+  button {
+  font: inherit;
+  min-height: 40px;
+  min-width: 36px;
+  border: 1px solid #72d8dd;
+  border-radius: 6px;
+  color: #d6f7f8;
+  background: #203d45;
+  padding: 7px 12px;
+}
+.agent-root
+  :is(.agent-takeover-dialog, .agent-takeover-banner, .agent-takeover-cancel)
+  button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.agent-root .agent-takeover-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  padding: 10px 12px;
+  border: 1px solid #72d8dd;
+  background: rgba(114, 216, 221, 0.07);
+  border-radius: 8px;
+  font-size: var(--font-body);
+}
+.agent-root .agent-takeover-banner b {
+  font-size: var(--font-body);
+}
+.agent-root .agent-takeover-banner span {
+  overflow-wrap: anywhere;
+}
+.agent-root .agent-takeover-notice,
+.agent-root .agent-takeover-error {
+  font-size: var(--font-note);
+  margin: 8px 0;
+}
+.agent-root .agent-takeover-error {
+  color: #ffb0b8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.agent-root .agent-takeover-idle {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+}
+.agent-root .agent-takeover-cancel {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0;
+}
+@media (max-width: 600px) {
+  .agent-root .agent-takeover-form {
+    grid-template-columns: 1fr;
+  }
+  .agent-root .agent-takeover-dialog {
+    padding: 14px;
+  }
+}
+.agent-root .agent-service-records form {
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.agent-root .agent-service-records input {
+  font: inherit;
+  padding: 8px;
+  background: #0e1b24;
+  border: 1px solid #49636f;
+  color: #edf4f6;
+  border-radius: 6px;
+  margin: 0 8px;
+}
+.agent-root .agent-service-records [role="tablist"] {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+.agent-root .agent-service-records [role="tab"][aria-selected="true"] {
+  background: #30535b;
+}
+.agent-root .agent-service-records article {
+  padding: 10px 0;
+  border-bottom: 1px solid #3d5966;
+  overflow-wrap: anywhere;
+}
+.agent-root .agent-service-records p {
+  font-size: var(--font-body);
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.agent-root .agent-heading .agent-tags button {
+  font: inherit;
+  font-size: var(--font-note);
+  background: none;
+  border: 0;
+  color: #9edce1;
+  cursor: pointer;
+}
+.agent-root .agent-records-link {
+  font: inherit;
+  font-size: var(--font-note);
+  background: none;
+  border: 0;
+  color: #9edce1;
+  cursor: pointer;
+}
+
+.agent-root .agent-takeover-dialog > p {
+  font-size: var(--font-body);
+  line-height: 1.5;
+}
+.agent-root .agent-takeover-dialog button {
+  min-height: 36px;
+  min-width: 36px;
+}
+.agent-root .agent-server-receipt li {
+  margin: 0.5em 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.agent-root .agent-server-receipt .agent-receipt-inactive {
+  color: #a2b4c0;
+}
+.agent-root .agent-record-written,
+.agent-root .agent-record-event-times {
+  font-variant-numeric: tabular-nums;
+}
+/* Nested card/viewport scaling must not shrink modal command text. */
+.agent-root .agent-service-records :is(li, li span, label, input) {
+  font-size: var(--font-body);
+}
+.agent-root .agent-service-records ul {
+  padding-inline-start: 20px;
+}
+.agent-root .agent-service-records form label {
+  min-width: 0;
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.agent-root .agent-service-records input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 36px;
+  margin: 0;
+}
+.agent-root .agent-records-link,
+.agent-root .agent-heading .agent-tags button {
+  min-width: 36px;
+  min-height: 36px;
+}

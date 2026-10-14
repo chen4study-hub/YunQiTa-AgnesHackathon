@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "changed_text_fields": {
+    "exports/buildings.json": 0,
+    "exports/model_card.json": 0,
+    "exports/replay/abstain.json": 1,
+    "exports/replay/index.json": 0,
+    "exports/replay/normal.json": 2,
+    "exports/replay/peak.json": 9,
+    "exports/replay/sample.json": 0
+  },
+  "visible_strings_scanned": 5152,
+  "new_llm_calls": 0,
+  "new_dispatches": 0,
+  "nonprose_unchanged": true,
+  "source_counts": {
+    "exports/replay/abstain.json": {
+      "before": {
+        "llm": 11,
+        "template": 1,
+        "rule": 12
+      },
+      "after": {
+        "llm": 11,
+        "template": 1,
+        "rule": 12
+      }
+    },
+    "exports/replay/normal.json": {
+      "before": {
+        "llm": 16,
+        "template": 8
+      },
+      "after": {
+        "llm": 16,
+        "template": 8
+      }
+    },
+    "exports/replay/peak.json": {
+      "before": {
+        "llm": 15,
+        "template": 7,
+        "rule": 2
+      },
+      "after": {
+        "llm": 15,
+        "template": 7,
+        "rule": 2
+      }
+    }
+  },
+  "before_sha256": {
+    "exports/buildings.json": "bb99ed8a4f97e1dcba79f1214a1a3f0461daca953f0e218da602c208262152af",
+    "exports/model_card.json": "c426e6a807be8e33e6cb97afe8df9101aa9e3ee20c03099e775405b0d1dab89b",
+    "exports/replay/abstain.json": "a074105c36f0603c7599f256f35bcaf13a57c8c8b1668e8da01d028ceca64df1",
+    "exports/replay/index.json": "264457c6eee854807c4e1779137e596628f6253b3e3456fe6330de7acb014b06",
+    "exports/replay/normal.json": "c5663066dfb360af283bd006f842e63da2396f124bb35fe63f663af462cdd100",
+    "exports/replay/peak.json": "458f594fa44c56a0836edab0b22579c8f074f57d086b935db58475a58a8fd3d1",
+    "exports/replay/sample.json": "e1cfaea2f40a6445db71c19c9263a80cb3bb4998ba3b69f4a715462ea6478536"
+  },
+  "after_sha256": {
+    "normal.json": "0543fc274e36a1e9f44fc7c0bf342b19a2a5060220fbfd2c780e4ded96e714f9",
+    "peak.json": "1673a7d6410fecafd62bbac912fe3f949b0c8da4e1ea7286923bb1be2f799da3",
+    "abstain.json": "cc65531432b19ba7759a73c68167383481a40bba14d9cb4bebf00c8f39e05c72"
+  }
+}

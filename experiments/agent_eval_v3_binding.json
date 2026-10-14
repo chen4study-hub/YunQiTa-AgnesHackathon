@@ -1,0 +1,18 @@
+{
+  "plan_sha256": "dc0ff5a25d1f6a205b0d598c53a97c657ae0c50fd006b289f245f01148005679",
+  "code_sha256": {
+    "scripts/evaluate_agent24.py": "f7bb2e78e0903b56a678a2a1ec00737ecdefc658ba913653797ab8afc2778c61",
+    "src/agent/orchestrator.py": "38e831363b4e7efa774f6e68e9af1e3c36b54f0d161170ec41cb3f367c284c39",
+    "src/agent/storage_planner.py": "bec59576b7c8e1b2a28918cc8631e225136119c5708bf7e6240661a1d95b670e",
+    "src/agent/rolling_context.py": "8fb0b16a02863413e6ba3c463eab5bbecba59b22b77726fbfc18610be5ea7533",
+    "src/agent/tools.py": "d7dd9527d4a8db4fed3ec915d204dc390578471fcc815a5c529c26e9055fa030",
+    "src/agent/selection.py": "f09297dbe70271bfcf4409720c8bd783b7162cefc1381b855b9b460ea6b2b6b6",
+    "src/agent/provider.py": "0c4e541a4f0ca993ba5db196ec31623fbb28d6046504e1ca7c8b09e126bee53d",
+    "src/agent/numeric_prompt.py": "b1de4855a6a7d26363966fca6af408b0544ce6836e490bfcd3575c0f60975b7a",
+    "configs/agent_tools.json": "599b9c7a0186be978d01d9db64d9f51fb7926dd39ea3d316fd3949f58f871b70"
+  },
+  "monthly_index_sha256": "0539b485db9021657708f1ead89ce507a92d6bf96a349bc4193a622ff1853dab",
+  "multi_index_sha256": "a158661b0f781cfdb6aa96eeda17cddac0bec0f2227c3e07f26facceb062247d",
+  "weather_sha256": "691a7c14644d3fae764978307c6c7eeb1b58a93845bf4bac759cba16cf04c74c",
+  "requested_llm_mode": "real"
+}

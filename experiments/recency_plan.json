@@ -1,0 +1,11 @@
+{
+  "scope": "development-only exploratory research, not new blind validation",
+  "hypothesis": "exponential recency weights reduce seasonal drift without discarding older observations",
+  "baseline": "uniform-weight LightGBM CQR",
+  "candidate": "LightGBM CQR with 8-week training-weight half-life, point and both quantile models",
+  "half_life_weeks": 8,
+  "folds": [[0.35,0.45,0.55],[0.40,0.50,0.60],[0.45,0.55,0.65]],
+  "calibration": "same independent chronological scale/Cq split, unweighted conformal correction",
+  "comparison": "existing three composite weight scenarios plus individual metrics and fold variability",
+  "limits": ["no final test retuning", "no automatic promotion", "no replay mutation", "no causal control claim", "overlapping development windows"]
+}

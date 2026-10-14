@@ -1,0 +1,36 @@
+{
+  "rules": "round4_review_rules.md",
+  "scope": "All 222 complete answers and relevant tool traces read by Agnes; not an independent blind review. Only subtract from automatic true, never upgrade false.",
+  "full_on": [
+    {"index": 6, "rules": ["R6"], "quote": "10 月 13 日（截至 14:00）", "reason": "同日读数仍写日历日期；历史两天日期和值已正确，不再对调。"},
+    {"index": 12, "rules": ["R6"], "quote": "10 月 13 日截至 14:00", "reason": "同日累计读数写日历日期；问题未指定历史日期。"},
+    {"index": 14, "rules": ["R6"], "quote": "2026 年 10 月 13 日截至 14:00", "reason": "同日读数应只用时间。"},
+    {"index": 18, "rules": ["R6"], "quote": "今天（2026-10-13）截至 14:00", "reason": "同日不需重复日历日期。"},
+    {"index": 37, "rules": ["R6"], "quote": "空调设定 25.5 °C。当前储能电量 36.4%。空调设定 25.5 °C。室外气温 13.3 °C。当前室外 13.3 °C", "reason": "同一空调设定和室外温度重复；人数千分位已修。"},
+    {"index": 40, "rules": ["R6"], "quote": "现在是 2026 年 10 月 13 日 14:00", "reason": "问几点，额外重复同日日期。"},
+    {"index": 45, "rules": ["R6"], "quote": "简而言之，该方案用“高峰放电＋低谷充电”的储能节奏配合空调微调", "reason": "长列项已阐述相同因果，又用整段总结重复，未遵循一个意思一次。"},
+    {"index": 47, "rules": ["R6"], "quote": "明天（次日）", "reason": "次日标签已有但又重复明天，未统一跨天口径；峰值及低把握提醒正确。"},
+    {"index": 56, "rules": ["R6"], "quote": "1000 × (1 + 5.0%)", "reason": "公式中的本金数字1000/1050未千分位；仅日期/时钟/URL/ID例外，公共例子同规则。"},
+    {"index": 60, "rules": ["R1"], "quote": "电量 是“State of Charge”的缩写", "reason": "错误把中文电量称英文缩写；SOC别名替换破坏了概念定义。"},
+    {"index": 63, "rules": ["R2"], "quote": "没查到相关联网公开资料，无法给带真实来源链接的楼宇运维基础知识点", "reason": "诚实无结果但未交付联网5知识点，不能作为任务成功；实际trace sources=[]。"},
+    {"index": 72, "rules": ["R1"], "quote": "天气适宜出去散步", "reason": "工具仅当前温湿度，没有雨/风/空气质量，直接判整体天气适宜缺依据；off明确仅气温适合并提示不足。"},
+    {"index": 75, "rules": ["R6"], "quote": "从 25.5 °C改为 24.5 °C…当前空调设定 25.5 °C", "reason": "相同当前设定在模板末尾又重复。"},
+    {"index": 80, "rules": ["R6"], "quote": "从 25.8 °C改为 24.8 °C…当前空调设定 25.8 °C", "reason": "相同当前设定在模板末尾又重复。"}
+  ],
+  "full_off": [
+    {"index": 14, "rules": ["R6"], "quote": "10 月 13 日截至 14:00", "reason": "与on同日显示日期相同扣分。"},
+    {"index": 19, "rules": ["R2"], "quote": "截至 14:00，共有 0 条告警记录", "reason": "用户同时问工单，只查alerts，缺工单部分；trace groups仅alerts。"},
+    {"index": 34, "rules": ["R6"], "quote": "当前储能功率为 323.7 kW…功率读数：323.7 kW", "reason": "同一功率及正值放电含义在模板和模型说明多次重复。"},
+    {"index": 56, "rules": ["R6"], "quote": "10000 × 5.0%", "reason": "公式本金10000/10500未千分位，与on例题同规则。"},
+    {"index": 57, "rules": ["R2", "R6"], "quote": "若外界“拉力”（气压）小，更容易挣脱；", "reason": "末句未完成；101.325 kPa又超过最多一位读数口径。"},
+    {"index": 59, "rules": ["R1"], "quote": "主要基于“杠杆平衡”", "reason": "曳引系统对重平衡并非杠杆机构，首句概念不准确。"},
+    {"index": 61, "rules": ["R2"], "quote": "4. **数字化与智能化**", "reason": "第4维度只有标题，正文被整轮30秒截断，未完整回答。"},
+    {"index": 63, "rules": ["R2", "R4"], "quote": "没有查到网上资料，下面是常识整理", "reason": "用户要求联网5知识点，未取得来源，以常识替代联网任务；与on同扣失败。"}
+  ],
+  "multi_on": [
+    {"index": 10, "rules": ["R6"], "quote": "当前是 2026 年 10 月 13 日，周二 14:00", "reason": "问几点，同日却写日历和星期，时间之外的冗余呈现。"},
+    {"index": 17, "rules": ["R3"], "quote": "修正：比如一家面包店", "reason": "将内部修订开头输出为用户答案，问题只要求概念举例。"},
+    {"index": 19, "rules": ["R6"], "quote": "当前空调设定 25.5 °C…从 25.5 °C改为 24.5 °C", "reason": "同一当前设定重复，另附未被问的当前累计用电。"}
+  ],
+  "multi_off": []
+}

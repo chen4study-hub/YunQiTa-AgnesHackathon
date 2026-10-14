@@ -1,0 +1,6 @@
+[
+ {"question":"27层二氧化碳怎么样？另外你怎么看美国大选？","tool":"floor_state","contains":["550.0 ppm"],"group":"mixed-pending"},
+ {"question":"现在电价多少？","tool":null,"contains":["会话已终止"],"group":"mixed-pending","category":"terminated"},
+ {"question":"现在电价多少？","tool":"tariff_periods","contains":["19:30","峰时电价 1.20 元/kWh","20:00","0.75 元/kWh"],"excludes":["最高","最低"],"display_time":"19:30","origin_index":19},
+ {"question":"现在电价多少？","tool":"tariff_periods","contains":["23:30","平时电价 0.75 元/kWh","次日 00:00","0.35 元/kWh"],"excludes":["最高","最低"],"display_time":"23:30","origin_index":23}
+]

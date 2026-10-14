@@ -1,0 +1,11 @@
+{
+  "hypothesis": "decouple point stabilization from uncertainty changes to avoid loss of coverage and rejection stability",
+  "source_plan": "experiments/multibuilding_ood_plan.json",
+  "candidate": "baseline CQR interval/gate unchanged; only OOD point residual multiplied by0.5 and clipped to issued baseline interval",
+  "factor": 0.5,
+  "bounds": "training-only weather min/max",
+  "evaluation": "same12 buildings and3 development folds; no final test reuse",
+  "ranking": "same composite policies and2pct goal; preserve every any-scenario improving intermediate bundle",
+  "caveat": "point-only approach is a follow-up selected after prior development results; exploratory, not unbiased validation",
+  "deployment": "no champion or replay changes"
+}

@@ -1,0 +1,24 @@
+schema_version: '1.1'
+main_building: Hog_office_Byron
+model_version: byron-expanded-holiday-monthly-v1
+campus_model_version: hog2017-v1
+operating_point: rejection_15
+rejection_fraction: 0.15
+interval_method: cqr
+alpha: 0.095
+rolling_weeks: 2
+aci_gamma: 0.02
+mode: auto
+timezone: America/Chicago
+storage:
+  capacity_kwh: 2000
+  max_power_kw: 500
+  initial_soc: 0.5
+  min_soc: 0.1
+  max_soc: 0.95
+  charge_kw: 80
+  discharge_kw: 140
+  efficiency: 1.0 # illustrative simulation, not actual equipment
+pv:
+  capacity_kwp: 180
+  cloud_fallback: 4.5 # estimated medium cloud if observed cloud is absent
